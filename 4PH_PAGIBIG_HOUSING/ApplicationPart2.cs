@@ -30,5 +30,10 @@ namespace _4PH_PAGIBIG_HOUSING
             applicationPart2.Show();
             this.Dispose();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ApplicationBriefing));
             btnApply = new Button();
+            panel2 = new Panel();
+            panel1 = new Panel();
             SuspendLayout();
             // 
             // btnApply
@@ -48,12 +50,28 @@
             btnApply.UseVisualStyleBackColor = true;
             btnApply.Click += btnApply_Click;
             // 
+            // panel2
+            // 
+            panel2.Location = new Point(600, 210);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(529, 409);
+            panel2.TabIndex = 32;
+            // 
+            // panel1
+            // 
+            panel1.Location = new Point(148, 210);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(433, 409);
+            panel1.TabIndex = 33;
+            // 
             // ApplicationBriefing
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1280, 800);
+            Controls.Add(panel1);
+            Controls.Add(panel2);
             Controls.Add(btnApply);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ApplicationBriefing";
@@ -66,5 +84,7 @@
         #endregion
 
         private Button btnApply;
+        private Panel panel2;
+        private Panel panel1;
     }
 }

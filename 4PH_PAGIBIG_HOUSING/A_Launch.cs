@@ -15,7 +15,6 @@ namespace _4PH_PAGIBIG_HOUSING
         {
 
         }
-
         private void btnApply_Click(object sender, EventArgs e)
         {
             // Show the loading screen

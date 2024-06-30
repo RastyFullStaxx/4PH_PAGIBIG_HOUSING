@@ -24,4 +24,9 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Database\" />
+    <Folder Include="Enums\" />
+  </ItemGroup>
+
 </Project>
