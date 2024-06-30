@@ -31,6 +31,7 @@ namespace _4PH_PAGIBIG_HOUSING
             // If progress bar reaches maximum value, stop the timer
             if (progressBar1.Value >= progressBar1.Maximum)
             {
+
                 timer1.Stop();
                 this.Close();
             }

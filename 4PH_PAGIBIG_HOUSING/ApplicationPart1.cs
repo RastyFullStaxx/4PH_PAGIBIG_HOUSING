@@ -19,7 +19,7 @@ namespace _4PH_PAGIBIG_HOUSING
 
         private void ApplicationPart1_Load(object sender, EventArgs e)
         {
-
+             
         }
 
         private void lblMID_Click(object sender, EventArgs e)
@@ -54,6 +54,16 @@ namespace _4PH_PAGIBIG_HOUSING
             ApplicationPart2 applicationPart2 = new ApplicationPart2();
             applicationPart2.Show();
             this.Dispose();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
+
         }
     }
 }

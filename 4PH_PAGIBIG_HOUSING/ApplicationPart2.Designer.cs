@@ -38,6 +38,13 @@
             btnLoanInfo = new Button();
             btnPersonalInfo = new Button();
             panel1 = new Panel();
+            txtMRID = new TextBox();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
+            textBox3 = new TextBox();
+            textBox4 = new TextBox();
+            panel2 = new Panel();
+            btnBack = new Button();
             SuspendLayout();
             // 
             // btnNext
@@ -154,12 +161,87 @@
             panel1.Size = new Size(528, 324);
             panel1.TabIndex = 25;
             // 
+            // txtMRID
+            // 
+            txtMRID.BorderStyle = BorderStyle.None;
+            txtMRID.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtMRID.Location = new Point(82, 289);
+            txtMRID.Name = "txtMRID";
+            txtMRID.Size = new Size(197, 18);
+            txtMRID.TabIndex = 26;
+            // 
+            // textBox1
+            // 
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(84, 383);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(478, 18);
+            textBox1.TabIndex = 27;
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
+            // textBox2
+            // 
+            textBox2.BorderStyle = BorderStyle.None;
+            textBox2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox2.Location = new Point(84, 478);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(254, 18);
+            textBox2.TabIndex = 28;
+            // 
+            // textBox3
+            // 
+            textBox3.BorderStyle = BorderStyle.None;
+            textBox3.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox3.Location = new Point(390, 476);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(172, 18);
+            textBox3.TabIndex = 29;
+            // 
+            // textBox4
+            // 
+            textBox4.BorderStyle = BorderStyle.None;
+            textBox4.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox4.Location = new Point(82, 572);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(480, 18);
+            textBox4.TabIndex = 30;
+            // 
+            // panel2
+            // 
+            panel2.Location = new Point(639, 229);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(529, 323);
+            panel2.TabIndex = 31;
+            // 
+            // btnBack
+            // 
+            btnBack.BackColor = Color.Transparent;
+            btnBack.Cursor = Cursors.Hand;
+            btnBack.FlatAppearance.BorderSize = 0;
+            btnBack.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnBack.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnBack.FlatStyle = FlatStyle.Flat;
+            btnBack.Image = (Image)resources.GetObject("btnBack.Image");
+            btnBack.Location = new Point(56, 713);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(126, 45);
+            btnBack.TabIndex = 32;
+            btnBack.UseVisualStyleBackColor = true;
+            // 
             // ApplicationPart2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1280, 800);
+            Controls.Add(btnBack);
+            Controls.Add(panel2);
+            Controls.Add(textBox4);
+            Controls.Add(textBox3);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
+            Controls.Add(txtMRID);
             Controls.Add(panel1);
             Controls.Add(btnPersonalInfo);
             Controls.Add(btnLoanInfo);
@@ -188,5 +270,12 @@
         private Button btnLoanInfo;
         private Button btnPersonalInfo;
         private Panel panel1;
+        private TextBox txtMRID;
+        private TextBox textBox1;
+        private TextBox textBox2;
+        private TextBox textBox3;
+        private TextBox textBox4;
+        private Panel panel2;
+        private Button btnBack;
     }
 }

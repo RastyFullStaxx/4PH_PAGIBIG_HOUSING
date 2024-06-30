@@ -38,12 +38,12 @@ namespace _4PH_PAGIBIG_HOUSING
             // 
             // btnApply
             // 
+            btnApply.BackColor = Color.Transparent;
             btnApply.Cursor = Cursors.Hand;
             btnApply.FlatAppearance.BorderSize = 0;
-            btnApply.FlatStyle = FlatStyle.Flat;
-            btnApply.BackColor = Color.Transparent;
             btnApply.FlatAppearance.MouseDownBackColor = Color.Transparent;
             btnApply.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnApply.FlatStyle = FlatStyle.Flat;
             btnApply.Image = (Image)resources.GetObject("btnApply.Image");
             btnApply.Location = new Point(505, 504);
             btnApply.Name = "btnApply";
