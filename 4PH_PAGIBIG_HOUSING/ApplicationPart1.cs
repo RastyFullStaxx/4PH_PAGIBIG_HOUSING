@@ -25,7 +25,7 @@ namespace _4PH_PAGIBIG_HOUSING
         private void btnNext_Click(object sender, EventArgs e)
         {
             // Example of moving to the next part of the application
-            ApplicationPart2 applicationPart2 = new ApplicationPart2();
+            ApplicationPart2 applicationPart2 = new ApplicationPart2(txtMRID.Text);
             applicationPart2.Show();
             this.Hide();
         }
@@ -69,8 +69,8 @@ namespace _4PH_PAGIBIG_HOUSING
             bool savedSuccessfully = SaveBorrowerInformation(borrower);
             if (savedSuccessfully)
             {
-                ApplicationPart2 applicationPart2 = new ApplicationPart2();
-                applicationPart2.Show();
+                ApplicationPart4 EmploymentInfo = new ApplicationPart4(txtMRID.Text, txtSSS.Text);
+                EmploymentInfo.Show();
                 this.Hide();
                 Console.WriteLine("Borrower information saved successfully.");
                 ClearForm();

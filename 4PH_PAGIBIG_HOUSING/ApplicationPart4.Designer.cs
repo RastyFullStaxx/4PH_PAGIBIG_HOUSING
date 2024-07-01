@@ -51,22 +51,22 @@
             txtEmployerTrunkLine = new TextBox();
             txtOccupation = new TextBox();
             txtTIN = new TextBox();
-            cbTypeOfProperty = new ComboBox();
+            cbYearsInBusiness = new ComboBox();
             cbDependents = new ComboBox();
             lblOtherInfo = new Label();
             lblRealEstateInfo = new Label();
             lblBankInfo = new Label();
-            lblEmploymentInfo = new Label();
+            lblLoanInfo = new Label();
             lblCollateralInfo = new Label();
-            label11 = new Label();
+            lblEmploymentInfo = new Label();
             label12 = new Label();
             btnOtherLoanInfo = new Button();
             btnRealEstateInfo = new Button();
             btnBankInfo = new Button();
             btnEmploymentInfo = new Button();
-            btnCollateralInfo = new Button();
-            btnLoanInfo = new Button();
             btnPersonalInfo = new Button();
+            button1 = new Button();
+            button2 = new Button();
             SuspendLayout();
             // 
             // lblGSIS
@@ -230,6 +230,7 @@
             btnNext.Size = new Size(126, 45);
             btnNext.TabIndex = 32;
             btnNext.UseVisualStyleBackColor = true;
+            btnNext.Click += btnSaveEmployment_Click;
             // 
             // txtGSIS
             // 
@@ -303,20 +304,20 @@
             txtTIN.Size = new Size(235, 23);
             txtTIN.TabIndex = 41;
             // 
-            // cbTypeOfProperty
+            // cbYearsInBusiness
             // 
-            cbTypeOfProperty.FormattingEnabled = true;
-            cbTypeOfProperty.Items.AddRange(new object[] { "Male", "Female", "Beks" });
-            cbTypeOfProperty.Location = new Point(602, 566);
-            cbTypeOfProperty.Name = "cbTypeOfProperty";
-            cbTypeOfProperty.Size = new Size(243, 23);
-            cbTypeOfProperty.TabIndex = 85;
-            cbTypeOfProperty.Text = " ";
+            cbYearsInBusiness.FormattingEnabled = true;
+            cbYearsInBusiness.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30" });
+            cbYearsInBusiness.Location = new Point(602, 566);
+            cbYearsInBusiness.Name = "cbYearsInBusiness";
+            cbYearsInBusiness.Size = new Size(243, 23);
+            cbYearsInBusiness.TabIndex = 85;
+            cbYearsInBusiness.Text = " ";
             // 
             // cbDependents
             // 
             cbDependents.FormattingEnabled = true;
-            cbDependents.Items.AddRange(new object[] { "Male", "Female", "Beks" });
+            cbDependents.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" });
             cbDependents.Location = new Point(871, 566);
             cbDependents.Name = "cbDependents";
             cbDependents.Size = new Size(235, 23);
@@ -362,18 +363,18 @@
             lblBankInfo.TabIndex = 98;
             lblBankInfo.Text = "BANK INFO";
             // 
-            // lblEmploymentInfo
+            // lblLoanInfo
             // 
-            lblEmploymentInfo.AutoSize = true;
-            lblEmploymentInfo.BackColor = Color.Transparent;
-            lblEmploymentInfo.FlatStyle = FlatStyle.Flat;
-            lblEmploymentInfo.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblEmploymentInfo.ForeColor = SystemColors.ActiveCaptionText;
-            lblEmploymentInfo.Location = new Point(526, 172);
-            lblEmploymentInfo.Name = "lblEmploymentInfo";
-            lblEmploymentInfo.Size = new Size(117, 15);
-            lblEmploymentInfo.TabIndex = 97;
-            lblEmploymentInfo.Text = "EMPLOYMENT INFO";
+            lblLoanInfo.AutoSize = true;
+            lblLoanInfo.BackColor = Color.Transparent;
+            lblLoanInfo.FlatStyle = FlatStyle.Flat;
+            lblLoanInfo.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblLoanInfo.ForeColor = SystemColors.ActiveCaptionText;
+            lblLoanInfo.Location = new Point(560, 172);
+            lblLoanInfo.Name = "lblLoanInfo";
+            lblLoanInfo.Size = new Size(70, 15);
+            lblLoanInfo.TabIndex = 97;
+            lblLoanInfo.Text = "LOAN INFO";
             // 
             // lblCollateralInfo
             // 
@@ -388,18 +389,18 @@
             lblCollateralInfo.TabIndex = 96;
             lblCollateralInfo.Text = "COLLATERAL INFO";
             // 
-            // label11
+            // lblEmploymentInfo
             // 
-            label11.AutoSize = true;
-            label11.BackColor = Color.Transparent;
-            label11.FlatStyle = FlatStyle.Flat;
-            label11.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label11.ForeColor = SystemColors.ActiveCaptionText;
-            label11.Location = new Point(212, 172);
-            label11.Name = "label11";
-            label11.Size = new Size(70, 15);
-            label11.TabIndex = 95;
-            label11.Text = "LOAN INFO";
+            lblEmploymentInfo.AutoSize = true;
+            lblEmploymentInfo.BackColor = Color.Transparent;
+            lblEmploymentInfo.FlatStyle = FlatStyle.Flat;
+            lblEmploymentInfo.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblEmploymentInfo.ForeColor = SystemColors.ActiveCaptionText;
+            lblEmploymentInfo.Location = new Point(201, 172);
+            lblEmploymentInfo.Name = "lblEmploymentInfo";
+            lblEmploymentInfo.Size = new Size(117, 15);
+            lblEmploymentInfo.TabIndex = 95;
+            lblEmploymentInfo.Text = "EMPLOYMENT INFO";
             // 
             // label12
             // 
@@ -467,41 +468,11 @@
             btnEmploymentInfo.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnEmploymentInfo.FlatStyle = FlatStyle.Flat;
             btnEmploymentInfo.Image = (Image)resources.GetObject("btnEmploymentInfo.Image");
-            btnEmploymentInfo.Location = new Point(555, 118);
+            btnEmploymentInfo.Location = new Point(229, 107);
             btnEmploymentInfo.Name = "btnEmploymentInfo";
             btnEmploymentInfo.Size = new Size(53, 51);
             btnEmploymentInfo.TabIndex = 90;
             btnEmploymentInfo.UseVisualStyleBackColor = true;
-            // 
-            // btnCollateralInfo
-            // 
-            btnCollateralInfo.BackColor = Color.Transparent;
-            btnCollateralInfo.Cursor = Cursors.Hand;
-            btnCollateralInfo.FlatAppearance.BorderSize = 0;
-            btnCollateralInfo.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnCollateralInfo.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnCollateralInfo.FlatStyle = FlatStyle.Flat;
-            btnCollateralInfo.Image = (Image)resources.GetObject("btnCollateralInfo.Image");
-            btnCollateralInfo.Location = new Point(383, 118);
-            btnCollateralInfo.Name = "btnCollateralInfo";
-            btnCollateralInfo.Size = new Size(53, 51);
-            btnCollateralInfo.TabIndex = 89;
-            btnCollateralInfo.UseVisualStyleBackColor = true;
-            // 
-            // btnLoanInfo
-            // 
-            btnLoanInfo.BackColor = Color.Transparent;
-            btnLoanInfo.Cursor = Cursors.Hand;
-            btnLoanInfo.FlatAppearance.BorderSize = 0;
-            btnLoanInfo.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnLoanInfo.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnLoanInfo.FlatStyle = FlatStyle.Flat;
-            btnLoanInfo.Image = (Image)resources.GetObject("btnLoanInfo.Image");
-            btnLoanInfo.Location = new Point(221, 118);
-            btnLoanInfo.Name = "btnLoanInfo";
-            btnLoanInfo.Size = new Size(53, 51);
-            btnLoanInfo.TabIndex = 88;
-            btnLoanInfo.UseVisualStyleBackColor = true;
             // 
             // btnPersonalInfo
             // 
@@ -518,28 +489,58 @@
             btnPersonalInfo.TabIndex = 87;
             btnPersonalInfo.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.Transparent;
+            button1.Cursor = Cursors.Hand;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.Location = new Point(385, 107);
+            button1.Name = "button1";
+            button1.Size = new Size(53, 51);
+            button1.TabIndex = 101;
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.Transparent;
+            button2.Cursor = Cursors.Hand;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button2.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.Location = new Point(560, 107);
+            button2.Name = "button2";
+            button2.Size = new Size(53, 51);
+            button2.TabIndex = 102;
+            button2.UseVisualStyleBackColor = true;
+            // 
             // ApplicationPart4
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1280, 800);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(lblOtherInfo);
             Controls.Add(lblRealEstateInfo);
             Controls.Add(lblBankInfo);
-            Controls.Add(lblEmploymentInfo);
+            Controls.Add(lblLoanInfo);
             Controls.Add(lblCollateralInfo);
-            Controls.Add(label11);
+            Controls.Add(lblEmploymentInfo);
             Controls.Add(label12);
             Controls.Add(btnOtherLoanInfo);
             Controls.Add(btnRealEstateInfo);
             Controls.Add(btnBankInfo);
             Controls.Add(btnEmploymentInfo);
-            Controls.Add(btnCollateralInfo);
-            Controls.Add(btnLoanInfo);
             Controls.Add(btnPersonalInfo);
             Controls.Add(cbDependents);
-            Controls.Add(cbTypeOfProperty);
+            Controls.Add(cbYearsInBusiness);
             Controls.Add(txtTIN);
             Controls.Add(txtOccupation);
             Controls.Add(txtEmployerTrunkLine);
@@ -565,6 +566,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "ApplicationPart4";
             Text = "ApplicationPart4";
+            Load += ApplicationPart4_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -593,21 +595,21 @@
         private TextBox txtEmployerTrunkLine;
         private TextBox txtOccupation;
         private TextBox txtTIN;
-        private ComboBox cbTypeOfProperty;
+        private ComboBox cbYearsInBusiness;
         private ComboBox cbDependents;
         private Label lblOtherInfo;
         private Label lblRealEstateInfo;
         private Label lblBankInfo;
-        private Label lblEmploymentInfo;
+        private Label lblLoanInfo;
         private Label lblCollateralInfo;
-        private Label label11;
+        private Label lblEmploymentInfo;
         private Label label12;
         private Button btnOtherLoanInfo;
         private Button btnRealEstateInfo;
         private Button btnBankInfo;
         private Button btnEmploymentInfo;
-        private Button btnCollateralInfo;
-        private Button btnLoanInfo;
         private Button btnPersonalInfo;
+        private Button button1;
+        private Button button2;
     }
 }

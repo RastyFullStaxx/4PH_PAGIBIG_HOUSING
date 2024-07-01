@@ -45,13 +45,12 @@
             txtLotNo = new TextBox();
             txtLandAreaMeasurement = new TextBox();
             txtBlockNo = new TextBox();
-            lblLoanInfo = new Label();
             lblOtherInfo = new Label();
             lblRealEstateInfo = new Label();
             lblBankInfo = new Label();
-            lblEmploymentInfo = new Label();
+            lblLoanInfo = new Label();
             lblCollateralInfo = new Label();
-            label8 = new Label();
+            lblEmploymentInfo = new Label();
             label9 = new Label();
             btnOtherLoanInfo = new Button();
             btnRealEstateInfo = new Button();
@@ -75,7 +74,6 @@
             lblNameOfProperty.Size = new Size(121, 15);
             lblNameOfProperty.TabIndex = 19;
             lblNameOfProperty.Text = "NAME OF PROPERTY";
-            lblNameOfProperty.Click += lblMRID_Click;
             // 
             // lblPropertlyLocation
             // 
@@ -239,19 +237,6 @@
             txtBlockNo.Size = new Size(174, 23);
             txtBlockNo.TabIndex = 38;
             // 
-            // lblLoanInfo
-            // 
-            lblLoanInfo.AutoSize = true;
-            lblLoanInfo.BackColor = Color.White;
-            lblLoanInfo.FlatStyle = FlatStyle.Flat;
-            lblLoanInfo.Font = new Font("Segoe UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblLoanInfo.ForeColor = Color.Gray;
-            lblLoanInfo.Location = new Point(817, 515);
-            lblLoanInfo.Name = "lblLoanInfo";
-            lblLoanInfo.Size = new Size(95, 13);
-            lblLoanInfo.TabIndex = 57;
-            lblLoanInfo.Text = "SQUARE METERS";
-            // 
             // lblOtherInfo
             // 
             lblOtherInfo.AutoSize = true;
@@ -291,18 +276,18 @@
             lblBankInfo.TabIndex = 80;
             lblBankInfo.Text = "BANK INFO";
             // 
-            // lblEmploymentInfo
+            // lblLoanInfo
             // 
-            lblEmploymentInfo.AutoSize = true;
-            lblEmploymentInfo.BackColor = Color.Transparent;
-            lblEmploymentInfo.FlatStyle = FlatStyle.Flat;
-            lblEmploymentInfo.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblEmploymentInfo.ForeColor = SystemColors.AppWorkspace;
-            lblEmploymentInfo.Location = new Point(526, 172);
-            lblEmploymentInfo.Name = "lblEmploymentInfo";
-            lblEmploymentInfo.Size = new Size(117, 15);
-            lblEmploymentInfo.TabIndex = 79;
-            lblEmploymentInfo.Text = "EMPLOYMENT INFO";
+            lblLoanInfo.AutoSize = true;
+            lblLoanInfo.BackColor = Color.Transparent;
+            lblLoanInfo.FlatStyle = FlatStyle.Flat;
+            lblLoanInfo.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblLoanInfo.ForeColor = SystemColors.AppWorkspace;
+            lblLoanInfo.Location = new Point(526, 172);
+            lblLoanInfo.Name = "lblLoanInfo";
+            lblLoanInfo.Size = new Size(70, 15);
+            lblLoanInfo.TabIndex = 79;
+            lblLoanInfo.Text = "LOAN INFO";
             // 
             // lblCollateralInfo
             // 
@@ -317,18 +302,18 @@
             lblCollateralInfo.TabIndex = 78;
             lblCollateralInfo.Text = "COLLATERAL INFO";
             // 
-            // label8
+            // lblEmploymentInfo
             // 
-            label8.AutoSize = true;
-            label8.BackColor = Color.Transparent;
-            label8.FlatStyle = FlatStyle.Flat;
-            label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.ForeColor = SystemColors.ActiveCaptionText;
-            label8.Location = new Point(212, 172);
-            label8.Name = "label8";
-            label8.Size = new Size(70, 15);
-            label8.TabIndex = 77;
-            label8.Text = "LOAN INFO";
+            lblEmploymentInfo.AutoSize = true;
+            lblEmploymentInfo.BackColor = Color.Transparent;
+            lblEmploymentInfo.FlatStyle = FlatStyle.Flat;
+            lblEmploymentInfo.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblEmploymentInfo.ForeColor = SystemColors.ActiveCaptionText;
+            lblEmploymentInfo.Location = new Point(192, 172);
+            lblEmploymentInfo.Name = "lblEmploymentInfo";
+            lblEmploymentInfo.Size = new Size(117, 15);
+            lblEmploymentInfo.TabIndex = 77;
+            lblEmploymentInfo.Text = "EMPLOYMENT INFO";
             // 
             // label9
             // 
@@ -478,9 +463,9 @@
             Controls.Add(lblOtherInfo);
             Controls.Add(lblRealEstateInfo);
             Controls.Add(lblBankInfo);
-            Controls.Add(lblEmploymentInfo);
+            Controls.Add(lblLoanInfo);
             Controls.Add(lblCollateralInfo);
-            Controls.Add(label8);
+            Controls.Add(lblEmploymentInfo);
             Controls.Add(label9);
             Controls.Add(btnOtherLoanInfo);
             Controls.Add(btnRealEstateInfo);
@@ -489,7 +474,6 @@
             Controls.Add(btnCollateralInfo);
             Controls.Add(btnLoanInfo);
             Controls.Add(btnPersonalInfo);
-            Controls.Add(lblLoanInfo);
             Controls.Add(txtBlockNo);
             Controls.Add(txtLandAreaMeasurement);
             Controls.Add(txtLotNo);
@@ -509,6 +493,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "ApplicationPart3";
             Text = "ApplicationPart3";
+            Load += ApplicationPart3_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -531,13 +516,12 @@
         private TextBox txtLotNo;
         private TextBox txtLandAreaMeasurement;
         private TextBox txtBlockNo;
-        private Label lblLoanInfo;
         private Label lblOtherInfo;
         private Label lblRealEstateInfo;
         private Label lblBankInfo;
-        private Label lblEmploymentInfo;
+        private Label lblLoanInfo;
         private Label lblCollateralInfo;
-        private Label label8;
+        private Label lblEmploymentInfo;
         private Label label9;
         private Button btnOtherLoanInfo;
         private Button btnRealEstateInfo;
