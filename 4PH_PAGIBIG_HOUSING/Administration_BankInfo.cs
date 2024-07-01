@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace _4PH_PAGIBIG_HOUSING
 {
-    public partial class Administration_Side : Form
+    public partial class Administration_BankInfo : Form
     {
-        public Administration_Side()
+        public Administration_BankInfo()
         {
             InitializeComponent();
         }

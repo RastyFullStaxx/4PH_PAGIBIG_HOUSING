@@ -29,152 +29,177 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ApplicationPart4));
-            lblMRID = new Label();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            label10 = new Label();
+            lblGSIS = new Label();
+            lblEmployerAddress = new Label();
+            lblEmployerEmail = new Label();
+            lblPosition = new Label();
+            lblEmployerName = new Label();
+            lblEmployerDirectLine = new Label();
+            lblOccupation = new Label();
+            lblYearsInBusiness = new Label();
+            lblEmployerTrunkLine = new Label();
+            lblTIN = new Label();
+            lblNoOfDependents = new Label();
             btnBack = new Button();
             btnNext = new Button();
+            txtGSIS = new TextBox();
+            txtEmployerAddress = new TextBox();
+            txtEmailAddress = new TextBox();
+            txtPosition = new TextBox();
+            txtEmployerName = new TextBox();
+            txtEmployerDirectLine = new TextBox();
+            txtEmployerTrunkLine = new TextBox();
+            txtOccupation = new TextBox();
+            txtTIN = new TextBox();
+            cbTypeOfProperty = new ComboBox();
+            cbDependents = new ComboBox();
+            lblOtherInfo = new Label();
+            lblRealEstateInfo = new Label();
+            lblBankInfo = new Label();
+            lblEmploymentInfo = new Label();
+            lblCollateralInfo = new Label();
+            label11 = new Label();
+            label12 = new Label();
+            btnOtherLoanInfo = new Button();
+            btnRealEstateInfo = new Button();
+            btnBankInfo = new Button();
+            btnEmploymentInfo = new Button();
+            btnCollateralInfo = new Button();
+            btnLoanInfo = new Button();
+            btnPersonalInfo = new Button();
             SuspendLayout();
             // 
-            // lblMRID
+            // lblGSIS
             // 
-            lblMRID.AutoSize = true;
-            lblMRID.BackColor = Color.Transparent;
-            lblMRID.FlatStyle = FlatStyle.Flat;
-            lblMRID.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMRID.Location = new Point(71, 269);
-            lblMRID.Name = "lblMRID";
-            lblMRID.Size = new Size(115, 15);
-            lblMRID.TabIndex = 20;
-            lblMRID.Text = "EE SSS/GSIS ID NO.";
+            lblGSIS.AutoSize = true;
+            lblGSIS.BackColor = Color.Transparent;
+            lblGSIS.FlatStyle = FlatStyle.Flat;
+            lblGSIS.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblGSIS.Location = new Point(71, 269);
+            lblGSIS.Name = "lblGSIS";
+            lblGSIS.Size = new Size(115, 15);
+            lblGSIS.TabIndex = 20;
+            lblGSIS.Text = "EE SSS/GSIS ID NO.";
             // 
-            // label1
+            // lblEmployerAddress
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.FlatStyle = FlatStyle.Flat;
-            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(71, 360);
-            label1.Name = "label1";
-            label1.Size = new Size(186, 15);
-            label1.TabIndex = 21;
-            label1.Text = "EMPLOYER/BUSINESS ADDRESS";
+            lblEmployerAddress.AutoSize = true;
+            lblEmployerAddress.BackColor = Color.Transparent;
+            lblEmployerAddress.FlatStyle = FlatStyle.Flat;
+            lblEmployerAddress.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblEmployerAddress.Location = new Point(71, 360);
+            lblEmployerAddress.Name = "lblEmployerAddress";
+            lblEmployerAddress.Size = new Size(186, 15);
+            lblEmployerAddress.TabIndex = 21;
+            lblEmployerAddress.Text = "EMPLOYER/BUSINESS ADDRESS";
             // 
-            // label2
+            // lblEmployerEmail
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.FlatStyle = FlatStyle.Flat;
-            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(71, 457);
-            label2.Name = "label2";
-            label2.Size = new Size(162, 15);
-            label2.TabIndex = 22;
-            label2.Text = "EMPLOYER EMAIL ADDRESS";
+            lblEmployerEmail.AutoSize = true;
+            lblEmployerEmail.BackColor = Color.Transparent;
+            lblEmployerEmail.FlatStyle = FlatStyle.Flat;
+            lblEmployerEmail.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblEmployerEmail.Location = new Point(71, 457);
+            lblEmployerEmail.Name = "lblEmployerEmail";
+            lblEmployerEmail.Size = new Size(162, 15);
+            lblEmployerEmail.TabIndex = 22;
+            lblEmployerEmail.Text = "EMPLOYER EMAIL ADDRESS";
             // 
-            // label3
+            // lblPosition
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.FlatStyle = FlatStyle.Flat;
-            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(71, 548);
-            label3.Name = "label3";
-            label3.Size = new Size(145, 15);
-            label3.TabIndex = 23;
-            label3.Text = "POSITION/DEPARTMENT";
+            lblPosition.AutoSize = true;
+            lblPosition.BackColor = Color.Transparent;
+            lblPosition.FlatStyle = FlatStyle.Flat;
+            lblPosition.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPosition.Location = new Point(71, 548);
+            lblPosition.Name = "lblPosition";
+            lblPosition.Size = new Size(145, 15);
+            lblPosition.TabIndex = 23;
+            lblPosition.Text = "POSITION/DEPARTMENT";
             // 
-            // label4
+            // lblEmployerName
             // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Transparent;
-            label4.FlatStyle = FlatStyle.Flat;
-            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(602, 269);
-            label4.Name = "label4";
-            label4.Size = new Size(166, 15);
-            label4.TabIndex = 24;
-            label4.Text = "EMPLOYER/BUSINESS NAME";
+            lblEmployerName.AutoSize = true;
+            lblEmployerName.BackColor = Color.Transparent;
+            lblEmployerName.FlatStyle = FlatStyle.Flat;
+            lblEmployerName.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblEmployerName.Location = new Point(602, 269);
+            lblEmployerName.Name = "lblEmployerName";
+            lblEmployerName.Size = new Size(166, 15);
+            lblEmployerName.TabIndex = 24;
+            lblEmployerName.Text = "EMPLOYER/BUSINESS NAME";
             // 
-            // label5
+            // lblEmployerDirectLine
             // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.Transparent;
-            label5.FlatStyle = FlatStyle.Flat;
-            label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(602, 360);
-            label5.Name = "label5";
-            label5.Size = new Size(139, 15);
-            label5.TabIndex = 25;
-            label5.Text = "EMPLOYER DIRECT LINE";
+            lblEmployerDirectLine.AutoSize = true;
+            lblEmployerDirectLine.BackColor = Color.Transparent;
+            lblEmployerDirectLine.FlatStyle = FlatStyle.Flat;
+            lblEmployerDirectLine.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblEmployerDirectLine.Location = new Point(602, 360);
+            lblEmployerDirectLine.Name = "lblEmployerDirectLine";
+            lblEmployerDirectLine.Size = new Size(139, 15);
+            lblEmployerDirectLine.TabIndex = 25;
+            lblEmployerDirectLine.Text = "EMPLOYER DIRECT LINE";
             // 
-            // label6
+            // lblOccupation
             // 
-            label6.AutoSize = true;
-            label6.BackColor = Color.Transparent;
-            label6.FlatStyle = FlatStyle.Flat;
-            label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(602, 457);
-            label6.Name = "label6";
-            label6.Size = new Size(81, 15);
-            label6.TabIndex = 26;
-            label6.Text = "OCCUPATION";
+            lblOccupation.AutoSize = true;
+            lblOccupation.BackColor = Color.Transparent;
+            lblOccupation.FlatStyle = FlatStyle.Flat;
+            lblOccupation.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblOccupation.Location = new Point(602, 457);
+            lblOccupation.Name = "lblOccupation";
+            lblOccupation.Size = new Size(81, 15);
+            lblOccupation.TabIndex = 26;
+            lblOccupation.Text = "OCCUPATION";
             // 
-            // label7
+            // lblYearsInBusiness
             // 
-            label7.AutoSize = true;
-            label7.BackColor = Color.Transparent;
-            label7.FlatStyle = FlatStyle.Flat;
-            label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(602, 548);
-            label7.Name = "label7";
-            label7.Size = new Size(203, 15);
-            label7.TabIndex = 27;
-            label7.Text = "YEARS IN BUSINESS/EMPLOYMENT";
+            lblYearsInBusiness.AutoSize = true;
+            lblYearsInBusiness.BackColor = Color.Transparent;
+            lblYearsInBusiness.FlatStyle = FlatStyle.Flat;
+            lblYearsInBusiness.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblYearsInBusiness.Location = new Point(602, 548);
+            lblYearsInBusiness.Name = "lblYearsInBusiness";
+            lblYearsInBusiness.Size = new Size(203, 15);
+            lblYearsInBusiness.TabIndex = 27;
+            lblYearsInBusiness.Text = "YEARS IN BUSINESS/EMPLOYMENT";
             // 
-            // label8
+            // lblEmployerTrunkLine
             // 
-            label8.AutoSize = true;
-            label8.BackColor = Color.Transparent;
-            label8.FlatStyle = FlatStyle.Flat;
-            label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(871, 360);
-            label8.Name = "label8";
-            label8.Size = new Size(139, 15);
-            label8.TabIndex = 28;
-            label8.Text = "EMPLOYER TRUNK LINE";
+            lblEmployerTrunkLine.AutoSize = true;
+            lblEmployerTrunkLine.BackColor = Color.Transparent;
+            lblEmployerTrunkLine.FlatStyle = FlatStyle.Flat;
+            lblEmployerTrunkLine.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblEmployerTrunkLine.Location = new Point(871, 360);
+            lblEmployerTrunkLine.Name = "lblEmployerTrunkLine";
+            lblEmployerTrunkLine.Size = new Size(139, 15);
+            lblEmployerTrunkLine.TabIndex = 28;
+            lblEmployerTrunkLine.Text = "EMPLOYER TRUNK LINE";
             // 
-            // label9
+            // lblTIN
             // 
-            label9.AutoSize = true;
-            label9.BackColor = Color.Transparent;
-            label9.FlatStyle = FlatStyle.Flat;
-            label9.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(871, 457);
-            label9.Name = "label9";
-            label9.Size = new Size(27, 15);
-            label9.TabIndex = 29;
-            label9.Text = "TIN";
+            lblTIN.AutoSize = true;
+            lblTIN.BackColor = Color.Transparent;
+            lblTIN.FlatStyle = FlatStyle.Flat;
+            lblTIN.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTIN.Location = new Point(871, 457);
+            lblTIN.Name = "lblTIN";
+            lblTIN.Size = new Size(27, 15);
+            lblTIN.TabIndex = 29;
+            lblTIN.Text = "TIN";
             // 
-            // label10
+            // lblNoOfDependents
             // 
-            label10.AutoSize = true;
-            label10.BackColor = Color.Transparent;
-            label10.FlatStyle = FlatStyle.Flat;
-            label10.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.Location = new Point(871, 548);
-            label10.Name = "label10";
-            label10.Size = new Size(124, 15);
-            label10.TabIndex = 30;
-            label10.Text = "NO. OF DEPENDENTS";
+            lblNoOfDependents.AutoSize = true;
+            lblNoOfDependents.BackColor = Color.Transparent;
+            lblNoOfDependents.FlatStyle = FlatStyle.Flat;
+            lblNoOfDependents.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblNoOfDependents.Location = new Point(871, 548);
+            lblNoOfDependents.Name = "lblNoOfDependents";
+            lblNoOfDependents.Size = new Size(124, 15);
+            lblNoOfDependents.TabIndex = 30;
+            lblNoOfDependents.Text = "NO. OF DEPENDENTS";
             // 
             // btnBack
             // 
@@ -206,25 +231,337 @@
             btnNext.TabIndex = 32;
             btnNext.UseVisualStyleBackColor = true;
             // 
+            // txtGSIS
+            // 
+            txtGSIS.BackColor = Color.WhiteSmoke;
+            txtGSIS.Location = new Point(71, 287);
+            txtGSIS.Name = "txtGSIS";
+            txtGSIS.Size = new Size(504, 23);
+            txtGSIS.TabIndex = 33;
+            // 
+            // txtEmployerAddress
+            // 
+            txtEmployerAddress.BackColor = Color.WhiteSmoke;
+            txtEmployerAddress.Location = new Point(71, 378);
+            txtEmployerAddress.Name = "txtEmployerAddress";
+            txtEmployerAddress.Size = new Size(504, 23);
+            txtEmployerAddress.TabIndex = 34;
+            // 
+            // txtEmailAddress
+            // 
+            txtEmailAddress.BackColor = Color.WhiteSmoke;
+            txtEmailAddress.Location = new Point(71, 475);
+            txtEmailAddress.Name = "txtEmailAddress";
+            txtEmailAddress.Size = new Size(504, 23);
+            txtEmailAddress.TabIndex = 35;
+            // 
+            // txtPosition
+            // 
+            txtPosition.BackColor = Color.WhiteSmoke;
+            txtPosition.Location = new Point(71, 566);
+            txtPosition.Name = "txtPosition";
+            txtPosition.Size = new Size(504, 23);
+            txtPosition.TabIndex = 36;
+            // 
+            // txtEmployerName
+            // 
+            txtEmployerName.BackColor = Color.WhiteSmoke;
+            txtEmployerName.Location = new Point(602, 287);
+            txtEmployerName.Name = "txtEmployerName";
+            txtEmployerName.Size = new Size(504, 23);
+            txtEmployerName.TabIndex = 37;
+            // 
+            // txtEmployerDirectLine
+            // 
+            txtEmployerDirectLine.BackColor = Color.WhiteSmoke;
+            txtEmployerDirectLine.Location = new Point(602, 378);
+            txtEmployerDirectLine.Name = "txtEmployerDirectLine";
+            txtEmployerDirectLine.Size = new Size(243, 23);
+            txtEmployerDirectLine.TabIndex = 38;
+            // 
+            // txtEmployerTrunkLine
+            // 
+            txtEmployerTrunkLine.BackColor = Color.WhiteSmoke;
+            txtEmployerTrunkLine.Location = new Point(871, 378);
+            txtEmployerTrunkLine.Name = "txtEmployerTrunkLine";
+            txtEmployerTrunkLine.Size = new Size(235, 23);
+            txtEmployerTrunkLine.TabIndex = 39;
+            // 
+            // txtOccupation
+            // 
+            txtOccupation.BackColor = Color.WhiteSmoke;
+            txtOccupation.Location = new Point(602, 475);
+            txtOccupation.Name = "txtOccupation";
+            txtOccupation.Size = new Size(243, 23);
+            txtOccupation.TabIndex = 40;
+            // 
+            // txtTIN
+            // 
+            txtTIN.BackColor = Color.WhiteSmoke;
+            txtTIN.Location = new Point(871, 475);
+            txtTIN.Name = "txtTIN";
+            txtTIN.Size = new Size(235, 23);
+            txtTIN.TabIndex = 41;
+            // 
+            // cbTypeOfProperty
+            // 
+            cbTypeOfProperty.FormattingEnabled = true;
+            cbTypeOfProperty.Items.AddRange(new object[] { "Male", "Female", "Beks" });
+            cbTypeOfProperty.Location = new Point(602, 566);
+            cbTypeOfProperty.Name = "cbTypeOfProperty";
+            cbTypeOfProperty.Size = new Size(243, 23);
+            cbTypeOfProperty.TabIndex = 85;
+            cbTypeOfProperty.Text = " ";
+            // 
+            // cbDependents
+            // 
+            cbDependents.FormattingEnabled = true;
+            cbDependents.Items.AddRange(new object[] { "Male", "Female", "Beks" });
+            cbDependents.Location = new Point(871, 566);
+            cbDependents.Name = "cbDependents";
+            cbDependents.Size = new Size(235, 23);
+            cbDependents.TabIndex = 86;
+            cbDependents.Text = " ";
+            // 
+            // lblOtherInfo
+            // 
+            lblOtherInfo.AutoSize = true;
+            lblOtherInfo.BackColor = Color.Transparent;
+            lblOtherInfo.FlatStyle = FlatStyle.Flat;
+            lblOtherInfo.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblOtherInfo.ForeColor = SystemColors.AppWorkspace;
+            lblOtherInfo.Location = new Point(1048, 172);
+            lblOtherInfo.Name = "lblOtherInfo";
+            lblOtherInfo.Size = new Size(112, 15);
+            lblOtherInfo.TabIndex = 100;
+            lblOtherInfo.Text = "OTHER LOAN INFO";
+            // 
+            // lblRealEstateInfo
+            // 
+            lblRealEstateInfo.AutoSize = true;
+            lblRealEstateInfo.BackColor = Color.Transparent;
+            lblRealEstateInfo.FlatStyle = FlatStyle.Flat;
+            lblRealEstateInfo.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblRealEstateInfo.ForeColor = SystemColors.AppWorkspace;
+            lblRealEstateInfo.Location = new Point(882, 172);
+            lblRealEstateInfo.Name = "lblRealEstateInfo";
+            lblRealEstateInfo.Size = new Size(108, 15);
+            lblRealEstateInfo.TabIndex = 99;
+            lblRealEstateInfo.Text = "REAL ESTATE INFO";
+            // 
+            // lblBankInfo
+            // 
+            lblBankInfo.AutoSize = true;
+            lblBankInfo.BackColor = Color.Transparent;
+            lblBankInfo.FlatStyle = FlatStyle.Flat;
+            lblBankInfo.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblBankInfo.ForeColor = SystemColors.AppWorkspace;
+            lblBankInfo.Location = new Point(730, 172);
+            lblBankInfo.Name = "lblBankInfo";
+            lblBankInfo.Size = new Size(71, 15);
+            lblBankInfo.TabIndex = 98;
+            lblBankInfo.Text = "BANK INFO";
+            // 
+            // lblEmploymentInfo
+            // 
+            lblEmploymentInfo.AutoSize = true;
+            lblEmploymentInfo.BackColor = Color.Transparent;
+            lblEmploymentInfo.FlatStyle = FlatStyle.Flat;
+            lblEmploymentInfo.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblEmploymentInfo.ForeColor = SystemColors.ActiveCaptionText;
+            lblEmploymentInfo.Location = new Point(526, 172);
+            lblEmploymentInfo.Name = "lblEmploymentInfo";
+            lblEmploymentInfo.Size = new Size(117, 15);
+            lblEmploymentInfo.TabIndex = 97;
+            lblEmploymentInfo.Text = "EMPLOYMENT INFO";
+            // 
+            // lblCollateralInfo
+            // 
+            lblCollateralInfo.AutoSize = true;
+            lblCollateralInfo.BackColor = Color.Transparent;
+            lblCollateralInfo.FlatStyle = FlatStyle.Flat;
+            lblCollateralInfo.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCollateralInfo.ForeColor = SystemColors.ActiveCaptionText;
+            lblCollateralInfo.Location = new Point(357, 172);
+            lblCollateralInfo.Name = "lblCollateralInfo";
+            lblCollateralInfo.Size = new Size(108, 15);
+            lblCollateralInfo.TabIndex = 96;
+            lblCollateralInfo.Text = "COLLATERAL INFO";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.BackColor = Color.Transparent;
+            label11.FlatStyle = FlatStyle.Flat;
+            label11.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label11.ForeColor = SystemColors.ActiveCaptionText;
+            label11.Location = new Point(212, 172);
+            label11.Name = "label11";
+            label11.Size = new Size(70, 15);
+            label11.TabIndex = 95;
+            label11.Text = "LOAN INFO";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.BackColor = Color.Transparent;
+            label12.FlatStyle = FlatStyle.Flat;
+            label12.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label12.Location = new Point(70, 172);
+            label12.Name = "label12";
+            label12.Size = new Size(98, 15);
+            label12.TabIndex = 94;
+            label12.Text = "PERSONAL INFO";
+            // 
+            // btnOtherLoanInfo
+            // 
+            btnOtherLoanInfo.BackColor = Color.Transparent;
+            btnOtherLoanInfo.Cursor = Cursors.Hand;
+            btnOtherLoanInfo.FlatAppearance.BorderSize = 0;
+            btnOtherLoanInfo.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnOtherLoanInfo.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnOtherLoanInfo.FlatStyle = FlatStyle.Flat;
+            btnOtherLoanInfo.Image = (Image)resources.GetObject("btnOtherLoanInfo.Image");
+            btnOtherLoanInfo.Location = new Point(1077, 118);
+            btnOtherLoanInfo.Name = "btnOtherLoanInfo";
+            btnOtherLoanInfo.Size = new Size(53, 51);
+            btnOtherLoanInfo.TabIndex = 93;
+            btnOtherLoanInfo.UseVisualStyleBackColor = true;
+            // 
+            // btnRealEstateInfo
+            // 
+            btnRealEstateInfo.BackColor = Color.Transparent;
+            btnRealEstateInfo.Cursor = Cursors.Hand;
+            btnRealEstateInfo.FlatAppearance.BorderSize = 0;
+            btnRealEstateInfo.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnRealEstateInfo.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnRealEstateInfo.FlatStyle = FlatStyle.Flat;
+            btnRealEstateInfo.Image = (Image)resources.GetObject("btnRealEstateInfo.Image");
+            btnRealEstateInfo.Location = new Point(908, 118);
+            btnRealEstateInfo.Name = "btnRealEstateInfo";
+            btnRealEstateInfo.Size = new Size(53, 51);
+            btnRealEstateInfo.TabIndex = 92;
+            btnRealEstateInfo.UseVisualStyleBackColor = true;
+            // 
+            // btnBankInfo
+            // 
+            btnBankInfo.BackColor = Color.Transparent;
+            btnBankInfo.Cursor = Cursors.Hand;
+            btnBankInfo.FlatAppearance.BorderSize = 0;
+            btnBankInfo.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnBankInfo.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnBankInfo.FlatStyle = FlatStyle.Flat;
+            btnBankInfo.Image = (Image)resources.GetObject("btnBankInfo.Image");
+            btnBankInfo.Location = new Point(738, 118);
+            btnBankInfo.Name = "btnBankInfo";
+            btnBankInfo.Size = new Size(53, 51);
+            btnBankInfo.TabIndex = 91;
+            btnBankInfo.UseVisualStyleBackColor = true;
+            // 
+            // btnEmploymentInfo
+            // 
+            btnEmploymentInfo.BackColor = Color.Transparent;
+            btnEmploymentInfo.Cursor = Cursors.Hand;
+            btnEmploymentInfo.FlatAppearance.BorderSize = 0;
+            btnEmploymentInfo.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnEmploymentInfo.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnEmploymentInfo.FlatStyle = FlatStyle.Flat;
+            btnEmploymentInfo.Image = (Image)resources.GetObject("btnEmploymentInfo.Image");
+            btnEmploymentInfo.Location = new Point(555, 118);
+            btnEmploymentInfo.Name = "btnEmploymentInfo";
+            btnEmploymentInfo.Size = new Size(53, 51);
+            btnEmploymentInfo.TabIndex = 90;
+            btnEmploymentInfo.UseVisualStyleBackColor = true;
+            // 
+            // btnCollateralInfo
+            // 
+            btnCollateralInfo.BackColor = Color.Transparent;
+            btnCollateralInfo.Cursor = Cursors.Hand;
+            btnCollateralInfo.FlatAppearance.BorderSize = 0;
+            btnCollateralInfo.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnCollateralInfo.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnCollateralInfo.FlatStyle = FlatStyle.Flat;
+            btnCollateralInfo.Image = (Image)resources.GetObject("btnCollateralInfo.Image");
+            btnCollateralInfo.Location = new Point(383, 118);
+            btnCollateralInfo.Name = "btnCollateralInfo";
+            btnCollateralInfo.Size = new Size(53, 51);
+            btnCollateralInfo.TabIndex = 89;
+            btnCollateralInfo.UseVisualStyleBackColor = true;
+            // 
+            // btnLoanInfo
+            // 
+            btnLoanInfo.BackColor = Color.Transparent;
+            btnLoanInfo.Cursor = Cursors.Hand;
+            btnLoanInfo.FlatAppearance.BorderSize = 0;
+            btnLoanInfo.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnLoanInfo.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnLoanInfo.FlatStyle = FlatStyle.Flat;
+            btnLoanInfo.Image = (Image)resources.GetObject("btnLoanInfo.Image");
+            btnLoanInfo.Location = new Point(221, 118);
+            btnLoanInfo.Name = "btnLoanInfo";
+            btnLoanInfo.Size = new Size(53, 51);
+            btnLoanInfo.TabIndex = 88;
+            btnLoanInfo.UseVisualStyleBackColor = true;
+            // 
+            // btnPersonalInfo
+            // 
+            btnPersonalInfo.BackColor = Color.Transparent;
+            btnPersonalInfo.Cursor = Cursors.Hand;
+            btnPersonalInfo.FlatAppearance.BorderSize = 0;
+            btnPersonalInfo.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnPersonalInfo.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnPersonalInfo.FlatStyle = FlatStyle.Flat;
+            btnPersonalInfo.Image = (Image)resources.GetObject("btnPersonalInfo.Image");
+            btnPersonalInfo.Location = new Point(88, 118);
+            btnPersonalInfo.Name = "btnPersonalInfo";
+            btnPersonalInfo.Size = new Size(53, 51);
+            btnPersonalInfo.TabIndex = 87;
+            btnPersonalInfo.UseVisualStyleBackColor = true;
+            // 
             // ApplicationPart4
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1280, 800);
+            Controls.Add(lblOtherInfo);
+            Controls.Add(lblRealEstateInfo);
+            Controls.Add(lblBankInfo);
+            Controls.Add(lblEmploymentInfo);
+            Controls.Add(lblCollateralInfo);
+            Controls.Add(label11);
+            Controls.Add(label12);
+            Controls.Add(btnOtherLoanInfo);
+            Controls.Add(btnRealEstateInfo);
+            Controls.Add(btnBankInfo);
+            Controls.Add(btnEmploymentInfo);
+            Controls.Add(btnCollateralInfo);
+            Controls.Add(btnLoanInfo);
+            Controls.Add(btnPersonalInfo);
+            Controls.Add(cbDependents);
+            Controls.Add(cbTypeOfProperty);
+            Controls.Add(txtTIN);
+            Controls.Add(txtOccupation);
+            Controls.Add(txtEmployerTrunkLine);
+            Controls.Add(txtEmployerDirectLine);
+            Controls.Add(txtEmployerName);
+            Controls.Add(txtPosition);
+            Controls.Add(txtEmailAddress);
+            Controls.Add(txtEmployerAddress);
+            Controls.Add(txtGSIS);
             Controls.Add(btnNext);
             Controls.Add(btnBack);
-            Controls.Add(label10);
-            Controls.Add(label9);
-            Controls.Add(label8);
-            Controls.Add(label7);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(lblMRID);
+            Controls.Add(lblNoOfDependents);
+            Controls.Add(lblTIN);
+            Controls.Add(lblEmployerTrunkLine);
+            Controls.Add(lblYearsInBusiness);
+            Controls.Add(lblOccupation);
+            Controls.Add(lblEmployerDirectLine);
+            Controls.Add(lblEmployerName);
+            Controls.Add(lblPosition);
+            Controls.Add(lblEmployerEmail);
+            Controls.Add(lblEmployerAddress);
+            Controls.Add(lblGSIS);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ApplicationPart4";
             Text = "ApplicationPart4";
@@ -234,18 +571,43 @@
 
         #endregion
 
-        private Label lblMRID;
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private Label label6;
-        private Label label7;
-        private Label label8;
-        private Label label9;
-        private Label label10;
+        private Label lblGSIS;
+        private Label lblEmployerAddress;
+        private Label lblEmployerEmail;
+        private Label lblPosition;
+        private Label lblEmployerName;
+        private Label lblEmployerDirectLine;
+        private Label lblOccupation;
+        private Label lblYearsInBusiness;
+        private Label lblEmployerTrunkLine;
+        private Label lblTIN;
+        private Label lblNoOfDependents;
         private Button btnBack;
         private Button btnNext;
+        private TextBox txtGSIS;
+        private TextBox txtEmployerAddress;
+        private TextBox txtEmailAddress;
+        private TextBox txtPosition;
+        private TextBox txtEmployerName;
+        private TextBox txtEmployerDirectLine;
+        private TextBox txtEmployerTrunkLine;
+        private TextBox txtOccupation;
+        private TextBox txtTIN;
+        private ComboBox cbTypeOfProperty;
+        private ComboBox cbDependents;
+        private Label lblOtherInfo;
+        private Label lblRealEstateInfo;
+        private Label lblBankInfo;
+        private Label lblEmploymentInfo;
+        private Label lblCollateralInfo;
+        private Label label11;
+        private Label label12;
+        private Button btnOtherLoanInfo;
+        private Button btnRealEstateInfo;
+        private Button btnBankInfo;
+        private Button btnEmploymentInfo;
+        private Button btnCollateralInfo;
+        private Button btnLoanInfo;
+        private Button btnPersonalInfo;
     }
 }

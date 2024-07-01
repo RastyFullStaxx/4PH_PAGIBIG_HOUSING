@@ -10,7 +10,7 @@ namespace _4PH_PAGIBIG_HOUSING.DbContext
     {
             public string? Pag_IBIG_MID_Number_RTN { get; set; }
             public string? Borrower_Name { get; set; }
-            public string? Borrower_Citizenship { get; set; }
+            public string? Borrower_Nationality { get; set; }
             public DateTime Birthdate { get; set; }
             public char Sex { get; set; }
             public string? Permanent_Address { get; set; }
@@ -22,6 +22,15 @@ namespace _4PH_PAGIBIG_HOUSING.DbContext
             public string? Home_Ownership { get; set; }
             public int Years_of_Stay { get; set; }
             public string? EE_SSS_GSIS_ID_No { get; set; }
-        
+        // Method to convert ComboBox selection to single character
+        public void SetSexFromComboBox(string selectedSex)
+        {
+            if (selectedSex == "Male")
+                Sex = 'M';
+            else if (selectedSex == "Female")
+                Sex = 'F';
+            else
+                throw new ArgumentException("Invalid sex selection.");
+        }
     }
 }
