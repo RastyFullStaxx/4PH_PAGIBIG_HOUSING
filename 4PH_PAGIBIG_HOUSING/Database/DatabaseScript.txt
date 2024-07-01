@@ -4,8 +4,7 @@ CREATE DATABASE IF NOT EXISTS PagIBIGHousing;
 -- Use the new database
 USE PagIBIGHousing;
 
--- Create the tables
-
+-- Table for storing borrower information
 CREATE TABLE BORROWER_INFORMATION (
     Pag_IBIG_MID_Number_RTN VARCHAR(14) PRIMARY KEY,
     Borrower_Name VARCHAR(100) NOT NULL,
@@ -24,6 +23,7 @@ CREATE TABLE BORROWER_INFORMATION (
     UNIQUE (EE_SSS_GSIS_ID_No)  -- Make EE_SSS_GSIS_ID_No unique
 );
 
+-- Table for storing borrower's employment information
 CREATE TABLE BORROWERS_EMPLOYMENT_INFORMATION (
     EE_SSS_GSIS_ID_No NUMERIC(20) PRIMARY KEY,
     Employer_Business_Name VARCHAR(100) NOT NULL,
@@ -39,28 +39,32 @@ CREATE TABLE BORROWERS_EMPLOYMENT_INFORMATION (
     FOREIGN KEY (EE_SSS_GSIS_ID_No) REFERENCES BORROWER_INFORMATION(EE_SSS_GSIS_ID_No)
 );
 
+-- Table for storing collateral information, related to BORROWER_INFORMATION
 CREATE TABLE COLLATERAL_INFORMATION (
-    TCT_OCT_CCT_No VARCHAR(13) PRIMARY KEY,
+    Collateral_ID INT AUTO_INCREMENT PRIMARY KEY,
+    Pag_IBIG_MID_Number_RTN VARCHAR(14) NOT NULL,
+    TCT_OCT_CCT_No VARCHAR(13) NOT NULL,
     Property_Location VARCHAR(120) NOT NULL,
     Type_of_Property VARCHAR(50) NOT NULL CHECK (Type_of_Property IN ('Rowhouse', 'Single Attached', 'Single Detached', 'Condominium', 'Townhouse', 'Duplex')),
     Name_of_Project VARCHAR(50) NOT NULL,
     Tax_Declaration NUMERIC(6) NOT NULL,
     Land_Area NUMERIC(5) NOT NULL,
     Lot_Unit_No VARCHAR(12),
-    Block_Bldg_No VARCHAR(12)
+    Block_Bldg_No VARCHAR(12),
+    FOREIGN KEY (Pag_IBIG_MID_Number_RTN) REFERENCES BORROWER_INFORMATION(Pag_IBIG_MID_Number_RTN)
 );
 
-CREATE TABLE `4PS_HOUSING_LOAN_INFORMATION` (
+-- Table for storing housing loan information
+CREATE TABLE 4PS_HOUSING_LOAN_INFORMATION (
     PAG_IBIG_MID_Number_RTN VARCHAR(14) NOT NULL,
-    TCT_OCT_CCT_No VARCHAR(13) NOT NULL,
     Loan_Amount NUMERIC(7) NOT NULL CHECK (Loan_Amount BETWEEN 1 AND 6000000),
-    Loan_Term VARCHAR(2) NOT NULL CHECK (Loan_Term BETWEEN '1' AND '30'),
+    Loan_Term NUMERIC(2) NOT NULL CHECK (Loan_Term BETWEEN 1 AND 30),
     Mode_of_Payment VARCHAR(40) NOT NULL CHECK (Mode_of_Payment IN ('Salary deduction', 'Over-the-Counter (Post-Dated Checks)', 'Over-the-Counter (Cash/Check)', 'Collecting Agent (Bank)', 'Collecting Agent (Developer)', 'Collecting Agent (Remittance Center)')),
-    PRIMARY KEY (PAG_IBIG_MID_Number_RTN, TCT_OCT_CCT_No),
-    FOREIGN KEY (PAG_IBIG_MID_Number_RTN) REFERENCES BORROWER_INFORMATION(Pag_IBIG_MID_Number_RTN),
-    FOREIGN KEY (TCT_OCT_CCT_No) REFERENCES COLLATERAL_INFORMATION(TCT_OCT_CCT_No)
+    PRIMARY KEY (PAG_IBIG_MID_Number_RTN),
+    FOREIGN KEY (PAG_IBIG_MID_Number_RTN) REFERENCES BORROWER_INFORMATION(Pag_IBIG_MID_Number_RTN)
 );
 
+-- Table for storing banking information
 CREATE TABLE BANKING_INFORMATION (
     PAG_IBIG_MID_Number_RTN VARCHAR(14) NOT NULL,
     Account_No VARCHAR(10) NOT NULL,
@@ -74,8 +78,7 @@ CREATE TABLE BANKING_INFORMATION (
     FOREIGN KEY (PAG_IBIG_MID_Number_RTN) REFERENCES BORROWER_INFORMATION(Pag_IBIG_MID_Number_RTN)
 );
 
-
-
+-- Table for storing real estate information
 CREATE TABLE REAL_ESTATE_INFORMATION (
     PAG_IBIG_MID_Number_RTN VARCHAR(14) NOT NULL,
     Real_Estate_Key INT AUTO_INCREMENT PRIMARY KEY,
@@ -88,7 +91,7 @@ CREATE TABLE REAL_ESTATE_INFORMATION (
     FOREIGN KEY (PAG_IBIG_MID_Number_RTN) REFERENCES BORROWER_INFORMATION(Pag_IBIG_MID_Number_RTN)
 );
 
-
+-- Table for storing other loan information
 CREATE TABLE LOAN_INFORMATION (
     PAG_IBIG_MID_Number_RTN VARCHAR(14) NOT NULL,
     Loan_Availment_Key VARCHAR(5) NOT NULL,

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ApplicationPart1));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnPersonalInfo = new Button();
             lblMID = new Label();
             lblFullname = new Label();
@@ -65,9 +65,9 @@
             btnRealEstateInfo = new Button();
             btnOtherLoanInfo = new Button();
             lblPersonalInfo = new Label();
-            lblLoanInfo = new Label();
-            lblCollateralInfo = new Label();
             lblEmploymentInfo = new Label();
+            lblCollateralInfo = new Label();
+            lblLoanInfo = new Label();
             lblBankInfo = new Label();
             lblRealEstateInfo = new Label();
             lblOtherInfo = new Label();
@@ -476,18 +476,18 @@
             lblPersonalInfo.TabIndex = 55;
             lblPersonalInfo.Text = "PERSONAL INFO";
             // 
-            // lblLoanInfo
+            // lblEmploymentInfo
             // 
-            lblLoanInfo.AutoSize = true;
-            lblLoanInfo.BackColor = Color.Transparent;
-            lblLoanInfo.FlatStyle = FlatStyle.Flat;
-            lblLoanInfo.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblLoanInfo.ForeColor = SystemColors.AppWorkspace;
-            lblLoanInfo.Location = new Point(212, 172);
-            lblLoanInfo.Name = "lblLoanInfo";
-            lblLoanInfo.Size = new Size(70, 15);
-            lblLoanInfo.TabIndex = 56;
-            lblLoanInfo.Text = "LOAN INFO";
+            lblEmploymentInfo.AutoSize = true;
+            lblEmploymentInfo.BackColor = Color.Transparent;
+            lblEmploymentInfo.FlatStyle = FlatStyle.Flat;
+            lblEmploymentInfo.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblEmploymentInfo.ForeColor = SystemColors.AppWorkspace;
+            lblEmploymentInfo.Location = new Point(194, 172);
+            lblEmploymentInfo.Name = "lblEmploymentInfo";
+            lblEmploymentInfo.Size = new Size(117, 15);
+            lblEmploymentInfo.TabIndex = 56;
+            lblEmploymentInfo.Text = "EMPLOYMENT INFO";
             // 
             // lblCollateralInfo
             // 
@@ -502,18 +502,18 @@
             lblCollateralInfo.TabIndex = 57;
             lblCollateralInfo.Text = "COLLATERAL INFO";
             // 
-            // lblEmploymentInfo
+            // lblLoanInfo
             // 
-            lblEmploymentInfo.AutoSize = true;
-            lblEmploymentInfo.BackColor = Color.Transparent;
-            lblEmploymentInfo.FlatStyle = FlatStyle.Flat;
-            lblEmploymentInfo.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblEmploymentInfo.ForeColor = SystemColors.AppWorkspace;
-            lblEmploymentInfo.Location = new Point(525, 172);
-            lblEmploymentInfo.Name = "lblEmploymentInfo";
-            lblEmploymentInfo.Size = new Size(117, 15);
-            lblEmploymentInfo.TabIndex = 58;
-            lblEmploymentInfo.Text = "EMPLOYMENT INFO";
+            lblLoanInfo.AutoSize = true;
+            lblLoanInfo.BackColor = Color.Transparent;
+            lblLoanInfo.FlatStyle = FlatStyle.Flat;
+            lblLoanInfo.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblLoanInfo.ForeColor = SystemColors.AppWorkspace;
+            lblLoanInfo.Location = new Point(555, 172);
+            lblLoanInfo.Name = "lblLoanInfo";
+            lblLoanInfo.Size = new Size(70, 15);
+            lblLoanInfo.TabIndex = 58;
+            lblLoanInfo.Text = "LOAN INFO";
             // 
             // lblBankInfo
             // 
@@ -585,7 +585,7 @@
             // dtBirthdate
             // 
             dtBirthdate.Checked = true;
-            dtBirthdate.CustomizableEdges = customizableEdges1;
+            dtBirthdate.CustomizableEdges = customizableEdges3;
             dtBirthdate.FillColor = Color.White;
             dtBirthdate.Font = new Font("Segoe UI", 9F);
             dtBirthdate.Format = DateTimePickerFormat.Long;
@@ -593,7 +593,7 @@
             dtBirthdate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtBirthdate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtBirthdate.Name = "dtBirthdate";
-            dtBirthdate.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            dtBirthdate.ShadowDecoration.CustomizableEdges = customizableEdges4;
             dtBirthdate.Size = new Size(200, 23);
             dtBirthdate.TabIndex = 67;
             dtBirthdate.Value = new DateTime(2024, 7, 1, 18, 59, 10, 472);
@@ -611,9 +611,9 @@
             Controls.Add(lblOtherInfo);
             Controls.Add(lblRealEstateInfo);
             Controls.Add(lblBankInfo);
-            Controls.Add(lblEmploymentInfo);
-            Controls.Add(lblCollateralInfo);
             Controls.Add(lblLoanInfo);
+            Controls.Add(lblCollateralInfo);
+            Controls.Add(lblEmploymentInfo);
             Controls.Add(lblPersonalInfo);
             Controls.Add(btnOtherLoanInfo);
             Controls.Add(btnRealEstateInfo);
@@ -693,9 +693,9 @@
         private Button btnRealEstateInfo;
         private Button btnOtherLoanInfo;
         private Label lblPersonalInfo;
-        private Label lblLoanInfo;
-        private Label lblCollateralInfo;
         private Label lblEmploymentInfo;
+        private Label lblCollateralInfo;
+        private Label lblLoanInfo;
         private Label lblBankInfo;
         private Label lblRealEstateInfo;
         private Label lblOtherInfo;

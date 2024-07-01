@@ -1,37 +1,100 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using _4PH_PAGIBIG_HOUSING.Database;
+using _4PH_PAGIBIG_HOUSING.DbContext;
+using MySql.Data.MySqlClient;
+using System;
 using System.Windows.Forms;
 
 namespace _4PH_PAGIBIG_HOUSING
 {
     public partial class ApplicationPart2 : Form
     {
-        public ApplicationPart2()
+        private readonly string _pagIBIGMIDNumberRTN;
+        private readonly DatabaseConnection database = DatabaseConnection.GetInstance();
+        private readonly HousingLoanInformation loan = new HousingLoanInformation();
+
+        public ApplicationPart2(string pagIBIGMIDNumberRTN)
         {
             InitializeComponent();
+            _pagIBIGMIDNumberRTN = pagIBIGMIDNumberRTN;
         }
 
-        private void btnPersonalInfo_Click(object sender, EventArgs e)
+        private void btnNext_Click(object sender, EventArgs e)
         {
-            ApplicationPart1 applicationPart1 = new ApplicationPart1();
-            applicationPart1.Show();
-            this.Dispose();
+            loan.PAG_IBIG_MID_Number_RTN = _pagIBIGMIDNumberRTN;
+            if (cbModeOfPayment.SelectedItem == null)
+            {
+                MessageBox.Show("Mode of payment is required.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cbModeOfPayment.Focus();
+                return;
+            }
+
+            loan.Mode_of_Payment = cbModeOfPayment.SelectedItem?.ToString();
+            Console.WriteLine($"Selected mode of payment: {loan.Mode_of_Payment}"); // Add this line for debugging
+
+            if (!decimal.TryParse(txtLoanAmount.Text, out decimal loanAmount))
+            {
+                MessageBox.Show("Invalid loan amount.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtLoanAmount.Focus();
+                return;
+            }
+
+            loan.Loan_Amount = loanAmount;
+            loan.Loan_Term = cbLoanTerm.Text;
+
+            bool savedSuccessfully = SaveLoanInformation(loan);
+            if (savedSuccessfully)
+            {
+                MessageBox.Show("Loan information saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ClearLoanForm();
+            }
+            else
+            {
+                MessageBox.Show("Failed to save loan information.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void btnLoan_Click(object sender, EventArgs e)
+
+        private bool SaveLoanInformation(HousingLoanInformation loan)
         {
-            ApplicationPart2 applicationPart2 = new ApplicationPart2();
-            applicationPart2.Show();
-            this.Dispose();
+            // Use your DatabaseConnection class to get a database connection
+            using (var connection = database.GetConnection())
+            {
+                try
+                {
+                    connection.Open();
+                    // Example SQL command to insert loan information into the database
+                    string sql = "INSERT INTO 4PS_HOUSING_LOAN_INFORMATION (PAG_IBIG_MID_Number_RTN, TCT_OCT_CCT_No, Loan_Amount, Loan_Term, Mode_of_Payment) " +
+                                 "VALUES (@MID, @TCT_OCT_CCT_No, @LoanAmount, @LoanTerm, @ModeOfPayment)";
+
+                    using (var cmd = new MySqlCommand(sql, connection))
+                    {
+                        // Add parameters to the SQL command
+                        cmd.Parameters.AddWithValue("@MID", loan.PAG_IBIG_MID_Number_RTN);
+                        cmd.Parameters.AddWithValue("@TCT_OCT_CCT_No", loan.TCT_OCT_CCT_No); // Ensure this value exists in collateral_information
+                        cmd.Parameters.AddWithValue("@LoanAmount", loan.Loan_Amount);
+                        cmd.Parameters.AddWithValue("@LoanTerm", loan.Loan_Term);
+                        cmd.Parameters.AddWithValue("@ModeOfPayment", loan.Mode_of_Payment);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        return rowsAffected > 0;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error saving loan information: {ex.Message}");
+                    return false;
+                }
+            }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+
+        private void ClearLoanForm()
+        {
+            txtLoanAmount.Text = string.Empty;
+            cbLoanTerm.Text = string.Empty;
+            cbModeOfPayment.SelectedIndex = -1; // Reset ComboBox selection
+        }
+        private void ApplicationPart2_Load(object sender, EventArgs e)
         {
 
         }
