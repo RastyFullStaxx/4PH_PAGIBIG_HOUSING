@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ApplicationPart1));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnPersonalInfo = new Button();
             lblMID = new Label();
             lblFullname = new Label();
@@ -56,23 +58,23 @@
             txtLandline = new TextBox();
             txtSSS = new TextBox();
             cbSex = new ComboBox();
-            cbMaritalStatus = new ComboBox();
-            cbHomeOwnership = new ComboBox();
-            cbYearsOfStay = new ComboBox();
-            dtBirthdate = new DateTimePicker();
             btnLoanInfo = new Button();
             btnCollateralInfo = new Button();
             btnEmploymentInfo = new Button();
             btnBankInfo = new Button();
             btnRealEstateInfo = new Button();
             btnOtherLoanInfo = new Button();
-            label1 = new Label();
+            lblPersonalInfo = new Label();
             lblLoanInfo = new Label();
             lblCollateralInfo = new Label();
             lblEmploymentInfo = new Label();
             lblBankInfo = new Label();
             lblRealEstateInfo = new Label();
             lblOtherInfo = new Label();
+            cbYearsOfStay = new TextBox();
+            cbMaritalStatus = new ComboBox();
+            cbHomeOwnership = new ComboBox();
+            dtBirthdate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             SuspendLayout();
             // 
             // btnPersonalInfo
@@ -89,7 +91,6 @@
             btnPersonalInfo.Size = new Size(53, 51);
             btnPersonalInfo.TabIndex = 1;
             btnPersonalInfo.UseVisualStyleBackColor = true;
-            btnPersonalInfo.Click += btnPersonalInfo_Click;
             // 
             // lblMID
             // 
@@ -102,7 +103,6 @@
             lblMID.Size = new Size(124, 15);
             lblMID.TabIndex = 2;
             lblMID.Text = "PAG-IBIG MRID/RTN";
-            lblMID.Click += lblMID_Click;
             // 
             // lblFullname
             // 
@@ -115,7 +115,6 @@
             lblFullname.Size = new Size(305, 15);
             lblFullname.TabIndex = 3;
             lblFullname.Text = "FULL NAME (SURNAME, FIRSTNAME MIDDLE INITIAL)";
-            lblFullname.Click += label1_Click;
             // 
             // lblSex
             // 
@@ -128,7 +127,6 @@
             lblSex.Size = new Size(28, 15);
             lblSex.TabIndex = 4;
             lblSex.Text = "SEX";
-            lblSex.Click += label1_Click_1;
             // 
             // lblNationality
             // 
@@ -136,7 +134,7 @@
             lblNationality.BackColor = Color.Transparent;
             lblNationality.FlatStyle = FlatStyle.Flat;
             lblNationality.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblNationality.Location = new Point(675, 348);
+            lblNationality.Location = new Point(707, 348);
             lblNationality.Name = "lblNationality";
             lblNationality.Size = new Size(84, 15);
             lblNationality.TabIndex = 5;
@@ -201,7 +199,6 @@
             lblLandline.Size = new Size(64, 15);
             lblLandline.TabIndex = 10;
             lblLandline.Text = "LANDLINE";
-            lblLandline.Click += label4_Click;
             // 
             // lblCellphoneNumber
             // 
@@ -278,7 +275,7 @@
             btnNext.Size = new Size(127, 45);
             btnNext.TabIndex = 16;
             btnNext.UseVisualStyleBackColor = true;
-            btnNext.Click += btnNext_Click;
+            btnNext.Click += btnSave_Click;
             // 
             // btnBack
             // 
@@ -299,81 +296,72 @@
             // 
             txtMRID.BackColor = Color.WhiteSmoke;
             txtMRID.Location = new Point(70, 277);
-            txtMRID.Multiline = true;
             txtMRID.Name = "txtMRID";
-            txtMRID.Size = new Size(218, 42);
+            txtMRID.Size = new Size(218, 23);
             txtMRID.TabIndex = 30;
             // 
             // txtFullname
             // 
             txtFullname.BackColor = Color.WhiteSmoke;
             txtFullname.Location = new Point(70, 366);
-            txtFullname.Multiline = true;
             txtFullname.Name = "txtFullname";
-            txtFullname.Size = new Size(495, 42);
+            txtFullname.Size = new Size(495, 23);
             txtFullname.TabIndex = 31;
             // 
             // txtNationality
             // 
             txtNationality.BackColor = Color.WhiteSmoke;
-            txtNationality.Location = new Point(675, 366);
-            txtNationality.Multiline = true;
+            txtNationality.Location = new Point(706, 366);
             txtNationality.Name = "txtNationality";
-            txtNationality.Size = new Size(191, 42);
+            txtNationality.Size = new Size(160, 23);
             txtNationality.TabIndex = 32;
             // 
             // txtPresentAddress
             // 
             txtPresentAddress.BackColor = Color.WhiteSmoke;
             txtPresentAddress.Location = new Point(70, 451);
-            txtPresentAddress.Multiline = true;
             txtPresentAddress.Name = "txtPresentAddress";
-            txtPresentAddress.Size = new Size(495, 42);
+            txtPresentAddress.Size = new Size(495, 23);
             txtPresentAddress.TabIndex = 34;
             // 
             // txtPermanentAddress
             // 
             txtPermanentAddress.BackColor = Color.WhiteSmoke;
             txtPermanentAddress.Location = new Point(598, 451);
-            txtPermanentAddress.Multiline = true;
             txtPermanentAddress.Name = "txtPermanentAddress";
-            txtPermanentAddress.Size = new Size(498, 42);
+            txtPermanentAddress.Size = new Size(498, 23);
             txtPermanentAddress.TabIndex = 35;
             // 
             // txtCellphoneNumber
             // 
             txtCellphoneNumber.BackColor = Color.WhiteSmoke;
             txtCellphoneNumber.Location = new Point(598, 544);
-            txtCellphoneNumber.Multiline = true;
             txtCellphoneNumber.Name = "txtCellphoneNumber";
-            txtCellphoneNumber.Size = new Size(193, 42);
+            txtCellphoneNumber.Size = new Size(193, 23);
             txtCellphoneNumber.TabIndex = 38;
             // 
             // txtEmailAddress
             // 
             txtEmailAddress.BackColor = Color.WhiteSmoke;
             txtEmailAddress.Location = new Point(813, 544);
-            txtEmailAddress.Multiline = true;
             txtEmailAddress.Name = "txtEmailAddress";
-            txtEmailAddress.Size = new Size(283, 42);
+            txtEmailAddress.Size = new Size(283, 23);
             txtEmailAddress.TabIndex = 39;
             // 
             // txtLandline
             // 
             txtLandline.BackColor = Color.WhiteSmoke;
             txtLandline.Location = new Point(291, 544);
-            txtLandline.Multiline = true;
             txtLandline.Name = "txtLandline";
-            txtLandline.Size = new Size(274, 42);
+            txtLandline.Size = new Size(274, 23);
             txtLandline.TabIndex = 40;
             // 
             // txtSSS
             // 
             txtSSS.BackColor = Color.WhiteSmoke;
             txtSSS.Location = new Point(598, 631);
-            txtSSS.Multiline = true;
             txtSSS.Name = "txtSSS";
-            txtSSS.Size = new Size(498, 42);
+            txtSSS.Size = new Size(498, 23);
             txtSSS.TabIndex = 43;
             // 
             // cbSex
@@ -382,46 +370,9 @@
             cbSex.Items.AddRange(new object[] { "Male", "Female", "Beks" });
             cbSex.Location = new Point(598, 366);
             cbSex.Name = "cbSex";
-            cbSex.Size = new Size(56, 23);
+            cbSex.Size = new Size(90, 23);
             cbSex.TabIndex = 44;
             cbSex.Text = " ";
-            // 
-            // cbMaritalStatus
-            // 
-            cbMaritalStatus.FormattingEnabled = true;
-            cbMaritalStatus.Items.AddRange(new object[] { "Male", "Female", "Beks" });
-            cbMaritalStatus.Location = new Point(70, 544);
-            cbMaritalStatus.Name = "cbMaritalStatus";
-            cbMaritalStatus.Size = new Size(204, 23);
-            cbMaritalStatus.TabIndex = 45;
-            cbMaritalStatus.Text = " ";
-            // 
-            // cbHomeOwnership
-            // 
-            cbHomeOwnership.FormattingEnabled = true;
-            cbHomeOwnership.Items.AddRange(new object[] { "Male", "Female", "Beks" });
-            cbHomeOwnership.Location = new Point(70, 631);
-            cbHomeOwnership.Name = "cbHomeOwnership";
-            cbHomeOwnership.Size = new Size(285, 23);
-            cbHomeOwnership.TabIndex = 46;
-            cbHomeOwnership.Text = " ";
-            // 
-            // cbYearsOfStay
-            // 
-            cbYearsOfStay.FormattingEnabled = true;
-            cbYearsOfStay.Items.AddRange(new object[] { "Male", "Female", "Beks" });
-            cbYearsOfStay.Location = new Point(383, 631);
-            cbYearsOfStay.Name = "cbYearsOfStay";
-            cbYearsOfStay.Size = new Size(182, 23);
-            cbYearsOfStay.TabIndex = 47;
-            cbYearsOfStay.Text = " ";
-            // 
-            // dtBirthdate
-            // 
-            dtBirthdate.Location = new Point(886, 366);
-            dtBirthdate.Name = "dtBirthdate";
-            dtBirthdate.Size = new Size(210, 23);
-            dtBirthdate.TabIndex = 48;
             // 
             // btnLoanInfo
             // 
@@ -513,18 +464,17 @@
             btnOtherLoanInfo.TabIndex = 54;
             btnOtherLoanInfo.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // lblPersonalInfo
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.FlatStyle = FlatStyle.Flat;
-            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(70, 172);
-            label1.Name = "label1";
-            label1.Size = new Size(98, 15);
-            label1.TabIndex = 55;
-            label1.Text = "PERSONAL INFO";
-            label1.Click += label1_Click_2;
+            lblPersonalInfo.AutoSize = true;
+            lblPersonalInfo.BackColor = Color.Transparent;
+            lblPersonalInfo.FlatStyle = FlatStyle.Flat;
+            lblPersonalInfo.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPersonalInfo.Location = new Point(70, 172);
+            lblPersonalInfo.Name = "lblPersonalInfo";
+            lblPersonalInfo.Size = new Size(98, 15);
+            lblPersonalInfo.TabIndex = 55;
+            lblPersonalInfo.Text = "PERSONAL INFO";
             // 
             // lblLoanInfo
             // 
@@ -533,7 +483,7 @@
             lblLoanInfo.FlatStyle = FlatStyle.Flat;
             lblLoanInfo.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblLoanInfo.ForeColor = SystemColors.AppWorkspace;
-            lblLoanInfo.Location = new Point(211, 172);
+            lblLoanInfo.Location = new Point(212, 172);
             lblLoanInfo.Name = "lblLoanInfo";
             lblLoanInfo.Size = new Size(70, 15);
             lblLoanInfo.TabIndex = 56;
@@ -598,11 +548,55 @@
             lblOtherInfo.FlatStyle = FlatStyle.Flat;
             lblOtherInfo.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblOtherInfo.ForeColor = SystemColors.AppWorkspace;
-            lblOtherInfo.Location = new Point(1053, 172);
+            lblOtherInfo.Location = new Point(1049, 172);
             lblOtherInfo.Name = "lblOtherInfo";
             lblOtherInfo.Size = new Size(112, 15);
             lblOtherInfo.TabIndex = 61;
             lblOtherInfo.Text = "OTHER LOAN INFO";
+            // 
+            // cbYearsOfStay
+            // 
+            cbYearsOfStay.BackColor = Color.WhiteSmoke;
+            cbYearsOfStay.Location = new Point(380, 631);
+            cbYearsOfStay.Name = "cbYearsOfStay";
+            cbYearsOfStay.Size = new Size(185, 23);
+            cbYearsOfStay.TabIndex = 62;
+            // 
+            // cbMaritalStatus
+            // 
+            cbMaritalStatus.FormattingEnabled = true;
+            cbMaritalStatus.Items.AddRange(new object[] { "Single", "Married", "Widowed" });
+            cbMaritalStatus.Location = new Point(70, 544);
+            cbMaritalStatus.Name = "cbMaritalStatus";
+            cbMaritalStatus.Size = new Size(204, 23);
+            cbMaritalStatus.TabIndex = 65;
+            cbMaritalStatus.Text = " ";
+            // 
+            // cbHomeOwnership
+            // 
+            cbHomeOwnership.FormattingEnabled = true;
+            cbHomeOwnership.Items.AddRange(new object[] { "Owned" });
+            cbHomeOwnership.Location = new Point(70, 631);
+            cbHomeOwnership.Name = "cbHomeOwnership";
+            cbHomeOwnership.Size = new Size(285, 23);
+            cbHomeOwnership.TabIndex = 66;
+            cbHomeOwnership.Text = " ";
+            // 
+            // dtBirthdate
+            // 
+            dtBirthdate.Checked = true;
+            dtBirthdate.CustomizableEdges = customizableEdges1;
+            dtBirthdate.FillColor = Color.White;
+            dtBirthdate.Font = new Font("Segoe UI", 9F);
+            dtBirthdate.Format = DateTimePickerFormat.Long;
+            dtBirthdate.Location = new Point(886, 366);
+            dtBirthdate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            dtBirthdate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            dtBirthdate.Name = "dtBirthdate";
+            dtBirthdate.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            dtBirthdate.Size = new Size(200, 23);
+            dtBirthdate.TabIndex = 67;
+            dtBirthdate.Value = new DateTime(2024, 7, 1, 18, 59, 10, 472);
             // 
             // ApplicationPart1
             // 
@@ -610,23 +604,23 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1280, 800);
+            Controls.Add(dtBirthdate);
+            Controls.Add(cbHomeOwnership);
+            Controls.Add(cbMaritalStatus);
+            Controls.Add(cbYearsOfStay);
             Controls.Add(lblOtherInfo);
             Controls.Add(lblRealEstateInfo);
             Controls.Add(lblBankInfo);
             Controls.Add(lblEmploymentInfo);
             Controls.Add(lblCollateralInfo);
             Controls.Add(lblLoanInfo);
-            Controls.Add(label1);
+            Controls.Add(lblPersonalInfo);
             Controls.Add(btnOtherLoanInfo);
             Controls.Add(btnRealEstateInfo);
             Controls.Add(btnBankInfo);
             Controls.Add(btnEmploymentInfo);
             Controls.Add(btnCollateralInfo);
             Controls.Add(btnLoanInfo);
-            Controls.Add(dtBirthdate);
-            Controls.Add(cbYearsOfStay);
-            Controls.Add(cbHomeOwnership);
-            Controls.Add(cbMaritalStatus);
             Controls.Add(cbSex);
             Controls.Add(txtSSS);
             Controls.Add(txtLandline);
@@ -692,22 +686,22 @@
         private TextBox txtLandline;
         private TextBox txtSSS;
         private ComboBox cbSex;
-        private ComboBox cbMaritalStatus;
-        private ComboBox cbHomeOwnership;
-        private ComboBox cbYearsOfStay;
-        private DateTimePicker dtBirthdate;
         private Button btnLoanInfo;
         private Button btnCollateralInfo;
         private Button btnEmploymentInfo;
         private Button btnBankInfo;
         private Button btnRealEstateInfo;
         private Button btnOtherLoanInfo;
-        private Label label1;
+        private Label lblPersonalInfo;
         private Label lblLoanInfo;
         private Label lblCollateralInfo;
         private Label lblEmploymentInfo;
         private Label lblBankInfo;
         private Label lblRealEstateInfo;
         private Label lblOtherInfo;
+        private TextBox cbYearsOfStay;
+        private ComboBox cbMaritalStatus;
+        private ComboBox cbHomeOwnership;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtBirthdate;
     }
 }

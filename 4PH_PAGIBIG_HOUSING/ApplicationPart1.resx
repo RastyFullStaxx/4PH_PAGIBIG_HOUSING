@@ -236,7 +236,7 @@
   <data name="btnLoanInfo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACYAAAAoCAYAAACSN4jeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAAoJJREFUWEfNmNtpAkEUhi0hJVhCSkgJ6SDpIOkg6SB2YDpIOljwgoIPC/ogCBoU
+        DAAACwwBP0AiyAAAAoJJREFUWEfNmNtpAkEUhi0hJVhCSkgJ6SDpIOkg6SB2YDpIOljwgoIPC/ogCBoU
         FAVhfRAUfJicbzjrJaxx172MHwzKrs78c25zKV2D53l39Xr9Qdp7s9msNhoN77jJ84p8PsnvyvqXfEGM
         CPmSz6Db7ZrRaGQWi4VZrVYnbTabmcFgYDqdjhGBfm4ipdN7LMFADLrb7UxcEIpImcyP9PGqXaZHLPTS
         brfNdDrVoa5ju93uBaayHnGElXDZZrPR7tPDBKXfoFarPepQ8VFR/nA41O6yZb1e2/hrtVpPOmQ8EDUe
@@ -253,7 +253,7 @@
   <data name="btnCollateralInfo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACYAAAAoCAYAAACSN4jeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAAoJJREFUWEfNmNtpAkEUhi0hJVhCSkgJ6SDpIOkg6SB2YDpIOljwgoIPC/ogCBoU
+        DAAACwwBP0AiyAAAAoJJREFUWEfNmNtpAkEUhi0hJVhCSkgJ6SDpIOkg6SB2YDpIOljwgoIPC/ogCBoU
         FAVhfRAUfJicbzjrJaxx172MHwzKrs78c25zKV2D53l39Xr9Qdp7s9msNhoN77jJ84p8PsnvyvqXfEGM
         CPmSz6Db7ZrRaGQWi4VZrVYnbTabmcFgYDqdjhGBfm4ipdN7LMFADLrb7UxcEIpImcyP9PGqXaZHLPTS
         brfNdDrVoa5ju93uBaayHnGElXDZZrPR7tPDBKXfoFarPepQ8VFR/nA41O6yZb1e2/hrtVpPOmQ8EDUe
@@ -270,7 +270,7 @@
   <data name="btnEmploymentInfo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACYAAAAoCAYAAACSN4jeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAAoJJREFUWEfNmNtpAkEUhi0hJVhCSkgJ6SDpIOkg6SB2YDpIOljwgoIPC/ogCBoU
+        DAAACwwBP0AiyAAAAoJJREFUWEfNmNtpAkEUhi0hJVhCSkgJ6SDpIOkg6SB2YDpIOljwgoIPC/ogCBoU
         FAVhfRAUfJicbzjrJaxx172MHwzKrs78c25zKV2D53l39Xr9Qdp7s9msNhoN77jJ84p8PsnvyvqXfEGM
         CPmSz6Db7ZrRaGQWi4VZrVYnbTabmcFgYDqdjhGBfm4ipdN7LMFADLrb7UxcEIpImcyP9PGqXaZHLPTS
         brfNdDrVoa5ju93uBaayHnGElXDZZrPR7tPDBKXfoFarPepQ8VFR/nA41O6yZb1e2/hrtVpPOmQ8EDUe
@@ -287,7 +287,7 @@
   <data name="btnBankInfo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACYAAAAoCAYAAACSN4jeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAAoJJREFUWEfNmNtpAkEUhi0hJVhCSkgJ6SDpIOkg6SB2YDpIOljwgoIPC/ogCBoU
+        DAAACwwBP0AiyAAAAoJJREFUWEfNmNtpAkEUhi0hJVhCSkgJ6SDpIOkg6SB2YDpIOljwgoIPC/ogCBoU
         FAVhfRAUfJicbzjrJaxx172MHwzKrs78c25zKV2D53l39Xr9Qdp7s9msNhoN77jJ84p8PsnvyvqXfEGM
         CPmSz6Db7ZrRaGQWi4VZrVYnbTabmcFgYDqdjhGBfm4ipdN7LMFADLrb7UxcEIpImcyP9PGqXaZHLPTS
         brfNdDrVoa5ju93uBaayHnGElXDZZrPR7tPDBKXfoFarPepQ8VFR/nA41O6yZb1e2/hrtVpPOmQ8EDUe
@@ -304,7 +304,7 @@
   <data name="btnRealEstateInfo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACYAAAAoCAYAAACSN4jeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAAoJJREFUWEfNmNtpAkEUhi0hJVhCSkgJ6SDpIOkg6SB2YDpIOljwgoIPC/ogCBoU
+        DAAACwwBP0AiyAAAAoJJREFUWEfNmNtpAkEUhi0hJVhCSkgJ6SDpIOkg6SB2YDpIOljwgoIPC/ogCBoU
         FAVhfRAUfJicbzjrJaxx172MHwzKrs78c25zKV2D53l39Xr9Qdp7s9msNhoN77jJ84p8PsnvyvqXfEGM
         CPmSz6Db7ZrRaGQWi4VZrVYnbTabmcFgYDqdjhGBfm4ipdN7LMFADLrb7UxcEIpImcyP9PGqXaZHLPTS
         brfNdDrVoa5ju93uBaayHnGElXDZZrPR7tPDBKXfoFarPepQ8VFR/nA41O6yZb1e2/hrtVpPOmQ8EDUe
@@ -321,7 +321,7 @@
   <data name="btnOtherLoanInfo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACYAAAAoCAYAAACSN4jeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAAoJJREFUWEfNmNtpAkEUhi0hJVhCSkgJ6SDpIOkg6SB2YDpIOljwgoIPC/ogCBoU
+        DAAACwwBP0AiyAAAAoJJREFUWEfNmNtpAkEUhi0hJVhCSkgJ6SDpIOkg6SB2YDpIOljwgoIPC/ogCBoU
         FAVhfRAUfJicbzjrJaxx172MHwzKrs78c25zKV2D53l39Xr9Qdp7s9msNhoN77jJ84p8PsnvyvqXfEGM
         CPmSz6Db7ZrRaGQWi4VZrVYnbTabmcFgYDqdjhGBfm4ipdN7LMFADLrb7UxcEIpImcyP9PGqXaZHLPTS
         brfNdDrVoa5ju93uBaayHnGElXDZZrPR7tPDBKXfoFarPepQ8VFR/nA41O6yZb1e2/hrtVpPOmQ8EDUe

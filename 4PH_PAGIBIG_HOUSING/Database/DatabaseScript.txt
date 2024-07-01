@@ -1,26 +1,10 @@
 -- Create the database
-CREATE DATABASE PagIBIGHousing;
-GO
+CREATE DATABASE IF NOT EXISTS PagIBIGHousing;
 
 -- Use the new database
 USE PagIBIGHousing;
-GO
 
 -- Create the tables
-
-CREATE TABLE BORROWERS_EMPLOYMENT_INFORMATION (
-    EE_SSS_GSIS_ID_No VARCHAR(20) PRIMARY KEY,
-    Employer_Business_Name VARCHAR(100) NOT NULL,
-    Employer_Business_Address VARCHAR(120) NOT NULL,
-    Employer_Direct_Line VARCHAR(20) NOT NULL,
-    Employer_Trunk_Line VARCHAR(20),
-    Employer_Email_Address VARCHAR(100) NOT NULL,
-    Occupation VARCHAR(100) NOT NULL,
-    TIN VARCHAR(20) NOT NULL,
-    Position_Department VARCHAR(100) NOT NULL,
-    Years_in_Business_Employment NUMERIC(2) CHECK (Years_in_Business_Employment BETWEEN 0 AND 99),
-    No_of_Dependents NUMERIC(2) CHECK (No_of_Dependents BETWEEN 0 AND 99)
-);
 
 CREATE TABLE BORROWER_INFORMATION (
     Pag_IBIG_MID_Number_RTN VARCHAR(14) PRIMARY KEY,
@@ -36,14 +20,29 @@ CREATE TABLE BORROWER_INFORMATION (
     Borrower_Email_Address VARCHAR(100) NOT NULL,
     Home_Ownership VARCHAR(50) NOT NULL,
     Years_of_Stay NUMERIC(2) CHECK (Years_of_Stay BETWEEN 1 AND 99),
-    EE_SSS_GSIS_ID_No VARCHAR(20) NOT NULL,
-    FOREIGN KEY (EE_SSS_GSIS_ID_No) REFERENCES BORROWERS_EMPLOYMENT_INFORMATION(EE_SSS_GSIS_ID_No)
+    EE_SSS_GSIS_ID_No NUMERIC(20) NOT NULL,
+    UNIQUE (EE_SSS_GSIS_ID_No)  -- Make EE_SSS_GSIS_ID_No unique
+);
+
+CREATE TABLE BORROWERS_EMPLOYMENT_INFORMATION (
+    EE_SSS_GSIS_ID_No NUMERIC(20) PRIMARY KEY,
+    Employer_Business_Name VARCHAR(100) NOT NULL,
+    Employer_Business_Address VARCHAR(120) NOT NULL,
+    Employer_Direct_Line VARCHAR(20) NOT NULL,
+    Employer_Trunk_Line VARCHAR(20),
+    Employer_Email_Address VARCHAR(100) NOT NULL,
+    Occupation VARCHAR(100) NOT NULL,
+    TIN VARCHAR(20) NOT NULL,
+    Position_Department VARCHAR(100) NOT NULL,
+    Years_in_Business_Employment NUMERIC(2) CHECK (Years_in_Business_Employment BETWEEN 0 AND 99),
+    No_of_Dependents NUMERIC(2) CHECK (No_of_Dependents BETWEEN 0 AND 99),
+    FOREIGN KEY (EE_SSS_GSIS_ID_No) REFERENCES BORROWER_INFORMATION(EE_SSS_GSIS_ID_No)
 );
 
 CREATE TABLE COLLATERAL_INFORMATION (
     TCT_OCT_CCT_No VARCHAR(13) PRIMARY KEY,
     Property_Location VARCHAR(120) NOT NULL,
-    Type_of_Property VARCHAR(15) NOT NULL CHECK (Type_of_Property IN ('Rowhouse', 'Single Attached', 'Single Detached', 'Condominium', 'Townhouse', 'Duplex')),
+    Type_of_Property VARCHAR(50) NOT NULL CHECK (Type_of_Property IN ('Rowhouse', 'Single Attached', 'Single Detached', 'Condominium', 'Townhouse', 'Duplex')),
     Name_of_Project VARCHAR(50) NOT NULL,
     Tax_Declaration NUMERIC(6) NOT NULL,
     Land_Area NUMERIC(5) NOT NULL,
@@ -51,7 +50,7 @@ CREATE TABLE COLLATERAL_INFORMATION (
     Block_Bldg_No VARCHAR(12)
 );
 
-CREATE TABLE 4PS_HOUSING_LOAN_INFORMATION (
+CREATE TABLE `4PS_HOUSING_LOAN_INFORMATION` (
     PAG_IBIG_MID_Number_RTN VARCHAR(14) NOT NULL,
     TCT_OCT_CCT_No VARCHAR(13) NOT NULL,
     Loan_Amount NUMERIC(7) NOT NULL CHECK (Loan_Amount BETWEEN 1 AND 6000000),
@@ -75,9 +74,11 @@ CREATE TABLE BANKING_INFORMATION (
     FOREIGN KEY (PAG_IBIG_MID_Number_RTN) REFERENCES BORROWER_INFORMATION(Pag_IBIG_MID_Number_RTN)
 );
 
+
+
 CREATE TABLE REAL_ESTATE_INFORMATION (
     PAG_IBIG_MID_Number_RTN VARCHAR(14) NOT NULL,
-    Real_Estate_Key INT PRIMARY KEY IDENTITY(1,1),
+    Real_Estate_Key INT AUTO_INCREMENT PRIMARY KEY,
     Real_Estate_Location VARCHAR(120) NOT NULL,
     Type_of_Property VARCHAR(50) NOT NULL CHECK (Type_of_Property IN ('Real Estate Property', 'Commercial Property', 'Residential Property')),
     Acquisition_Cost NUMERIC(15) NOT NULL,
@@ -86,6 +87,7 @@ CREATE TABLE REAL_ESTATE_INFORMATION (
     Rental_Income NUMERIC(15) NOT NULL,
     FOREIGN KEY (PAG_IBIG_MID_Number_RTN) REFERENCES BORROWER_INFORMATION(Pag_IBIG_MID_Number_RTN)
 );
+
 
 CREATE TABLE LOAN_INFORMATION (
     PAG_IBIG_MID_Number_RTN VARCHAR(14) NOT NULL,

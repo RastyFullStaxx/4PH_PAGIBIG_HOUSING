@@ -17,7 +17,7 @@ namespace _4PH_PAGIBIG_HOUSING
             progressBar1.Maximum = 100;
 
             // Set the step size for the progress bar
-            progressBar1.Step = 1;
+            progressBar1.Step = 10;
 
             // Start the timer when the form loads
             timer1.Start();
@@ -28,12 +28,24 @@ namespace _4PH_PAGIBIG_HOUSING
             // Update progress bar value
             progressBar1.PerformStep();
 
-            // If progress bar reaches maximum value, stop the timer
+            // If progress bar reaches maximum value, stop the timer and show ApplicationPart1
             if (progressBar1.Value >= progressBar1.Maximum)
             {
-
                 timer1.Stop();
-                this.Close();
+
+                try
+                {
+                    // Show ApplicationPart1
+                    ApplicationPart1 borrowerinfo = new ApplicationPart1();
+                    borrowerinfo.Show();
+
+                    // Close this loading form
+                    this.Hide();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error: {ex.Message}");
+                }
             }
         }
     }

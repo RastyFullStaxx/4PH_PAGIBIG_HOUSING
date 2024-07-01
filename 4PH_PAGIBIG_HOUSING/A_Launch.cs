@@ -1,11 +1,14 @@
+using _4PH_PAGIBIG_HOUSING.Database;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+
 
 namespace _4PH_PAGIBIG_HOUSING
 {
     public partial class A_Launch : Form
     {
+        DatabaseConnection database = DatabaseConnection.GetInstance();
         public A_Launch()
         {
             InitializeComponent();
@@ -17,13 +20,16 @@ namespace _4PH_PAGIBIG_HOUSING
         }
         private void btnApply_Click(object sender, EventArgs e)
         {
-            // Show the loading screen
-            LoadingScreenForm loadingScreen = new LoadingScreenForm();
-            loadingScreen.ShowDialog();
 
-            ApplicationBriefing applicationBriefing = new ApplicationBriefing();
-            applicationBriefing.Show();
+            /*       // Show the loading screen
+                   LoadingScreenForm loadingScreen = new LoadingScreenForm();
+                   loadingScreen.ShowDialog();*/
+
+            ApplicationPart1 borrowerinfo = new ApplicationPart1();
+            borrowerinfo.Show();
+
             this.Hide();
         }
+
     }
 }
