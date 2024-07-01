@@ -63,8 +63,10 @@ namespace _4PH_PAGIBIG_HOUSING
             bool savedSuccessfully = SaveBorrowersEmploymentInformation(employmentinfo);
             if (savedSuccessfully)
             {
-                MessageBox.Show("Employment information saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ClearEmploymentForm();
+
+                ApplicationPart3 collateralInfo = new ApplicationPart3(_pagIBIGMIDNumberRTN);
+                collateralInfo.Show();
+                this.Hide();
             }
             else
             {

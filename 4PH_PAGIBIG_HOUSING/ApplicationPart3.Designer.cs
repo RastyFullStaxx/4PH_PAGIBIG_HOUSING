@@ -173,6 +173,7 @@
             btnNext.Size = new Size(126, 45);
             btnNext.TabIndex = 27;
             btnNext.UseVisualStyleBackColor = true;
+            btnNext.Click += btnSaveCollateral_Click;
             // 
             // btnBack
             // 
@@ -445,7 +446,7 @@
             // cbTypeOfProperty
             // 
             cbTypeOfProperty.FormattingEnabled = true;
-            cbTypeOfProperty.Items.AddRange(new object[] { "Male", "Female", "Beks" });
+            cbTypeOfProperty.Items.AddRange(new object[] { "Rowhouse", "Single Attached", "Single Detached" });
             cbTypeOfProperty.Location = new Point(951, 310);
             cbTypeOfProperty.Name = "cbTypeOfProperty";
             cbTypeOfProperty.Size = new Size(174, 23);

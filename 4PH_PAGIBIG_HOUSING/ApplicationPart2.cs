@@ -11,16 +11,22 @@ namespace _4PH_PAGIBIG_HOUSING
         private readonly string _pagIBIGMIDNumberRTN;
         private readonly DatabaseConnection database = DatabaseConnection.GetInstance();
         private readonly HousingLoanInformation loan = new HousingLoanInformation();
+        private string _tct;
 
-        public ApplicationPart2(string pagIBIGMIDNumberRTN)
+        public ApplicationPart2(string pagIBIGMIDNumberRTN, string tct)
         {
             InitializeComponent();
             _pagIBIGMIDNumberRTN = pagIBIGMIDNumberRTN;
+            _tct = tct; // Receive TCT from ApplicationPart3
+
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
             loan.PAG_IBIG_MID_Number_RTN = _pagIBIGMIDNumberRTN;
+
+            loan.TCT_OCT_CCT_No = _tct; // Set TCT value
+
             if (cbModeOfPayment.SelectedItem == null)
             {
                 MessageBox.Show("Mode of payment is required.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -44,7 +50,9 @@ namespace _4PH_PAGIBIG_HOUSING
             bool savedSuccessfully = SaveLoanInformation(loan);
             if (savedSuccessfully)
             {
-                MessageBox.Show("Loan information saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ApplicationPart5 BankInfo = new ApplicationPart5();
+                BankInfo.Show();
+                this.Hide();
                 ClearLoanForm();
             }
             else
@@ -70,7 +78,7 @@ namespace _4PH_PAGIBIG_HOUSING
                     {
                         // Add parameters to the SQL command
                         cmd.Parameters.AddWithValue("@MID", loan.PAG_IBIG_MID_Number_RTN);
-                        cmd.Parameters.AddWithValue("@TCT_OCT_CCT_No", loan.TCT_OCT_CCT_No); // Ensure this value exists in collateral_information
+                        cmd.Parameters.AddWithValue("@TCT_OCT_CCT_No", loan.TCT_OCT_CCT_No); 
                         cmd.Parameters.AddWithValue("@LoanAmount", loan.Loan_Amount);
                         cmd.Parameters.AddWithValue("@LoanTerm", loan.Loan_Term);
                         cmd.Parameters.AddWithValue("@ModeOfPayment", loan.Mode_of_Payment);
