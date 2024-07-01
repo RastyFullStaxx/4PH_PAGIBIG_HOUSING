@@ -8,6 +8,8 @@ namespace _4PH_PAGIBIG_HOUSING.DbContext
 {
     internal class CollateralInformation
     {
+
+        public string? PAG_IBIG_MID_Number_RTN { get; set; }
         public string? TCT_OCT_CCT_No { get; set; }
         public string? Property_Location { get; set; }
         public string? Type_of_Property { get; set; }

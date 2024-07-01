@@ -22,13 +22,7 @@ namespace _4PH_PAGIBIG_HOUSING
             // Initialize your form or load data if needed
         }
 
-        private void btnNext_Click(object sender, EventArgs e)
-        {
-            // Example of moving to the next part of the application
-            ApplicationPart2 applicationPart2 = new ApplicationPart2(txtMRID.Text);
-            applicationPart2.Show();
-            this.Hide();
-        }
+
 
         private void btnSave_Click(object sender, EventArgs e)
         {

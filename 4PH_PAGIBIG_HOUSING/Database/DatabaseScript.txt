@@ -51,17 +51,21 @@ CREATE TABLE COLLATERAL_INFORMATION (
     Land_Area NUMERIC(5) NOT NULL,
     Lot_Unit_No VARCHAR(12),
     Block_Bldg_No VARCHAR(12),
+    INDEX (TCT_OCT_CCT_No), -- Index on TCT_OCT_CCT_No for foreign key reference
     FOREIGN KEY (Pag_IBIG_MID_Number_RTN) REFERENCES BORROWER_INFORMATION(Pag_IBIG_MID_Number_RTN)
 );
 
--- Table for storing housing loan information
+-- Table for storing loan information
 CREATE TABLE 4PS_HOUSING_LOAN_INFORMATION (
+    Loan_ID INT AUTO_INCREMENT PRIMARY KEY,
     PAG_IBIG_MID_Number_RTN VARCHAR(14) NOT NULL,
-    Loan_Amount NUMERIC(7) NOT NULL CHECK (Loan_Amount BETWEEN 1 AND 6000000),
-    Loan_Term NUMERIC(2) NOT NULL CHECK (Loan_Term BETWEEN 1 AND 30),
-    Mode_of_Payment VARCHAR(40) NOT NULL CHECK (Mode_of_Payment IN ('Salary deduction', 'Over-the-Counter (Post-Dated Checks)', 'Over-the-Counter (Cash/Check)', 'Collecting Agent (Bank)', 'Collecting Agent (Developer)', 'Collecting Agent (Remittance Center)')),
-    PRIMARY KEY (PAG_IBIG_MID_Number_RTN),
-    FOREIGN KEY (PAG_IBIG_MID_Number_RTN) REFERENCES BORROWER_INFORMATION(Pag_IBIG_MID_Number_RTN)
+    TCT_OCT_CCT_No VARCHAR(13) NOT NULL,
+    Loan_Amount DECIMAL(18, 2) NOT NULL,
+    Loan_Term VARCHAR(20) NOT NULL,
+    Mode_of_Payment VARCHAR(50) NOT NULL,
+    INDEX (TCT_OCT_CCT_No), -- Index on TCT_OCT_CCT_No for foreign key reference
+    FOREIGN KEY (PAG_IBIG_MID_Number_RTN) REFERENCES BORROWER_INFORMATION(Pag_IBIG_MID_Number_RTN),
+    FOREIGN KEY (TCT_OCT_CCT_No) REFERENCES COLLATERAL_INFORMATION(TCT_OCT_CCT_No)
 );
 
 -- Table for storing banking information
