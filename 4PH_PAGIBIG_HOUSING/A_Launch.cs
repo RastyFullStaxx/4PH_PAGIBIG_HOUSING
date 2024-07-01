@@ -21,12 +21,9 @@ namespace _4PH_PAGIBIG_HOUSING
         private void btnApply_Click(object sender, EventArgs e)
         {
 
-            /*       // Show the loading screen
+                 // Show the loading screen
                    LoadingScreenForm loadingScreen = new LoadingScreenForm();
-                   loadingScreen.ShowDialog();*/
-
-            ApplicationPart1 borrowerinfo = new ApplicationPart1();
-            borrowerinfo.Show();
+                   loadingScreen.ShowDialog();
 
             this.Hide();
         }
