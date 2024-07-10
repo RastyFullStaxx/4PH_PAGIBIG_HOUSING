@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administration_Dashboard));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnDashboard = new Button();
             btnPersonalInfo = new Button();
             btnLoanInfo = new Button();
@@ -38,11 +40,13 @@
             btnRealEstateInfo = new Button();
             btnOtherLoanInfo = new Button();
             btnExit = new Button();
-            btnFind = new Button();
-            btnGroupBy = new Button();
-            btnJoin = new Button();
-            btnAboutUs = new Button();
+            btnAddRecord = new Button();
             imgSectionTitle = new PictureBox();
+            lblMRID = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            cbSelectMRID = new Guna.UI2.WinForms.Guna2ComboBox();
+            btnSQLProblems = new Button();
+            btnAbout = new Button();
+            btnManageRecord = new Button();
             ((System.ComponentModel.ISupportInitialize)imgSectionTitle).BeginInit();
             SuspendLayout();
             // 
@@ -181,65 +185,20 @@
             btnExit.TabIndex = 47;
             btnExit.UseVisualStyleBackColor = true;
             // 
-            // btnFind
+            // btnAddRecord
             // 
-            btnFind.BackColor = Color.Transparent;
-            btnFind.Cursor = Cursors.Hand;
-            btnFind.FlatAppearance.BorderSize = 0;
-            btnFind.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnFind.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnFind.FlatStyle = FlatStyle.Flat;
-            btnFind.Image = (Image)resources.GetObject("btnFind.Image");
-            btnFind.Location = new Point(503, 153);
-            btnFind.Name = "btnFind";
-            btnFind.Size = new Size(257, 246);
-            btnFind.TabIndex = 48;
-            btnFind.UseVisualStyleBackColor = true;
-            // 
-            // btnGroupBy
-            // 
-            btnGroupBy.BackColor = Color.Transparent;
-            btnGroupBy.Cursor = Cursors.Hand;
-            btnGroupBy.FlatAppearance.BorderSize = 0;
-            btnGroupBy.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnGroupBy.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnGroupBy.FlatStyle = FlatStyle.Flat;
-            btnGroupBy.Image = (Image)resources.GetObject("btnGroupBy.Image");
-            btnGroupBy.Location = new Point(795, 153);
-            btnGroupBy.Name = "btnGroupBy";
-            btnGroupBy.Size = new Size(257, 246);
-            btnGroupBy.TabIndex = 49;
-            btnGroupBy.UseVisualStyleBackColor = true;
-            // 
-            // btnJoin
-            // 
-            btnJoin.BackColor = Color.Transparent;
-            btnJoin.Cursor = Cursors.Hand;
-            btnJoin.FlatAppearance.BorderSize = 0;
-            btnJoin.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnJoin.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnJoin.FlatStyle = FlatStyle.Flat;
-            btnJoin.Image = (Image)resources.GetObject("btnJoin.Image");
-            btnJoin.Location = new Point(503, 405);
-            btnJoin.Name = "btnJoin";
-            btnJoin.Size = new Size(257, 246);
-            btnJoin.TabIndex = 50;
-            btnJoin.UseVisualStyleBackColor = true;
-            // 
-            // btnAboutUs
-            // 
-            btnAboutUs.BackColor = Color.Transparent;
-            btnAboutUs.Cursor = Cursors.Hand;
-            btnAboutUs.FlatAppearance.BorderSize = 0;
-            btnAboutUs.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnAboutUs.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnAboutUs.FlatStyle = FlatStyle.Flat;
-            btnAboutUs.Image = (Image)resources.GetObject("btnAboutUs.Image");
-            btnAboutUs.Location = new Point(795, 405);
-            btnAboutUs.Name = "btnAboutUs";
-            btnAboutUs.Size = new Size(257, 246);
-            btnAboutUs.TabIndex = 51;
-            btnAboutUs.UseVisualStyleBackColor = true;
+            btnAddRecord.BackColor = Color.Transparent;
+            btnAddRecord.Cursor = Cursors.Hand;
+            btnAddRecord.FlatAppearance.BorderSize = 0;
+            btnAddRecord.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnAddRecord.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnAddRecord.FlatStyle = FlatStyle.Flat;
+            btnAddRecord.Image = (Image)resources.GetObject("btnAddRecord.Image");
+            btnAddRecord.Location = new Point(419, 389);
+            btnAddRecord.Name = "btnAddRecord";
+            btnAddRecord.Size = new Size(359, 175);
+            btnAddRecord.TabIndex = 50;
+            btnAddRecord.UseVisualStyleBackColor = true;
             // 
             // imgSectionTitle
             // 
@@ -250,17 +209,91 @@
             imgSectionTitle.TabIndex = 52;
             imgSectionTitle.TabStop = false;
             // 
+            // lblMRID
+            // 
+            lblMRID.BackColor = Color.Transparent;
+            lblMRID.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMRID.Location = new Point(538, 166);
+            lblMRID.Name = "lblMRID";
+            lblMRID.Size = new Size(152, 17);
+            lblMRID.TabIndex = 54;
+            lblMRID.Text = "PAG-IBIG MRID/RTN No.";
+            // 
+            // cbSelectMRID
+            // 
+            cbSelectMRID.BackColor = Color.Transparent;
+            cbSelectMRID.CustomizableEdges = customizableEdges1;
+            cbSelectMRID.DrawMode = DrawMode.OwnerDrawFixed;
+            cbSelectMRID.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbSelectMRID.FocusedColor = Color.FromArgb(94, 148, 255);
+            cbSelectMRID.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cbSelectMRID.Font = new Font("Segoe UI", 10F);
+            cbSelectMRID.ForeColor = Color.FromArgb(68, 88, 112);
+            cbSelectMRID.ItemHeight = 30;
+            cbSelectMRID.Location = new Point(538, 189);
+            cbSelectMRID.Name = "cbSelectMRID";
+            cbSelectMRID.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            cbSelectMRID.Size = new Size(499, 36);
+            cbSelectMRID.TabIndex = 55;
+            // 
+            // btnSQLProblems
+            // 
+            btnSQLProblems.BackColor = Color.Transparent;
+            btnSQLProblems.Cursor = Cursors.Hand;
+            btnSQLProblems.FlatAppearance.BorderSize = 0;
+            btnSQLProblems.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnSQLProblems.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnSQLProblems.FlatStyle = FlatStyle.Flat;
+            btnSQLProblems.Image = (Image)resources.GetObject("btnSQLProblems.Image");
+            btnSQLProblems.Location = new Point(419, 570);
+            btnSQLProblems.Name = "btnSQLProblems";
+            btnSQLProblems.Size = new Size(359, 105);
+            btnSQLProblems.TabIndex = 59;
+            btnSQLProblems.UseVisualStyleBackColor = true;
+            // 
+            // btnAbout
+            // 
+            btnAbout.BackColor = Color.Transparent;
+            btnAbout.Cursor = Cursors.Hand;
+            btnAbout.FlatAppearance.BorderSize = 0;
+            btnAbout.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnAbout.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnAbout.FlatStyle = FlatStyle.Flat;
+            btnAbout.Image = (Image)resources.GetObject("btnAbout.Image");
+            btnAbout.Location = new Point(819, 570);
+            btnAbout.Name = "btnAbout";
+            btnAbout.Size = new Size(359, 105);
+            btnAbout.TabIndex = 60;
+            btnAbout.UseVisualStyleBackColor = true;
+            // 
+            // btnManageRecord
+            // 
+            btnManageRecord.BackColor = Color.Transparent;
+            btnManageRecord.Cursor = Cursors.Hand;
+            btnManageRecord.FlatAppearance.BorderSize = 0;
+            btnManageRecord.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnManageRecord.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnManageRecord.FlatStyle = FlatStyle.Flat;
+            btnManageRecord.Image = (Image)resources.GetObject("btnManageRecord.Image");
+            btnManageRecord.Location = new Point(819, 389);
+            btnManageRecord.Name = "btnManageRecord";
+            btnManageRecord.Size = new Size(359, 175);
+            btnManageRecord.TabIndex = 61;
+            btnManageRecord.UseVisualStyleBackColor = true;
+            // 
             // Administration_Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1280, 800);
+            Controls.Add(btnManageRecord);
+            Controls.Add(btnAbout);
+            Controls.Add(btnSQLProblems);
+            Controls.Add(cbSelectMRID);
+            Controls.Add(lblMRID);
             Controls.Add(imgSectionTitle);
-            Controls.Add(btnAboutUs);
-            Controls.Add(btnJoin);
-            Controls.Add(btnGroupBy);
-            Controls.Add(btnFind);
+            Controls.Add(btnAddRecord);
             Controls.Add(btnExit);
             Controls.Add(btnOtherLoanInfo);
             Controls.Add(btnRealEstateInfo);
@@ -277,6 +310,7 @@
             Load += Administration_Dashboard_Load;
             ((System.ComponentModel.ISupportInitialize)imgSectionTitle).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -290,10 +324,12 @@
         private Button btnRealEstateInfo;
         private Button btnOtherLoanInfo;
         private Button btnExit;
-        private Button btnFind;
-        private Button btnGroupBy;
-        private Button btnJoin;
-        private Button btnAboutUs;
+        private Button btnAddRecord;
         private PictureBox imgSectionTitle;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblMRID;
+        private Guna.UI2.WinForms.Guna2ComboBox cbSelectMRID;
+        private Button btnSQLProblems;
+        private Button btnAbout;
+        private Button btnManageRecord;
     }
 }
