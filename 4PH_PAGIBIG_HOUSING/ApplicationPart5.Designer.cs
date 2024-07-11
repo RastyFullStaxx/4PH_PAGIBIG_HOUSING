@@ -204,7 +204,7 @@
             btnRevealEntry2.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnRevealEntry2.FlatStyle = FlatStyle.Flat;
             btnRevealEntry2.Image = (Image)resources.GetObject("btnRevealEntry2.Image");
-            btnRevealEntry2.Location = new Point(357, 447);
+            btnRevealEntry2.Location = new Point(340, 26);
             btnRevealEntry2.Name = "btnRevealEntry2";
             btnRevealEntry2.Size = new Size(431, 66);
             btnRevealEntry2.TabIndex = 35;
@@ -542,8 +542,6 @@
             // 
             pnlMain.AutoScroll = true;
             pnlMain.BackColor = Color.Transparent;
-            pnlMain.Controls.Add(btnRevealEntry2);
-            pnlMain.Controls.Add(btnRevealEntry3);
             pnlMain.Controls.Add(pnlEntry3);
             pnlMain.Controls.Add(pnlEntry2);
             pnlMain.Controls.Add(pnlEntry1);
@@ -558,6 +556,7 @@
             // 
             pnlEntry3.BackColor = Color.Transparent;
             pnlEntry3.Controls.Add(btnCancelEntry3);
+            pnlEntry3.Controls.Add(btnRevealEntry3);
             pnlEntry3.Controls.Add(label16);
             pnlEntry3.Controls.Add(comboBox2);
             pnlEntry3.Controls.Add(label7);
@@ -604,7 +603,7 @@
             btnRevealEntry3.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnRevealEntry3.FlatStyle = FlatStyle.Flat;
             btnRevealEntry3.Image = (Image)resources.GetObject("btnRevealEntry3.Image");
-            btnRevealEntry3.Location = new Point(362, 735);
+            btnRevealEntry3.Location = new Point(340, 26);
             btnRevealEntry3.Name = "btnRevealEntry3";
             btnRevealEntry3.Size = new Size(431, 66);
             btnRevealEntry3.TabIndex = 90;
@@ -761,6 +760,7 @@
             pnlEntry2.Controls.Add(label1);
             pnlEntry2.Controls.Add(label2);
             pnlEntry2.Controls.Add(label3);
+            pnlEntry2.Controls.Add(btnRevealEntry2);
             pnlEntry2.Controls.Add(label4);
             pnlEntry2.Controls.Add(label5);
             pnlEntry2.Controls.Add(label6);
