@@ -24,10 +24,10 @@ namespace _4PH_PAGIBIG_HOUSING
             FormBorderStyle = FormBorderStyle.None;
 
             // Apply rounded corners on load
-            Load += ApplicationBriefing_Load;
+            //Load += ApplicationBriefing_Load;
 
             // Apply rounded corners when resizing
-            Resize += ApplicationBriefing_Resize;
+            //Resize += ApplicationBriefing_Resize;
         }
         private void ApplicationBriefing_Load(object sender, EventArgs e)
         {

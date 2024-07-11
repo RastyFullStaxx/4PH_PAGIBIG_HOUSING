@@ -13,7 +13,8 @@ namespace _4PH_PAGIBIG_HOUSING.Database
         private string connectionString;
 
         // Singleton instance
-        // Singleton instance
+
+        // Singleton instance using Lazy<T>
         private static readonly Lazy<DatabaseConnection> instance =
             new Lazy<DatabaseConnection>(() => new DatabaseConnection());
 
@@ -21,23 +22,25 @@ namespace _4PH_PAGIBIG_HOUSING.Database
         private DatabaseConnection()
         {
             // Initialize connection string here
-            //RASTY : connectionString = "server=localhost;port=3307;database=pagibighousing;uid=root;pwd='180503';";
-            //RASTY : connectionString = "server=localhost;port=3307;database=pagibighousing;uid=root;pwd='';";
+            //RASTY = connectionString = "server=localhost;database=unbroke;uid=root;pwd='180503';";
+            // Rasty = connectionString = "server=localhost;port=3307;database=pagibighousing;uid=root;pwd='';";
 
-            //EJAY =  connectionString = "server=localhost;database=pagibighousing;uid=root;pwd='';";
+
+            //EJAY = connectionString = "server=localhost;database=unbroke;uid=root;pwd='';";
 
             connectionString = "server=localhost;database=pagibighousing;uid=root;pwd='';";
 
         }
 
-
         // Public static method to get the singleton instance
         public static DatabaseConnection Instance => instance.Value;
+
 
         // Method to get database connection
         public MySqlConnection GetConnection()
         {
-            return new MySqlConnection(connectionString);
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            return connection;
         }
 
         // Method to test database connection

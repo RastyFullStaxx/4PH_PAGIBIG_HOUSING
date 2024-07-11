@@ -1,4 +1,7 @@
-﻿using System;
+﻿using _4PH_PAGIBIG_HOUSING.Database;
+using _4PH_PAGIBIG_HOUSING.DbContext;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,9 +10,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using _4PH_PAGIBIG_HOUSING.Database;
-using _4PH_PAGIBIG_HOUSING.DbContext;
-using MySql.Data.MySqlClient;
 
 namespace _4PH_PAGIBIG_HOUSING
 {
@@ -17,8 +17,13 @@ namespace _4PH_PAGIBIG_HOUSING
     {
         private bool pnlEntry2Expanded = false;
         private bool pnlEntry3Expanded = false;
+        private readonly string _pagIBIGMIDNumberRTN, _tct;
+        private readonly DatabaseConnection _database = DatabaseConnection.Instance;
+        private readonly BankingInformation _bank = new BankingInformation();
 
-        public ApplicationPart5()
+
+
+        public ApplicationPart5(String pagibigMIDNumber, String tct)
         {
             InitializeComponent();
 
@@ -27,6 +32,8 @@ namespace _4PH_PAGIBIG_HOUSING
 
             // Initialize the initial state of pnlEntry3
             ShowOnlyCancelEntry3();
+            _pagIBIGMIDNumberRTN = pagibigMIDNumber;
+            _tct = tct;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -56,7 +63,7 @@ namespace _4PH_PAGIBIG_HOUSING
             // Show only btnCancelEntry2 and hide other controls in pnlEntry2
             btnCancelEntry2.Visible = true;
             label15.Visible = false;
-            comboBox1.Visible = false;
+            cbTypeOfAccount2.Visible = false;
             label1.Visible = false;
             label2.Visible = false;
             label3.Visible = false;
@@ -64,12 +71,12 @@ namespace _4PH_PAGIBIG_HOUSING
             label4.Visible = false;
             label5.Visible = false;
             label6.Visible = false;
-            textBox1.Visible = false;
-            textBox2.Visible = false;
-            textBox3.Visible = false;
-            textBox4.Visible = false;
-            textBox5.Visible = false;
-            dateTimePicker1.Visible = false;
+            txtAccountNumber2.Visible = false;
+            txtBankOfTheAccount2.Visible = false;
+            txtIssuerName2.Visible = false;
+            txtAverageBalance2.Visible = false;
+            txtBranchAddress2.Visible = false;
+            dtDateOpened2.Visible = false;
             btnCancelEntry2.Visible = false;
 
             pnlEntry2Expanded = false;
@@ -80,7 +87,7 @@ namespace _4PH_PAGIBIG_HOUSING
             // Show all controls in pnlEntry2
             btnCancelEntry2.Visible = true;
             label15.Visible = true;
-            comboBox1.Visible = true;
+            cbTypeOfAccount2.Visible = true;
             label1.Visible = true;
             label2.Visible = true;
             label3.Visible = true;
@@ -88,12 +95,12 @@ namespace _4PH_PAGIBIG_HOUSING
             label4.Visible = true;
             label5.Visible = true;
             label6.Visible = true;
-            textBox1.Visible = true;
-            textBox2.Visible = true;
-            textBox3.Visible = true;
-            textBox4.Visible = true;
-            textBox5.Visible = true;
-            dateTimePicker1.Visible = true;
+            txtAccountNumber2.Visible = true;
+            txtBankOfTheAccount2.Visible = true;
+            txtIssuerName2.Visible = true;
+            txtAverageBalance2.Visible = true;
+            txtBranchAddress2.Visible = true;
+            dtDateOpened2.Visible = true;
             btnCancelEntry2.Visible = true;
 
             pnlEntry2Expanded = true;
@@ -122,19 +129,19 @@ namespace _4PH_PAGIBIG_HOUSING
             btnCancelEntry3.Visible = true;
             btnRevealEntry3.Visible = true; // Show btnRevealEntry3 when btnCancelEntry3 is visible
             label16.Visible = false;
-            comboBox2.Visible = false;
+            cbTypeOfAccount3.Visible = false;
             label7.Visible = false;
             label8.Visible = false;
             label9.Visible = false;
             label10.Visible = false;
             label13.Visible = false;
             label14.Visible = false;
-            textBox6.Visible = false;
-            textBox7.Visible = false;
-            textBox8.Visible = false;
-            textBox9.Visible = false;
-            textBox10.Visible = false;
-            dateTimePicker2.Visible = false;
+            txtAccountNumber3.Visible = false;
+            txtBankOfTheAccount3.Visible = false;
+            txtIssuerName3.Visible = false;
+            txtAverageBalance3.Visible = false;
+            txtBranchAddress3.Visible = false;
+            dtDateOpened3.Visible = false;
             btnCancelEntry3.Visible = false;
 
             pnlEntry3Expanded = false;
@@ -146,19 +153,19 @@ namespace _4PH_PAGIBIG_HOUSING
             btnCancelEntry3.Visible = true;
             btnRevealEntry3.Visible = false; // Hide btnRevealEntry3 when all controls are visible
             label16.Visible = true;
-            comboBox2.Visible = true;
+            cbTypeOfAccount3.Visible = true;
             label7.Visible = true;
             label8.Visible = true;
             label9.Visible = true;
             label10.Visible = true;
             label13.Visible = true;
             label14.Visible = true;
-            textBox6.Visible = true;
-            textBox7.Visible = true;
-            textBox8.Visible = true;
-            textBox9.Visible = true;
-            textBox10.Visible = true;
-            dateTimePicker2.Visible = true;
+            txtAccountNumber3.Visible = true;
+            txtBankOfTheAccount3.Visible = true;
+            txtIssuerName3.Visible = true;
+            txtAverageBalance3.Visible = true;
+            txtBranchAddress3.Visible = true;
+            dtDateOpened3.Visible = true;
             btnCancelEntry3.Visible = true;
 
             pnlEntry3Expanded = true;
@@ -174,9 +181,18 @@ namespace _4PH_PAGIBIG_HOUSING
             _tct = tct;
         }
 
-        private void btnSaveBankInfo_Click(object sender, EventArgs e)
+        private void ApplicationPart5_Load(object sender, EventArgs e)
         {
-            if (ValidateInputs())
+            cbTypeOfAccount1.Items.AddRange(new string[] { "Savings", "Checking", "Current" });
+            cbTypeOfAccount2.Items.AddRange(new string[] { "Savings", "Checking", "Current" });
+            cbTypeOfAccount3.Items.AddRange(new string[] { "Savings", "Checking", "Current" });
+
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            Panel1Insert();
+            if (pnlEntry2.Visible) // Check if pnlEntry2 is visible
             {
                 if (SaveBankingInformation(_bank))
                 {
@@ -192,36 +208,152 @@ namespace _4PH_PAGIBIG_HOUSING
                     MessageBox.Show("Failed to save banking information.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            if (pnlEntry3.Visible) // Check if pnlEntry3 is visible
+            {
+                Panel3Insert();
+            }
+
+
+            ApplicationPart6 realestate = new ApplicationPart6(_pagIBIGMIDNumberRTN, _tct);
+            realestate.Show();
+            this.Hide();
+
         }
 
-        private bool ValidateInputs()
+        private void Panel1Insert()
         {
             _bank.PAG_IBIG_MID_Number_RTN = _pagIBIGMIDNumberRTN;
-            _bank.Account_No = txtAccountNumber.Text.Trim();
-            _bank.Type_of_Account = cbTypeOfAccount.SelectedItem?.ToString();
-            _bank.Branch_Address = txtBranchAddress.Text.Trim();
-            _bank.Issuer_Name = txtIssuerName.Text.Trim();
-            _bank.Bank = txtBankOfTheAccount.Text.Trim();
+            _bank.Account_No = txtAccountNumber1.Text.Trim();
+            _bank.Type_of_Account = cbTypeOfAccount1.SelectedItem?.ToString();
+            _bank.Branch_Address = txtBranchAddress1.Text.Trim();
+            _bank.Issuer_Name = txtIssuerName1.Text.Trim();
+            _bank.Type_of_Account = cbTypeOfAccount1.SelectedItem?.ToString();
+            _bank.Branch_Address = txtBranchAddress1.Text.Trim();
+            _bank.Issuer_Name = txtIssuerName1.Text.Trim();
+            _bank.Bank = txtBankOfTheAccount1.Text.Trim();
+
             // Validate required fields
             if (string.IsNullOrEmpty(_bank.Account_No) || string.IsNullOrEmpty(_bank.Type_of_Account))
             {
-                MessageBox.Show("Account Number and Type of Account are required.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
+                MessageBox.Show("Account Number and Type of Account are required for the first bank account.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
 
-            // Validate average balance
-            if (!decimal.TryParse(txtAverageBalance.Text, out decimal aveBalance))
+            // Try parsing average balance
+            if (!decimal.TryParse(txtAverageBalance1.Text, out decimal aveBalance))
             {
-                MessageBox.Show("Invalid Average Balance.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
+                MessageBox.Show("Invalid Average Balance for the first bank account.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
 
             _bank.Ave_Balance = aveBalance;
-            _bank.Date_Opened = dtDateOpened.Value;
+            _bank.Date_Opened = dtDateOpened1.Value;
 
-            return true;
+            // Save banking information
+            if (SaveBankingInformation(_bank))
+            {
+                //MessageBox.Show("Banking information saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Optionally, you can proceed to the next form or take other actions
+            }
+            else
+            {
+                MessageBox.Show("Failed to save banking information.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
+
+        private void Panel2Insert()
+        {
+            if (!pnlEntry2.Visible) return; // Exit if pnlEntry2 is not visible
+
+            _bank.PAG_IBIG_MID_Number_RTN = _pagIBIGMIDNumberRTN;
+            _bank.Account_No = txtAccountNumber2.Text.Trim();
+            _bank.Type_of_Account = cbTypeOfAccount2.SelectedItem?.ToString();
+            _bank.Branch_Address = txtBranchAddress2.Text.Trim();
+            _bank.Issuer_Name = txtIssuerName2.Text.Trim();
+            _bank.Bank = txtBankOfTheAccount2.Text.Trim();
+
+            // Validate required fields only if pnlEntry2 is visible
+            if (string.IsNullOrEmpty(_bank.Account_No))
+            {
+                MessageBox.Show("Account Number is required for the second bank account.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(_bank.Type_of_Account))
+            {
+                MessageBox.Show("Type of Account is required for the second bank account.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Try parsing average balance
+            if (!decimal.TryParse(txtAverageBalance2.Text, out decimal aveBalance))
+            {
+                MessageBox.Show("Invalid Average Balance for the second bank account.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            _bank.Ave_Balance = aveBalance;
+            _bank.Date_Opened = dtDateOpened2.Value;
+
+            // Save banking information
+            if (SaveBankingInformation(_bank))
+            {
+                //MessageBox.Show("Banking information saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Optionally, you can proceed to the next form or take other actions
+            }
+            else
+            {
+                MessageBox.Show("Failed to save banking information.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Panel3Insert()
+        {
+            if (!pnlEntry3.Visible) return; // Exit if pnlEntry3 is not visible
+
+            _bank.PAG_IBIG_MID_Number_RTN = _pagIBIGMIDNumberRTN;
+            _bank.Account_No = txtAccountNumber3.Text.Trim();
+            _bank.Type_of_Account = cbTypeOfAccount3.SelectedItem?.ToString();
+            _bank.Branch_Address = txtBranchAddress3.Text.Trim();
+            _bank.Issuer_Name = txtIssuerName3.Text.Trim();
+            _bank.Bank = txtBankOfTheAccount3.Text.Trim();
+
+            // Validate required fields only if pnlEntry3 is visible
+            if (string.IsNullOrEmpty(_bank.Account_No))
+            {
+                MessageBox.Show("Account Number is required for the third bank account.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(_bank.Type_of_Account))
+            {
+                MessageBox.Show("Type of Account is required for the third bank account.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Try parsing average balance
+            if (!decimal.TryParse(txtAverageBalance3.Text, out decimal aveBalance))
+            {
+                MessageBox.Show("Invalid Average Balance for the third bank account.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            _bank.Ave_Balance = aveBalance;
+            _bank.Date_Opened = dtDateOpened3.Value;
+
+            // Save banking information
+            if (SaveBankingInformation(_bank))
+            {
+                //MessageBox.Show("Banking information saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Optionally, you can proceed to the next form or take other actions
+            }
+            else
+            {
+                MessageBox.Show("Failed to save banking information.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
         private bool SaveBankingInformation(BankingInformation bankingInfo)
         {
@@ -253,43 +385,15 @@ namespace _4PH_PAGIBIG_HOUSING
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Error saving banking information: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Error saving banking information: {ex.Message}");
                     return false;
                 }
             }
         }
 
-        private void ClearInputs()
-        {
-            txtAccountNumber.Text = string.Empty;
-            cbTypeOfAccount.SelectedIndex = -1; // Reset combo box selection
-            txtBranchAddress.Text = string.Empty;
-            txtIssuerName.Text = string.Empty;
-            txtAverageBalance.Text = string.Empty;
-            dtDateOpened.Value = DateTime.Now;
-        }
-
-        private void ApplicationPart5_Load(object sender, EventArgs e)
+        private void pnlEntry2_Paint(object sender, PaintEventArgs e)
         {
 
-            cbTypeOfAccount.Items.AddRange(new string[] { "Savings", "Checking", "Current" });
-        }
-
-        private void btnAddMoreAcc_Click(object sender, EventArgs e)
-        {
-            if (ValidateInputs())
-            {
-                if (SaveBankingInformation(_bank))
-                {
-                    MessageBox.Show("Additional banking information saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ClearInputs();
-                    // Optionally, you can proceed to the next form or take other actions
-                }
-                else
-                {
-                    MessageBox.Show("Failed to save additional banking information.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
         }
     }
 }

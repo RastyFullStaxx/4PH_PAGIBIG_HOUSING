@@ -99,10 +99,10 @@ namespace _4PH_PAGIBIG_HOUSING
                 MessageBox.Show("Tax declaration must be a numeric value with 6 digits.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-                
-            if (!IsNumeric(txtLandAreaMeasurement.Text) || txtLandAreaMeasurement.Text.Length > 5)
+
+            if (!IsNumeric(txtLandAreaMeasurement.Text) || txtLandAreaMeasurement.Text.Length >=6)
             {
-                MessageBox.Show("Land area must be a numeric value with 5 digits.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Land area must be a numeric value with only up to 5 digits.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 

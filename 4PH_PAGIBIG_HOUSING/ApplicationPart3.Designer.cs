@@ -446,7 +446,7 @@
             // cbPropertyLocation
             // 
             cbPropertyLocation.BackColor = Color.WhiteSmoke;
-            cbPropertyLocation.Location = new Point(70, 406);
+            cbPropertyLocation.Location = new Point(74, 418);
             cbPropertyLocation.Name = "cbPropertyLocation";
             cbPropertyLocation.Size = new Size(517, 23);
             cbPropertyLocation.TabIndex = 85;
@@ -491,6 +491,7 @@
             Controls.Add(lblNameOfProperty);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ApplicationPart3";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ApplicationPart3";
             Load += ApplicationPart3_Load;
             ResumeLayout(false);
