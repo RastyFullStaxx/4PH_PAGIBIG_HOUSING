@@ -9,7 +9,7 @@ namespace _4PH_PAGIBIG_HOUSING
     public partial class ApplicationPart2 : Form
     {
         private readonly string _pagIBIGMIDNumberRTN;
-        private readonly DatabaseConnection database = DatabaseConnection.Instance;
+        private readonly DatabaseConnection database = DatabaseConnection.GetInstance();
         private readonly HousingLoanInformation loan = new HousingLoanInformation();
         private string _tct;
 
@@ -50,7 +50,7 @@ namespace _4PH_PAGIBIG_HOUSING
             bool savedSuccessfully = SaveLoanInformation(loan);
             if (savedSuccessfully)
             {
-                ApplicationPart5 BankInfo = new ApplicationPart5(_pagIBIGMIDNumberRTN, _tct);
+                ApplicationPart5 BankInfo = new ApplicationPart5();
                 BankInfo.Show();
                 this.Hide();
                 ClearLoanForm();

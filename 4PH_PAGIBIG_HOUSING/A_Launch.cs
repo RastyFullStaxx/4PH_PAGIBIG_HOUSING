@@ -8,7 +8,7 @@ namespace _4PH_PAGIBIG_HOUSING
 {
     public partial class A_Launch : Form
     {
-        DatabaseConnection database = DatabaseConnection.Instance;
+        DatabaseConnection database = DatabaseConnection.GetInstance();
         public A_Launch()
         {
             InitializeComponent();
@@ -24,14 +24,15 @@ namespace _4PH_PAGIBIG_HOUSING
             // Show the loading screen
             LoadingScreenForm loadingScreen = new LoadingScreenForm();
             loadingScreen.ShowDialog();
+            
 
             this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Administration_Dashboard dashboard = new Administration_Dashboard();
-            dashboard.Show();
+            Administration_Dashboard administration_Dashboard = new Administration_Dashboard();
+            administration_Dashboard.Show();
             this.Hide();
         }
     }

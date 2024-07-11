@@ -10,7 +10,7 @@ namespace _4PH_PAGIBIG_HOUSING
     {
         private readonly string _pagIBIGMIDNumberRTN;
         private readonly long _SSSNumber; // Changed to long for numeric SSS ID
-        private readonly DatabaseConnection database = DatabaseConnection.Instance;
+        private readonly DatabaseConnection database = DatabaseConnection.GetInstance();
         private readonly BorrowersEmploymentInformation employmentinfo = new BorrowersEmploymentInformation();
 
         public ApplicationPart4(string pagIBIGMIDNumberRTN, string SSSNumber)
