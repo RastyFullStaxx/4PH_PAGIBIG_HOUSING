@@ -34,7 +34,6 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ab_Difficult_SQL_Problems));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
@@ -48,6 +47,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ab_Difficult_SQL_Problems));
             pnlDifficultProblems = new Guna.UI2.WinForms.Guna2Panel();
             DataViewDifficultProblem3Result = new Guna.UI2.WinForms.Guna2DataGridView();
             imgDifficultProblem3 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -56,6 +56,9 @@
             DataViewDifficultProblem1Result = new Guna.UI2.WinForms.Guna2DataGridView();
             imgDifficultProblem1 = new Guna.UI2.WinForms.Guna2PictureBox();
             imgDifficultProblems = new Guna.UI2.WinForms.Guna2PictureBox();
+            btnDifficult = new Button();
+            btnModerate = new Button();
+            btnSimple = new Button();
             pnlDifficultProblems.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DataViewDifficultProblem3Result).BeginInit();
             ((System.ComponentModel.ISupportInitialize)imgDifficultProblem3).BeginInit();
@@ -69,6 +72,9 @@
             // pnlDifficultProblems
             // 
             pnlDifficultProblems.AutoScroll = true;
+            pnlDifficultProblems.Controls.Add(btnDifficult);
+            pnlDifficultProblems.Controls.Add(btnModerate);
+            pnlDifficultProblems.Controls.Add(btnSimple);
             pnlDifficultProblems.Controls.Add(DataViewDifficultProblem3Result);
             pnlDifficultProblems.Controls.Add(imgDifficultProblem3);
             pnlDifficultProblems.Controls.Add(DataViewDifficulteProblem2Result);
@@ -107,7 +113,7 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             DataViewDifficultProblem3Result.DefaultCellStyle = dataGridViewCellStyle3;
             DataViewDifficultProblem3Result.GridColor = Color.FromArgb(231, 229, 255);
-            DataViewDifficultProblem3Result.Location = new Point(73, 1351);
+            DataViewDifficultProblem3Result.Location = new Point(73, 1365);
             DataViewDifficultProblem3Result.Name = "DataViewDifficultProblem3Result";
             DataViewDifficultProblem3Result.RowHeadersVisible = false;
             DataViewDifficultProblem3Result.Size = new Size(836, 243);
@@ -142,7 +148,7 @@
             imgDifficultProblem3.Location = new Point(73, 1195);
             imgDifficultProblem3.Name = "imgDifficultProblem3";
             imgDifficultProblem3.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            imgDifficultProblem3.Size = new Size(853, 135);
+            imgDifficultProblem3.Size = new Size(853, 164);
             imgDifficultProblem3.TabIndex = 5;
             imgDifficultProblem3.TabStop = false;
             // 
@@ -170,7 +176,7 @@
             dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
             DataViewDifficulteProblem2Result.DefaultCellStyle = dataGridViewCellStyle6;
             DataViewDifficulteProblem2Result.GridColor = Color.FromArgb(231, 229, 255);
-            DataViewDifficulteProblem2Result.Location = new Point(73, 875);
+            DataViewDifficulteProblem2Result.Location = new Point(73, 903);
             DataViewDifficulteProblem2Result.Name = "DataViewDifficulteProblem2Result";
             DataViewDifficulteProblem2Result.RowHeadersVisible = false;
             DataViewDifficulteProblem2Result.Size = new Size(836, 243);
@@ -202,10 +208,10 @@
             imgDifficultProblem2.CustomizableEdges = customizableEdges3;
             imgDifficultProblem2.Image = (Image)resources.GetObject("imgDifficultProblem2.Image");
             imgDifficultProblem2.ImageRotate = 0F;
-            imgDifficultProblem2.Location = new Point(73, 719);
+            imgDifficultProblem2.Location = new Point(73, 738);
             imgDifficultProblem2.Name = "imgDifficultProblem2";
             imgDifficultProblem2.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            imgDifficultProblem2.Size = new Size(853, 135);
+            imgDifficultProblem2.Size = new Size(853, 168);
             imgDifficultProblem2.TabIndex = 3;
             imgDifficultProblem2.TabStop = false;
             // 
@@ -233,7 +239,7 @@
             dataGridViewCellStyle9.WrapMode = DataGridViewTriState.False;
             DataViewDifficultProblem1Result.DefaultCellStyle = dataGridViewCellStyle9;
             DataViewDifficultProblem1Result.GridColor = Color.FromArgb(231, 229, 255);
-            DataViewDifficultProblem1Result.Location = new Point(73, 392);
+            DataViewDifficultProblem1Result.Location = new Point(73, 423);
             DataViewDifficultProblem1Result.Name = "DataViewDifficultProblem1Result";
             DataViewDifficultProblem1Result.RowHeadersVisible = false;
             DataViewDifficultProblem1Result.Size = new Size(836, 243);
@@ -268,7 +274,7 @@
             imgDifficultProblem1.Location = new Point(73, 234);
             imgDifficultProblem1.Name = "imgDifficultProblem1";
             imgDifficultProblem1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            imgDifficultProblem1.Size = new Size(853, 138);
+            imgDifficultProblem1.Size = new Size(853, 183);
             imgDifficultProblem1.TabIndex = 1;
             imgDifficultProblem1.TabStop = false;
             // 
@@ -280,9 +286,54 @@
             imgDifficultProblems.Location = new Point(44, 55);
             imgDifficultProblems.Name = "imgDifficultProblems";
             imgDifficultProblems.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            imgDifficultProblems.Size = new Size(897, 154);
+            imgDifficultProblems.Size = new Size(897, 93);
             imgDifficultProblems.TabIndex = 0;
             imgDifficultProblems.TabStop = false;
+            // 
+            // btnDifficult
+            // 
+            btnDifficult.BackColor = Color.Transparent;
+            btnDifficult.Cursor = Cursors.Hand;
+            btnDifficult.FlatAppearance.BorderSize = 0;
+            btnDifficult.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnDifficult.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnDifficult.FlatStyle = FlatStyle.Flat;
+            btnDifficult.Image = (Image)resources.GetObject("btnDifficult.Image");
+            btnDifficult.Location = new Point(587, 148);
+            btnDifficult.Name = "btnDifficult";
+            btnDifficult.Size = new Size(157, 63);
+            btnDifficult.TabIndex = 61;
+            btnDifficult.UseVisualStyleBackColor = true;
+            // 
+            // btnModerate
+            // 
+            btnModerate.BackColor = Color.Transparent;
+            btnModerate.Cursor = Cursors.Hand;
+            btnModerate.FlatAppearance.BorderSize = 0;
+            btnModerate.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnModerate.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnModerate.FlatStyle = FlatStyle.Flat;
+            btnModerate.Image = (Image)resources.GetObject("btnModerate.Image");
+            btnModerate.Location = new Point(406, 148);
+            btnModerate.Name = "btnModerate";
+            btnModerate.Size = new Size(157, 63);
+            btnModerate.TabIndex = 60;
+            btnModerate.UseVisualStyleBackColor = true;
+            // 
+            // btnSimple
+            // 
+            btnSimple.BackColor = Color.Transparent;
+            btnSimple.Cursor = Cursors.Hand;
+            btnSimple.FlatAppearance.BorderSize = 0;
+            btnSimple.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnSimple.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnSimple.FlatStyle = FlatStyle.Flat;
+            btnSimple.Image = (Image)resources.GetObject("btnSimple.Image");
+            btnSimple.Location = new Point(228, 148);
+            btnSimple.Name = "btnSimple";
+            btnSimple.Size = new Size(157, 63);
+            btnSimple.TabIndex = 59;
+            btnSimple.UseVisualStyleBackColor = true;
             // 
             // Ab_Difficult_SQL_Problems
             // 
@@ -317,5 +368,8 @@
         private Guna.UI2.WinForms.Guna2DataGridView DataViewDifficultProblem1Result;
         private Guna.UI2.WinForms.Guna2PictureBox imgDifficultProblem1;
         private Guna.UI2.WinForms.Guna2PictureBox imgDifficultProblems;
+        private Button btnDifficult;
+        private Button btnModerate;
+        private Button btnSimple;
     }
 }

@@ -237,5 +237,12 @@ namespace _4PH_PAGIBIG_HOUSING
             cbYearsOfStay.Text = string.Empty; // Reset ComboBox selection
             txtSSS.Text = string.Empty;
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            A_Launch a_Launch = new A_Launch();
+            a_Launch.Show();
+            this.Close();
+        }
     }
 }

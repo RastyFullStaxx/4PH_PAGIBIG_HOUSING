@@ -34,7 +34,6 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ab_Easy_SQL_Problems));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
@@ -48,6 +47,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ab_Easy_SQL_Problems));
             pnlSimpleProblems = new Guna.UI2.WinForms.Guna2Panel();
             DataViewEasyProblem3Result = new Guna.UI2.WinForms.Guna2DataGridView();
             imgSimpleProblem3 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -56,6 +56,9 @@
             DataViewEasyProblem1Result = new Guna.UI2.WinForms.Guna2DataGridView();
             imgSimpleProblem1 = new Guna.UI2.WinForms.Guna2PictureBox();
             imgSimpleProblems = new Guna.UI2.WinForms.Guna2PictureBox();
+            btnSimple = new Button();
+            btnModerate = new Button();
+            btnDifficult = new Button();
             pnlSimpleProblems.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DataViewEasyProblem3Result).BeginInit();
             ((System.ComponentModel.ISupportInitialize)imgSimpleProblem3).BeginInit();
@@ -69,6 +72,9 @@
             // pnlSimpleProblems
             // 
             pnlSimpleProblems.AutoScroll = true;
+            pnlSimpleProblems.Controls.Add(btnDifficult);
+            pnlSimpleProblems.Controls.Add(btnModerate);
+            pnlSimpleProblems.Controls.Add(btnSimple);
             pnlSimpleProblems.Controls.Add(DataViewEasyProblem3Result);
             pnlSimpleProblems.Controls.Add(imgSimpleProblem3);
             pnlSimpleProblems.Controls.Add(DataViewEasyProblem2Result);
@@ -262,6 +268,7 @@
             // 
             // imgSimpleProblem1
             // 
+            imgSimpleProblem1.BackColor = Color.Transparent;
             imgSimpleProblem1.CustomizableEdges = customizableEdges5;
             imgSimpleProblem1.Image = (Image)resources.GetObject("imgSimpleProblem1.Image");
             imgSimpleProblem1.ImageRotate = 0F;
@@ -280,9 +287,54 @@
             imgSimpleProblems.Location = new Point(44, 55);
             imgSimpleProblems.Name = "imgSimpleProblems";
             imgSimpleProblems.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            imgSimpleProblems.Size = new Size(897, 154);
+            imgSimpleProblems.Size = new Size(897, 89);
             imgSimpleProblems.TabIndex = 0;
             imgSimpleProblems.TabStop = false;
+            // 
+            // btnSimple
+            // 
+            btnSimple.BackColor = Color.Transparent;
+            btnSimple.Cursor = Cursors.Hand;
+            btnSimple.FlatAppearance.BorderSize = 0;
+            btnSimple.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnSimple.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnSimple.FlatStyle = FlatStyle.Flat;
+            btnSimple.Image = (Image)resources.GetObject("btnSimple.Image");
+            btnSimple.Location = new Point(228, 148);
+            btnSimple.Name = "btnSimple";
+            btnSimple.Size = new Size(157, 63);
+            btnSimple.TabIndex = 56;
+            btnSimple.UseVisualStyleBackColor = true;
+            // 
+            // btnModerate
+            // 
+            btnModerate.BackColor = Color.Transparent;
+            btnModerate.Cursor = Cursors.Hand;
+            btnModerate.FlatAppearance.BorderSize = 0;
+            btnModerate.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnModerate.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnModerate.FlatStyle = FlatStyle.Flat;
+            btnModerate.Image = (Image)resources.GetObject("btnModerate.Image");
+            btnModerate.Location = new Point(406, 148);
+            btnModerate.Name = "btnModerate";
+            btnModerate.Size = new Size(157, 63);
+            btnModerate.TabIndex = 57;
+            btnModerate.UseVisualStyleBackColor = true;
+            // 
+            // btnDifficult
+            // 
+            btnDifficult.BackColor = Color.Transparent;
+            btnDifficult.Cursor = Cursors.Hand;
+            btnDifficult.FlatAppearance.BorderSize = 0;
+            btnDifficult.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnDifficult.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnDifficult.FlatStyle = FlatStyle.Flat;
+            btnDifficult.Image = (Image)resources.GetObject("btnDifficult.Image");
+            btnDifficult.Location = new Point(587, 148);
+            btnDifficult.Name = "btnDifficult";
+            btnDifficult.Size = new Size(157, 63);
+            btnDifficult.TabIndex = 58;
+            btnDifficult.UseVisualStyleBackColor = true;
             // 
             // Ab_Easy_SQL_Problems
             // 
@@ -315,5 +367,8 @@
         private Guna.UI2.WinForms.Guna2DataGridView DataViewEasyProblem2Result;
         private Guna.UI2.WinForms.Guna2DataGridView DataViewEasyProblem3Result;
         private Guna.UI2.WinForms.Guna2PictureBox imgSimpleProblem3;
+        private Button btnSimple;
+        private Button btnDifficult;
+        private Button btnModerate;
     }
 }

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ApplicationPart1));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnPersonalInfo = new Button();
             lblMID = new Label();
             lblFullname = new Label();
@@ -291,6 +291,7 @@
             btnBack.Size = new Size(126, 45);
             btnBack.TabIndex = 29;
             btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += btnBack_Click;
             // 
             // txtMRID
             // 
@@ -585,7 +586,7 @@
             // dtBirthdate
             // 
             dtBirthdate.Checked = true;
-            dtBirthdate.CustomizableEdges = customizableEdges3;
+            dtBirthdate.CustomizableEdges = customizableEdges1;
             dtBirthdate.FillColor = Color.White;
             dtBirthdate.Font = new Font("Segoe UI", 9F);
             dtBirthdate.Format = DateTimePickerFormat.Long;
@@ -593,7 +594,7 @@
             dtBirthdate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtBirthdate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtBirthdate.Name = "dtBirthdate";
-            dtBirthdate.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            dtBirthdate.ShadowDecoration.CustomizableEdges = customizableEdges2;
             dtBirthdate.Size = new Size(200, 23);
             dtBirthdate.TabIndex = 67;
             dtBirthdate.Value = new DateTime(2024, 7, 1, 18, 59, 10, 472);
