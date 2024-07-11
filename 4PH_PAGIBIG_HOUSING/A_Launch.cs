@@ -22,11 +22,8 @@ namespace _4PH_PAGIBIG_HOUSING
         {
 
             // Show the loading screen
-            ApplicationPart5 applicationPart5 = new ApplicationPart5();
-            applicationPart5.Show();
-
-            //LoadingScreenForm loadingScreen = new LoadingScreenForm();
-            //loadingScreen.ShowDialog();
+            LoadingScreenForm loadingScreen = new LoadingScreenForm();
+            loadingScreen.ShowDialog();
             
 
             this.Hide();
