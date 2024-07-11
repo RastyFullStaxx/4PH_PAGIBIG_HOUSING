@@ -9,7 +9,7 @@ namespace _4PH_PAGIBIG_HOUSING
 {
     public partial class ApplicationPart1 : Form
     {
-        private readonly DatabaseConnection database = DatabaseConnection.GetInstance();
+        private readonly DatabaseConnection database = DatabaseConnection.Instance;
         private readonly BorrowerInformation borrower = new BorrowerInformation();
 
         public ApplicationPart1()

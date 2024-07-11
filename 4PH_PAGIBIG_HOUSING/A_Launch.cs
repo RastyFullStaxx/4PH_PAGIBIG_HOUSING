@@ -8,7 +8,7 @@ namespace _4PH_PAGIBIG_HOUSING
 {
     public partial class A_Launch : Form
     {
-        DatabaseConnection database = DatabaseConnection.GetInstance();
+        DatabaseConnection database = DatabaseConnection.Instance;
         public A_Launch()
         {
             InitializeComponent();

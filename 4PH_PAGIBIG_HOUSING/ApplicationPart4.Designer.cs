@@ -565,6 +565,7 @@
             Controls.Add(lblGSIS);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ApplicationPart4";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ApplicationPart4";
             Load += ApplicationPart4_Load;
             ResumeLayout(false);

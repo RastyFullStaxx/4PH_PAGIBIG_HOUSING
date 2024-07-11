@@ -1,4 +1,6 @@
-﻿using System;
+﻿using _4PH_PAGIBIG_HOUSING.Database;
+using _4PH_PAGIBIG_HOUSING.DbContext;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +14,21 @@ namespace _4PH_PAGIBIG_HOUSING
 {
     public partial class ApplicationPart6 : Form
     {
-        public ApplicationPart6()
+
+        private readonly string _pagIBIGMIDNumberRTN, _tct;
+        private readonly DatabaseConnection _database = DatabaseConnection.Instance;
+        private readonly RealEstateInformation _estate = new RealEstateInformation();
+
+
+        public ApplicationPart6(string pagibigMIDNumber, string tct)
         {
             InitializeComponent();
 
             // Set default state for pnlMain based on the selected radio button
             SetPanelVisibility();
+            _pagIBIGMIDNumberRTN = pagibigMIDNumber;
+            _tct = tct;
+
 
             // Set initial visibility for entry panels and buttons
             pnlEntry2.Visible = false;
@@ -25,8 +36,6 @@ namespace _4PH_PAGIBIG_HOUSING
             pnlEntry3.Visible = false;
             btnCancelEntry3.Visible = false;
 
-            // Ensure child controls inside pnlEntry2 and pnlEntry3 are visible initially
-            // Example: pnlEntry2.Controls.Add(label1); // Add child controls as needed
         }
 
         private void ApplicationPart6_Load(object sender, EventArgs e)

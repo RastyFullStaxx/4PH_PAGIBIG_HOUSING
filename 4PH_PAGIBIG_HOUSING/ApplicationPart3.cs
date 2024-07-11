@@ -8,7 +8,7 @@ namespace _4PH_PAGIBIG_HOUSING
 {
     public partial class ApplicationPart3 : Form
     {
-        private readonly DatabaseConnection database = DatabaseConnection.GetInstance();
+        private readonly DatabaseConnection database = DatabaseConnection.Instance;
         private readonly CollateralInformation collateral = new CollateralInformation();
         private readonly string _pagIBIGMIDNumberRTN;
 
@@ -100,9 +100,9 @@ namespace _4PH_PAGIBIG_HOUSING
                 return false;
             }
 
-            if (!IsNumeric(txtLandAreaMeasurement.Text) || txtLandAreaMeasurement.Text.Length != 5)
+            if (!IsNumeric(txtLandAreaMeasurement.Text) || txtLandAreaMeasurement.Text.Length >=6)
             {
-                MessageBox.Show("Land area must be a numeric value with 5 digits.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Land area must be a numeric value with only up to 5 digits.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 

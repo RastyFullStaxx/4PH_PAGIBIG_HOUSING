@@ -45,13 +45,13 @@
             lblBranch = new Label();
             lblTypeOfAccount = new Label();
             btnRevealEntry2 = new Button();
-            txtAccountNumber = new TextBox();
-            txtBankOfTheAccount = new TextBox();
-            txtIssuerName = new TextBox();
-            txtAverageBalance = new TextBox();
-            txtBranch = new TextBox();
-            dtDateOpened = new DateTimePicker();
-            cbTypeOfAccount = new ComboBox();
+            txtAccountNumber1 = new TextBox();
+            txtBankOfTheAccount1 = new TextBox();
+            txtIssuerName1 = new TextBox();
+            txtAverageBalance1 = new TextBox();
+            txtBranchAddress1 = new TextBox();
+            dtDateOpened1 = new DateTimePicker();
+            cbTypeOfAccount1 = new ComboBox();
             lblOtherInfo = new Label();
             lblRealEstateInfo = new Label();
             lblBankInfo = new Label();
@@ -68,39 +68,39 @@
             btnPersonalInfo = new Button();
             pnlEntry1 = new Guna.UI2.WinForms.Guna2Panel();
             pnlMain = new Guna.UI2.WinForms.Guna2Panel();
+            btnRevealEntry3 = new Button();
             pnlEntry3 = new Guna.UI2.WinForms.Guna2Panel();
             btnCancelEntry3 = new Button();
-            btnRevealEntry3 = new Button();
             label16 = new Label();
-            comboBox2 = new ComboBox();
+            cbTypeOfAccount3 = new ComboBox();
             label7 = new Label();
             label8 = new Label();
             label9 = new Label();
             label10 = new Label();
             label13 = new Label();
             label14 = new Label();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
-            textBox9 = new TextBox();
-            textBox10 = new TextBox();
-            dateTimePicker2 = new DateTimePicker();
+            txtAccountNumber3 = new TextBox();
+            txtBankOfTheAccount3 = new TextBox();
+            txtIssuerName3 = new TextBox();
+            txtAverageBalance3 = new TextBox();
+            txtBranchAddress3 = new TextBox();
+            dtDateOpened3 = new DateTimePicker();
             pnlEntry2 = new Guna.UI2.WinForms.Guna2Panel();
             btnCancelEntry2 = new Button();
             label15 = new Label();
-            comboBox1 = new ComboBox();
+            cbTypeOfAccount2 = new ComboBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
+            txtAccountNumber2 = new TextBox();
+            txtBankOfTheAccount2 = new TextBox();
+            txtIssuerName2 = new TextBox();
+            txtAverageBalance2 = new TextBox();
+            txtBranchAddress2 = new TextBox();
+            dtDateOpened2 = new DateTimePicker();
             btnNext = new Button();
             btnBack = new Button();
             pnlEntry1.SuspendLayout();
@@ -209,62 +209,61 @@
             btnRevealEntry2.UseVisualStyleBackColor = true;
             btnRevealEntry2.Click += btnRevealEntry2_Click;
             // 
-            // txtAccountNumber
+            // txtAccountNumber1
             // 
-            txtAccountNumber.BackColor = Color.WhiteSmoke;
-            txtAccountNumber.Location = new Point(9, 44);
-            txtAccountNumber.Name = "txtAccountNumber";
-            txtAccountNumber.Size = new Size(503, 23);
-            txtAccountNumber.TabIndex = 36;
+            txtAccountNumber1.BackColor = Color.WhiteSmoke;
+            txtAccountNumber1.Location = new Point(9, 44);
+            txtAccountNumber1.Name = "txtAccountNumber1";
+            txtAccountNumber1.Size = new Size(503, 23);
+            txtAccountNumber1.TabIndex = 36;
             // 
-            // txtBankOfTheAccount
+            // txtBankOfTheAccount1
             // 
-            txtBankOfTheAccount.BackColor = Color.WhiteSmoke;
-            txtBankOfTheAccount.Location = new Point(9, 138);
-            txtBankOfTheAccount.Name = "txtBankOfTheAccount";
-            txtBankOfTheAccount.Size = new Size(503, 23);
-            txtBankOfTheAccount.TabIndex = 37;
+            txtBankOfTheAccount1.BackColor = Color.WhiteSmoke;
+            txtBankOfTheAccount1.Location = new Point(9, 138);
+            txtBankOfTheAccount1.Name = "txtBankOfTheAccount1";
+            txtBankOfTheAccount1.Size = new Size(503, 23);
+            txtBankOfTheAccount1.TabIndex = 37;
             // 
-            // txtIssuerName
+            // txtIssuerName1
             // 
-            txtIssuerName.BackColor = Color.WhiteSmoke;
-            txtIssuerName.Location = new Point(9, 233);
-            txtIssuerName.Name = "txtIssuerName";
-            txtIssuerName.Size = new Size(503, 23);
-            txtIssuerName.TabIndex = 38;
+            txtIssuerName1.BackColor = Color.WhiteSmoke;
+            txtIssuerName1.Location = new Point(9, 233);
+            txtIssuerName1.Name = "txtIssuerName1";
+            txtIssuerName1.Size = new Size(503, 23);
+            txtIssuerName1.TabIndex = 38;
             // 
-            // txtAverageBalance
+            // txtAverageBalance1
             // 
-            txtAverageBalance.BackColor = Color.WhiteSmoke;
-            txtAverageBalance.Location = new Point(577, 44);
-            txtAverageBalance.Name = "txtAverageBalance";
-            txtAverageBalance.Size = new Size(292, 23);
-            txtAverageBalance.TabIndex = 39;
+            txtAverageBalance1.BackColor = Color.WhiteSmoke;
+            txtAverageBalance1.Location = new Point(577, 44);
+            txtAverageBalance1.Name = "txtAverageBalance1";
+            txtAverageBalance1.Size = new Size(292, 23);
+            txtAverageBalance1.TabIndex = 39;
             // 
-            // txtBranch
+            // txtBranchAddress1
             // 
-            txtBranch.BackColor = Color.WhiteSmoke;
-            txtBranch.Location = new Point(577, 233);
-            txtBranch.Name = "txtBranch";
-            txtBranch.Size = new Size(469, 23);
-            txtBranch.TabIndex = 41;
+            txtBranchAddress1.BackColor = Color.WhiteSmoke;
+            txtBranchAddress1.Location = new Point(577, 233);
+            txtBranchAddress1.Name = "txtBranchAddress1";
+            txtBranchAddress1.Size = new Size(469, 23);
+            txtBranchAddress1.TabIndex = 41;
             // 
-            // dtDateOpened
+            // dtDateOpened1
             // 
-            dtDateOpened.Location = new Point(577, 138);
-            dtDateOpened.Name = "dtDateOpened";
-            dtDateOpened.Size = new Size(292, 23);
-            dtDateOpened.TabIndex = 43;
+            dtDateOpened1.Location = new Point(577, 138);
+            dtDateOpened1.Name = "dtDateOpened1";
+            dtDateOpened1.Size = new Size(292, 23);
+            dtDateOpened1.TabIndex = 43;
             // 
-            // cbTypeOfAccount
+            // cbTypeOfAccount1
             // 
-            cbTypeOfAccount.FormattingEnabled = true;
-            cbTypeOfAccount.Items.AddRange(new object[] { "Male", "Female", "Beks" });
-            cbTypeOfAccount.Location = new Point(883, 44);
-            cbTypeOfAccount.Name = "cbTypeOfAccount";
-            cbTypeOfAccount.Size = new Size(162, 23);
-            cbTypeOfAccount.TabIndex = 87;
-            cbTypeOfAccount.Text = " ";
+            cbTypeOfAccount1.FormattingEnabled = true;
+            cbTypeOfAccount1.Location = new Point(883, 44);
+            cbTypeOfAccount1.Name = "cbTypeOfAccount1";
+            cbTypeOfAccount1.Size = new Size(162, 23);
+            cbTypeOfAccount1.TabIndex = 87;
+            cbTypeOfAccount1.Text = " ";
             // 
             // lblOtherInfo
             // 
@@ -470,14 +469,14 @@
             pnlEntry1.Controls.Add(lblAverageBalance);
             pnlEntry1.Controls.Add(lblDateOpened);
             pnlEntry1.Controls.Add(lblBranch);
-            pnlEntry1.Controls.Add(txtAccountNumber);
-            pnlEntry1.Controls.Add(txtBankOfTheAccount);
-            pnlEntry1.Controls.Add(txtIssuerName);
-            pnlEntry1.Controls.Add(txtAverageBalance);
-            pnlEntry1.Controls.Add(txtBranch);
-            pnlEntry1.Controls.Add(dtDateOpened);
+            pnlEntry1.Controls.Add(txtAccountNumber1);
+            pnlEntry1.Controls.Add(txtBankOfTheAccount1);
+            pnlEntry1.Controls.Add(txtIssuerName1);
+            pnlEntry1.Controls.Add(txtAverageBalance1);
+            pnlEntry1.Controls.Add(txtBranchAddress1);
+            pnlEntry1.Controls.Add(dtDateOpened1);
             pnlEntry1.Controls.Add(lblTypeOfAccount);
-            pnlEntry1.Controls.Add(cbTypeOfAccount);
+            pnlEntry1.Controls.Add(cbTypeOfAccount1);
             pnlEntry1.CustomizableEdges = customizableEdges1;
             pnlEntry1.Location = new Point(21, 47);
             pnlEntry1.Name = "pnlEntry1";
@@ -501,24 +500,40 @@
             pnlMain.Size = new Size(1225, 471);
             pnlMain.TabIndex = 116;
             // 
+            // btnRevealEntry3
+            // 
+            btnRevealEntry3.BackColor = Color.Transparent;
+            btnRevealEntry3.Cursor = Cursors.Hand;
+            btnRevealEntry3.FlatAppearance.BorderSize = 0;
+            btnRevealEntry3.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnRevealEntry3.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnRevealEntry3.FlatStyle = FlatStyle.Flat;
+            btnRevealEntry3.Image = (Image)resources.GetObject("btnRevealEntry3.Image");
+            btnRevealEntry3.Location = new Point(362, 735);
+            btnRevealEntry3.Name = "btnRevealEntry3";
+            btnRevealEntry3.Size = new Size(431, 66);
+            btnRevealEntry3.TabIndex = 90;
+            btnRevealEntry3.UseVisualStyleBackColor = true;
+            btnRevealEntry3.Click += btnRevealEntry3_Click;
+            // 
             // pnlEntry3
             // 
             pnlEntry3.BackColor = Color.Transparent;
             pnlEntry3.Controls.Add(btnCancelEntry3);
             pnlEntry3.Controls.Add(label16);
-            pnlEntry3.Controls.Add(comboBox2);
+            pnlEntry3.Controls.Add(cbTypeOfAccount3);
             pnlEntry3.Controls.Add(label7);
             pnlEntry3.Controls.Add(label8);
             pnlEntry3.Controls.Add(label9);
             pnlEntry3.Controls.Add(label10);
             pnlEntry3.Controls.Add(label13);
             pnlEntry3.Controls.Add(label14);
-            pnlEntry3.Controls.Add(textBox6);
-            pnlEntry3.Controls.Add(textBox7);
-            pnlEntry3.Controls.Add(textBox8);
-            pnlEntry3.Controls.Add(textBox9);
-            pnlEntry3.Controls.Add(textBox10);
-            pnlEntry3.Controls.Add(dateTimePicker2);
+            pnlEntry3.Controls.Add(txtAccountNumber3);
+            pnlEntry3.Controls.Add(txtBankOfTheAccount3);
+            pnlEntry3.Controls.Add(txtIssuerName3);
+            pnlEntry3.Controls.Add(txtAverageBalance3);
+            pnlEntry3.Controls.Add(txtBranchAddress3);
+            pnlEntry3.Controls.Add(dtDateOpened3);
             pnlEntry3.CustomizableEdges = customizableEdges3;
             pnlEntry3.Location = new Point(21, 620);
             pnlEntry3.Name = "pnlEntry3";
@@ -542,22 +557,6 @@
             btnCancelEntry3.UseVisualStyleBackColor = true;
             btnCancelEntry3.Click += btnCancelEntry3_Click;
             // 
-            // btnRevealEntry3
-            // 
-            btnRevealEntry3.BackColor = Color.Transparent;
-            btnRevealEntry3.Cursor = Cursors.Hand;
-            btnRevealEntry3.FlatAppearance.BorderSize = 0;
-            btnRevealEntry3.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnRevealEntry3.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnRevealEntry3.FlatStyle = FlatStyle.Flat;
-            btnRevealEntry3.Image = (Image)resources.GetObject("btnRevealEntry3.Image");
-            btnRevealEntry3.Location = new Point(362, 735);
-            btnRevealEntry3.Name = "btnRevealEntry3";
-            btnRevealEntry3.Size = new Size(431, 66);
-            btnRevealEntry3.TabIndex = 90;
-            btnRevealEntry3.UseVisualStyleBackColor = true;
-            btnRevealEntry3.Click += btnRevealEntry3_Click;
-            // 
             // label16
             // 
             label16.AutoSize = true;
@@ -570,15 +569,14 @@
             label16.TabIndex = 88;
             label16.Text = "TYPE OF ACCOUNT";
             // 
-            // comboBox2
+            // cbTypeOfAccount3
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Male", "Female", "Beks" });
-            comboBox2.Location = new Point(883, 44);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(162, 23);
-            comboBox2.TabIndex = 89;
-            comboBox2.Text = " ";
+            cbTypeOfAccount3.FormattingEnabled = true;
+            cbTypeOfAccount3.Location = new Point(883, 44);
+            cbTypeOfAccount3.Name = "cbTypeOfAccount3";
+            cbTypeOfAccount3.Size = new Size(162, 23);
+            cbTypeOfAccount3.TabIndex = 89;
+            cbTypeOfAccount3.Text = " ";
             // 
             // label7
             // 
@@ -652,77 +650,78 @@
             label14.TabIndex = 26;
             label14.Text = "BRANCH/ADDRESS OF THE BANK";
             // 
-            // textBox6
+            // txtAccountNumber3
             // 
-            textBox6.BackColor = Color.WhiteSmoke;
-            textBox6.Location = new Point(9, 44);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(503, 23);
-            textBox6.TabIndex = 36;
+            txtAccountNumber3.BackColor = Color.WhiteSmoke;
+            txtAccountNumber3.Location = new Point(9, 44);
+            txtAccountNumber3.Name = "txtAccountNumber3";
+            txtAccountNumber3.Size = new Size(503, 23);
+            txtAccountNumber3.TabIndex = 36;
             // 
-            // textBox7
+            // txtBankOfTheAccount3
             // 
-            textBox7.BackColor = Color.WhiteSmoke;
-            textBox7.Location = new Point(9, 138);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(503, 23);
-            textBox7.TabIndex = 37;
+            txtBankOfTheAccount3.BackColor = Color.WhiteSmoke;
+            txtBankOfTheAccount3.Location = new Point(9, 138);
+            txtBankOfTheAccount3.Name = "txtBankOfTheAccount3";
+            txtBankOfTheAccount3.Size = new Size(503, 23);
+            txtBankOfTheAccount3.TabIndex = 37;
             // 
-            // textBox8
+            // txtIssuerName3
             // 
-            textBox8.BackColor = Color.WhiteSmoke;
-            textBox8.Location = new Point(9, 233);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(503, 23);
-            textBox8.TabIndex = 38;
+            txtIssuerName3.BackColor = Color.WhiteSmoke;
+            txtIssuerName3.Location = new Point(9, 233);
+            txtIssuerName3.Name = "txtIssuerName3";
+            txtIssuerName3.Size = new Size(503, 23);
+            txtIssuerName3.TabIndex = 38;
             // 
-            // textBox9
+            // txtAverageBalance3
             // 
-            textBox9.BackColor = Color.WhiteSmoke;
-            textBox9.Location = new Point(577, 44);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(292, 23);
-            textBox9.TabIndex = 39;
+            txtAverageBalance3.BackColor = Color.WhiteSmoke;
+            txtAverageBalance3.Location = new Point(577, 44);
+            txtAverageBalance3.Name = "txtAverageBalance3";
+            txtAverageBalance3.Size = new Size(292, 23);
+            txtAverageBalance3.TabIndex = 39;
             // 
-            // textBox10
+            // txtBranchAddress3
             // 
-            textBox10.BackColor = Color.WhiteSmoke;
-            textBox10.Location = new Point(577, 233);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(469, 23);
-            textBox10.TabIndex = 41;
+            txtBranchAddress3.BackColor = Color.WhiteSmoke;
+            txtBranchAddress3.Location = new Point(577, 233);
+            txtBranchAddress3.Name = "txtBranchAddress3";
+            txtBranchAddress3.Size = new Size(469, 23);
+            txtBranchAddress3.TabIndex = 41;
             // 
-            // dateTimePicker2
+            // dtDateOpened3
             // 
-            dateTimePicker2.Location = new Point(577, 138);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(292, 23);
-            dateTimePicker2.TabIndex = 43;
+            dtDateOpened3.Location = new Point(577, 138);
+            dtDateOpened3.Name = "dtDateOpened3";
+            dtDateOpened3.Size = new Size(292, 23);
+            dtDateOpened3.TabIndex = 43;
             // 
             // pnlEntry2
             // 
             pnlEntry2.BackColor = Color.Transparent;
             pnlEntry2.Controls.Add(btnCancelEntry2);
             pnlEntry2.Controls.Add(label15);
-            pnlEntry2.Controls.Add(comboBox1);
+            pnlEntry2.Controls.Add(cbTypeOfAccount2);
             pnlEntry2.Controls.Add(label1);
             pnlEntry2.Controls.Add(label2);
             pnlEntry2.Controls.Add(label3);
             pnlEntry2.Controls.Add(label4);
             pnlEntry2.Controls.Add(label5);
             pnlEntry2.Controls.Add(label6);
-            pnlEntry2.Controls.Add(textBox1);
-            pnlEntry2.Controls.Add(textBox2);
-            pnlEntry2.Controls.Add(textBox3);
-            pnlEntry2.Controls.Add(textBox4);
-            pnlEntry2.Controls.Add(textBox5);
-            pnlEntry2.Controls.Add(dateTimePicker1);
+            pnlEntry2.Controls.Add(txtAccountNumber2);
+            pnlEntry2.Controls.Add(txtBankOfTheAccount2);
+            pnlEntry2.Controls.Add(txtIssuerName2);
+            pnlEntry2.Controls.Add(txtAverageBalance2);
+            pnlEntry2.Controls.Add(txtBranchAddress2);
+            pnlEntry2.Controls.Add(dtDateOpened2);
             pnlEntry2.CustomizableEdges = customizableEdges5;
             pnlEntry2.Location = new Point(21, 333);
             pnlEntry2.Name = "pnlEntry2";
             pnlEntry2.ShadowDecoration.CustomizableEdges = customizableEdges6;
             pnlEntry2.Size = new Size(1156, 280);
             pnlEntry2.TabIndex = 116;
+            pnlEntry2.Paint += pnlEntry2_Paint;
             // 
             // btnCancelEntry2
             // 
@@ -752,15 +751,14 @@
             label15.TabIndex = 88;
             label15.Text = "TYPE OF ACCOUNT";
             // 
-            // comboBox1
+            // cbTypeOfAccount2
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Male", "Female", "Beks" });
-            comboBox1.Location = new Point(883, 44);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(162, 23);
-            comboBox1.TabIndex = 89;
-            comboBox1.Text = " ";
+            cbTypeOfAccount2.FormattingEnabled = true;
+            cbTypeOfAccount2.Location = new Point(883, 44);
+            cbTypeOfAccount2.Name = "cbTypeOfAccount2";
+            cbTypeOfAccount2.Size = new Size(162, 23);
+            cbTypeOfAccount2.TabIndex = 89;
+            cbTypeOfAccount2.Text = " ";
             // 
             // label1
             // 
@@ -834,52 +832,52 @@
             label6.TabIndex = 26;
             label6.Text = "BRANCH/ADDRESS OF THE BANK";
             // 
-            // textBox1
+            // txtAccountNumber2
             // 
-            textBox1.BackColor = Color.WhiteSmoke;
-            textBox1.Location = new Point(9, 44);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(503, 23);
-            textBox1.TabIndex = 36;
+            txtAccountNumber2.BackColor = Color.WhiteSmoke;
+            txtAccountNumber2.Location = new Point(9, 44);
+            txtAccountNumber2.Name = "txtAccountNumber2";
+            txtAccountNumber2.Size = new Size(503, 23);
+            txtAccountNumber2.TabIndex = 36;
             // 
-            // textBox2
+            // txtBankOfTheAccount2
             // 
-            textBox2.BackColor = Color.WhiteSmoke;
-            textBox2.Location = new Point(9, 138);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(503, 23);
-            textBox2.TabIndex = 37;
+            txtBankOfTheAccount2.BackColor = Color.WhiteSmoke;
+            txtBankOfTheAccount2.Location = new Point(9, 138);
+            txtBankOfTheAccount2.Name = "txtBankOfTheAccount2";
+            txtBankOfTheAccount2.Size = new Size(503, 23);
+            txtBankOfTheAccount2.TabIndex = 37;
             // 
-            // textBox3
+            // txtIssuerName2
             // 
-            textBox3.BackColor = Color.WhiteSmoke;
-            textBox3.Location = new Point(9, 233);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(503, 23);
-            textBox3.TabIndex = 38;
+            txtIssuerName2.BackColor = Color.WhiteSmoke;
+            txtIssuerName2.Location = new Point(9, 233);
+            txtIssuerName2.Name = "txtIssuerName2";
+            txtIssuerName2.Size = new Size(503, 23);
+            txtIssuerName2.TabIndex = 38;
             // 
-            // textBox4
+            // txtAverageBalance2
             // 
-            textBox4.BackColor = Color.WhiteSmoke;
-            textBox4.Location = new Point(577, 44);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(292, 23);
-            textBox4.TabIndex = 39;
+            txtAverageBalance2.BackColor = Color.WhiteSmoke;
+            txtAverageBalance2.Location = new Point(577, 44);
+            txtAverageBalance2.Name = "txtAverageBalance2";
+            txtAverageBalance2.Size = new Size(292, 23);
+            txtAverageBalance2.TabIndex = 39;
             // 
-            // textBox5
+            // txtBranchAddress2
             // 
-            textBox5.BackColor = Color.WhiteSmoke;
-            textBox5.Location = new Point(577, 233);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(469, 23);
-            textBox5.TabIndex = 41;
+            txtBranchAddress2.BackColor = Color.WhiteSmoke;
+            txtBranchAddress2.Location = new Point(577, 233);
+            txtBranchAddress2.Name = "txtBranchAddress2";
+            txtBranchAddress2.Size = new Size(469, 23);
+            txtBranchAddress2.TabIndex = 41;
             // 
-            // dateTimePicker1
+            // dtDateOpened2
             // 
-            dateTimePicker1.Location = new Point(577, 138);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(292, 23);
-            dateTimePicker1.TabIndex = 43;
+            dtDateOpened2.Location = new Point(577, 138);
+            dtDateOpened2.Name = "dtDateOpened2";
+            dtDateOpened2.Size = new Size(292, 23);
+            dtDateOpened2.TabIndex = 43;
             // 
             // btnNext
             // 
@@ -895,6 +893,7 @@
             btnNext.Size = new Size(126, 45);
             btnNext.TabIndex = 119;
             btnNext.UseVisualStyleBackColor = true;
+            btnNext.Click += btnNext_Click;
             // 
             // btnBack
             // 
@@ -960,13 +959,13 @@
         private Label lblBranch;
         private Label lblTypeOfAccount;
         private Button btnRevealEntry2;
-        private TextBox txtAccountNumber;
-        private TextBox txtBankOfTheAccount;
-        private TextBox txtIssuerName;
-        private TextBox txtAverageBalance;
-        private TextBox txtBranch;
-        private DateTimePicker dtDateOpened;
-        private ComboBox cbTypeOfAccount;
+        private TextBox txtAccountNumber1;
+        private TextBox txtBankOfTheAccount1;
+        private TextBox txtIssuerName1;
+        private TextBox txtAverageBalance1;
+        private TextBox txtBranchAddress1;
+        private DateTimePicker dtDateOpened1;
+        private ComboBox cbTypeOfAccount1;
         private Label lblOtherInfo;
         private Label lblRealEstateInfo;
         private Label lblBankInfo;
@@ -985,34 +984,34 @@
         private Guna.UI2.WinForms.Guna2Panel pnlMain;
         private Guna.UI2.WinForms.Guna2Panel pnlEntry3;
         private Label label16;
-        private ComboBox comboBox2;
+        private ComboBox cbTypeOfAccount3;
         private Label label7;
         private Label label8;
         private Label label9;
         private Label label10;
         private Label label13;
         private Label label14;
-        private TextBox textBox6;
-        private TextBox textBox7;
-        private TextBox textBox8;
-        private TextBox textBox9;
-        private TextBox textBox10;
-        private DateTimePicker dateTimePicker2;
+        private TextBox txtAccountNumber3;
+        private TextBox txtBankOfTheAccount3;
+        private TextBox txtIssuerName3;
+        private TextBox txtAverageBalance3;
+        private TextBox txtBranchAddress3;
+        private DateTimePicker dtDateOpened3;
         private Guna.UI2.WinForms.Guna2Panel pnlEntry2;
         private Label label15;
-        private ComboBox comboBox1;
+        private ComboBox cbTypeOfAccount2;
         private Label label1;
         private Label label2;
         private Label label3;
         private Label label4;
         private Label label5;
         private Label label6;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private DateTimePicker dateTimePicker1;
+        private TextBox txtAccountNumber2;
+        private TextBox txtBankOfTheAccount2;
+        private TextBox txtIssuerName2;
+        private TextBox txtAverageBalance2;
+        private TextBox txtBranchAddress2;
+        private DateTimePicker dtDateOpened2;
         private Button btnNext;
         private Button btnBack;
         private Button btnRevealEntry3;
