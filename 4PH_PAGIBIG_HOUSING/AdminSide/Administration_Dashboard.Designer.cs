@@ -250,6 +250,7 @@
             btnSQLProblems.Size = new Size(359, 105);
             btnSQLProblems.TabIndex = 59;
             btnSQLProblems.UseVisualStyleBackColor = true;
+            btnSQLProblems.Click += btnSQLProblems_Click;
             // 
             // btnAbout
             // 

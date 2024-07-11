@@ -21,5 +21,12 @@ namespace _4PH_PAGIBIG_HOUSING
         {
 
         }
+
+        private void btnSQLProblems_Click(object sender, EventArgs e)
+        {
+            Ab_Easy_SQL_Problems ab_SQL_Problems = new Ab_Easy_SQL_Problems();
+            ab_SQL_Problems.Show();
+            this.Hide();
+        }
     }
 }
