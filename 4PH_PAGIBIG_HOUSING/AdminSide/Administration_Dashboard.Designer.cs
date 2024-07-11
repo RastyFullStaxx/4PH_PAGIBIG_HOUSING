@@ -52,15 +52,15 @@
             btnAbout = new Button();
             btnManageRecord = new Button();
             pnlAboutUs = new Guna.UI2.WinForms.Guna2Panel();
+            imgPapas = new Guna.UI2.WinForms.Guna2PictureBox();
             btnBack = new Button();
             imgAboutUs = new PictureBox();
             imgSearchIcon = new PictureBox();
-            imgPapas = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)imgSectionTitle).BeginInit();
             pnlAboutUs.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)imgPapas).BeginInit();
             ((System.ComponentModel.ISupportInitialize)imgAboutUs).BeginInit();
             ((System.ComponentModel.ISupportInitialize)imgSearchIcon).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)imgPapas).BeginInit();
             SuspendLayout();
             // 
             // btnDashboard
@@ -320,6 +320,20 @@
             pnlAboutUs.Size = new Size(986, 800);
             pnlAboutUs.TabIndex = 62;
             // 
+            // imgPapas
+            // 
+            imgPapas.BorderRadius = 30;
+            imgPapas.CustomizableEdges = customizableEdges3;
+            imgPapas.FillColor = Color.WhiteSmoke;
+            imgPapas.Image = (Image)resources.GetObject("imgPapas.Image");
+            imgPapas.ImageRotate = 0F;
+            imgPapas.Location = new Point(37, 282);
+            imgPapas.Name = "imgPapas";
+            imgPapas.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            imgPapas.Size = new Size(932, 222);
+            imgPapas.TabIndex = 77;
+            imgPapas.TabStop = false;
+            // 
             // btnBack
             // 
             btnBack.BackColor = Color.Transparent;
@@ -355,20 +369,6 @@
             imgSearchIcon.TabIndex = 99;
             imgSearchIcon.TabStop = false;
             // 
-            // imgPapas
-            // 
-            imgPapas.BorderRadius = 30;
-            imgPapas.CustomizableEdges = customizableEdges3;
-            imgPapas.FillColor = Color.WhiteSmoke;
-            imgPapas.Image = (Image)resources.GetObject("imgPapas.Image");
-            imgPapas.ImageRotate = 0F;
-            imgPapas.Location = new Point(37, 282);
-            imgPapas.Name = "imgPapas";
-            imgPapas.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            imgPapas.Size = new Size(932, 222);
-            imgPapas.TabIndex = 77;
-            imgPapas.TabStop = false;
-            // 
             // Administration_Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -400,9 +400,9 @@
             Load += Administration_Dashboard_Load;
             ((System.ComponentModel.ISupportInitialize)imgSectionTitle).EndInit();
             pnlAboutUs.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)imgPapas).EndInit();
             ((System.ComponentModel.ISupportInitialize)imgAboutUs).EndInit();
             ((System.ComponentModel.ISupportInitialize)imgSearchIcon).EndInit();
-            ((System.ComponentModel.ISupportInitialize)imgPapas).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
