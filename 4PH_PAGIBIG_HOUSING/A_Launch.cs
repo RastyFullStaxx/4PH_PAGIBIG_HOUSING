@@ -21,12 +21,23 @@ namespace _4PH_PAGIBIG_HOUSING
         private void btnApply_Click(object sender, EventArgs e)
         {
 
-                 // Show the loading screen
-                   LoadingScreenForm loadingScreen = new LoadingScreenForm();
-                   loadingScreen.ShowDialog();
+            // Show the loading screen
+            ApplicationPart5 applicationPart5 = new ApplicationPart5();
+            applicationPart5.Show();
+
+            /*
+            LoadingScreenForm loadingScreen = new LoadingScreenForm();
+            loadingScreen.ShowDialog();
+            */
 
             this.Hide();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Administration_Dashboard administration_Dashboard = new Administration_Dashboard();
+            administration_Dashboard.Show();
+            this.Hide();
+        }
     }
 }

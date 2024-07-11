@@ -46,7 +46,7 @@ namespace _4PH_PAGIBIG_HOUSING
             btnApply.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnApply.FlatStyle = FlatStyle.Flat;
             btnApply.Image = (Image)resources.GetObject("btnApply.Image");
-            btnApply.Location = new Point(366, 506);
+            btnApply.Location = new Point(343, 506);
             btnApply.Name = "btnApply";
             btnApply.Size = new Size(303, 128);
             btnApply.TabIndex = 0;
@@ -62,11 +62,12 @@ namespace _4PH_PAGIBIG_HOUSING
             button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(675, 506);
+            button1.Location = new Point(652, 506);
             button1.Name = "button1";
             button1.Size = new Size(303, 128);
             button1.TabIndex = 1;
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // A_Launch
             // 
