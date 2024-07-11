@@ -132,7 +132,7 @@ namespace _4PH_PAGIBIG_HOUSING
             textBox9.Visible = false;
             textBox10.Visible = false;
             dateTimePicker2.Visible = false;
-            btnCancelEntry2.Visible = false;
+            btnCancelEntry3.Visible = false;
 
             pnlEntry3Expanded = false;
         }
@@ -159,6 +159,11 @@ namespace _4PH_PAGIBIG_HOUSING
             btnCancelEntry3.Visible = true;
 
             pnlEntry3Expanded = true;
+        }
+
+        private void ApplicationPart5_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

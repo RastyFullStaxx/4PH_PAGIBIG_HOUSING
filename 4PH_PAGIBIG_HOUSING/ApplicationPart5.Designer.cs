@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ApplicationPart5));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lblAccountNumber = new Label();
             lblBankOfTheAccount = new Label();
             lblIssuerName = new Label();
@@ -68,8 +68,6 @@
             btnPersonalInfo = new Button();
             pnlEntry1 = new Guna.UI2.WinForms.Guna2Panel();
             pnlMain = new Guna.UI2.WinForms.Guna2Panel();
-            btnNext = new Button();
-            btnBack = new Button();
             pnlEntry3 = new Guna.UI2.WinForms.Guna2Panel();
             btnCancelEntry3 = new Button();
             btnRevealEntry3 = new Button();
@@ -103,6 +101,8 @@
             textBox4 = new TextBox();
             textBox5 = new TextBox();
             dateTimePicker1 = new DateTimePicker();
+            btnNext = new Button();
+            btnBack = new Button();
             pnlEntry1.SuspendLayout();
             pnlMain.SuspendLayout();
             pnlEntry3.SuspendLayout();
@@ -202,12 +202,12 @@
             btnRevealEntry2.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnRevealEntry2.FlatStyle = FlatStyle.Flat;
             btnRevealEntry2.Image = (Image)resources.GetObject("btnRevealEntry2.Image");
-            btnRevealEntry2.Location = new Point(340, 115);
+            btnRevealEntry2.Location = new Point(340, 26);
             btnRevealEntry2.Name = "btnRevealEntry2";
             btnRevealEntry2.Size = new Size(431, 66);
             btnRevealEntry2.TabIndex = 35;
             btnRevealEntry2.UseVisualStyleBackColor = true;
-            this.btnRevealEntry2.Click += new System.EventHandler(this.btnRevealEntry2_Click);
+            btnRevealEntry2.Click += btnRevealEntry2_Click;
             // 
             // txtAccountNumber
             // 
@@ -478,10 +478,10 @@
             pnlEntry1.Controls.Add(dtDateOpened);
             pnlEntry1.Controls.Add(lblTypeOfAccount);
             pnlEntry1.Controls.Add(cbTypeOfAccount);
-            pnlEntry1.CustomizableEdges = customizableEdges9;
+            pnlEntry1.CustomizableEdges = customizableEdges1;
             pnlEntry1.Location = new Point(21, 47);
             pnlEntry1.Name = "pnlEntry1";
-            pnlEntry1.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            pnlEntry1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             pnlEntry1.Size = new Size(1156, 280);
             pnlEntry1.TabIndex = 115;
             // 
@@ -489,47 +489,15 @@
             // 
             pnlMain.AutoScroll = true;
             pnlMain.BackColor = Color.Transparent;
-            pnlMain.Controls.Add(btnNext);
-            pnlMain.Controls.Add(btnBack);
             pnlMain.Controls.Add(pnlEntry3);
             pnlMain.Controls.Add(pnlEntry2);
             pnlMain.Controls.Add(pnlEntry1);
-            pnlMain.CustomizableEdges = customizableEdges15;
+            pnlMain.CustomizableEdges = customizableEdges7;
             pnlMain.Location = new Point(28, 222);
             pnlMain.Name = "pnlMain";
-            pnlMain.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            pnlMain.Size = new Size(1225, 555);
+            pnlMain.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            pnlMain.Size = new Size(1225, 471);
             pnlMain.TabIndex = 116;
-            // 
-            // btnNext
-            // 
-            btnNext.BackColor = Color.Transparent;
-            btnNext.Cursor = Cursors.Hand;
-            btnNext.FlatAppearance.BorderSize = 0;
-            btnNext.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnNext.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnNext.FlatStyle = FlatStyle.Flat;
-            btnNext.Image = (Image)resources.GetObject("btnNext.Image");
-            btnNext.Location = new Point(1068, 976);
-            btnNext.Name = "btnNext";
-            btnNext.Size = new Size(126, 45);
-            btnNext.TabIndex = 119;
-            btnNext.UseVisualStyleBackColor = true;
-            // 
-            // btnBack
-            // 
-            btnBack.BackColor = Color.Transparent;
-            btnBack.Cursor = Cursors.Hand;
-            btnBack.FlatAppearance.BorderSize = 0;
-            btnBack.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnBack.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnBack.FlatStyle = FlatStyle.Flat;
-            btnBack.Image = (Image)resources.GetObject("btnBack.Image");
-            btnBack.Location = new Point(12, 976);
-            btnBack.Name = "btnBack";
-            btnBack.Size = new Size(126, 45);
-            btnBack.TabIndex = 118;
-            btnBack.UseVisualStyleBackColor = true;
             // 
             // pnlEntry3
             // 
@@ -550,10 +518,10 @@
             pnlEntry3.Controls.Add(textBox9);
             pnlEntry3.Controls.Add(textBox10);
             pnlEntry3.Controls.Add(dateTimePicker2);
-            pnlEntry3.CustomizableEdges = customizableEdges11;
-            pnlEntry3.Location = new Point(21, 681);
+            pnlEntry3.CustomizableEdges = customizableEdges3;
+            pnlEntry3.Location = new Point(21, 620);
             pnlEntry3.Name = "pnlEntry3";
-            pnlEntry3.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            pnlEntry3.ShadowDecoration.CustomizableEdges = customizableEdges4;
             pnlEntry3.Size = new Size(1156, 280);
             pnlEntry3.TabIndex = 117;
             // 
@@ -571,7 +539,7 @@
             btnCancelEntry3.Size = new Size(97, 41);
             btnCancelEntry3.TabIndex = 92;
             btnCancelEntry3.UseVisualStyleBackColor = true;
-            this.btnCancelEntry3.Click += new System.EventHandler(this.btnCancelEntry3_Click);
+            btnCancelEntry3.Click += btnCancelEntry3_Click;
             // 
             // btnRevealEntry3
             // 
@@ -582,12 +550,12 @@
             btnRevealEntry3.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnRevealEntry3.FlatStyle = FlatStyle.Flat;
             btnRevealEntry3.Image = (Image)resources.GetObject("btnRevealEntry3.Image");
-            btnRevealEntry3.Location = new Point(340, 115);
+            btnRevealEntry3.Location = new Point(340, 26);
             btnRevealEntry3.Name = "btnRevealEntry3";
             btnRevealEntry3.Size = new Size(431, 66);
             btnRevealEntry3.TabIndex = 90;
             btnRevealEntry3.UseVisualStyleBackColor = true;
-            this.btnRevealEntry3.Click += new System.EventHandler(this.btnRevealEntry3_Click);
+            btnRevealEntry3.Click += btnRevealEntry3_Click;
             // 
             // label16
             // 
@@ -749,10 +717,10 @@
             pnlEntry2.Controls.Add(textBox4);
             pnlEntry2.Controls.Add(textBox5);
             pnlEntry2.Controls.Add(dateTimePicker1);
-            pnlEntry2.CustomizableEdges = customizableEdges13;
-            pnlEntry2.Location = new Point(21, 368);
+            pnlEntry2.CustomizableEdges = customizableEdges5;
+            pnlEntry2.Location = new Point(21, 333);
             pnlEntry2.Name = "pnlEntry2";
-            pnlEntry2.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            pnlEntry2.ShadowDecoration.CustomizableEdges = customizableEdges6;
             pnlEntry2.Size = new Size(1156, 280);
             pnlEntry2.TabIndex = 116;
             // 
@@ -770,7 +738,7 @@
             btnCancelEntry2.Size = new Size(97, 41);
             btnCancelEntry2.TabIndex = 91;
             btnCancelEntry2.UseVisualStyleBackColor = true;
-            this.btnCancelEntry2.Click += new System.EventHandler(this.btnCancelEntry2_Click);
+            btnCancelEntry2.Click += btnCancelEntry2_Click;
             // 
             // label15
             // 
@@ -913,12 +881,44 @@
             dateTimePicker1.Size = new Size(292, 23);
             dateTimePicker1.TabIndex = 43;
             // 
+            // btnNext
+            // 
+            btnNext.BackColor = Color.Transparent;
+            btnNext.Cursor = Cursors.Hand;
+            btnNext.FlatAppearance.BorderSize = 0;
+            btnNext.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnNext.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnNext.FlatStyle = FlatStyle.Flat;
+            btnNext.Image = (Image)resources.GetObject("btnNext.Image");
+            btnNext.Location = new Point(1105, 715);
+            btnNext.Name = "btnNext";
+            btnNext.Size = new Size(126, 45);
+            btnNext.TabIndex = 119;
+            btnNext.UseVisualStyleBackColor = true;
+            // 
+            // btnBack
+            // 
+            btnBack.BackColor = Color.Transparent;
+            btnBack.Cursor = Cursors.Hand;
+            btnBack.FlatAppearance.BorderSize = 0;
+            btnBack.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnBack.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnBack.FlatStyle = FlatStyle.Flat;
+            btnBack.Image = (Image)resources.GetObject("btnBack.Image");
+            btnBack.Location = new Point(49, 715);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(126, 45);
+            btnBack.TabIndex = 118;
+            btnBack.UseVisualStyleBackColor = true;
+            // 
             // ApplicationPart5
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1280, 800);
+            Controls.Add(btnNext);
+            Controls.Add(btnBack);
             Controls.Add(lblOtherInfo);
             Controls.Add(lblRealEstateInfo);
             Controls.Add(lblBankInfo);
@@ -938,6 +938,7 @@
             Name = "ApplicationPart5";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ApplicationPart5";
+            Load += ApplicationPart5_Load;
             pnlEntry1.ResumeLayout(false);
             pnlEntry1.PerformLayout();
             pnlMain.ResumeLayout(false);
