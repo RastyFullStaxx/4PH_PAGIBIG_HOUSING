@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administration_LoanInfo));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             imgSectionTitle = new PictureBox();
             btnExit = new Button();
             btnOtherLoanInfo = new Button();
@@ -41,8 +43,9 @@
             btnDashboard = new Button();
             dataGridView = new DataGridView();
             button1 = new Button();
-            textBox1 = new TextBox();
             imgSearchIcon = new PictureBox();
+            cbSelectMRID = new Guna.UI2.WinForms.Guna2ComboBox();
+            lblMRID = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)imgSectionTitle).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             ((System.ComponentModel.ISupportInitialize)imgSearchIcon).BeginInit();
@@ -70,7 +73,9 @@
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(128, 56);
             btnExit.TabIndex = 61;
+            btnExit.TextAlign = ContentAlignment.TopLeft;
             btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
             // 
             // btnOtherLoanInfo
             // 
@@ -86,6 +91,7 @@
             btnOtherLoanInfo.Size = new Size(256, 56);
             btnOtherLoanInfo.TabIndex = 60;
             btnOtherLoanInfo.UseVisualStyleBackColor = true;
+            btnOtherLoanInfo.Click += btnOtherLoanInfo_Click;
             // 
             // btnRealEstateInfo
             // 
@@ -101,6 +107,7 @@
             btnRealEstateInfo.Size = new Size(256, 56);
             btnRealEstateInfo.TabIndex = 59;
             btnRealEstateInfo.UseVisualStyleBackColor = true;
+            btnRealEstateInfo.Click += btnRealEstateInfo_Click;
             // 
             // btnBankInfo
             // 
@@ -116,6 +123,7 @@
             btnBankInfo.Size = new Size(256, 56);
             btnBankInfo.TabIndex = 58;
             btnBankInfo.UseVisualStyleBackColor = true;
+            btnBankInfo.Click += btnBankInfo_Click;
             // 
             // btnEmploymentInfo
             // 
@@ -131,6 +139,7 @@
             btnEmploymentInfo.Size = new Size(256, 56);
             btnEmploymentInfo.TabIndex = 57;
             btnEmploymentInfo.UseVisualStyleBackColor = true;
+            btnEmploymentInfo.Click += btnEmploymentInfo_Click;
             // 
             // btnCollateralInfo
             // 
@@ -146,6 +155,7 @@
             btnCollateralInfo.Size = new Size(256, 56);
             btnCollateralInfo.TabIndex = 56;
             btnCollateralInfo.UseVisualStyleBackColor = true;
+            btnCollateralInfo.Click += btnCollateralInfo_Click;
             // 
             // btnLoanInfo
             // 
@@ -161,6 +171,7 @@
             btnLoanInfo.Size = new Size(256, 56);
             btnLoanInfo.TabIndex = 55;
             btnLoanInfo.UseVisualStyleBackColor = true;
+            btnLoanInfo.Click += btnLoanInfo_Click;
             // 
             // btnPersonalInfo
             // 
@@ -176,6 +187,7 @@
             btnPersonalInfo.Size = new Size(256, 56);
             btnPersonalInfo.TabIndex = 54;
             btnPersonalInfo.UseVisualStyleBackColor = true;
+            btnPersonalInfo.Click += btnPersonalInfo_Click;
             // 
             // btnDashboard
             // 
@@ -191,6 +203,7 @@
             btnDashboard.Size = new Size(256, 56);
             btnDashboard.TabIndex = 53;
             btnDashboard.UseVisualStyleBackColor = true;
+            btnDashboard.Click += btnDashboard_Click;
             // 
             // dataGridView
             // 
@@ -216,22 +229,42 @@
             button1.TabIndex = 68;
             button1.UseVisualStyleBackColor = true;
             // 
-            // textBox1
-            // 
-            textBox1.BackColor = Color.WhiteSmoke;
-            textBox1.Location = new Point(874, 43);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(356, 23);
-            textBox1.TabIndex = 69;
-            // 
             // imgSearchIcon
             // 
+            imgSearchIcon.BackColor = Color.Transparent;
             imgSearchIcon.Image = (Image)resources.GetObject("imgSearchIcon.Image");
-            imgSearchIcon.Location = new Point(839, 39);
+            imgSearchIcon.Location = new Point(862, 37);
             imgSearchIcon.Name = "imgSearchIcon";
             imgSearchIcon.Size = new Size(30, 30);
-            imgSearchIcon.TabIndex = 70;
+            imgSearchIcon.TabIndex = 105;
             imgSearchIcon.TabStop = false;
+            // 
+            // cbSelectMRID
+            // 
+            cbSelectMRID.BackColor = Color.Transparent;
+            cbSelectMRID.CustomizableEdges = customizableEdges1;
+            cbSelectMRID.DrawMode = DrawMode.OwnerDrawFixed;
+            cbSelectMRID.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbSelectMRID.FocusedColor = Color.FromArgb(94, 148, 255);
+            cbSelectMRID.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cbSelectMRID.Font = new Font("Segoe UI", 10F);
+            cbSelectMRID.ForeColor = Color.FromArgb(68, 88, 112);
+            cbSelectMRID.ItemHeight = 30;
+            cbSelectMRID.Location = new Point(898, 35);
+            cbSelectMRID.Name = "cbSelectMRID";
+            cbSelectMRID.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            cbSelectMRID.Size = new Size(280, 36);
+            cbSelectMRID.TabIndex = 104;
+            // 
+            // lblMRID
+            // 
+            lblMRID.BackColor = Color.Transparent;
+            lblMRID.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMRID.Location = new Point(898, 17);
+            lblMRID.Name = "lblMRID";
+            lblMRID.Size = new Size(152, 17);
+            lblMRID.TabIndex = 103;
+            lblMRID.Text = "PAG-IBIG MRID/RTN No.";
             // 
             // Administration_LoanInfo
             // 
@@ -240,7 +273,8 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1280, 800);
             Controls.Add(imgSearchIcon);
-            Controls.Add(textBox1);
+            Controls.Add(cbSelectMRID);
+            Controls.Add(lblMRID);
             Controls.Add(button1);
             Controls.Add(dataGridView);
             Controls.Add(imgSectionTitle);
@@ -255,6 +289,7 @@
             Controls.Add(btnDashboard);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Administration_LoanInfo";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Administration_LoanInfo";
             ((System.ComponentModel.ISupportInitialize)imgSectionTitle).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
@@ -277,7 +312,8 @@
         private Button btnDashboard;
         private DataGridView dataGridView;
         private Button button1;
-        private TextBox textBox1;
         private PictureBox imgSearchIcon;
+        private Guna.UI2.WinForms.Guna2ComboBox cbSelectMRID;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblMRID;
     }
 }

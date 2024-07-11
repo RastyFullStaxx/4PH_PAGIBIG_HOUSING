@@ -46,6 +46,7 @@
             btnBack.Size = new Size(162, 21);
             btnBack.TabIndex = 37;
             btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += btnBack_Click;
             // 
             // Submission_Success
             // 
@@ -56,6 +57,7 @@
             Controls.Add(btnBack);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Submission_Success";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Submission_Success";
             ResumeLayout(false);
         }

@@ -31,6 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administration_Dashboard));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnDashboard = new Button();
             btnPersonalInfo = new Button();
             btnLoanInfo = new Button();
@@ -47,7 +51,16 @@
             btnSQLProblems = new Button();
             btnAbout = new Button();
             btnManageRecord = new Button();
+            pnlAboutUs = new Guna.UI2.WinForms.Guna2Panel();
+            btnBack = new Button();
+            imgAboutUs = new PictureBox();
+            imgSearchIcon = new PictureBox();
+            imgPapas = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)imgSectionTitle).BeginInit();
+            pnlAboutUs.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)imgAboutUs).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)imgSearchIcon).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)imgPapas).BeginInit();
             SuspendLayout();
             // 
             // btnDashboard
@@ -64,6 +77,7 @@
             btnDashboard.Size = new Size(256, 56);
             btnDashboard.TabIndex = 39;
             btnDashboard.UseVisualStyleBackColor = true;
+            btnDashboard.Click += btnDashboard_Click;
             // 
             // btnPersonalInfo
             // 
@@ -79,6 +93,7 @@
             btnPersonalInfo.Size = new Size(256, 56);
             btnPersonalInfo.TabIndex = 40;
             btnPersonalInfo.UseVisualStyleBackColor = true;
+            btnPersonalInfo.Click += btnPersonalInfo_Click;
             // 
             // btnLoanInfo
             // 
@@ -94,6 +109,7 @@
             btnLoanInfo.Size = new Size(256, 56);
             btnLoanInfo.TabIndex = 41;
             btnLoanInfo.UseVisualStyleBackColor = true;
+            btnLoanInfo.Click += btnLoanInfo_Click;
             // 
             // btnCollateralInfo
             // 
@@ -109,6 +125,7 @@
             btnCollateralInfo.Size = new Size(256, 56);
             btnCollateralInfo.TabIndex = 42;
             btnCollateralInfo.UseVisualStyleBackColor = true;
+            btnCollateralInfo.Click += btnCollateralInfo_Click;
             // 
             // btnEmploymentInfo
             // 
@@ -124,6 +141,7 @@
             btnEmploymentInfo.Size = new Size(256, 56);
             btnEmploymentInfo.TabIndex = 43;
             btnEmploymentInfo.UseVisualStyleBackColor = true;
+            btnEmploymentInfo.Click += btnEmploymentInfo_Click;
             // 
             // btnBankInfo
             // 
@@ -139,6 +157,7 @@
             btnBankInfo.Size = new Size(256, 56);
             btnBankInfo.TabIndex = 44;
             btnBankInfo.UseVisualStyleBackColor = true;
+            btnBankInfo.Click += btnBankInfo_Click;
             // 
             // btnRealEstateInfo
             // 
@@ -154,6 +173,7 @@
             btnRealEstateInfo.Size = new Size(256, 56);
             btnRealEstateInfo.TabIndex = 45;
             btnRealEstateInfo.UseVisualStyleBackColor = true;
+            btnRealEstateInfo.Click += btnRealEstateInfo_Click;
             // 
             // btnOtherLoanInfo
             // 
@@ -169,6 +189,7 @@
             btnOtherLoanInfo.Size = new Size(256, 56);
             btnOtherLoanInfo.TabIndex = 46;
             btnOtherLoanInfo.UseVisualStyleBackColor = true;
+            btnOtherLoanInfo.Click += btnOtherLoanInfo_Click;
             // 
             // btnExit
             // 
@@ -184,6 +205,7 @@
             btnExit.Size = new Size(128, 56);
             btnExit.TabIndex = 47;
             btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
             // 
             // btnAddRecord
             // 
@@ -199,9 +221,11 @@
             btnAddRecord.Size = new Size(359, 175);
             btnAddRecord.TabIndex = 50;
             btnAddRecord.UseVisualStyleBackColor = true;
+            btnAddRecord.Click += btnAddRecord_Click;
             // 
             // imgSectionTitle
             // 
+            imgSectionTitle.BackColor = Color.Transparent;
             imgSectionTitle.Image = (Image)resources.GetObject("imgSectionTitle.Image");
             imgSectionTitle.Location = new Point(326, 23);
             imgSectionTitle.Name = "imgSectionTitle";
@@ -213,7 +237,7 @@
             // 
             lblMRID.BackColor = Color.Transparent;
             lblMRID.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMRID.Location = new Point(538, 166);
+            lblMRID.Location = new Point(898, 17);
             lblMRID.Name = "lblMRID";
             lblMRID.Size = new Size(152, 17);
             lblMRID.TabIndex = 54;
@@ -230,10 +254,10 @@
             cbSelectMRID.Font = new Font("Segoe UI", 10F);
             cbSelectMRID.ForeColor = Color.FromArgb(68, 88, 112);
             cbSelectMRID.ItemHeight = 30;
-            cbSelectMRID.Location = new Point(538, 189);
+            cbSelectMRID.Location = new Point(898, 35);
             cbSelectMRID.Name = "cbSelectMRID";
             cbSelectMRID.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            cbSelectMRID.Size = new Size(499, 36);
+            cbSelectMRID.Size = new Size(280, 36);
             cbSelectMRID.TabIndex = 55;
             // 
             // btnSQLProblems
@@ -266,6 +290,7 @@
             btnAbout.Size = new Size(359, 105);
             btnAbout.TabIndex = 60;
             btnAbout.UseVisualStyleBackColor = true;
+            btnAbout.Click += btnAbout_Click;
             // 
             // btnManageRecord
             // 
@@ -281,6 +306,68 @@
             btnManageRecord.Size = new Size(359, 175);
             btnManageRecord.TabIndex = 61;
             btnManageRecord.UseVisualStyleBackColor = true;
+            btnManageRecord.Click += btnManageRecord_Click;
+            // 
+            // pnlAboutUs
+            // 
+            pnlAboutUs.Controls.Add(imgPapas);
+            pnlAboutUs.Controls.Add(btnBack);
+            pnlAboutUs.Controls.Add(imgAboutUs);
+            pnlAboutUs.CustomizableEdges = customizableEdges5;
+            pnlAboutUs.Location = new Point(295, 0);
+            pnlAboutUs.Name = "pnlAboutUs";
+            pnlAboutUs.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            pnlAboutUs.Size = new Size(986, 800);
+            pnlAboutUs.TabIndex = 62;
+            // 
+            // btnBack
+            // 
+            btnBack.BackColor = Color.Transparent;
+            btnBack.Cursor = Cursors.Hand;
+            btnBack.FlatAppearance.BorderSize = 0;
+            btnBack.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnBack.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnBack.FlatStyle = FlatStyle.Flat;
+            btnBack.Image = (Image)resources.GetObject("btnBack.Image");
+            btnBack.Location = new Point(22, 744);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(134, 44);
+            btnBack.TabIndex = 74;
+            btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += btnBack_Click;
+            // 
+            // imgAboutUs
+            // 
+            imgAboutUs.Image = (Image)resources.GetObject("imgAboutUs.Image");
+            imgAboutUs.Location = new Point(0, 0);
+            imgAboutUs.Name = "imgAboutUs";
+            imgAboutUs.Size = new Size(986, 800);
+            imgAboutUs.TabIndex = 0;
+            imgAboutUs.TabStop = false;
+            // 
+            // imgSearchIcon
+            // 
+            imgSearchIcon.BackColor = Color.Transparent;
+            imgSearchIcon.Image = (Image)resources.GetObject("imgSearchIcon.Image");
+            imgSearchIcon.Location = new Point(862, 37);
+            imgSearchIcon.Name = "imgSearchIcon";
+            imgSearchIcon.Size = new Size(30, 30);
+            imgSearchIcon.TabIndex = 99;
+            imgSearchIcon.TabStop = false;
+            // 
+            // imgPapas
+            // 
+            imgPapas.BorderRadius = 30;
+            imgPapas.CustomizableEdges = customizableEdges3;
+            imgPapas.FillColor = Color.WhiteSmoke;
+            imgPapas.Image = (Image)resources.GetObject("imgPapas.Image");
+            imgPapas.ImageRotate = 0F;
+            imgPapas.Location = new Point(37, 282);
+            imgPapas.Name = "imgPapas";
+            imgPapas.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            imgPapas.Size = new Size(932, 222);
+            imgPapas.TabIndex = 77;
+            imgPapas.TabStop = false;
             // 
             // Administration_Dashboard
             // 
@@ -288,6 +375,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1280, 800);
+            Controls.Add(pnlAboutUs);
             Controls.Add(btnManageRecord);
             Controls.Add(btnAbout);
             Controls.Add(btnSQLProblems);
@@ -304,12 +392,17 @@
             Controls.Add(btnLoanInfo);
             Controls.Add(btnPersonalInfo);
             Controls.Add(btnDashboard);
+            Controls.Add(imgSearchIcon);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Administration_Dashboard";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Administration_Side";
             Load += Administration_Dashboard_Load;
             ((System.ComponentModel.ISupportInitialize)imgSectionTitle).EndInit();
+            pnlAboutUs.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)imgAboutUs).EndInit();
+            ((System.ComponentModel.ISupportInitialize)imgSearchIcon).EndInit();
+            ((System.ComponentModel.ISupportInitialize)imgPapas).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -332,5 +425,10 @@
         private Button btnSQLProblems;
         private Button btnAbout;
         private Button btnManageRecord;
+        private Guna.UI2.WinForms.Guna2Panel pnlAboutUs;
+        private Button btnBack;
+        private PictureBox imgAboutUs;
+        private PictureBox imgSearchIcon;
+        private Guna.UI2.WinForms.Guna2PictureBox imgPapas;
     }
 }

@@ -29,16 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ApplicationPart5));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lblAccountNumber = new Label();
             lblBankOfTheAccount = new Label();
             lblIssuerName = new Label();
@@ -68,10 +66,11 @@
             btnLoanInfo = new Button();
             btnPersonalInfo = new Button();
             pnlEntry1 = new Guna.UI2.WinForms.Guna2Panel();
+            dtDateOpened = new Guna.UI2.WinForms.Guna2DateTimePicker();
             pnlMain = new Guna.UI2.WinForms.Guna2Panel();
+            btnRevealEntry3 = new Button();
             pnlEntry3 = new Guna.UI2.WinForms.Guna2Panel();
             btnCancelEntry3 = new Button();
-            btnRevealEntry3 = new Button();
             label16 = new Label();
             comboBox2 = new ComboBox();
             label7 = new Label();
@@ -108,7 +107,6 @@
             pnlMain.SuspendLayout();
             pnlEntry3.SuspendLayout();
             pnlEntry2.SuspendLayout();
-            dtDateOpened = new Guna.UI2.WinForms.Guna2DateTimePicker();
             SuspendLayout();
             // 
             // lblAccountNumber
@@ -117,7 +115,7 @@
             lblAccountNumber.BackColor = Color.Transparent;
             lblAccountNumber.FlatStyle = FlatStyle.Flat;
             lblAccountNumber.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblAccountNumber.Location = new Point(9, 26);
+            lblAccountNumber.Location = new Point(17, 25);
             lblAccountNumber.Name = "lblAccountNumber";
             lblAccountNumber.Size = new Size(117, 15);
             lblAccountNumber.TabIndex = 21;
@@ -129,7 +127,7 @@
             lblBankOfTheAccount.BackColor = Color.Transparent;
             lblBankOfTheAccount.FlatStyle = FlatStyle.Flat;
             lblBankOfTheAccount.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblBankOfTheAccount.Location = new Point(9, 120);
+            lblBankOfTheAccount.Location = new Point(17, 119);
             lblBankOfTheAccount.Name = "lblBankOfTheAccount";
             lblBankOfTheAccount.Size = new Size(142, 15);
             lblBankOfTheAccount.TabIndex = 22;
@@ -141,7 +139,7 @@
             lblIssuerName.BackColor = Color.Transparent;
             lblIssuerName.FlatStyle = FlatStyle.Flat;
             lblIssuerName.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblIssuerName.Location = new Point(9, 215);
+            lblIssuerName.Location = new Point(17, 214);
             lblIssuerName.Name = "lblIssuerName";
             lblIssuerName.Size = new Size(85, 15);
             lblIssuerName.TabIndex = 23;
@@ -153,7 +151,7 @@
             lblAverageBalance.BackColor = Color.Transparent;
             lblAverageBalance.FlatStyle = FlatStyle.Flat;
             lblAverageBalance.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblAverageBalance.Location = new Point(577, 26);
+            lblAverageBalance.Location = new Point(585, 25);
             lblAverageBalance.Name = "lblAverageBalance";
             lblAverageBalance.Size = new Size(114, 15);
             lblAverageBalance.TabIndex = 24;
@@ -165,7 +163,7 @@
             lblDateOpened.BackColor = Color.Transparent;
             lblDateOpened.FlatStyle = FlatStyle.Flat;
             lblDateOpened.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblDateOpened.Location = new Point(577, 120);
+            lblDateOpened.Location = new Point(585, 119);
             lblDateOpened.Name = "lblDateOpened";
             lblDateOpened.Size = new Size(85, 15);
             lblDateOpened.TabIndex = 25;
@@ -177,7 +175,7 @@
             lblBranch.BackColor = Color.Transparent;
             lblBranch.FlatStyle = FlatStyle.Flat;
             lblBranch.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblBranch.Location = new Point(577, 215);
+            lblBranch.Location = new Point(585, 214);
             lblBranch.Name = "lblBranch";
             lblBranch.Size = new Size(194, 15);
             lblBranch.TabIndex = 26;
@@ -189,7 +187,7 @@
             lblTypeOfAccount.BackColor = Color.Transparent;
             lblTypeOfAccount.FlatStyle = FlatStyle.Flat;
             lblTypeOfAccount.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTypeOfAccount.Location = new Point(883, 26);
+            lblTypeOfAccount.Location = new Point(892, 25);
             lblTypeOfAccount.Name = "lblTypeOfAccount";
             lblTypeOfAccount.Size = new Size(111, 15);
             lblTypeOfAccount.TabIndex = 27;
@@ -204,61 +202,17 @@
             btnRevealEntry2.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnRevealEntry2.FlatStyle = FlatStyle.Flat;
             btnRevealEntry2.Image = (Image)resources.GetObject("btnRevealEntry2.Image");
-            btnRevealEntry2.Location = new Point(340, 26);
+            btnRevealEntry2.Location = new Point(375, 448);
             btnRevealEntry2.Name = "btnRevealEntry2";
             btnRevealEntry2.Size = new Size(431, 66);
             btnRevealEntry2.TabIndex = 35;
             btnRevealEntry2.UseVisualStyleBackColor = true;
             btnRevealEntry2.Click += btnRevealEntry2_Click;
-            btnNext.BackColor = Color.Transparent;
-            btnNext.Cursor = Cursors.Hand;
-            btnNext.FlatAppearance.BorderSize = 0;
-            btnNext.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnNext.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnNext.FlatStyle = FlatStyle.Flat;
-            btnNext.Image = (Image)resources.GetObject("btnNext.Image");
-            btnNext.Location = new Point(1112, 713);
-            btnNext.Name = "btnNext";
-            btnNext.Size = new Size(126, 45);
-            btnNext.TabIndex = 34;
-            btnNext.UseVisualStyleBackColor = true;
-            btnNext.Click += btnSaveBankInfo_Click;
-            // 
-            // btnBack
-            // 
-            btnBack.BackColor = Color.Transparent;
-            btnBack.Cursor = Cursors.Hand;
-            btnBack.FlatAppearance.BorderSize = 0;
-            btnBack.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnBack.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnBack.FlatStyle = FlatStyle.Flat;
-            btnBack.Image = (Image)resources.GetObject("btnBack.Image");
-            btnBack.Location = new Point(56, 713);
-            btnBack.Name = "btnBack";
-            btnBack.Size = new Size(126, 45);
-            btnBack.TabIndex = 33;
-            btnBack.UseVisualStyleBackColor = true;
-            // 
-            // btnAddMoreAcc
-            // 
-            btnAddMoreAcc.BackColor = Color.Transparent;
-            btnAddMoreAcc.Cursor = Cursors.Hand;
-            btnAddMoreAcc.FlatAppearance.BorderSize = 0;
-            btnAddMoreAcc.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnAddMoreAcc.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnAddMoreAcc.FlatStyle = FlatStyle.Flat;
-            btnAddMoreAcc.Image = (Image)resources.GetObject("btnAddMoreAcc.Image");
-            btnAddMoreAcc.Location = new Point(397, 588);
-            btnAddMoreAcc.Name = "btnAddMoreAcc";
-            btnAddMoreAcc.Size = new Size(413, 45);
-            btnAddMoreAcc.TabIndex = 35;
-            btnAddMoreAcc.UseVisualStyleBackColor = true;
-            btnAddMoreAcc.Click += btnAddMoreAcc_Click;
             // 
             // txtAccountNumber
             // 
             txtAccountNumber.BackColor = Color.WhiteSmoke;
-            txtAccountNumber.Location = new Point(9, 44);
+            txtAccountNumber.Location = new Point(17, 43);
             txtAccountNumber.Name = "txtAccountNumber";
             txtAccountNumber.Size = new Size(503, 23);
             txtAccountNumber.TabIndex = 36;
@@ -266,7 +220,7 @@
             // txtBankOfTheAccount
             // 
             txtBankOfTheAccount.BackColor = Color.WhiteSmoke;
-            txtBankOfTheAccount.Location = new Point(9, 138);
+            txtBankOfTheAccount.Location = new Point(17, 137);
             txtBankOfTheAccount.Name = "txtBankOfTheAccount";
             txtBankOfTheAccount.Size = new Size(503, 23);
             txtBankOfTheAccount.TabIndex = 37;
@@ -274,7 +228,7 @@
             // txtIssuerName
             // 
             txtIssuerName.BackColor = Color.WhiteSmoke;
-            txtIssuerName.Location = new Point(9, 233);
+            txtIssuerName.Location = new Point(17, 232);
             txtIssuerName.Name = "txtIssuerName";
             txtIssuerName.Size = new Size(503, 23);
             txtIssuerName.TabIndex = 38;
@@ -282,27 +236,15 @@
             // txtAverageBalance
             // 
             txtAverageBalance.BackColor = Color.WhiteSmoke;
-            txtAverageBalance.Location = new Point(577, 44);
+            txtAverageBalance.Location = new Point(585, 43);
             txtAverageBalance.Name = "txtAverageBalance";
             txtAverageBalance.Size = new Size(292, 23);
             txtAverageBalance.TabIndex = 39;
             // 
             // txtBranchAddress
             // 
-            txtBranch.BackColor = Color.WhiteSmoke;
-            txtBranch.Location = new Point(577, 233);
-            txtBranch.Name = "txtBranch";
-            txtBranch.Size = new Size(469, 23);
-            txtBranch.TabIndex = 41;
-            // 
-            // dtDateOpened
-            // 
-            dtDateOpened.Location = new Point(577, 138);
-            dtDateOpened.Name = "dtDateOpened";
-            dtDateOpened.Size = new Size(292, 23);
-            dtDateOpened.TabIndex = 43;
             txtBranchAddress.BackColor = Color.WhiteSmoke;
-            txtBranchAddress.Location = new Point(634, 502);
+            txtBranchAddress.Location = new Point(585, 232);
             txtBranchAddress.Name = "txtBranchAddress";
             txtBranchAddress.Size = new Size(469, 23);
             txtBranchAddress.TabIndex = 41;
@@ -310,10 +252,8 @@
             // cbTypeOfAccount
             // 
             cbTypeOfAccount.FormattingEnabled = true;
-            cbTypeOfAccount.Items.AddRange(new object[] { "Male", "Female", "Beks" });
-            cbTypeOfAccount.Location = new Point(883, 44);
-            cbTypeOfAccount.Items.AddRange(new object[] { "Savings", "Checking", "Current" });
-            cbTypeOfAccount.Location = new Point(941, 313);
+            cbTypeOfAccount.Items.AddRange(new object[] { "Male", "Female", "Beks", "Savings", "Checking", "Current" });
+            cbTypeOfAccount.Location = new Point(892, 43);
             cbTypeOfAccount.Name = "cbTypeOfAccount";
             cbTypeOfAccount.Size = new Size(162, 23);
             cbTypeOfAccount.TabIndex = 87;
@@ -517,31 +457,49 @@
             // pnlEntry1
             // 
             pnlEntry1.BackColor = Color.Transparent;
+            pnlEntry1.Controls.Add(dtDateOpened);
+            pnlEntry1.Controls.Add(lblAverageBalance);
             pnlEntry1.Controls.Add(lblAccountNumber);
             pnlEntry1.Controls.Add(lblBankOfTheAccount);
             pnlEntry1.Controls.Add(lblIssuerName);
-            pnlEntry1.Controls.Add(lblAverageBalance);
-            pnlEntry1.Controls.Add(lblDateOpened);
-            pnlEntry1.Controls.Add(lblBranch);
+            pnlEntry1.Controls.Add(lblTypeOfAccount);
             pnlEntry1.Controls.Add(txtAccountNumber);
             pnlEntry1.Controls.Add(txtBankOfTheAccount);
             pnlEntry1.Controls.Add(txtIssuerName);
             pnlEntry1.Controls.Add(txtAverageBalance);
-            pnlEntry1.Controls.Add(txtBranch);
-            pnlEntry1.Controls.Add(dtDateOpened);
-            pnlEntry1.Controls.Add(lblTypeOfAccount);
+            pnlEntry1.Controls.Add(txtBranchAddress);
+            pnlEntry1.Controls.Add(lblDateOpened);
+            pnlEntry1.Controls.Add(lblBranch);
             pnlEntry1.Controls.Add(cbTypeOfAccount);
-            pnlEntry1.CustomizableEdges = customizableEdges1;
+            pnlEntry1.CustomizableEdges = customizableEdges3;
             pnlEntry1.Location = new Point(21, 47);
             pnlEntry1.Name = "pnlEntry1";
-            pnlEntry1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            pnlEntry1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             pnlEntry1.Size = new Size(1156, 280);
             pnlEntry1.TabIndex = 115;
+            // 
+            // dtDateOpened
+            // 
+            dtDateOpened.Checked = true;
+            dtDateOpened.CustomizableEdges = customizableEdges1;
+            dtDateOpened.FillColor = Color.White;
+            dtDateOpened.Font = new Font("Segoe UI", 9F);
+            dtDateOpened.Format = DateTimePickerFormat.Long;
+            dtDateOpened.Location = new Point(585, 137);
+            dtDateOpened.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            dtDateOpened.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            dtDateOpened.Name = "dtDateOpened";
+            dtDateOpened.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            dtDateOpened.Size = new Size(469, 23);
+            dtDateOpened.TabIndex = 115;
+            dtDateOpened.Value = new DateTime(2024, 7, 1, 18, 59, 10, 472);
             // 
             // pnlMain
             // 
             pnlMain.AutoScroll = true;
             pnlMain.BackColor = Color.Transparent;
+            pnlMain.Controls.Add(btnRevealEntry2);
+            pnlMain.Controls.Add(btnRevealEntry3);
             pnlMain.Controls.Add(pnlEntry3);
             pnlMain.Controls.Add(pnlEntry2);
             pnlMain.Controls.Add(pnlEntry1);
@@ -552,11 +510,26 @@
             pnlMain.Size = new Size(1225, 471);
             pnlMain.TabIndex = 116;
             // 
+            // btnRevealEntry3
+            // 
+            btnRevealEntry3.BackColor = Color.Transparent;
+            btnRevealEntry3.Cursor = Cursors.Hand;
+            btnRevealEntry3.FlatAppearance.BorderSize = 0;
+            btnRevealEntry3.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnRevealEntry3.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnRevealEntry3.FlatStyle = FlatStyle.Flat;
+            btnRevealEntry3.Image = (Image)resources.GetObject("btnRevealEntry3.Image");
+            btnRevealEntry3.Location = new Point(376, 735);
+            btnRevealEntry3.Name = "btnRevealEntry3";
+            btnRevealEntry3.Size = new Size(431, 66);
+            btnRevealEntry3.TabIndex = 90;
+            btnRevealEntry3.UseVisualStyleBackColor = true;
+            btnRevealEntry3.Click += btnRevealEntry3_Click;
+            // 
             // pnlEntry3
             // 
             pnlEntry3.BackColor = Color.Transparent;
             pnlEntry3.Controls.Add(btnCancelEntry3);
-            pnlEntry3.Controls.Add(btnRevealEntry3);
             pnlEntry3.Controls.Add(label16);
             pnlEntry3.Controls.Add(comboBox2);
             pnlEntry3.Controls.Add(label7);
@@ -571,10 +544,10 @@
             pnlEntry3.Controls.Add(textBox9);
             pnlEntry3.Controls.Add(textBox10);
             pnlEntry3.Controls.Add(dateTimePicker2);
-            pnlEntry3.CustomizableEdges = customizableEdges3;
+            pnlEntry3.CustomizableEdges = customizableEdges1;
             pnlEntry3.Location = new Point(21, 620);
             pnlEntry3.Name = "pnlEntry3";
-            pnlEntry3.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            pnlEntry3.ShadowDecoration.CustomizableEdges = customizableEdges2;
             pnlEntry3.Size = new Size(1156, 280);
             pnlEntry3.TabIndex = 117;
             // 
@@ -593,22 +566,6 @@
             btnCancelEntry3.TabIndex = 92;
             btnCancelEntry3.UseVisualStyleBackColor = true;
             btnCancelEntry3.Click += btnCancelEntry3_Click;
-            // 
-            // btnRevealEntry3
-            // 
-            btnRevealEntry3.BackColor = Color.Transparent;
-            btnRevealEntry3.Cursor = Cursors.Hand;
-            btnRevealEntry3.FlatAppearance.BorderSize = 0;
-            btnRevealEntry3.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnRevealEntry3.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnRevealEntry3.FlatStyle = FlatStyle.Flat;
-            btnRevealEntry3.Image = (Image)resources.GetObject("btnRevealEntry3.Image");
-            btnRevealEntry3.Location = new Point(340, 26);
-            btnRevealEntry3.Name = "btnRevealEntry3";
-            btnRevealEntry3.Size = new Size(431, 66);
-            btnRevealEntry3.TabIndex = 90;
-            btnRevealEntry3.UseVisualStyleBackColor = true;
-            btnRevealEntry3.Click += btnRevealEntry3_Click;
             // 
             // label16
             // 
@@ -760,7 +717,6 @@
             pnlEntry2.Controls.Add(label1);
             pnlEntry2.Controls.Add(label2);
             pnlEntry2.Controls.Add(label3);
-            pnlEntry2.Controls.Add(btnRevealEntry2);
             pnlEntry2.Controls.Add(label4);
             pnlEntry2.Controls.Add(label5);
             pnlEntry2.Controls.Add(label6);
@@ -922,7 +878,7 @@
             // textBox5
             // 
             textBox5.BackColor = Color.WhiteSmoke;
-            textBox5.Location = new Point(577, 233);
+            textBox5.Location = new Point(576, 233);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(469, 23);
             textBox5.TabIndex = 41;
@@ -948,6 +904,7 @@
             btnNext.Size = new Size(126, 45);
             btnNext.TabIndex = 119;
             btnNext.UseVisualStyleBackColor = true;
+            btnNext.Click += btnSaveBankInfo_Click;
             // 
             // btnBack
             // 
@@ -963,21 +920,6 @@
             btnBack.Size = new Size(126, 45);
             btnBack.TabIndex = 118;
             btnBack.UseVisualStyleBackColor = true;
-            // dtDateOpened
-            // 
-            dtDateOpened.Checked = true;
-            dtDateOpened.CustomizableEdges = customizableEdges3;
-            dtDateOpened.FillColor = Color.White;
-            dtDateOpened.Font = new Font("Segoe UI", 9F);
-            dtDateOpened.Format = DateTimePickerFormat.Long;
-            dtDateOpened.Location = new Point(634, 407);
-            dtDateOpened.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            dtDateOpened.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            dtDateOpened.Name = "dtDateOpened";
-            dtDateOpened.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            dtDateOpened.Size = new Size(469, 23);
-            dtDateOpened.TabIndex = 115;
-            dtDateOpened.Value = new DateTime(2024, 7, 1, 18, 59, 10, 472);
             // 
             // ApplicationPart5
             // 
@@ -985,9 +927,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1280, 800);
-            Controls.Add(btnNext);
-            Controls.Add(btnBack);
-            Controls.Add(dtDateOpened);
             Controls.Add(lblOtherInfo);
             Controls.Add(lblRealEstateInfo);
             Controls.Add(lblBankInfo);
@@ -1002,23 +941,9 @@
             Controls.Add(btnCollateralInfo);
             Controls.Add(btnLoanInfo);
             Controls.Add(btnPersonalInfo);
-            Controls.Add(pnlMain);
-            Controls.Add(cbTypeOfAccount);
-            Controls.Add(txtBranchAddress);
-            Controls.Add(txtAverageBalance);
-            Controls.Add(txtIssuerName);
-            Controls.Add(txtBankOfTheAccount);
-            Controls.Add(txtAccountNumber);
-            Controls.Add(btnAddMoreAcc);
             Controls.Add(btnNext);
             Controls.Add(btnBack);
-            Controls.Add(lblTypeOfAccount);
-            Controls.Add(lblBranch);
-            Controls.Add(lblDateOpened);
-            Controls.Add(lblAverageBalance);
-            Controls.Add(lblIssuerName);
-            Controls.Add(lblBankOfTheAccount);
-            Controls.Add(lblAccountNumber);
+            Controls.Add(pnlMain);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ApplicationPart5";
             StartPosition = FormStartPosition.CenterScreen;
