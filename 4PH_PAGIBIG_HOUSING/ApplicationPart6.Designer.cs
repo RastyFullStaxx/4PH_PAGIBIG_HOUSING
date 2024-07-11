@@ -31,20 +31,50 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ApplicationPart6));
             rdbtnYES = new RadioButton();
             rdbtnNO = new RadioButton();
-            panel1 = new Panel();
+            pnlMain = new Panel();
+            btnRevealEntry3 = new Button();
+            btnRevealEntry2 = new Button();
+            btnCancelEntry3 = new Button();
+            btnCancelEntry2 = new Button();
+            pnlEntry3 = new Panel();
+            comboBox2 = new ComboBox();
+            label14 = new Label();
+            label15 = new Label();
+            textBox11 = new TextBox();
+            label16 = new Label();
+            textBox12 = new TextBox();
+            label17 = new Label();
+            textBox13 = new TextBox();
+            label18 = new Label();
+            textBox14 = new TextBox();
+            label19 = new Label();
+            textBox15 = new TextBox();
+            pnlEntry2 = new Panel();
+            comboBox1 = new ComboBox();
+            label6 = new Label();
+            label7 = new Label();
+            textBox3 = new TextBox();
+            label8 = new Label();
+            textBox7 = new TextBox();
+            label9 = new Label();
+            textBox8 = new TextBox();
+            label10 = new Label();
+            textBox9 = new TextBox();
+            label13 = new Label();
+            textBox10 = new TextBox();
+            pnlEntry1 = new Panel();
             cbTypeOfProperty = new ComboBox();
-            label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
             lblMRID = new Label();
-            textBox6 = new TextBox();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
-            textBox2 = new TextBox();
+            label5 = new Label();
             textBox1 = new TextBox();
-            btnAddMoreAcc = new Button();
+            label4 = new Label();
+            textBox2 = new TextBox();
+            label3 = new Label();
+            textBox4 = new TextBox();
+            label2 = new Label();
+            textBox5 = new TextBox();
+            label1 = new Label();
+            textBox6 = new TextBox();
             btnNext = new Button();
             btnBack = new Button();
             lblPrompt = new Label();
@@ -62,19 +92,22 @@
             btnCollateralInfo = new Button();
             btnLoanInfo = new Button();
             btnPersonalInfo = new Button();
-            panel1.SuspendLayout();
+            pnlMain.SuspendLayout();
+            pnlEntry3.SuspendLayout();
+            pnlEntry2.SuspendLayout();
+            pnlEntry1.SuspendLayout();
             SuspendLayout();
             // 
             // rdbtnYES
             // 
             rdbtnYES.AutoSize = true;
             rdbtnYES.BackColor = Color.Transparent;
+            rdbtnYES.Cursor = Cursors.Hand;
             rdbtnYES.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             rdbtnYES.Location = new Point(311, 271);
             rdbtnYES.Name = "rdbtnYES";
             rdbtnYES.Size = new Size(45, 19);
             rdbtnYES.TabIndex = 0;
-            rdbtnYES.TabStop = true;
             rdbtnYES.Text = "YES";
             rdbtnYES.UseVisualStyleBackColor = false;
             rdbtnYES.CheckedChanged += rdbtnYES_CheckedChanged;
@@ -83,6 +116,8 @@
             // 
             rdbtnNO.AutoSize = true;
             rdbtnNO.BackColor = Color.Transparent;
+            rdbtnNO.Checked = true;
+            rdbtnNO.Cursor = Cursors.Hand;
             rdbtnNO.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             rdbtnNO.Location = new Point(362, 271);
             rdbtnNO.Name = "rdbtnNO";
@@ -91,93 +126,389 @@
             rdbtnNO.TabStop = true;
             rdbtnNO.Text = "NO";
             rdbtnNO.UseVisualStyleBackColor = false;
+            rdbtnNO.CheckedChanged += rdbtnNO_CheckedChanged;
             // 
-            // panel1
+            // pnlMain
             // 
-            panel1.BackColor = Color.Transparent;
-            panel1.Controls.Add(cbTypeOfProperty);
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(lblMRID);
-            panel1.Controls.Add(textBox6);
-            panel1.Controls.Add(textBox5);
-            panel1.Controls.Add(textBox4);
-            panel1.Controls.Add(textBox2);
-            panel1.Controls.Add(textBox1);
-            panel1.Location = new Point(72, 330);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(976, 371);
-            panel1.TabIndex = 2;
+            pnlMain.AutoScroll = true;
+            pnlMain.BackColor = Color.Transparent;
+            pnlMain.Controls.Add(btnRevealEntry3);
+            pnlMain.Controls.Add(btnRevealEntry2);
+            pnlMain.Controls.Add(btnCancelEntry3);
+            pnlMain.Controls.Add(btnCancelEntry2);
+            pnlMain.Controls.Add(pnlEntry3);
+            pnlMain.Controls.Add(pnlEntry2);
+            pnlMain.Controls.Add(pnlEntry1);
+            pnlMain.Location = new Point(72, 312);
+            pnlMain.Name = "pnlMain";
+            pnlMain.Size = new Size(1178, 389);
+            pnlMain.TabIndex = 2;
+            // 
+            // btnRevealEntry3
+            // 
+            btnRevealEntry3.BackColor = Color.Transparent;
+            btnRevealEntry3.Cursor = Cursors.Hand;
+            btnRevealEntry3.FlatAppearance.BorderSize = 0;
+            btnRevealEntry3.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnRevealEntry3.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnRevealEntry3.FlatStyle = FlatStyle.Flat;
+            btnRevealEntry3.Image = (Image)resources.GetObject("btnRevealEntry3.Image");
+            btnRevealEntry3.Location = new Point(359, 388);
+            btnRevealEntry3.Name = "btnRevealEntry3";
+            btnRevealEntry3.Size = new Size(413, 45);
+            btnRevealEntry3.TabIndex = 39;
+            btnRevealEntry3.UseVisualStyleBackColor = true;
+            btnRevealEntry3.Click += btnRevealEntry3_Click;
+            // 
+            // btnRevealEntry2
+            // 
+            btnRevealEntry2.BackColor = Color.Transparent;
+            btnRevealEntry2.Cursor = Cursors.Hand;
+            btnRevealEntry2.FlatAppearance.BorderSize = 0;
+            btnRevealEntry2.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnRevealEntry2.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnRevealEntry2.FlatStyle = FlatStyle.Flat;
+            btnRevealEntry2.Image = (Image)resources.GetObject("btnRevealEntry2.Image");
+            btnRevealEntry2.Location = new Point(357, 178);
+            btnRevealEntry2.Name = "btnRevealEntry2";
+            btnRevealEntry2.Size = new Size(413, 45);
+            btnRevealEntry2.TabIndex = 38;
+            btnRevealEntry2.UseVisualStyleBackColor = true;
+            btnRevealEntry2.Click += btnRevealEntry2_Click;
+            // 
+            // btnCancelEntry3
+            // 
+            btnCancelEntry3.BackColor = Color.Transparent;
+            btnCancelEntry3.Cursor = Cursors.Hand;
+            btnCancelEntry3.FlatAppearance.BorderSize = 0;
+            btnCancelEntry3.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnCancelEntry3.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnCancelEntry3.FlatStyle = FlatStyle.Flat;
+            btnCancelEntry3.Image = (Image)resources.GetObject("btnCancelEntry3.Image");
+            btnCancelEntry3.Location = new Point(882, 601);
+            btnCancelEntry3.Name = "btnCancelEntry3";
+            btnCancelEntry3.Size = new Size(97, 41);
+            btnCancelEntry3.TabIndex = 130;
+            btnCancelEntry3.UseVisualStyleBackColor = true;
+            btnCancelEntry3.Click += btnCancelEntry3_Click;
+            // 
+            // btnCancelEntry2
+            // 
+            btnCancelEntry2.BackColor = Color.Transparent;
+            btnCancelEntry2.Cursor = Cursors.Hand;
+            btnCancelEntry2.FlatAppearance.BorderSize = 0;
+            btnCancelEntry2.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnCancelEntry2.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnCancelEntry2.FlatStyle = FlatStyle.Flat;
+            btnCancelEntry2.Image = (Image)resources.GetObject("btnCancelEntry2.Image");
+            btnCancelEntry2.Location = new Point(880, 390);
+            btnCancelEntry2.Name = "btnCancelEntry2";
+            btnCancelEntry2.Size = new Size(97, 41);
+            btnCancelEntry2.TabIndex = 129;
+            btnCancelEntry2.UseVisualStyleBackColor = true;
+            btnCancelEntry2.Click += btnCancelEntry2_Click;
+            // 
+            // pnlEntry3
+            // 
+            pnlEntry3.Controls.Add(comboBox2);
+            pnlEntry3.Controls.Add(label14);
+            pnlEntry3.Controls.Add(label15);
+            pnlEntry3.Controls.Add(textBox11);
+            pnlEntry3.Controls.Add(label16);
+            pnlEntry3.Controls.Add(textBox12);
+            pnlEntry3.Controls.Add(label17);
+            pnlEntry3.Controls.Add(textBox13);
+            pnlEntry3.Controls.Add(label18);
+            pnlEntry3.Controls.Add(textBox14);
+            pnlEntry3.Controls.Add(label19);
+            pnlEntry3.Controls.Add(textBox15);
+            pnlEntry3.Location = new Point(16, 437);
+            pnlEntry3.Name = "pnlEntry3";
+            pnlEntry3.Size = new Size(963, 156);
+            pnlEntry3.TabIndex = 30;
+            // 
+            // comboBox2
+            // 
+            comboBox2.Location = new Point(531, 32);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(413, 23);
+            comboBox2.TabIndex = 0;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.BackColor = Color.Transparent;
+            label14.FlatStyle = FlatStyle.Flat;
+            label14.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label14.Location = new Point(8, 14);
+            label14.Name = "label14";
+            label14.Size = new Size(138, 15);
+            label14.TabIndex = 22;
+            label14.Text = "REAL ESTATE LOCATION";
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.BackColor = Color.Transparent;
+            label15.FlatStyle = FlatStyle.Flat;
+            label15.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label15.Location = new Point(744, 103);
+            label15.Name = "label15";
+            label15.Size = new Size(99, 15);
+            label15.TabIndex = 27;
+            label15.Text = "RENTAL INCOME";
+            // 
+            // textBox11
+            // 
+            textBox11.BackColor = Color.WhiteSmoke;
+            textBox11.Location = new Point(8, 32);
+            textBox11.Name = "textBox11";
+            textBox11.Size = new Size(499, 23);
+            textBox11.TabIndex = 0;
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.BackColor = Color.Transparent;
+            label16.FlatStyle = FlatStyle.Flat;
+            label16.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label16.Location = new Point(531, 103);
+            label16.Name = "label16";
+            label16.Size = new Size(128, 15);
+            label16.TabIndex = 26;
+            label16.Text = "MORTRAGE BALANCE";
+            // 
+            // textBox12
+            // 
+            textBox12.BackColor = Color.WhiteSmoke;
+            textBox12.Location = new Point(8, 121);
+            textBox12.Name = "textBox12";
+            textBox12.Size = new Size(271, 23);
+            textBox12.TabIndex = 1;
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.BackColor = Color.Transparent;
+            label17.FlatStyle = FlatStyle.Flat;
+            label17.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label17.Location = new Point(531, 14);
+            label17.Name = "label17";
+            label17.Size = new Size(114, 15);
+            label17.TabIndex = 25;
+            label17.Text = "TYPE OF PROPERTY";
+            // 
+            // textBox13
+            // 
+            textBox13.BackColor = Color.WhiteSmoke;
+            textBox13.Location = new Point(531, 121);
+            textBox13.Name = "textBox13";
+            textBox13.Size = new Size(200, 23);
+            textBox13.TabIndex = 3;
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.BackColor = Color.Transparent;
+            label18.FlatStyle = FlatStyle.Flat;
+            label18.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label18.Location = new Point(285, 103);
+            label18.Name = "label18";
+            label18.Size = new Size(94, 15);
+            label18.TabIndex = 24;
+            label18.Text = "MARKET VALUE";
+            // 
+            // textBox14
+            // 
+            textBox14.BackColor = Color.WhiteSmoke;
+            textBox14.Location = new Point(744, 121);
+            textBox14.Name = "textBox14";
+            textBox14.Size = new Size(200, 23);
+            textBox14.TabIndex = 4;
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.BackColor = Color.Transparent;
+            label19.FlatStyle = FlatStyle.Flat;
+            label19.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label19.Location = new Point(8, 103);
+            label19.Name = "label19";
+            label19.Size = new Size(117, 15);
+            label19.TabIndex = 23;
+            label19.Text = "ACQUISITION COST";
+            // 
+            // textBox15
+            // 
+            textBox15.BackColor = Color.WhiteSmoke;
+            textBox15.Location = new Point(285, 121);
+            textBox15.Name = "textBox15";
+            textBox15.Size = new Size(222, 23);
+            textBox15.TabIndex = 5;
+            // 
+            // pnlEntry2
+            // 
+            pnlEntry2.Controls.Add(comboBox1);
+            pnlEntry2.Controls.Add(label6);
+            pnlEntry2.Controls.Add(label7);
+            pnlEntry2.Controls.Add(textBox3);
+            pnlEntry2.Controls.Add(label8);
+            pnlEntry2.Controls.Add(textBox7);
+            pnlEntry2.Controls.Add(label9);
+            pnlEntry2.Controls.Add(textBox8);
+            pnlEntry2.Controls.Add(label10);
+            pnlEntry2.Controls.Add(textBox9);
+            pnlEntry2.Controls.Add(label13);
+            pnlEntry2.Controls.Add(textBox10);
+            pnlEntry2.Location = new Point(14, 228);
+            pnlEntry2.Name = "pnlEntry2";
+            pnlEntry2.Size = new Size(963, 156);
+            pnlEntry2.TabIndex = 29;
+            // 
+            // comboBox1
+            // 
+            comboBox1.Location = new Point(531, 32);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(413, 23);
+            comboBox1.TabIndex = 0;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
+            label6.FlatStyle = FlatStyle.Flat;
+            label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Location = new Point(8, 14);
+            label6.Name = "label6";
+            label6.Size = new Size(138, 15);
+            label6.TabIndex = 22;
+            label6.Text = "REAL ESTATE LOCATION";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
+            label7.FlatStyle = FlatStyle.Flat;
+            label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.Location = new Point(744, 103);
+            label7.Name = "label7";
+            label7.Size = new Size(99, 15);
+            label7.TabIndex = 27;
+            label7.Text = "RENTAL INCOME";
+            // 
+            // textBox3
+            // 
+            textBox3.BackColor = Color.WhiteSmoke;
+            textBox3.Location = new Point(8, 32);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(499, 23);
+            textBox3.TabIndex = 0;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.BackColor = Color.Transparent;
+            label8.FlatStyle = FlatStyle.Flat;
+            label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.Location = new Point(531, 103);
+            label8.Name = "label8";
+            label8.Size = new Size(128, 15);
+            label8.TabIndex = 26;
+            label8.Text = "MORTRAGE BALANCE";
+            // 
+            // textBox7
+            // 
+            textBox7.BackColor = Color.WhiteSmoke;
+            textBox7.Location = new Point(8, 121);
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(271, 23);
+            textBox7.TabIndex = 1;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.BackColor = Color.Transparent;
+            label9.FlatStyle = FlatStyle.Flat;
+            label9.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.Location = new Point(531, 14);
+            label9.Name = "label9";
+            label9.Size = new Size(114, 15);
+            label9.TabIndex = 25;
+            label9.Text = "TYPE OF PROPERTY";
+            // 
+            // textBox8
+            // 
+            textBox8.BackColor = Color.WhiteSmoke;
+            textBox8.Location = new Point(531, 121);
+            textBox8.Name = "textBox8";
+            textBox8.Size = new Size(200, 23);
+            textBox8.TabIndex = 3;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.BackColor = Color.Transparent;
+            label10.FlatStyle = FlatStyle.Flat;
+            label10.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.Location = new Point(285, 103);
+            label10.Name = "label10";
+            label10.Size = new Size(94, 15);
+            label10.TabIndex = 24;
+            label10.Text = "MARKET VALUE";
+            // 
+            // textBox9
+            // 
+            textBox9.BackColor = Color.WhiteSmoke;
+            textBox9.Location = new Point(744, 121);
+            textBox9.Name = "textBox9";
+            textBox9.Size = new Size(200, 23);
+            textBox9.TabIndex = 4;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.BackColor = Color.Transparent;
+            label13.FlatStyle = FlatStyle.Flat;
+            label13.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label13.Location = new Point(8, 103);
+            label13.Name = "label13";
+            label13.Size = new Size(117, 15);
+            label13.TabIndex = 23;
+            label13.Text = "ACQUISITION COST";
+            // 
+            // textBox10
+            // 
+            textBox10.BackColor = Color.WhiteSmoke;
+            textBox10.Location = new Point(285, 121);
+            textBox10.Name = "textBox10";
+            textBox10.Size = new Size(222, 23);
+            textBox10.TabIndex = 5;
+            // 
+            // pnlEntry1
+            // 
+            pnlEntry1.Controls.Add(cbTypeOfProperty);
+            pnlEntry1.Controls.Add(lblMRID);
+            pnlEntry1.Controls.Add(label5);
+            pnlEntry1.Controls.Add(textBox1);
+            pnlEntry1.Controls.Add(label4);
+            pnlEntry1.Controls.Add(textBox2);
+            pnlEntry1.Controls.Add(label3);
+            pnlEntry1.Controls.Add(textBox4);
+            pnlEntry1.Controls.Add(label2);
+            pnlEntry1.Controls.Add(textBox5);
+            pnlEntry1.Controls.Add(label1);
+            pnlEntry1.Controls.Add(textBox6);
+            pnlEntry1.Location = new Point(14, 16);
+            pnlEntry1.Name = "pnlEntry1";
+            pnlEntry1.Size = new Size(963, 156);
+            pnlEntry1.TabIndex = 28;
             // 
             // cbTypeOfProperty
             // 
-            cbTypeOfProperty.Location = new Point(537, 86);
+            cbTypeOfProperty.Location = new Point(531, 32);
             cbTypeOfProperty.Name = "cbTypeOfProperty";
             cbTypeOfProperty.Size = new Size(413, 23);
             cbTypeOfProperty.TabIndex = 0;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.Transparent;
-            label5.FlatStyle = FlatStyle.Flat;
-            label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(750, 157);
-            label5.Name = "label5";
-            label5.Size = new Size(99, 15);
-            label5.TabIndex = 27;
-            label5.Text = "RENTAL INCOME";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Transparent;
-            label4.FlatStyle = FlatStyle.Flat;
-            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(537, 157);
-            label4.Name = "label4";
-            label4.Size = new Size(128, 15);
-            label4.TabIndex = 26;
-            label4.Text = "MORTRAGE BALANCE";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.FlatStyle = FlatStyle.Flat;
-            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(537, 68);
-            label3.Name = "label3";
-            label3.Size = new Size(114, 15);
-            label3.TabIndex = 25;
-            label3.Text = "TYPE OF PROPERTY";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.FlatStyle = FlatStyle.Flat;
-            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(291, 157);
-            label2.Name = "label2";
-            label2.Size = new Size(94, 15);
-            label2.TabIndex = 24;
-            label2.Text = "MARKET VALUE";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.FlatStyle = FlatStyle.Flat;
-            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(14, 157);
-            label1.Name = "label1";
-            label1.Size = new Size(117, 15);
-            label1.TabIndex = 23;
-            label1.Text = "ACQUISITION COST";
             // 
             // lblMRID
             // 
@@ -185,66 +516,111 @@
             lblMRID.BackColor = Color.Transparent;
             lblMRID.FlatStyle = FlatStyle.Flat;
             lblMRID.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMRID.Location = new Point(14, 68);
+            lblMRID.Location = new Point(8, 14);
             lblMRID.Name = "lblMRID";
             lblMRID.Size = new Size(138, 15);
             lblMRID.TabIndex = 22;
             lblMRID.Text = "REAL ESTATE LOCATION";
             // 
-            // textBox6
+            // label5
             // 
-            textBox6.BackColor = Color.WhiteSmoke;
-            textBox6.Location = new Point(291, 175);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(222, 23);
-            textBox6.TabIndex = 5;
-            // 
-            // textBox5
-            // 
-            textBox5.BackColor = Color.WhiteSmoke;
-            textBox5.Location = new Point(750, 175);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(200, 23);
-            textBox5.TabIndex = 4;
-            // 
-            // textBox4
-            // 
-            textBox4.BackColor = Color.WhiteSmoke;
-            textBox4.Location = new Point(537, 175);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(200, 23);
-            textBox4.TabIndex = 3;
-            // 
-            // textBox2
-            // 
-            textBox2.BackColor = Color.WhiteSmoke;
-            textBox2.Location = new Point(14, 175);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(271, 23);
-            textBox2.TabIndex = 1;
+            label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
+            label5.FlatStyle = FlatStyle.Flat;
+            label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(744, 103);
+            label5.Name = "label5";
+            label5.Size = new Size(99, 15);
+            label5.TabIndex = 27;
+            label5.Text = "RENTAL INCOME";
             // 
             // textBox1
             // 
             textBox1.BackColor = Color.WhiteSmoke;
-            textBox1.Location = new Point(14, 86);
+            textBox1.Location = new Point(8, 32);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(499, 23);
             textBox1.TabIndex = 0;
             // 
-            // btnAddMoreAcc
+            // label4
             // 
-            btnAddMoreAcc.BackColor = Color.Transparent;
-            btnAddMoreAcc.Cursor = Cursors.Hand;
-            btnAddMoreAcc.FlatAppearance.BorderSize = 0;
-            btnAddMoreAcc.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnAddMoreAcc.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnAddMoreAcc.FlatStyle = FlatStyle.Flat;
-            btnAddMoreAcc.Image = (Image)resources.GetObject("btnAddMoreAcc.Image");
-            btnAddMoreAcc.Location = new Point(397, 588);
-            btnAddMoreAcc.Name = "btnAddMoreAcc";
-            btnAddMoreAcc.Size = new Size(413, 45);
-            btnAddMoreAcc.TabIndex = 38;
-            btnAddMoreAcc.UseVisualStyleBackColor = true;
+            label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
+            label4.FlatStyle = FlatStyle.Flat;
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(531, 103);
+            label4.Name = "label4";
+            label4.Size = new Size(128, 15);
+            label4.TabIndex = 26;
+            label4.Text = "MORTRAGE BALANCE";
+            // 
+            // textBox2
+            // 
+            textBox2.BackColor = Color.WhiteSmoke;
+            textBox2.Location = new Point(8, 121);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(271, 23);
+            textBox2.TabIndex = 1;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.FlatStyle = FlatStyle.Flat;
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(531, 14);
+            label3.Name = "label3";
+            label3.Size = new Size(114, 15);
+            label3.TabIndex = 25;
+            label3.Text = "TYPE OF PROPERTY";
+            // 
+            // textBox4
+            // 
+            textBox4.BackColor = Color.WhiteSmoke;
+            textBox4.Location = new Point(531, 121);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(200, 23);
+            textBox4.TabIndex = 3;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.FlatStyle = FlatStyle.Flat;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(285, 103);
+            label2.Name = "label2";
+            label2.Size = new Size(94, 15);
+            label2.TabIndex = 24;
+            label2.Text = "MARKET VALUE";
+            // 
+            // textBox5
+            // 
+            textBox5.BackColor = Color.WhiteSmoke;
+            textBox5.Location = new Point(744, 121);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(200, 23);
+            textBox5.TabIndex = 4;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.FlatStyle = FlatStyle.Flat;
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(8, 103);
+            label1.Name = "label1";
+            label1.Size = new Size(117, 15);
+            label1.TabIndex = 23;
+            label1.Text = "ACQUISITION COST";
+            // 
+            // textBox6
+            // 
+            textBox6.BackColor = Color.WhiteSmoke;
+            textBox6.Location = new Point(285, 121);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(222, 23);
+            textBox6.TabIndex = 5;
             // 
             // btnNext
             // 
@@ -504,10 +880,9 @@
             Controls.Add(btnLoanInfo);
             Controls.Add(btnPersonalInfo);
             Controls.Add(lblPrompt);
-            Controls.Add(btnAddMoreAcc);
             Controls.Add(btnNext);
             Controls.Add(btnBack);
-            Controls.Add(panel1);
+            Controls.Add(pnlMain);
             Controls.Add(rdbtnNO);
             Controls.Add(rdbtnYES);
             FormBorderStyle = FormBorderStyle.None;
@@ -515,8 +890,13 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ApplicationPart6";
             Load += ApplicationPart6_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            pnlMain.ResumeLayout(false);
+            pnlEntry3.ResumeLayout(false);
+            pnlEntry3.PerformLayout();
+            pnlEntry2.ResumeLayout(false);
+            pnlEntry2.PerformLayout();
+            pnlEntry1.ResumeLayout(false);
+            pnlEntry1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -525,7 +905,7 @@
 
         private RadioButton rdbtnYES;
         private RadioButton rdbtnNO;
-        private Panel panel1;
+        private Panel pnlMain;
         private TextBox textBox1;
         private TextBox textBox6;
         private TextBox textBox5;
@@ -537,7 +917,7 @@
         private Label label2;
         private Label label1;
         private Label lblMRID;
-        private Button btnAddMoreAcc;
+        private Button btnRevealEntry2;
         private Button btnNext;
         private Button btnBack;
         private Label lblPrompt;
@@ -556,5 +936,35 @@
         private Button btnLoanInfo;
         private Button btnPersonalInfo;
         private ComboBox cbTypeOfProperty;
+        private Panel pnlEntry1;
+        private Panel pnlEntry3;
+        private ComboBox comboBox2;
+        private Label label14;
+        private Label label15;
+        private TextBox textBox11;
+        private Label label16;
+        private TextBox textBox12;
+        private Label label17;
+        private TextBox textBox13;
+        private Label label18;
+        private TextBox textBox14;
+        private Label label19;
+        private TextBox textBox15;
+        private Panel pnlEntry2;
+        private ComboBox comboBox1;
+        private Label label6;
+        private Label label7;
+        private TextBox textBox3;
+        private Label label8;
+        private TextBox textBox7;
+        private Label label9;
+        private TextBox textBox8;
+        private Label label10;
+        private TextBox textBox9;
+        private Label label13;
+        private TextBox textBox10;
+        private Button btnRevealEntry3;
+        private Button btnCancelEntry3;
+        private Button btnCancelEntry2;
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace _4PH_PAGIBIG_HOUSING
 {
-    public partial class Administration_ReadDisplay : Form
+    public partial class Administration_ManageRecord : Form
     {
-        public Administration_ReadDisplay()
+        public Administration_ManageRecord()
         {
             InitializeComponent();
         }
