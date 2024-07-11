@@ -59,8 +59,8 @@
             btnCollateralInfo = new Button();
             btnLoanInfo = new Button();
             btnPersonalInfo = new Button();
-            cbPropertyLocation = new ComboBox();
             cbTypeOfProperty = new ComboBox();
+            cbPropertyLocation = new TextBox();
             SuspendLayout();
             // 
             // lblNameOfProperty
@@ -433,16 +433,6 @@
             btnPersonalInfo.TabIndex = 69;
             btnPersonalInfo.UseVisualStyleBackColor = true;
             // 
-            // cbPropertyLocation
-            // 
-            cbPropertyLocation.FormattingEnabled = true;
-            cbPropertyLocation.Items.AddRange(new object[] { "Male", "Female", "Beks" });
-            cbPropertyLocation.Location = new Point(74, 406);
-            cbPropertyLocation.Name = "cbPropertyLocation";
-            cbPropertyLocation.Size = new Size(517, 23);
-            cbPropertyLocation.TabIndex = 83;
-            cbPropertyLocation.Text = " ";
-            // 
             // cbTypeOfProperty
             // 
             cbTypeOfProperty.FormattingEnabled = true;
@@ -453,14 +443,22 @@
             cbTypeOfProperty.TabIndex = 84;
             cbTypeOfProperty.Text = " ";
             // 
+            // cbPropertyLocation
+            // 
+            cbPropertyLocation.BackColor = Color.WhiteSmoke;
+            cbPropertyLocation.Location = new Point(70, 406);
+            cbPropertyLocation.Name = "cbPropertyLocation";
+            cbPropertyLocation.Size = new Size(517, 23);
+            cbPropertyLocation.TabIndex = 85;
+            // 
             // ApplicationPart3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1280, 800);
-            Controls.Add(cbTypeOfProperty);
             Controls.Add(cbPropertyLocation);
+            Controls.Add(cbTypeOfProperty);
             Controls.Add(lblOtherInfo);
             Controls.Add(lblRealEstateInfo);
             Controls.Add(lblBankInfo);
@@ -531,7 +529,7 @@
         private Button btnCollateralInfo;
         private Button btnLoanInfo;
         private Button btnPersonalInfo;
-        private ComboBox cbPropertyLocation;
         private ComboBox cbTypeOfProperty;
+        private TextBox cbPropertyLocation;
     }
 }

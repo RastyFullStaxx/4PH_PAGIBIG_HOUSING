@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ApplicationPart5));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lblAccountNumber = new Label();
             lblBankOfTheAccount = new Label();
             lblIssuerName = new Label();
@@ -43,8 +45,7 @@
             txtBankOfTheAccount = new TextBox();
             txtIssuerName = new TextBox();
             txtAverageBalance = new TextBox();
-            txtBranch = new TextBox();
-            dtDateOpened = new DateTimePicker();
+            txtBranchAddress = new TextBox();
             cbTypeOfAccount = new ComboBox();
             lblOtherInfo = new Label();
             lblRealEstateInfo = new Label();
@@ -60,6 +61,7 @@
             btnCollateralInfo = new Button();
             btnLoanInfo = new Button();
             btnPersonalInfo = new Button();
+            dtDateOpened = new Guna.UI2.WinForms.Guna2DateTimePicker();
             SuspendLayout();
             // 
             // lblAccountNumber
@@ -160,6 +162,7 @@
             btnNext.Size = new Size(126, 45);
             btnNext.TabIndex = 34;
             btnNext.UseVisualStyleBackColor = true;
+            btnNext.Click += btnSaveBankInfo_Click;
             // 
             // btnBack
             // 
@@ -190,6 +193,7 @@
             btnAddMoreAcc.Size = new Size(413, 45);
             btnAddMoreAcc.TabIndex = 35;
             btnAddMoreAcc.UseVisualStyleBackColor = true;
+            btnAddMoreAcc.Click += btnAddMoreAcc_Click;
             // 
             // txtAccountNumber
             // 
@@ -223,25 +227,18 @@
             txtAverageBalance.Size = new Size(292, 23);
             txtAverageBalance.TabIndex = 39;
             // 
-            // txtBranch
+            // txtBranchAddress
             // 
-            txtBranch.BackColor = Color.WhiteSmoke;
-            txtBranch.Location = new Point(634, 502);
-            txtBranch.Name = "txtBranch";
-            txtBranch.Size = new Size(469, 23);
-            txtBranch.TabIndex = 41;
-            // 
-            // dtDateOpened
-            // 
-            dtDateOpened.Location = new Point(634, 407);
-            dtDateOpened.Name = "dtDateOpened";
-            dtDateOpened.Size = new Size(292, 23);
-            dtDateOpened.TabIndex = 43;
+            txtBranchAddress.BackColor = Color.WhiteSmoke;
+            txtBranchAddress.Location = new Point(634, 502);
+            txtBranchAddress.Name = "txtBranchAddress";
+            txtBranchAddress.Size = new Size(469, 23);
+            txtBranchAddress.TabIndex = 41;
             // 
             // cbTypeOfAccount
             // 
             cbTypeOfAccount.FormattingEnabled = true;
-            cbTypeOfAccount.Items.AddRange(new object[] { "Male", "Female", "Beks" });
+            cbTypeOfAccount.Items.AddRange(new object[] { "Savings", "Checking", "Current" });
             cbTypeOfAccount.Location = new Point(941, 313);
             cbTypeOfAccount.Name = "cbTypeOfAccount";
             cbTypeOfAccount.Size = new Size(162, 23);
@@ -443,12 +440,29 @@
             btnPersonalInfo.TabIndex = 101;
             btnPersonalInfo.UseVisualStyleBackColor = true;
             // 
+            // dtDateOpened
+            // 
+            dtDateOpened.Checked = true;
+            dtDateOpened.CustomizableEdges = customizableEdges3;
+            dtDateOpened.FillColor = Color.White;
+            dtDateOpened.Font = new Font("Segoe UI", 9F);
+            dtDateOpened.Format = DateTimePickerFormat.Long;
+            dtDateOpened.Location = new Point(634, 407);
+            dtDateOpened.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            dtDateOpened.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            dtDateOpened.Name = "dtDateOpened";
+            dtDateOpened.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            dtDateOpened.Size = new Size(469, 23);
+            dtDateOpened.TabIndex = 115;
+            dtDateOpened.Value = new DateTime(2024, 7, 1, 18, 59, 10, 472);
+            // 
             // ApplicationPart5
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1280, 800);
+            Controls.Add(dtDateOpened);
             Controls.Add(lblOtherInfo);
             Controls.Add(lblRealEstateInfo);
             Controls.Add(lblBankInfo);
@@ -464,8 +478,7 @@
             Controls.Add(btnLoanInfo);
             Controls.Add(btnPersonalInfo);
             Controls.Add(cbTypeOfAccount);
-            Controls.Add(dtDateOpened);
-            Controls.Add(txtBranch);
+            Controls.Add(txtBranchAddress);
             Controls.Add(txtAverageBalance);
             Controls.Add(txtIssuerName);
             Controls.Add(txtBankOfTheAccount);
@@ -484,6 +497,7 @@
             Name = "ApplicationPart5";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ApplicationPart5";
+            Load += ApplicationPart5_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -504,8 +518,7 @@
         private TextBox txtBankOfTheAccount;
         private TextBox txtIssuerName;
         private TextBox txtAverageBalance;
-        private TextBox txtBranch;
-        private DateTimePicker dtDateOpened;
+        private TextBox txtBranchAddress;
         private ComboBox cbTypeOfAccount;
         private Label lblOtherInfo;
         private Label lblRealEstateInfo;
@@ -521,5 +534,6 @@
         private Button btnCollateralInfo;
         private Button btnLoanInfo;
         private Button btnPersonalInfo;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtDateOpened;
     }
 }

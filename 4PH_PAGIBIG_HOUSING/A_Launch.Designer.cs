@@ -67,6 +67,7 @@ namespace _4PH_PAGIBIG_HOUSING
             button1.Size = new Size(303, 128);
             button1.TabIndex = 1;
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // A_Launch
             // 
