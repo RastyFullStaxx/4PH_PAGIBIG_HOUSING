@@ -153,7 +153,7 @@
             btnRevealEntry3.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnRevealEntry3.FlatStyle = FlatStyle.Flat;
             btnRevealEntry3.Image = (Image)resources.GetObject("btnRevealEntry3.Image");
-            btnRevealEntry3.Location = new Point(366, 496);
+            btnRevealEntry3.Location = new Point(359, 388);
             btnRevealEntry3.Name = "btnRevealEntry3";
             btnRevealEntry3.Size = new Size(413, 45);
             btnRevealEntry3.TabIndex = 39;
@@ -169,7 +169,7 @@
             btnRevealEntry2.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnRevealEntry2.FlatStyle = FlatStyle.Flat;
             btnRevealEntry2.Image = (Image)resources.GetObject("btnRevealEntry2.Image");
-            btnRevealEntry2.Location = new Point(361, 289);
+            btnRevealEntry2.Location = new Point(357, 178);
             btnRevealEntry2.Name = "btnRevealEntry2";
             btnRevealEntry2.Size = new Size(413, 45);
             btnRevealEntry2.TabIndex = 38;

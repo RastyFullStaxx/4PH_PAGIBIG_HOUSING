@@ -16,5 +16,12 @@ namespace _4PH_PAGIBIG_HOUSING
         {
             InitializeComponent();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            A_Launch a_Launch = new A_Launch();
+            a_Launch.Show();
+            this.Close();
+        }
     }
 }

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administration_EmploymentInfo));
-            imgSearchIcon = new PictureBox();
-            txtSearchBar = new TextBox();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnDelete = new Button();
             dataGridView1 = new DataGridView();
             imgSectionTitle = new PictureBox();
@@ -43,27 +43,13 @@
             btnLoanInfo = new Button();
             btnPersonalInfo = new Button();
             btnDashboard = new Button();
-            ((System.ComponentModel.ISupportInitialize)imgSearchIcon).BeginInit();
+            imgSearchIcon = new PictureBox();
+            cbSelectMRID = new Guna.UI2.WinForms.Guna2ComboBox();
+            lblMRID = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)imgSectionTitle).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)imgSearchIcon).BeginInit();
             SuspendLayout();
-            // 
-            // imgSearchIcon
-            // 
-            imgSearchIcon.Image = (Image)resources.GetObject("imgSearchIcon.Image");
-            imgSearchIcon.Location = new Point(843, 37);
-            imgSearchIcon.Name = "imgSearchIcon";
-            imgSearchIcon.Size = new Size(30, 30);
-            imgSearchIcon.TabIndex = 84;
-            imgSearchIcon.TabStop = false;
-            // 
-            // txtSearchBar
-            // 
-            txtSearchBar.BackColor = Color.WhiteSmoke;
-            txtSearchBar.Location = new Point(878, 41);
-            txtSearchBar.Name = "txtSearchBar";
-            txtSearchBar.Size = new Size(356, 23);
-            txtSearchBar.TabIndex = 83;
             // 
             // btnDelete
             // 
@@ -112,6 +98,7 @@
             btnExit.Size = new Size(128, 56);
             btnExit.TabIndex = 79;
             btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
             // 
             // btnOtherLoanInfo
             // 
@@ -127,6 +114,7 @@
             btnOtherLoanInfo.Size = new Size(256, 56);
             btnOtherLoanInfo.TabIndex = 78;
             btnOtherLoanInfo.UseVisualStyleBackColor = true;
+            btnOtherLoanInfo.Click += btnOtherLoanInfo_Click;
             // 
             // btnRealEstateInfo
             // 
@@ -142,6 +130,7 @@
             btnRealEstateInfo.Size = new Size(256, 56);
             btnRealEstateInfo.TabIndex = 77;
             btnRealEstateInfo.UseVisualStyleBackColor = true;
+            btnRealEstateInfo.Click += btnRealEstateInfo_Click;
             // 
             // btnBankInfo
             // 
@@ -157,6 +146,7 @@
             btnBankInfo.Size = new Size(256, 56);
             btnBankInfo.TabIndex = 76;
             btnBankInfo.UseVisualStyleBackColor = true;
+            btnBankInfo.Click += btnBankInfo_Click;
             // 
             // btnEmploymentInfo
             // 
@@ -172,6 +162,7 @@
             btnEmploymentInfo.Size = new Size(256, 56);
             btnEmploymentInfo.TabIndex = 75;
             btnEmploymentInfo.UseVisualStyleBackColor = true;
+            btnEmploymentInfo.Click += btnEmploymentInfo_Click;
             // 
             // btnCollateralInfo
             // 
@@ -187,6 +178,7 @@
             btnCollateralInfo.Size = new Size(256, 56);
             btnCollateralInfo.TabIndex = 74;
             btnCollateralInfo.UseVisualStyleBackColor = true;
+            btnCollateralInfo.Click += btnCollateralInfo_Click;
             // 
             // btnLoanInfo
             // 
@@ -202,6 +194,7 @@
             btnLoanInfo.Size = new Size(256, 56);
             btnLoanInfo.TabIndex = 73;
             btnLoanInfo.UseVisualStyleBackColor = true;
+            btnLoanInfo.Click += btnLoanInfo_Click;
             // 
             // btnPersonalInfo
             // 
@@ -217,6 +210,7 @@
             btnPersonalInfo.Size = new Size(256, 56);
             btnPersonalInfo.TabIndex = 72;
             btnPersonalInfo.UseVisualStyleBackColor = true;
+            btnPersonalInfo.Click += btnPersonalInfo_Click;
             // 
             // btnDashboard
             // 
@@ -232,6 +226,44 @@
             btnDashboard.Size = new Size(256, 56);
             btnDashboard.TabIndex = 71;
             btnDashboard.UseVisualStyleBackColor = true;
+            btnDashboard.Click += btnDashboard_Click;
+            // 
+            // imgSearchIcon
+            // 
+            imgSearchIcon.BackColor = Color.Transparent;
+            imgSearchIcon.Image = (Image)resources.GetObject("imgSearchIcon.Image");
+            imgSearchIcon.Location = new Point(862, 37);
+            imgSearchIcon.Name = "imgSearchIcon";
+            imgSearchIcon.Size = new Size(30, 30);
+            imgSearchIcon.TabIndex = 105;
+            imgSearchIcon.TabStop = false;
+            // 
+            // cbSelectMRID
+            // 
+            cbSelectMRID.BackColor = Color.Transparent;
+            cbSelectMRID.CustomizableEdges = customizableEdges17;
+            cbSelectMRID.DrawMode = DrawMode.OwnerDrawFixed;
+            cbSelectMRID.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbSelectMRID.FocusedColor = Color.FromArgb(94, 148, 255);
+            cbSelectMRID.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cbSelectMRID.Font = new Font("Segoe UI", 10F);
+            cbSelectMRID.ForeColor = Color.FromArgb(68, 88, 112);
+            cbSelectMRID.ItemHeight = 30;
+            cbSelectMRID.Location = new Point(898, 35);
+            cbSelectMRID.Name = "cbSelectMRID";
+            cbSelectMRID.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            cbSelectMRID.Size = new Size(280, 36);
+            cbSelectMRID.TabIndex = 104;
+            // 
+            // lblMRID
+            // 
+            lblMRID.BackColor = Color.Transparent;
+            lblMRID.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMRID.Location = new Point(898, 17);
+            lblMRID.Name = "lblMRID";
+            lblMRID.Size = new Size(152, 17);
+            lblMRID.TabIndex = 103;
+            lblMRID.Text = "PAG-IBIG MRID/RTN No.";
             // 
             // Administration_EmploymentInfo
             // 
@@ -240,7 +272,8 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1280, 800);
             Controls.Add(imgSearchIcon);
-            Controls.Add(txtSearchBar);
+            Controls.Add(cbSelectMRID);
+            Controls.Add(lblMRID);
             Controls.Add(btnDelete);
             Controls.Add(dataGridView1);
             Controls.Add(imgSectionTitle);
@@ -257,17 +290,14 @@
             Name = "Administration_EmploymentInfo";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Administration_EmploymentInfo";
-            ((System.ComponentModel.ISupportInitialize)imgSearchIcon).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)imgSectionTitle).EndInit();
+            ((System.ComponentModel.ISupportInitialize)imgSearchIcon).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private PictureBox imgSearchIcon;
-        private TextBox txtSearchBar;
         private Button btnDelete;
         private DataGridView dataGridView1;
         private PictureBox imgSectionTitle;
@@ -280,5 +310,8 @@
         private Button btnLoanInfo;
         private Button btnPersonalInfo;
         private Button btnDashboard;
+        private PictureBox imgSearchIcon;
+        private Guna.UI2.WinForms.Guna2ComboBox cbSelectMRID;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblMRID;
     }
 }

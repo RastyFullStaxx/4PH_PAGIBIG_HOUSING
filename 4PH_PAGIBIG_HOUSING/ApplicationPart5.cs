@@ -170,6 +170,16 @@ namespace _4PH_PAGIBIG_HOUSING
 
             pnlEntry3Expanded = true;
         }
+        private readonly string _pagIBIGMIDNumberRTN, _tct;
+        private readonly DatabaseConnection _database = DatabaseConnection.Instance;
+        private readonly BankingInformation _bank = new BankingInformation();
+    
+        public ApplicationPart5(string pagIBIGMIDNumberRTN, string tct)
+        {
+            InitializeComponent();
+            _pagIBIGMIDNumberRTN = pagIBIGMIDNumberRTN;
+            _tct = tct;
+        }
 
         private void ApplicationPart5_Load(object sender, EventArgs e)
         {
@@ -184,7 +194,19 @@ namespace _4PH_PAGIBIG_HOUSING
             Panel1Insert();
             if (pnlEntry2.Visible) // Check if pnlEntry2 is visible
             {
-                Panel2Insert();
+                if (SaveBankingInformation(_bank))
+                {
+                    MessageBox.Show("Banking information saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearInputs();
+                    // Optionally, you can proceed to the next form or take other actions
+                    ApplicationPart6 applicationPart6 = new ApplicationPart6();
+                    applicationPart6.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to save banking information.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             if (pnlEntry3.Visible) // Check if pnlEntry3 is visible
             {

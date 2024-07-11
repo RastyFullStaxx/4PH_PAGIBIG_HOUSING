@@ -56,10 +56,8 @@
             btnPersonalInfo = new Button();
             dtMaturityDate = new DateTimePicker();
             cbTypeOfLoan = new ComboBox();
-            pnlEntry1 = new Panel();
             pnlMain = new Panel();
             btnCancelEntry3 = new Button();
-            btnCancelEntry2 = new Button();
             btnRevealEntry3 = new Button();
             pnlEntry3 = new Panel();
             comboBox2 = new ComboBox();
@@ -72,6 +70,7 @@
             textBox4 = new TextBox();
             textBox5 = new TextBox();
             textBox6 = new TextBox();
+            btnCancelEntry2 = new Button();
             pnlEntry2 = new Panel();
             comboBox1 = new ComboBox();
             label1 = new Label();
@@ -83,10 +82,11 @@
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             textBox3 = new TextBox();
-            pnlEntry1.SuspendLayout();
+            pnlEntry1 = new Panel();
             pnlMain.SuspendLayout();
             pnlEntry3.SuspendLayout();
             pnlEntry2.SuspendLayout();
+            pnlEntry1.SuspendLayout();
             SuspendLayout();
             // 
             // lblTypeOfLoan
@@ -95,7 +95,7 @@
             lblTypeOfLoan.BackColor = Color.Transparent;
             lblTypeOfLoan.FlatStyle = FlatStyle.Flat;
             lblTypeOfLoan.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTypeOfLoan.Location = new Point(21, 15);
+            lblTypeOfLoan.Location = new Point(14, 24);
             lblTypeOfLoan.Name = "lblTypeOfLoan";
             lblTypeOfLoan.Size = new Size(87, 15);
             lblTypeOfLoan.TabIndex = 22;
@@ -107,7 +107,7 @@
             lblBalance.BackColor = Color.Transparent;
             lblBalance.FlatStyle = FlatStyle.Flat;
             lblBalance.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblBalance.Location = new Point(21, 100);
+            lblBalance.Location = new Point(14, 109);
             lblBalance.Name = "lblBalance";
             lblBalance.Size = new Size(117, 15);
             lblBalance.TabIndex = 23;
@@ -119,7 +119,7 @@
             lblTypeOfSecurity.BackColor = Color.Transparent;
             lblTypeOfSecurity.FlatStyle = FlatStyle.Flat;
             lblTypeOfSecurity.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTypeOfSecurity.Location = new Point(344, 15);
+            lblTypeOfSecurity.Location = new Point(337, 24);
             lblTypeOfSecurity.Name = "lblTypeOfSecurity";
             lblTypeOfSecurity.Size = new Size(196, 15);
             lblTypeOfSecurity.TabIndex = 24;
@@ -131,7 +131,7 @@
             lblMortgage.BackColor = Color.Transparent;
             lblMortgage.FlatStyle = FlatStyle.Flat;
             lblMortgage.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMortgage.Location = new Point(559, 100);
+            lblMortgage.Location = new Point(552, 109);
             lblMortgage.Name = "lblMortgage";
             lblMortgage.Size = new Size(167, 15);
             lblMortgage.TabIndex = 25;
@@ -143,7 +143,7 @@
             lblMaturityDate.BackColor = Color.Transparent;
             lblMaturityDate.FlatStyle = FlatStyle.Flat;
             lblMaturityDate.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMaturityDate.Location = new Point(769, 15);
+            lblMaturityDate.Location = new Point(762, 24);
             lblMaturityDate.Name = "lblMaturityDate";
             lblMaturityDate.Size = new Size(99, 15);
             lblMaturityDate.TabIndex = 26;
@@ -158,7 +158,7 @@
             btnRevealEntry2.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnRevealEntry2.FlatStyle = FlatStyle.Flat;
             btnRevealEntry2.Image = (Image)resources.GetObject("btnRevealEntry2.Image");
-            btnRevealEntry2.Location = new Point(363, 282);
+            btnRevealEntry2.Location = new Point(405, 289);
             btnRevealEntry2.Name = "btnRevealEntry2";
             btnRevealEntry2.Size = new Size(413, 45);
             btnRevealEntry2.TabIndex = 38;
@@ -179,6 +179,7 @@
             btnNext.Size = new Size(126, 45);
             btnNext.TabIndex = 37;
             btnNext.UseVisualStyleBackColor = true;
+            btnNext.Click += btnNext_Click;
             // 
             // btnBack
             // 
@@ -198,7 +199,7 @@
             // txtTypeOfSecurity
             // 
             txtTypeOfSecurity.BackColor = Color.WhiteSmoke;
-            txtTypeOfSecurity.Location = new Point(344, 33);
+            txtTypeOfSecurity.Location = new Point(337, 42);
             txtTypeOfSecurity.Name = "txtTypeOfSecurity";
             txtTypeOfSecurity.Size = new Size(382, 23);
             txtTypeOfSecurity.TabIndex = 40;
@@ -206,7 +207,7 @@
             // txtBalance
             // 
             txtBalance.BackColor = Color.WhiteSmoke;
-            txtBalance.Location = new Point(21, 118);
+            txtBalance.Location = new Point(14, 127);
             txtBalance.Name = "txtBalance";
             txtBalance.Size = new Size(519, 23);
             txtBalance.TabIndex = 41;
@@ -214,7 +215,7 @@
             // txtMortgage
             // 
             txtMortgage.BackColor = Color.WhiteSmoke;
-            txtMortgage.Location = new Point(559, 118);
+            txtMortgage.Location = new Point(552, 127);
             txtMortgage.Name = "txtMortgage";
             txtMortgage.Size = new Size(473, 23);
             txtMortgage.TabIndex = 42;
@@ -416,51 +417,33 @@
             // 
             // dtMaturityDate
             // 
-            dtMaturityDate.Location = new Point(769, 33);
+            dtMaturityDate.Location = new Point(762, 42);
             dtMaturityDate.Name = "dtMaturityDate";
             dtMaturityDate.Size = new Size(263, 23);
             dtMaturityDate.TabIndex = 143;
             // 
             // cbTypeOfLoan
             // 
-            cbTypeOfLoan.Location = new Point(19, 33);
+            cbTypeOfLoan.Location = new Point(12, 42);
             cbTypeOfLoan.Name = "cbTypeOfLoan";
             cbTypeOfLoan.Size = new Size(284, 23);
             cbTypeOfLoan.TabIndex = 144;
-            // 
-            // pnlEntry1
-            // 
-            pnlEntry1.BackColor = Color.Transparent;
-            pnlEntry1.Controls.Add(cbTypeOfLoan);
-            pnlEntry1.Controls.Add(lblTypeOfLoan);
-            pnlEntry1.Controls.Add(dtMaturityDate);
-            pnlEntry1.Controls.Add(lblBalance);
-            pnlEntry1.Controls.Add(lblTypeOfSecurity);
-            pnlEntry1.Controls.Add(lblMortgage);
-            pnlEntry1.Controls.Add(lblMaturityDate);
-            pnlEntry1.Controls.Add(txtTypeOfSecurity);
-            pnlEntry1.Controls.Add(txtBalance);
-            pnlEntry1.Controls.Add(txtMortgage);
-            pnlEntry1.Location = new Point(14, 14);
-            pnlEntry1.Name = "pnlEntry1";
-            pnlEntry1.Size = new Size(1047, 162);
-            pnlEntry1.TabIndex = 145;
             // 
             // pnlMain
             // 
             pnlMain.AutoScroll = true;
             pnlMain.BackColor = Color.Transparent;
             pnlMain.Controls.Add(btnCancelEntry3);
-            pnlMain.Controls.Add(btnCancelEntry2);
-            pnlMain.Controls.Add(btnRevealEntry2);
             pnlMain.Controls.Add(btnRevealEntry3);
             pnlMain.Controls.Add(pnlEntry3);
+            pnlMain.Controls.Add(btnCancelEntry2);
+            pnlMain.Controls.Add(btnRevealEntry2);
             pnlMain.Controls.Add(pnlEntry2);
             pnlMain.Controls.Add(pnlEntry1);
-            pnlMain.Location = new Point(36, 202);
+            pnlMain.Location = new Point(28, 222);
             pnlMain.Name = "pnlMain";
-            pnlMain.Size = new Size(1216, 505);
-            pnlMain.TabIndex = 146;
+            pnlMain.Size = new Size(1224, 428);
+            pnlMain.TabIndex = 145;
             // 
             // btnCancelEntry3
             // 
@@ -471,28 +454,12 @@
             btnCancelEntry3.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnCancelEntry3.FlatStyle = FlatStyle.Flat;
             btnCancelEntry3.Image = (Image)resources.GetObject("btnCancelEntry3.Image");
-            btnCancelEntry3.Location = new Point(962, 588);
+            btnCancelEntry3.Location = new Point(985, 675);
             btnCancelEntry3.Name = "btnCancelEntry3";
             btnCancelEntry3.Size = new Size(97, 41);
             btnCancelEntry3.TabIndex = 149;
             btnCancelEntry3.UseVisualStyleBackColor = true;
             btnCancelEntry3.Click += btnCancelEntry3_Click;
-            // 
-            // btnCancelEntry2
-            // 
-            btnCancelEntry2.BackColor = Color.Transparent;
-            btnCancelEntry2.Cursor = Cursors.Hand;
-            btnCancelEntry2.FlatAppearance.BorderSize = 0;
-            btnCancelEntry2.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnCancelEntry2.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnCancelEntry2.FlatStyle = FlatStyle.Flat;
-            btnCancelEntry2.Image = (Image)resources.GetObject("btnCancelEntry2.Image");
-            btnCancelEntry2.Location = new Point(963, 384);
-            btnCancelEntry2.Name = "btnCancelEntry2";
-            btnCancelEntry2.Size = new Size(97, 41);
-            btnCancelEntry2.TabIndex = 148;
-            btnCancelEntry2.UseVisualStyleBackColor = true;
-            btnCancelEntry2.Click += btnCancelEntry2_Click;
             // 
             // btnRevealEntry3
             // 
@@ -503,16 +470,15 @@
             btnRevealEntry3.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnRevealEntry3.FlatStyle = FlatStyle.Flat;
             btnRevealEntry3.Image = (Image)resources.GetObject("btnRevealEntry3.Image");
-            btnRevealEntry3.Location = new Point(362, 485);
+            btnRevealEntry3.Location = new Point(405, 545);
             btnRevealEntry3.Name = "btnRevealEntry3";
             btnRevealEntry3.Size = new Size(413, 45);
             btnRevealEntry3.TabIndex = 147;
             btnRevealEntry3.UseVisualStyleBackColor = true;
-            btnRevealEntry3.Click += btnRevealEntry3_Click;
+            btnRevealEntry3.Click += pnlRevealEntry3_Click;
             // 
             // pnlEntry3
             // 
-            pnlEntry3.BackColor = Color.Transparent;
             pnlEntry3.Controls.Add(comboBox2);
             pnlEntry3.Controls.Add(label6);
             pnlEntry3.Controls.Add(dateTimePicker2);
@@ -523,14 +489,14 @@
             pnlEntry3.Controls.Add(textBox4);
             pnlEntry3.Controls.Add(textBox5);
             pnlEntry3.Controls.Add(textBox6);
-            pnlEntry3.Location = new Point(14, 425);
+            pnlEntry3.Location = new Point(28, 479);
             pnlEntry3.Name = "pnlEntry3";
-            pnlEntry3.Size = new Size(1047, 162);
-            pnlEntry3.TabIndex = 147;
+            pnlEntry3.Size = new Size(1054, 188);
+            pnlEntry3.TabIndex = 148;
             // 
             // comboBox2
             // 
-            comboBox2.Location = new Point(19, 33);
+            comboBox2.Location = new Point(12, 42);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(284, 23);
             comboBox2.TabIndex = 144;
@@ -541,7 +507,7 @@
             label6.BackColor = Color.Transparent;
             label6.FlatStyle = FlatStyle.Flat;
             label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(21, 15);
+            label6.Location = new Point(14, 24);
             label6.Name = "label6";
             label6.Size = new Size(87, 15);
             label6.TabIndex = 22;
@@ -549,7 +515,7 @@
             // 
             // dateTimePicker2
             // 
-            dateTimePicker2.Location = new Point(769, 33);
+            dateTimePicker2.Location = new Point(762, 42);
             dateTimePicker2.Name = "dateTimePicker2";
             dateTimePicker2.Size = new Size(263, 23);
             dateTimePicker2.TabIndex = 143;
@@ -560,7 +526,7 @@
             label7.BackColor = Color.Transparent;
             label7.FlatStyle = FlatStyle.Flat;
             label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(21, 100);
+            label7.Location = new Point(14, 109);
             label7.Name = "label7";
             label7.Size = new Size(117, 15);
             label7.TabIndex = 23;
@@ -572,7 +538,7 @@
             label8.BackColor = Color.Transparent;
             label8.FlatStyle = FlatStyle.Flat;
             label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(344, 15);
+            label8.Location = new Point(337, 24);
             label8.Name = "label8";
             label8.Size = new Size(196, 15);
             label8.TabIndex = 24;
@@ -584,7 +550,7 @@
             label9.BackColor = Color.Transparent;
             label9.FlatStyle = FlatStyle.Flat;
             label9.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(559, 100);
+            label9.Location = new Point(552, 112);
             label9.Name = "label9";
             label9.Size = new Size(167, 15);
             label9.TabIndex = 25;
@@ -596,7 +562,7 @@
             label10.BackColor = Color.Transparent;
             label10.FlatStyle = FlatStyle.Flat;
             label10.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.Location = new Point(769, 15);
+            label10.Location = new Point(762, 24);
             label10.Name = "label10";
             label10.Size = new Size(99, 15);
             label10.TabIndex = 26;
@@ -605,7 +571,7 @@
             // textBox4
             // 
             textBox4.BackColor = Color.WhiteSmoke;
-            textBox4.Location = new Point(344, 33);
+            textBox4.Location = new Point(337, 42);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(382, 23);
             textBox4.TabIndex = 40;
@@ -613,7 +579,7 @@
             // textBox5
             // 
             textBox5.BackColor = Color.WhiteSmoke;
-            textBox5.Location = new Point(21, 118);
+            textBox5.Location = new Point(14, 127);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(519, 23);
             textBox5.TabIndex = 41;
@@ -621,14 +587,29 @@
             // textBox6
             // 
             textBox6.BackColor = Color.WhiteSmoke;
-            textBox6.Location = new Point(559, 118);
+            textBox6.Location = new Point(552, 130);
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(473, 23);
             textBox6.TabIndex = 42;
             // 
+            // btnCancelEntry2
+            // 
+            btnCancelEntry2.BackColor = Color.Transparent;
+            btnCancelEntry2.Cursor = Cursors.Hand;
+            btnCancelEntry2.FlatAppearance.BorderSize = 0;
+            btnCancelEntry2.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnCancelEntry2.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnCancelEntry2.FlatStyle = FlatStyle.Flat;
+            btnCancelEntry2.Image = (Image)resources.GetObject("btnCancelEntry2.Image");
+            btnCancelEntry2.Location = new Point(985, 419);
+            btnCancelEntry2.Name = "btnCancelEntry2";
+            btnCancelEntry2.Size = new Size(97, 41);
+            btnCancelEntry2.TabIndex = 146;
+            btnCancelEntry2.UseVisualStyleBackColor = true;
+            btnCancelEntry2.Click += btnCancelEntry2_Click;
+            // 
             // pnlEntry2
             // 
-            pnlEntry2.BackColor = Color.Transparent;
             pnlEntry2.Controls.Add(comboBox1);
             pnlEntry2.Controls.Add(label1);
             pnlEntry2.Controls.Add(dateTimePicker1);
@@ -639,14 +620,14 @@
             pnlEntry2.Controls.Add(textBox1);
             pnlEntry2.Controls.Add(textBox2);
             pnlEntry2.Controls.Add(textBox3);
-            pnlEntry2.Location = new Point(14, 221);
+            pnlEntry2.Location = new Point(28, 223);
             pnlEntry2.Name = "pnlEntry2";
-            pnlEntry2.Size = new Size(1047, 162);
-            pnlEntry2.TabIndex = 146;
+            pnlEntry2.Size = new Size(1054, 188);
+            pnlEntry2.TabIndex = 145;
             // 
             // comboBox1
             // 
-            comboBox1.Location = new Point(19, 33);
+            comboBox1.Location = new Point(12, 42);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(284, 23);
             comboBox1.TabIndex = 144;
@@ -657,7 +638,7 @@
             label1.BackColor = Color.Transparent;
             label1.FlatStyle = FlatStyle.Flat;
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(21, 15);
+            label1.Location = new Point(14, 24);
             label1.Name = "label1";
             label1.Size = new Size(87, 15);
             label1.TabIndex = 22;
@@ -665,7 +646,7 @@
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(769, 33);
+            dateTimePicker1.Location = new Point(762, 42);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(263, 23);
             dateTimePicker1.TabIndex = 143;
@@ -676,7 +657,7 @@
             label2.BackColor = Color.Transparent;
             label2.FlatStyle = FlatStyle.Flat;
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(21, 100);
+            label2.Location = new Point(14, 109);
             label2.Name = "label2";
             label2.Size = new Size(117, 15);
             label2.TabIndex = 23;
@@ -688,7 +669,7 @@
             label3.BackColor = Color.Transparent;
             label3.FlatStyle = FlatStyle.Flat;
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(344, 15);
+            label3.Location = new Point(337, 24);
             label3.Name = "label3";
             label3.Size = new Size(196, 15);
             label3.TabIndex = 24;
@@ -700,7 +681,7 @@
             label4.BackColor = Color.Transparent;
             label4.FlatStyle = FlatStyle.Flat;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(559, 100);
+            label4.Location = new Point(552, 112);
             label4.Name = "label4";
             label4.Size = new Size(167, 15);
             label4.TabIndex = 25;
@@ -712,7 +693,7 @@
             label5.BackColor = Color.Transparent;
             label5.FlatStyle = FlatStyle.Flat;
             label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(769, 15);
+            label5.Location = new Point(762, 24);
             label5.Name = "label5";
             label5.Size = new Size(99, 15);
             label5.TabIndex = 26;
@@ -721,7 +702,7 @@
             // textBox1
             // 
             textBox1.BackColor = Color.WhiteSmoke;
-            textBox1.Location = new Point(344, 33);
+            textBox1.Location = new Point(337, 42);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(382, 23);
             textBox1.TabIndex = 40;
@@ -729,7 +710,7 @@
             // textBox2
             // 
             textBox2.BackColor = Color.WhiteSmoke;
-            textBox2.Location = new Point(21, 118);
+            textBox2.Location = new Point(14, 127);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(519, 23);
             textBox2.TabIndex = 41;
@@ -737,10 +718,27 @@
             // textBox3
             // 
             textBox3.BackColor = Color.WhiteSmoke;
-            textBox3.Location = new Point(559, 118);
+            textBox3.Location = new Point(552, 130);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(473, 23);
             textBox3.TabIndex = 42;
+            // 
+            // pnlEntry1
+            // 
+            pnlEntry1.Controls.Add(cbTypeOfLoan);
+            pnlEntry1.Controls.Add(lblTypeOfLoan);
+            pnlEntry1.Controls.Add(dtMaturityDate);
+            pnlEntry1.Controls.Add(lblBalance);
+            pnlEntry1.Controls.Add(lblTypeOfSecurity);
+            pnlEntry1.Controls.Add(lblMortgage);
+            pnlEntry1.Controls.Add(lblMaturityDate);
+            pnlEntry1.Controls.Add(txtTypeOfSecurity);
+            pnlEntry1.Controls.Add(txtBalance);
+            pnlEntry1.Controls.Add(txtMortgage);
+            pnlEntry1.Location = new Point(28, 15);
+            pnlEntry1.Name = "pnlEntry1";
+            pnlEntry1.Size = new Size(1084, 176);
+            pnlEntry1.TabIndex = 0;
             // 
             // ApplicationPart7
             // 
@@ -767,15 +765,16 @@
             Controls.Add(pnlMain);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ApplicationPart7";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ApplicationPart7";
             Load += ApplicationPart7_Load;
-            pnlEntry1.ResumeLayout(false);
-            pnlEntry1.PerformLayout();
             pnlMain.ResumeLayout(false);
             pnlEntry3.ResumeLayout(false);
             pnlEntry3.PerformLayout();
             pnlEntry2.ResumeLayout(false);
             pnlEntry2.PerformLayout();
+            pnlEntry1.ResumeLayout(false);
+            pnlEntry1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -809,8 +808,8 @@
         private Button btnPersonalInfo;
         private DateTimePicker dtMaturityDate;
         private ComboBox cbTypeOfLoan;
-        private Panel pnlEntry1;
         private Panel pnlMain;
+        private Panel pnlEntry1;
         private Panel pnlEntry2;
         private ComboBox comboBox1;
         private Label label1;
@@ -822,6 +821,7 @@
         private TextBox textBox1;
         private TextBox textBox2;
         private TextBox textBox3;
+        private Button btnCancelEntry3;
         private Button btnRevealEntry3;
         private Panel pnlEntry3;
         private ComboBox comboBox2;
@@ -834,7 +834,6 @@
         private TextBox textBox4;
         private TextBox textBox5;
         private TextBox textBox6;
-        private Button btnCancelEntry3;
         private Button btnCancelEntry2;
     }
 }
