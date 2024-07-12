@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ApplicationPart5));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lblAccountNumber = new Label();
@@ -67,7 +67,6 @@
             btnLoanInfo = new Button();
             btnPersonalInfo = new Button();
             pnlEntry1 = new Guna.UI2.WinForms.Guna2Panel();
-            dtDateOpened = new Guna.UI2.WinForms.Guna2DateTimePicker();
             pnlMain = new Guna.UI2.WinForms.Guna2Panel();
             btnRevealEntry3 = new Button();
             pnlEntry3 = new Guna.UI2.WinForms.Guna2Panel();
@@ -210,6 +209,20 @@
             btnRevealEntry2.UseVisualStyleBackColor = true;
             btnRevealEntry2.Click += btnRevealEntry2_Click;
             // 
+            // txtAccountNumber1
+            // 
+            txtAccountNumber1.Location = new Point(17, 44);
+            txtAccountNumber1.Name = "txtAccountNumber1";
+            txtAccountNumber1.Size = new Size(495, 23);
+            txtAccountNumber1.TabIndex = 116;
+            // 
+            // txtBankOfTheAccount1
+            // 
+            txtBankOfTheAccount1.Location = new Point(17, 137);
+            txtBankOfTheAccount1.Name = "txtBankOfTheAccount1";
+            txtBankOfTheAccount1.Size = new Size(495, 23);
+            txtBankOfTheAccount1.TabIndex = 117;
+            // 
             // txtIssuerName1
             // 
             txtIssuerName1.BackColor = Color.WhiteSmoke;
@@ -236,10 +249,12 @@
             // 
             // dtDateOpened1
             // 
-            dtDateOpened1.Location = new Point(577, 138);
+            dtDateOpened1.Font = new Font("Segoe UI", 9F);
+            dtDateOpened1.Location = new Point(585, 137);
             dtDateOpened1.Name = "dtDateOpened1";
-            dtDateOpened1.Size = new Size(292, 23);
-            dtDateOpened1.TabIndex = 43;
+            dtDateOpened1.Size = new Size(469, 23);
+            dtDateOpened1.TabIndex = 115;
+            dtDateOpened1.Value = new DateTime(2024, 7, 1, 18, 59, 10, 472);
             // 
             // cbTypeOfAccount1
             // 
@@ -448,8 +463,6 @@
             // pnlEntry1
             // 
             pnlEntry1.BackColor = Color.Transparent;
-            pnlEntry1.Controls.Add(dtDateOpened);
-            pnlEntry1.Controls.Add(lblAverageBalance);
             pnlEntry1.Controls.Add(lblAccountNumber);
             pnlEntry1.Controls.Add(lblBankOfTheAccount);
             pnlEntry1.Controls.Add(lblIssuerName);
@@ -467,25 +480,9 @@
             pnlEntry1.CustomizableEdges = customizableEdges1;
             pnlEntry1.Location = new Point(21, 47);
             pnlEntry1.Name = "pnlEntry1";
-            pnlEntry1.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            pnlEntry1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             pnlEntry1.Size = new Size(1156, 280);
             pnlEntry1.TabIndex = 115;
-            // 
-            // dtDateOpened
-            // 
-            dtDateOpened.Checked = true;
-            dtDateOpened.CustomizableEdges = customizableEdges1;
-            dtDateOpened.FillColor = Color.White;
-            dtDateOpened.Font = new Font("Segoe UI", 9F);
-            dtDateOpened.Format = DateTimePickerFormat.Long;
-            dtDateOpened.Location = new Point(585, 137);
-            dtDateOpened.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            dtDateOpened.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            dtDateOpened.Name = "dtDateOpened";
-            dtDateOpened.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            dtDateOpened.Size = new Size(469, 23);
-            dtDateOpened.TabIndex = 115;
-            dtDateOpened.Value = new DateTime(2024, 7, 1, 18, 59, 10, 472);
             // 
             // pnlMain
             // 
@@ -540,7 +537,7 @@
             pnlEntry3.CustomizableEdges = customizableEdges3;
             pnlEntry3.Location = new Point(21, 620);
             pnlEntry3.Name = "pnlEntry3";
-            pnlEntry3.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            pnlEntry3.ShadowDecoration.CustomizableEdges = customizableEdges4;
             pnlEntry3.Size = new Size(1156, 280);
             pnlEntry3.TabIndex = 117;
             // 
@@ -919,8 +916,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1280, 800);
-            Controls.Add(btnNext);
-            Controls.Add(btnBack);
             Controls.Add(lblOtherInfo);
             Controls.Add(lblRealEstateInfo);
             Controls.Add(lblBankInfo);

@@ -19,8 +19,9 @@ namespace _4PH_PAGIBIG_HOUSING
         private bool pnlEntry3Expanded = false;
         private readonly string _pagIBIGMIDNumberRTN, _tct;
         private readonly DatabaseConnection _database = DatabaseConnection.Instance;
-        private readonly BankingInformation _bank = new BankingInformation();
-
+        private readonly BankingInformation _bank1 = new BankingInformation();
+        private readonly BankingInformation _bank2 = new BankingInformation();
+        private readonly BankingInformation _bank3 = new BankingInformation();
 
 
         public ApplicationPart5(String pagibigMIDNumber, String tct)
@@ -170,16 +171,6 @@ namespace _4PH_PAGIBIG_HOUSING
 
             pnlEntry3Expanded = true;
         }
-        private readonly string _pagIBIGMIDNumberRTN, _tct;
-        private readonly DatabaseConnection _database = DatabaseConnection.Instance;
-        private readonly BankingInformation _bank = new BankingInformation();
-    
-        public ApplicationPart5(string pagIBIGMIDNumberRTN, string tct)
-        {
-            InitializeComponent();
-            _pagIBIGMIDNumberRTN = pagIBIGMIDNumberRTN;
-            _tct = tct;
-        }
 
         private void ApplicationPart5_Load(object sender, EventArgs e)
         {
@@ -191,167 +182,222 @@ namespace _4PH_PAGIBIG_HOUSING
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            Panel1Insert();
-            if (pnlEntry2.Visible) // Check if pnlEntry2 is visible
+            // Validate each panel first
+            bool panel1Valid = ValidatePanel1();
+            bool panel2Valid = ValidatePanel2();
+            bool panel3Valid = ValidatePanel3();
+
+            // Proceed only if all panels are valid
+            if (panel1Valid && panel2Valid && panel3Valid)
             {
-                if (SaveBankingInformation(_bank))
+                // Insert data for each panel
+                bool panel1Inserted = Panel1Insert();
+                bool panel2Inserted = Panel2Insert();
+                bool panel3Inserted = Panel3Insert();
+
+                // Check if all insertions were successful
+                if (panel1Inserted && panel2Inserted && panel3Inserted)
                 {
-                    MessageBox.Show("Banking information saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ClearInputs();
-                    // Optionally, you can proceed to the next form or take other actions
-                    ApplicationPart6 applicationPart6 = new ApplicationPart6();
-                    applicationPart6.Show();
+                    // Navigate to the next form
+                    ApplicationPart6 realestate = new ApplicationPart6(_pagIBIGMIDNumberRTN, _tct);
+                    realestate.Show();
                     this.Hide();
                 }
                 else
                 {
-                    MessageBox.Show("Failed to save banking information.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Failed to save some of the banking information. Please check your entries.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            if (pnlEntry3.Visible) // Check if pnlEntry3 is visible
+            else
             {
-                Panel3Insert();
+                MessageBox.Show("Please fill out all required fields correctly in all panels before proceeding.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
-
-            ApplicationPart6 realestate = new ApplicationPart6(_pagIBIGMIDNumberRTN, _tct);
-            realestate.Show();
-            this.Hide();
-
         }
 
-        private void Panel1Insert()
+
+        private bool ValidatePanel1()
         {
-            _bank.PAG_IBIG_MID_Number_RTN = _pagIBIGMIDNumberRTN;
-            _bank.Account_No = txtAccountNumber1.Text.Trim();
-            _bank.Type_of_Account = cbTypeOfAccount1.SelectedItem?.ToString();
-            _bank.Branch_Address = txtBranchAddress1.Text.Trim();
-            _bank.Issuer_Name = txtIssuerName1.Text.Trim();
-            _bank.Type_of_Account = cbTypeOfAccount1.SelectedItem?.ToString();
-            _bank.Branch_Address = txtBranchAddress1.Text.Trim();
-            _bank.Issuer_Name = txtIssuerName1.Text.Trim();
-            _bank.Bank = txtBankOfTheAccount1.Text.Trim();
+            if (!pnlEntry1.Visible) return true; // No need to validate if pnlEntry1 is not visible
+
+            _bank1.PAG_IBIG_MID_Number_RTN = _pagIBIGMIDNumberRTN;
+            _bank1.Account_No = txtAccountNumber1.Text.Trim();
+            _bank1.Type_of_Account = cbTypeOfAccount1.SelectedItem?.ToString();
+            _bank1.Branch_Address = txtBranchAddress1.Text.Trim();
+            _bank1.Issuer_Name = txtIssuerName1.Text.Trim();
+            _bank1.Bank = txtBankOfTheAccount1.Text.Trim();
 
             // Validate required fields
-            if (string.IsNullOrEmpty(_bank.Account_No) || string.IsNullOrEmpty(_bank.Type_of_Account))
+            if (string.IsNullOrEmpty(_bank1.Account_No) || string.IsNullOrEmpty(_bank1.Type_of_Account))
             {
                 MessageBox.Show("Account Number and Type of Account are required for the first bank account.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                return false;
             }
 
             // Try parsing average balance
             if (!decimal.TryParse(txtAverageBalance1.Text, out decimal aveBalance))
             {
                 MessageBox.Show("Invalid Average Balance for the first bank account.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                return false;
             }
 
-            _bank.Ave_Balance = aveBalance;
-            _bank.Date_Opened = dtDateOpened1.Value;
+            _bank1.Ave_Balance = aveBalance;
+            _bank1.Date_Opened = dtDateOpened1.Value;
 
-            // Save banking information
-            if (SaveBankingInformation(_bank))
-            {
-                //MessageBox.Show("Banking information saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                // Optionally, you can proceed to the next form or take other actions
-            }
-            else
-            {
-                MessageBox.Show("Failed to save banking information.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
+            return true;
         }
 
-
-        private void Panel2Insert()
+        private bool ValidatePanel2()
         {
-            if (!pnlEntry2.Visible) return; // Exit if pnlEntry2 is not visible
+            if (!pnlEntry2.Visible) return true; // No need to validate if pnlEntry2 is not visible
 
-            _bank.PAG_IBIG_MID_Number_RTN = _pagIBIGMIDNumberRTN;
-            _bank.Account_No = txtAccountNumber2.Text.Trim();
-            _bank.Type_of_Account = cbTypeOfAccount2.SelectedItem?.ToString();
-            _bank.Branch_Address = txtBranchAddress2.Text.Trim();
-            _bank.Issuer_Name = txtIssuerName2.Text.Trim();
-            _bank.Bank = txtBankOfTheAccount2.Text.Trim();
+            _bank2.PAG_IBIG_MID_Number_RTN = _pagIBIGMIDNumberRTN;
+            _bank2.Account_No = txtAccountNumber2.Text.Trim();
+            _bank2.Type_of_Account = cbTypeOfAccount2.SelectedItem?.ToString();
+            _bank2.Branch_Address = txtBranchAddress2.Text.Trim();
+            _bank2.Issuer_Name = txtIssuerName2.Text.Trim();
+            _bank2.Bank = txtBankOfTheAccount2.Text.Trim();
 
-            // Validate required fields only if pnlEntry2 is visible
-            if (string.IsNullOrEmpty(_bank.Account_No))
+            // Validate required fields
+            if (string.IsNullOrEmpty(_bank2.Account_No) || string.IsNullOrEmpty(_bank2.Type_of_Account))
             {
-                MessageBox.Show("Account Number is required for the second bank account.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (string.IsNullOrEmpty(_bank.Type_of_Account))
-            {
-                MessageBox.Show("Type of Account is required for the second bank account.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                MessageBox.Show("Account Number and Type of Account are required for the second bank account.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
             }
 
             // Try parsing average balance
             if (!decimal.TryParse(txtAverageBalance2.Text, out decimal aveBalance))
             {
                 MessageBox.Show("Invalid Average Balance for the second bank account.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                return false;
             }
 
-            _bank.Ave_Balance = aveBalance;
-            _bank.Date_Opened = dtDateOpened2.Value;
+            _bank2.Ave_Balance = aveBalance;
+            _bank2.Date_Opened = dtDateOpened2.Value;
 
-            // Save banking information
-            if (SaveBankingInformation(_bank))
-            {
-                //MessageBox.Show("Banking information saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                // Optionally, you can proceed to the next form or take other actions
-            }
-            else
-            {
-                MessageBox.Show("Failed to save banking information.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            return true;
         }
 
-        private void Panel3Insert()
+        private bool ValidatePanel3()
         {
-            if (!pnlEntry3.Visible) return; // Exit if pnlEntry3 is not visible
+            if (!pnlEntry3.Visible) return true; // No need to validate if pnlEntry3 is not visible
 
-            _bank.PAG_IBIG_MID_Number_RTN = _pagIBIGMIDNumberRTN;
-            _bank.Account_No = txtAccountNumber3.Text.Trim();
-            _bank.Type_of_Account = cbTypeOfAccount3.SelectedItem?.ToString();
-            _bank.Branch_Address = txtBranchAddress3.Text.Trim();
-            _bank.Issuer_Name = txtIssuerName3.Text.Trim();
-            _bank.Bank = txtBankOfTheAccount3.Text.Trim();
+            _bank3.PAG_IBIG_MID_Number_RTN = _pagIBIGMIDNumberRTN;
+            _bank3.Account_No = txtAccountNumber3.Text.Trim();
+            _bank3.Type_of_Account = cbTypeOfAccount3.SelectedItem?.ToString();
+            _bank3.Branch_Address = txtBranchAddress3.Text.Trim();
+            _bank3.Issuer_Name = txtIssuerName3.Text.Trim();
+            _bank3.Bank = txtBankOfTheAccount3.Text.Trim();
 
-            // Validate required fields only if pnlEntry3 is visible
-            if (string.IsNullOrEmpty(_bank.Account_No))
+            // Validate required fields
+            if (string.IsNullOrEmpty(_bank3.Account_No) || string.IsNullOrEmpty(_bank3.Type_of_Account))
             {
-                MessageBox.Show("Account Number is required for the third bank account.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (string.IsNullOrEmpty(_bank.Type_of_Account))
-            {
-                MessageBox.Show("Type of Account is required for the third bank account.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                MessageBox.Show("Account Number and Type of Account are required for the third bank account.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
             }
 
             // Try parsing average balance
             if (!decimal.TryParse(txtAverageBalance3.Text, out decimal aveBalance))
             {
                 MessageBox.Show("Invalid Average Balance for the third bank account.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                return false;
             }
 
-            _bank.Ave_Balance = aveBalance;
-            _bank.Date_Opened = dtDateOpened3.Value;
+            _bank3.Ave_Balance = aveBalance;
+            _bank3.Date_Opened = dtDateOpened3.Value;
 
-            // Save banking information
-            if (SaveBankingInformation(_bank))
+            return true;
+        }
+
+        private bool Panel1Insert()
+        {
+            try
             {
-                //MessageBox.Show("Banking information saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                // Optionally, you can proceed to the next form or take other actions
+                using (MySqlConnection conn = _database.GetConnection())
+                {
+                    conn.Open();
+                    string query = "INSERT INTO banking_information(PAG_IBIG_MID_Number_RTN, Account_No, Type_of_Account, Branch_Address, Issuer_Name, Bank, Ave_Balance, Date_Opened) VALUES (@PAG_IBIG_MID_Number_RTN, @Account_No, @Type_of_Account, @Branch_Address, @Issuer_Name, @Bank, @Ave_Balance, @Date_Opened)";
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@PAG_IBIG_MID_Number_RTN", _bank1.PAG_IBIG_MID_Number_RTN);
+                        cmd.Parameters.AddWithValue("@Account_No", _bank1.Account_No);
+                        cmd.Parameters.AddWithValue("@Type_of_Account", _bank1.Type_of_Account);
+                        cmd.Parameters.AddWithValue("@Branch_Address", _bank1.Branch_Address);
+                        cmd.Parameters.AddWithValue("@Issuer_Name", _bank1.Issuer_Name);
+                        cmd.Parameters.AddWithValue("@Bank", _bank1.Bank);
+                        cmd.Parameters.AddWithValue("@Ave_Balance", _bank1.Ave_Balance);
+                        cmd.Parameters.AddWithValue("@Date_Opened", _bank1.Date_Opened);
+
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                return true;
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Failed to save banking information.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error saving the first bank account: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+        private bool Panel2Insert()
+        {
+            try
+            {
+                using (MySqlConnection conn = _database.GetConnection())
+                {
+                    conn.Open();
+                    string query = "INSERT INTO banking_information(PAG_IBIG_MID_Number_RTN, Account_No, Type_of_Account, Branch_Address, Issuer_Name, Bank, Ave_Balance, Date_Opened) VALUES (@PAG_IBIG_MID_Number_RTN, @Account_No, @Type_of_Account, @Branch_Address, @Issuer_Name, @Bank, @Ave_Balance, @Date_Opened)";
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@PAG_IBIG_MID_Number_RTN", _bank2.PAG_IBIG_MID_Number_RTN);
+                        cmd.Parameters.AddWithValue("@Account_No", _bank2.Account_No);
+                        cmd.Parameters.AddWithValue("@Type_of_Account", _bank2.Type_of_Account);
+                        cmd.Parameters.AddWithValue("@Branch_Address", _bank2.Branch_Address);
+                        cmd.Parameters.AddWithValue("@Issuer_Name", _bank2.Issuer_Name);
+                        cmd.Parameters.AddWithValue("@Bank", _bank2.Bank);
+                        cmd.Parameters.AddWithValue("@Ave_Balance", _bank2.Ave_Balance);
+                        cmd.Parameters.AddWithValue("@Date_Opened", _bank2.Date_Opened);
+
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error saving the second bank account: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+        private bool Panel3Insert()
+        {
+            try
+            {
+                using (MySqlConnection conn = _database.GetConnection())
+                {
+                    conn.Open();
+                    string query = "INSERT INTO banking_information(PAG_IBIG_MID_Number_RTN, Account_No, Type_of_Account, Branch_Address, Issuer_Name, Bank, Ave_Balance, Date_Opened) VALUES (@PAG_IBIG_MID_Number_RTN, @Account_No, @Type_of_Account, @Branch_Address, @Issuer_Name, @Bank, @Ave_Balance, @Date_Opened)";
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@PAG_IBIG_MID_Number_RTN", _bank3.PAG_IBIG_MID_Number_RTN);
+                        cmd.Parameters.AddWithValue("@Account_No", _bank3.Account_No);
+                        cmd.Parameters.AddWithValue("@Type_of_Account", _bank3.Type_of_Account);
+                        cmd.Parameters.AddWithValue("@Branch_Address", _bank3.Branch_Address);
+                        cmd.Parameters.AddWithValue("@Issuer_Name", _bank3.Issuer_Name);
+                        cmd.Parameters.AddWithValue("@Bank", _bank3.Bank);
+                        cmd.Parameters.AddWithValue("@Ave_Balance", _bank3.Ave_Balance);
+                        cmd.Parameters.AddWithValue("@Date_Opened", _bank3.Date_Opened);
+
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error saving the third bank account: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
         }
 
@@ -397,3 +443,4 @@ namespace _4PH_PAGIBIG_HOUSING
         }
     }
 }
+
