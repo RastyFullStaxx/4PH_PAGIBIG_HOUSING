@@ -121,7 +121,7 @@
   <data name="btnReview.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFkAAAAfCAYAAACMCmHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAAz5JREFUaEPtmc1RIzEQRknAJMBlr9w4ceZAAo7ABADFnn3ZveEEnAAEgCMwAXDg
+        DAAACwwBP0AiyAAAAz5JREFUaEPtmc1RIzEQRknAJMBlr9w4ceZAAo7ABADFnn3ZveEEnAAEgCMwAXDg
         yJ+rHAIhePtp9UEz1Ts74xkv3rJU9YqR1GpNf+qRNcxe0/L4+Hjy8vJy+fz8fGssjdUO8mAa3KGDcZSl
         6V6yuHfBhAUT3RhlqdoXE/dbEbcxS/TK0jUri8ViZAPfKo4K9bw9PT19zxLWl9fX1x+Bg0JD0C9LGRc2
         9GhgoTXxPs2eYp1li+iHt3CPto5dPZZtBA4NWdrfxVQ/iwwL3TBdT7LEKYs574WG28r9/f3q+vo6EfVv
@@ -141,7 +141,7 @@
   <data name="btnConfirm.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFkAAAAfCAYAAACMCmHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAAzNJREFUaEPtmj9vE0EQxf1RKJFtJCtOkKAyTTpooKKJaaAiIEFHEZcpoKSgjgSl
+        DAAACwwBP0AiyAAAAzNJREFUaEPtmj9vE0EQxf1RKJFtJCtOkKAyTTpooKKJaaAiIEFHEZcpoKSgjgSl
         I1Ej9wjJJVClgjZSvsCwv7sdvN7MmftnAvY+6em8O7O7c+9259Zed8qivyuj/lCeuev0xlDO3FW2kHPH
         GTp092TgpWkO1+ko69gedNs57w3lwEtVHdcHcs11ksQtQSf0GXp56cqhd1MO3JI4tzpMLOR5b1eeewlX
         wzkfRY0Tq/HIS2mjv5e92KyGiRVIJvCSLiPLwSlFtMVzM0eTvA3nxPqceWlzdHdkbDglNufIS5y97Nhk
@@ -161,7 +161,7 @@
   <data name="btnPersonalInfo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGwAAAAwCAYAAAD0Kp9BAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAAAtJJREFUeF7tmotx00AURV0CJVACJdABdBA6SDqADqAD6CB0kBJSQkpICbBnksO8
+        DAAACwwBP0AiyAAAAtJJREFUeF7tmotx00AURV0CJVACJdABdBA6SDqADqAD6CB0kBJSQkpICbBnksO8
         0awV20ix1rln5o7ktx+t3tXqZ+1CCCGEEEJ4E3xu+vKs9wTCtrlr+vMsTAsbJ4YNRgwbjBg2GDFsMGLY
         YMSwwYhhgxHDNsx108+n1X/sM4y3HpTl7ceZ4BWUxlTTeoZh0kMTMZYx7QzcN2kM+t4EU8OqWeqmKbwy
         PSO+NlXDMGZa51tTOBM90x73rKNfTeHM9EzrKWZtiJdM43r3rilsiA9N01NgzNo4U9OYdcy+8Mrsexju

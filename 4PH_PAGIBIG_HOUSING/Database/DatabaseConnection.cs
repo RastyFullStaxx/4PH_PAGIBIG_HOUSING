@@ -2,6 +2,7 @@
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -81,6 +82,26 @@ namespace _4PH_PAGIBIG_HOUSING.Database
                     return false;
                 }
             }
+        }
+
+        public DataSet ExecuteQuery(string query)
+        {
+            DataSet dataSet = new DataSet();
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
+                    adapter.Fill(dataSet);
+                }
+                catch (Exception ex)
+                {
+                    // Handle exception
+                    Console.WriteLine(ex.Message);
+                }
+            }
+            return dataSet;
         }
 
     }

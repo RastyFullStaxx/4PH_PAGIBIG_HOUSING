@@ -110,7 +110,7 @@ namespace _4PH_PAGIBIG_HOUSING
 
             OverlayForm overlay = new OverlayForm(this);
             overlay.Show();
-            Overview overview = new Overview();
+            Overview overview = new Overview(_pagIBIGMIDNumberRTN);
             overview.FormClosed += (s, args) => overlay.Close(); // Close overlay when overview is closed
             overview.ShowDialog();
         }

@@ -30,6 +30,95 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Overview));
             panel1 = new Panel();
+            txtAmortization3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtLoanBalance3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtTypeofSecurity3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtMaturityDate3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtTypeofLoan3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtAmortization2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtLoanBalance2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtTypeofSecurity2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtMaturityDate2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtTypeofLoan2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtAmortization1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtLoanBalance1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtTypeofSecurity1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtMaturityDate1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtTypeofLoan1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtRentalIncome3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtMorgageBalance3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtMarketValue3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtAcquisitionCost3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtTypeofProperty3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtEstateLocation3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtRentalIncome2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtMorgageBalance2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtMarketValue2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtAcquisitionCost2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtTypeofProperty2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtEstateLocation2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtRentalIncome1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtMorgageBalance1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtMarketValue1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtAcquisitionCost1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtTypeofProperty1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtEstateLocation1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtIssuerName3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtBranchAddress3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtBank3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            dtDateOpened3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtTypeofAccount3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtBalance3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtAccountNumber3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtIssuerName2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtBranchAddress2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtBank2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            dtDateOpened2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtTypeofAccount2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtBalance2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtAccountNumber2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtIssuerName1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtBranchAddress1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtBank1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            dtDateOpened1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtTypeofAccount1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtBalance1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtAccountNumber1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtNumberofDependents = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtYearsinBusiness = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtPosition = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtTin = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtOccupation = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtEmployerEmailAddress = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtTrunkLine = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtDirectLine = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtBusinessAddress = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtBusinessname = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtSSS = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtAreaMeasurement = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtCCTProperty = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtBldgNumber = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtUnitNumber = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtTypeofProperty = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtPropertyLocation = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtDeclarationNumber = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtNameofProperty = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtModePayment = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtLoanTerm = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtLoanAmount = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtYearsofStay = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtOwnership = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtEmailAddress = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtPhoneNumber = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtLandline = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtMaritalStatus = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtPermanentAddress = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtSex = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtPresentAddress = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtBirthdate = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtNationality = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtFullName = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtPagibigMIDNumber = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnReview = new Button();
             btnConfirm = new Button();
             guna2HtmlLabel101 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -52,7 +141,6 @@
             guna2HtmlLabel95 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel96 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel80 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel81 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel82 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel83 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel84 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -60,7 +148,6 @@
             guna2HtmlLabel86 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel87 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel72 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel73 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel74 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel75 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel76 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -68,7 +155,6 @@
             guna2HtmlLabel78 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel79 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel63 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel64 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel65 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel66 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel67 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -147,6 +233,95 @@
             // panel1
             // 
             panel1.AutoScroll = true;
+            panel1.Controls.Add(txtAmortization3);
+            panel1.Controls.Add(txtLoanBalance3);
+            panel1.Controls.Add(txtTypeofSecurity3);
+            panel1.Controls.Add(txtMaturityDate3);
+            panel1.Controls.Add(txtTypeofLoan3);
+            panel1.Controls.Add(txtAmortization2);
+            panel1.Controls.Add(txtLoanBalance2);
+            panel1.Controls.Add(txtTypeofSecurity2);
+            panel1.Controls.Add(txtMaturityDate2);
+            panel1.Controls.Add(txtTypeofLoan2);
+            panel1.Controls.Add(txtAmortization1);
+            panel1.Controls.Add(txtLoanBalance1);
+            panel1.Controls.Add(txtTypeofSecurity1);
+            panel1.Controls.Add(txtMaturityDate1);
+            panel1.Controls.Add(txtTypeofLoan1);
+            panel1.Controls.Add(txtRentalIncome3);
+            panel1.Controls.Add(txtMorgageBalance3);
+            panel1.Controls.Add(txtMarketValue3);
+            panel1.Controls.Add(txtAcquisitionCost3);
+            panel1.Controls.Add(txtTypeofProperty3);
+            panel1.Controls.Add(txtEstateLocation3);
+            panel1.Controls.Add(txtRentalIncome2);
+            panel1.Controls.Add(txtMorgageBalance2);
+            panel1.Controls.Add(txtMarketValue2);
+            panel1.Controls.Add(txtAcquisitionCost2);
+            panel1.Controls.Add(txtTypeofProperty2);
+            panel1.Controls.Add(txtEstateLocation2);
+            panel1.Controls.Add(txtRentalIncome1);
+            panel1.Controls.Add(txtMorgageBalance1);
+            panel1.Controls.Add(txtMarketValue1);
+            panel1.Controls.Add(txtAcquisitionCost1);
+            panel1.Controls.Add(txtTypeofProperty1);
+            panel1.Controls.Add(txtEstateLocation1);
+            panel1.Controls.Add(txtIssuerName3);
+            panel1.Controls.Add(txtBranchAddress3);
+            panel1.Controls.Add(txtBank3);
+            panel1.Controls.Add(dtDateOpened3);
+            panel1.Controls.Add(txtTypeofAccount3);
+            panel1.Controls.Add(txtBalance3);
+            panel1.Controls.Add(txtAccountNumber3);
+            panel1.Controls.Add(txtIssuerName2);
+            panel1.Controls.Add(txtBranchAddress2);
+            panel1.Controls.Add(txtBank2);
+            panel1.Controls.Add(dtDateOpened2);
+            panel1.Controls.Add(txtTypeofAccount2);
+            panel1.Controls.Add(txtBalance2);
+            panel1.Controls.Add(txtAccountNumber2);
+            panel1.Controls.Add(txtIssuerName1);
+            panel1.Controls.Add(txtBranchAddress1);
+            panel1.Controls.Add(txtBank1);
+            panel1.Controls.Add(dtDateOpened1);
+            panel1.Controls.Add(txtTypeofAccount1);
+            panel1.Controls.Add(txtBalance1);
+            panel1.Controls.Add(txtAccountNumber1);
+            panel1.Controls.Add(txtNumberofDependents);
+            panel1.Controls.Add(txtYearsinBusiness);
+            panel1.Controls.Add(txtPosition);
+            panel1.Controls.Add(txtTin);
+            panel1.Controls.Add(txtOccupation);
+            panel1.Controls.Add(txtEmployerEmailAddress);
+            panel1.Controls.Add(txtTrunkLine);
+            panel1.Controls.Add(txtDirectLine);
+            panel1.Controls.Add(txtBusinessAddress);
+            panel1.Controls.Add(txtBusinessname);
+            panel1.Controls.Add(txtSSS);
+            panel1.Controls.Add(txtAreaMeasurement);
+            panel1.Controls.Add(txtCCTProperty);
+            panel1.Controls.Add(txtBldgNumber);
+            panel1.Controls.Add(txtUnitNumber);
+            panel1.Controls.Add(txtTypeofProperty);
+            panel1.Controls.Add(txtPropertyLocation);
+            panel1.Controls.Add(txtDeclarationNumber);
+            panel1.Controls.Add(txtNameofProperty);
+            panel1.Controls.Add(txtModePayment);
+            panel1.Controls.Add(txtLoanTerm);
+            panel1.Controls.Add(txtLoanAmount);
+            panel1.Controls.Add(txtYearsofStay);
+            panel1.Controls.Add(txtOwnership);
+            panel1.Controls.Add(txtEmailAddress);
+            panel1.Controls.Add(txtPhoneNumber);
+            panel1.Controls.Add(txtLandline);
+            panel1.Controls.Add(txtMaritalStatus);
+            panel1.Controls.Add(txtPermanentAddress);
+            panel1.Controls.Add(txtSex);
+            panel1.Controls.Add(txtPresentAddress);
+            panel1.Controls.Add(txtBirthdate);
+            panel1.Controls.Add(txtNationality);
+            panel1.Controls.Add(txtFullName);
+            panel1.Controls.Add(txtPagibigMIDNumber);
             panel1.Controls.Add(btnReview);
             panel1.Controls.Add(btnConfirm);
             panel1.Controls.Add(guna2HtmlLabel101);
@@ -169,7 +344,6 @@
             panel1.Controls.Add(guna2HtmlLabel95);
             panel1.Controls.Add(guna2HtmlLabel96);
             panel1.Controls.Add(guna2HtmlLabel80);
-            panel1.Controls.Add(guna2HtmlLabel81);
             panel1.Controls.Add(guna2HtmlLabel82);
             panel1.Controls.Add(guna2HtmlLabel83);
             panel1.Controls.Add(guna2HtmlLabel84);
@@ -177,7 +351,6 @@
             panel1.Controls.Add(guna2HtmlLabel86);
             panel1.Controls.Add(guna2HtmlLabel87);
             panel1.Controls.Add(guna2HtmlLabel72);
-            panel1.Controls.Add(guna2HtmlLabel73);
             panel1.Controls.Add(guna2HtmlLabel74);
             panel1.Controls.Add(guna2HtmlLabel75);
             panel1.Controls.Add(guna2HtmlLabel76);
@@ -185,7 +358,6 @@
             panel1.Controls.Add(guna2HtmlLabel78);
             panel1.Controls.Add(guna2HtmlLabel79);
             panel1.Controls.Add(guna2HtmlLabel63);
-            panel1.Controls.Add(guna2HtmlLabel64);
             panel1.Controls.Add(guna2HtmlLabel65);
             panel1.Controls.Add(guna2HtmlLabel66);
             panel1.Controls.Add(guna2HtmlLabel67);
@@ -261,6 +433,932 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1075, 694);
             panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
+            // 
+            // txtAmortization3
+            // 
+            txtAmortization3.AutoSize = false;
+            txtAmortization3.BackColor = Color.Transparent;
+            txtAmortization3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtAmortization3.Location = new Point(247, 2395);
+            txtAmortization3.Name = "txtAmortization3";
+            txtAmortization3.Size = new Size(324, 20);
+            txtAmortization3.TabIndex = 321;
+            // 
+            // txtLoanBalance3
+            // 
+            txtLoanBalance3.AutoSize = false;
+            txtLoanBalance3.BackColor = Color.Transparent;
+            txtLoanBalance3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtLoanBalance3.Location = new Point(247, 2380);
+            txtLoanBalance3.Name = "txtLoanBalance3";
+            txtLoanBalance3.Size = new Size(324, 20);
+            txtLoanBalance3.TabIndex = 320;
+            // 
+            // txtTypeofSecurity3
+            // 
+            txtTypeofSecurity3.AutoSize = false;
+            txtTypeofSecurity3.BackColor = Color.Transparent;
+            txtTypeofSecurity3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtTypeofSecurity3.Location = new Point(247, 2364);
+            txtTypeofSecurity3.Name = "txtTypeofSecurity3";
+            txtTypeofSecurity3.Size = new Size(324, 20);
+            txtTypeofSecurity3.TabIndex = 319;
+            // 
+            // txtMaturityDate3
+            // 
+            txtMaturityDate3.AutoSize = false;
+            txtMaturityDate3.BackColor = Color.Transparent;
+            txtMaturityDate3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtMaturityDate3.Location = new Point(247, 2348);
+            txtMaturityDate3.Name = "txtMaturityDate3";
+            txtMaturityDate3.Size = new Size(324, 20);
+            txtMaturityDate3.TabIndex = 318;
+            // 
+            // txtTypeofLoan3
+            // 
+            txtTypeofLoan3.AutoSize = false;
+            txtTypeofLoan3.BackColor = Color.Transparent;
+            txtTypeofLoan3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtTypeofLoan3.Location = new Point(247, 2332);
+            txtTypeofLoan3.Name = "txtTypeofLoan3";
+            txtTypeofLoan3.Size = new Size(324, 20);
+            txtTypeofLoan3.TabIndex = 317;
+            // 
+            // txtAmortization2
+            // 
+            txtAmortization2.AutoSize = false;
+            txtAmortization2.BackColor = Color.Transparent;
+            txtAmortization2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtAmortization2.Location = new Point(247, 2278);
+            txtAmortization2.Name = "txtAmortization2";
+            txtAmortization2.Size = new Size(324, 20);
+            txtAmortization2.TabIndex = 316;
+            // 
+            // txtLoanBalance2
+            // 
+            txtLoanBalance2.AutoSize = false;
+            txtLoanBalance2.BackColor = Color.Transparent;
+            txtLoanBalance2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtLoanBalance2.Location = new Point(247, 2263);
+            txtLoanBalance2.Name = "txtLoanBalance2";
+            txtLoanBalance2.Size = new Size(324, 20);
+            txtLoanBalance2.TabIndex = 315;
+            // 
+            // txtTypeofSecurity2
+            // 
+            txtTypeofSecurity2.AutoSize = false;
+            txtTypeofSecurity2.BackColor = Color.Transparent;
+            txtTypeofSecurity2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtTypeofSecurity2.Location = new Point(247, 2247);
+            txtTypeofSecurity2.Name = "txtTypeofSecurity2";
+            txtTypeofSecurity2.Size = new Size(324, 20);
+            txtTypeofSecurity2.TabIndex = 314;
+            // 
+            // txtMaturityDate2
+            // 
+            txtMaturityDate2.AutoSize = false;
+            txtMaturityDate2.BackColor = Color.Transparent;
+            txtMaturityDate2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtMaturityDate2.Location = new Point(247, 2231);
+            txtMaturityDate2.Name = "txtMaturityDate2";
+            txtMaturityDate2.Size = new Size(324, 20);
+            txtMaturityDate2.TabIndex = 313;
+            // 
+            // txtTypeofLoan2
+            // 
+            txtTypeofLoan2.AutoSize = false;
+            txtTypeofLoan2.BackColor = Color.Transparent;
+            txtTypeofLoan2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtTypeofLoan2.Location = new Point(247, 2215);
+            txtTypeofLoan2.Name = "txtTypeofLoan2";
+            txtTypeofLoan2.Size = new Size(324, 20);
+            txtTypeofLoan2.TabIndex = 312;
+            // 
+            // txtAmortization1
+            // 
+            txtAmortization1.AutoSize = false;
+            txtAmortization1.BackColor = Color.Transparent;
+            txtAmortization1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtAmortization1.Location = new Point(247, 2161);
+            txtAmortization1.Name = "txtAmortization1";
+            txtAmortization1.Size = new Size(324, 20);
+            txtAmortization1.TabIndex = 311;
+            // 
+            // txtLoanBalance1
+            // 
+            txtLoanBalance1.AutoSize = false;
+            txtLoanBalance1.BackColor = Color.Transparent;
+            txtLoanBalance1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtLoanBalance1.Location = new Point(247, 2146);
+            txtLoanBalance1.Name = "txtLoanBalance1";
+            txtLoanBalance1.Size = new Size(324, 20);
+            txtLoanBalance1.TabIndex = 310;
+            // 
+            // txtTypeofSecurity1
+            // 
+            txtTypeofSecurity1.AutoSize = false;
+            txtTypeofSecurity1.BackColor = Color.Transparent;
+            txtTypeofSecurity1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtTypeofSecurity1.Location = new Point(247, 2130);
+            txtTypeofSecurity1.Name = "txtTypeofSecurity1";
+            txtTypeofSecurity1.Size = new Size(324, 20);
+            txtTypeofSecurity1.TabIndex = 309;
+            // 
+            // txtMaturityDate1
+            // 
+            txtMaturityDate1.AutoSize = false;
+            txtMaturityDate1.BackColor = Color.Transparent;
+            txtMaturityDate1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtMaturityDate1.Location = new Point(247, 2114);
+            txtMaturityDate1.Name = "txtMaturityDate1";
+            txtMaturityDate1.Size = new Size(324, 20);
+            txtMaturityDate1.TabIndex = 308;
+            // 
+            // txtTypeofLoan1
+            // 
+            txtTypeofLoan1.AutoSize = false;
+            txtTypeofLoan1.BackColor = Color.Transparent;
+            txtTypeofLoan1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtTypeofLoan1.Location = new Point(247, 2098);
+            txtTypeofLoan1.Name = "txtTypeofLoan1";
+            txtTypeofLoan1.Size = new Size(324, 20);
+            txtTypeofLoan1.TabIndex = 307;
+            // 
+            // txtRentalIncome3
+            // 
+            txtRentalIncome3.AutoSize = false;
+            txtRentalIncome3.BackColor = Color.Transparent;
+            txtRentalIncome3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtRentalIncome3.Location = new Point(247, 1951);
+            txtRentalIncome3.Name = "txtRentalIncome3";
+            txtRentalIncome3.Size = new Size(324, 20);
+            txtRentalIncome3.TabIndex = 305;
+            // 
+            // txtMorgageBalance3
+            // 
+            txtMorgageBalance3.AutoSize = false;
+            txtMorgageBalance3.BackColor = Color.Transparent;
+            txtMorgageBalance3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtMorgageBalance3.Location = new Point(247, 1936);
+            txtMorgageBalance3.Name = "txtMorgageBalance3";
+            txtMorgageBalance3.Size = new Size(324, 20);
+            txtMorgageBalance3.TabIndex = 304;
+            // 
+            // txtMarketValue3
+            // 
+            txtMarketValue3.AutoSize = false;
+            txtMarketValue3.BackColor = Color.Transparent;
+            txtMarketValue3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtMarketValue3.Location = new Point(247, 1921);
+            txtMarketValue3.Name = "txtMarketValue3";
+            txtMarketValue3.Size = new Size(324, 20);
+            txtMarketValue3.TabIndex = 303;
+            // 
+            // txtAcquisitionCost3
+            // 
+            txtAcquisitionCost3.AutoSize = false;
+            txtAcquisitionCost3.BackColor = Color.Transparent;
+            txtAcquisitionCost3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtAcquisitionCost3.Location = new Point(247, 1905);
+            txtAcquisitionCost3.Name = "txtAcquisitionCost3";
+            txtAcquisitionCost3.Size = new Size(324, 20);
+            txtAcquisitionCost3.TabIndex = 302;
+            // 
+            // txtTypeofProperty3
+            // 
+            txtTypeofProperty3.AutoSize = false;
+            txtTypeofProperty3.BackColor = Color.Transparent;
+            txtTypeofProperty3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtTypeofProperty3.Location = new Point(247, 1889);
+            txtTypeofProperty3.Name = "txtTypeofProperty3";
+            txtTypeofProperty3.Size = new Size(324, 20);
+            txtTypeofProperty3.TabIndex = 301;
+            // 
+            // txtEstateLocation3
+            // 
+            txtEstateLocation3.AutoSize = false;
+            txtEstateLocation3.BackColor = Color.Transparent;
+            txtEstateLocation3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtEstateLocation3.Location = new Point(247, 1874);
+            txtEstateLocation3.Name = "txtEstateLocation3";
+            txtEstateLocation3.Size = new Size(324, 20);
+            txtEstateLocation3.TabIndex = 300;
+            // 
+            // txtRentalIncome2
+            // 
+            txtRentalIncome2.AutoSize = false;
+            txtRentalIncome2.BackColor = Color.Transparent;
+            txtRentalIncome2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtRentalIncome2.Location = new Point(247, 1805);
+            txtRentalIncome2.Name = "txtRentalIncome2";
+            txtRentalIncome2.Size = new Size(324, 20);
+            txtRentalIncome2.TabIndex = 298;
+            // 
+            // txtMorgageBalance2
+            // 
+            txtMorgageBalance2.AutoSize = false;
+            txtMorgageBalance2.BackColor = Color.Transparent;
+            txtMorgageBalance2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtMorgageBalance2.Location = new Point(247, 1790);
+            txtMorgageBalance2.Name = "txtMorgageBalance2";
+            txtMorgageBalance2.Size = new Size(324, 20);
+            txtMorgageBalance2.TabIndex = 297;
+            // 
+            // txtMarketValue2
+            // 
+            txtMarketValue2.AutoSize = false;
+            txtMarketValue2.BackColor = Color.Transparent;
+            txtMarketValue2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtMarketValue2.Location = new Point(247, 1774);
+            txtMarketValue2.Name = "txtMarketValue2";
+            txtMarketValue2.Size = new Size(324, 20);
+            txtMarketValue2.TabIndex = 296;
+            // 
+            // txtAcquisitionCost2
+            // 
+            txtAcquisitionCost2.AutoSize = false;
+            txtAcquisitionCost2.BackColor = Color.Transparent;
+            txtAcquisitionCost2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtAcquisitionCost2.Location = new Point(247, 1759);
+            txtAcquisitionCost2.Name = "txtAcquisitionCost2";
+            txtAcquisitionCost2.Size = new Size(324, 20);
+            txtAcquisitionCost2.TabIndex = 295;
+            // 
+            // txtTypeofProperty2
+            // 
+            txtTypeofProperty2.AutoSize = false;
+            txtTypeofProperty2.BackColor = Color.Transparent;
+            txtTypeofProperty2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtTypeofProperty2.Location = new Point(247, 1743);
+            txtTypeofProperty2.Name = "txtTypeofProperty2";
+            txtTypeofProperty2.Size = new Size(324, 20);
+            txtTypeofProperty2.TabIndex = 294;
+            // 
+            // txtEstateLocation2
+            // 
+            txtEstateLocation2.AutoSize = false;
+            txtEstateLocation2.BackColor = Color.Transparent;
+            txtEstateLocation2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtEstateLocation2.Location = new Point(247, 1728);
+            txtEstateLocation2.Name = "txtEstateLocation2";
+            txtEstateLocation2.Size = new Size(324, 20);
+            txtEstateLocation2.TabIndex = 293;
+            // 
+            // txtRentalIncome1
+            // 
+            txtRentalIncome1.AutoSize = false;
+            txtRentalIncome1.BackColor = Color.Transparent;
+            txtRentalIncome1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtRentalIncome1.Location = new Point(247, 1656);
+            txtRentalIncome1.Name = "txtRentalIncome1";
+            txtRentalIncome1.Size = new Size(324, 20);
+            txtRentalIncome1.TabIndex = 291;
+            // 
+            // txtMorgageBalance1
+            // 
+            txtMorgageBalance1.AutoSize = false;
+            txtMorgageBalance1.BackColor = Color.Transparent;
+            txtMorgageBalance1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtMorgageBalance1.Location = new Point(247, 1641);
+            txtMorgageBalance1.Name = "txtMorgageBalance1";
+            txtMorgageBalance1.Size = new Size(324, 20);
+            txtMorgageBalance1.TabIndex = 290;
+            // 
+            // txtMarketValue1
+            // 
+            txtMarketValue1.AutoSize = false;
+            txtMarketValue1.BackColor = Color.Transparent;
+            txtMarketValue1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtMarketValue1.Location = new Point(247, 1626);
+            txtMarketValue1.Name = "txtMarketValue1";
+            txtMarketValue1.Size = new Size(324, 20);
+            txtMarketValue1.TabIndex = 289;
+            // 
+            // txtAcquisitionCost1
+            // 
+            txtAcquisitionCost1.AutoSize = false;
+            txtAcquisitionCost1.BackColor = Color.Transparent;
+            txtAcquisitionCost1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtAcquisitionCost1.Location = new Point(247, 1610);
+            txtAcquisitionCost1.Name = "txtAcquisitionCost1";
+            txtAcquisitionCost1.Size = new Size(324, 20);
+            txtAcquisitionCost1.TabIndex = 288;
+            // 
+            // txtTypeofProperty1
+            // 
+            txtTypeofProperty1.AutoSize = false;
+            txtTypeofProperty1.BackColor = Color.Transparent;
+            txtTypeofProperty1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtTypeofProperty1.Location = new Point(247, 1594);
+            txtTypeofProperty1.Name = "txtTypeofProperty1";
+            txtTypeofProperty1.Size = new Size(324, 20);
+            txtTypeofProperty1.TabIndex = 287;
+            // 
+            // txtEstateLocation1
+            // 
+            txtEstateLocation1.AutoSize = false;
+            txtEstateLocation1.BackColor = Color.Transparent;
+            txtEstateLocation1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtEstateLocation1.Location = new Point(247, 1578);
+            txtEstateLocation1.Name = "txtEstateLocation1";
+            txtEstateLocation1.Size = new Size(324, 20);
+            txtEstateLocation1.TabIndex = 286;
+            // 
+            // txtIssuerName3
+            // 
+            txtIssuerName3.AutoSize = false;
+            txtIssuerName3.BackColor = Color.Transparent;
+            txtIssuerName3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtIssuerName3.Location = new Point(247, 1439);
+            txtIssuerName3.Name = "txtIssuerName3";
+            txtIssuerName3.Size = new Size(324, 20);
+            txtIssuerName3.TabIndex = 285;
+            // 
+            // txtBranchAddress3
+            // 
+            txtBranchAddress3.AutoSize = false;
+            txtBranchAddress3.BackColor = Color.Transparent;
+            txtBranchAddress3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtBranchAddress3.Location = new Point(247, 1424);
+            txtBranchAddress3.Name = "txtBranchAddress3";
+            txtBranchAddress3.Size = new Size(324, 20);
+            txtBranchAddress3.TabIndex = 284;
+            // 
+            // txtBank3
+            // 
+            txtBank3.AutoSize = false;
+            txtBank3.BackColor = Color.Transparent;
+            txtBank3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtBank3.Location = new Point(247, 1409);
+            txtBank3.Name = "txtBank3";
+            txtBank3.Size = new Size(324, 20);
+            txtBank3.TabIndex = 283;
+            // 
+            // dtDateOpened3
+            // 
+            dtDateOpened3.AutoSize = false;
+            dtDateOpened3.BackColor = Color.Transparent;
+            dtDateOpened3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            dtDateOpened3.Location = new Point(247, 1394);
+            dtDateOpened3.Name = "dtDateOpened3";
+            dtDateOpened3.Size = new Size(324, 20);
+            dtDateOpened3.TabIndex = 282;
+            // 
+            // txtTypeofAccount3
+            // 
+            txtTypeofAccount3.AutoSize = false;
+            txtTypeofAccount3.BackColor = Color.Transparent;
+            txtTypeofAccount3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtTypeofAccount3.Location = new Point(247, 1378);
+            txtTypeofAccount3.Name = "txtTypeofAccount3";
+            txtTypeofAccount3.Size = new Size(324, 20);
+            txtTypeofAccount3.TabIndex = 281;
+            // 
+            // txtBalance3
+            // 
+            txtBalance3.AutoSize = false;
+            txtBalance3.BackColor = Color.Transparent;
+            txtBalance3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtBalance3.Location = new Point(247, 1362);
+            txtBalance3.Name = "txtBalance3";
+            txtBalance3.Size = new Size(324, 20);
+            txtBalance3.TabIndex = 280;
+            // 
+            // txtAccountNumber3
+            // 
+            txtAccountNumber3.AutoSize = false;
+            txtAccountNumber3.BackColor = Color.Transparent;
+            txtAccountNumber3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtAccountNumber3.Location = new Point(247, 1346);
+            txtAccountNumber3.Name = "txtAccountNumber3";
+            txtAccountNumber3.Size = new Size(324, 20);
+            txtAccountNumber3.TabIndex = 279;
+            // 
+            // txtIssuerName2
+            // 
+            txtIssuerName2.AutoSize = false;
+            txtIssuerName2.BackColor = Color.Transparent;
+            txtIssuerName2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtIssuerName2.Location = new Point(247, 1290);
+            txtIssuerName2.Name = "txtIssuerName2";
+            txtIssuerName2.Size = new Size(324, 20);
+            txtIssuerName2.TabIndex = 278;
+            // 
+            // txtBranchAddress2
+            // 
+            txtBranchAddress2.AutoSize = false;
+            txtBranchAddress2.BackColor = Color.Transparent;
+            txtBranchAddress2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtBranchAddress2.Location = new Point(247, 1275);
+            txtBranchAddress2.Name = "txtBranchAddress2";
+            txtBranchAddress2.Size = new Size(324, 20);
+            txtBranchAddress2.TabIndex = 277;
+            // 
+            // txtBank2
+            // 
+            txtBank2.AutoSize = false;
+            txtBank2.BackColor = Color.Transparent;
+            txtBank2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtBank2.Location = new Point(247, 1260);
+            txtBank2.Name = "txtBank2";
+            txtBank2.Size = new Size(324, 20);
+            txtBank2.TabIndex = 276;
+            // 
+            // dtDateOpened2
+            // 
+            dtDateOpened2.AutoSize = false;
+            dtDateOpened2.BackColor = Color.Transparent;
+            dtDateOpened2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            dtDateOpened2.Location = new Point(247, 1245);
+            dtDateOpened2.Name = "dtDateOpened2";
+            dtDateOpened2.Size = new Size(324, 20);
+            dtDateOpened2.TabIndex = 275;
+            // 
+            // txtTypeofAccount2
+            // 
+            txtTypeofAccount2.AutoSize = false;
+            txtTypeofAccount2.BackColor = Color.Transparent;
+            txtTypeofAccount2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtTypeofAccount2.Location = new Point(247, 1229);
+            txtTypeofAccount2.Name = "txtTypeofAccount2";
+            txtTypeofAccount2.Size = new Size(324, 20);
+            txtTypeofAccount2.TabIndex = 274;
+            // 
+            // txtBalance2
+            // 
+            txtBalance2.AutoSize = false;
+            txtBalance2.BackColor = Color.Transparent;
+            txtBalance2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtBalance2.Location = new Point(247, 1213);
+            txtBalance2.Name = "txtBalance2";
+            txtBalance2.Size = new Size(324, 20);
+            txtBalance2.TabIndex = 273;
+            // 
+            // txtAccountNumber2
+            // 
+            txtAccountNumber2.AutoSize = false;
+            txtAccountNumber2.BackColor = Color.Transparent;
+            txtAccountNumber2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtAccountNumber2.Location = new Point(247, 1197);
+            txtAccountNumber2.Name = "txtAccountNumber2";
+            txtAccountNumber2.Size = new Size(324, 20);
+            txtAccountNumber2.TabIndex = 272;
+            // 
+            // txtIssuerName1
+            // 
+            txtIssuerName1.AutoSize = false;
+            txtIssuerName1.BackColor = Color.Transparent;
+            txtIssuerName1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtIssuerName1.Location = new Point(247, 1139);
+            txtIssuerName1.Name = "txtIssuerName1";
+            txtIssuerName1.Size = new Size(324, 20);
+            txtIssuerName1.TabIndex = 271;
+            // 
+            // txtBranchAddress1
+            // 
+            txtBranchAddress1.AutoSize = false;
+            txtBranchAddress1.BackColor = Color.Transparent;
+            txtBranchAddress1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtBranchAddress1.Location = new Point(247, 1124);
+            txtBranchAddress1.Name = "txtBranchAddress1";
+            txtBranchAddress1.Size = new Size(324, 20);
+            txtBranchAddress1.TabIndex = 270;
+            // 
+            // txtBank1
+            // 
+            txtBank1.AutoSize = false;
+            txtBank1.BackColor = Color.Transparent;
+            txtBank1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtBank1.Location = new Point(247, 1109);
+            txtBank1.Name = "txtBank1";
+            txtBank1.Size = new Size(324, 20);
+            txtBank1.TabIndex = 269;
+            // 
+            // dtDateOpened1
+            // 
+            dtDateOpened1.AutoSize = false;
+            dtDateOpened1.BackColor = Color.Transparent;
+            dtDateOpened1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            dtDateOpened1.Location = new Point(247, 1094);
+            dtDateOpened1.Name = "dtDateOpened1";
+            dtDateOpened1.Size = new Size(324, 20);
+            dtDateOpened1.TabIndex = 268;
+            // 
+            // txtTypeofAccount1
+            // 
+            txtTypeofAccount1.AutoSize = false;
+            txtTypeofAccount1.BackColor = Color.Transparent;
+            txtTypeofAccount1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtTypeofAccount1.Location = new Point(247, 1078);
+            txtTypeofAccount1.Name = "txtTypeofAccount1";
+            txtTypeofAccount1.Size = new Size(324, 20);
+            txtTypeofAccount1.TabIndex = 267;
+            // 
+            // txtBalance1
+            // 
+            txtBalance1.AutoSize = false;
+            txtBalance1.BackColor = Color.Transparent;
+            txtBalance1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtBalance1.Location = new Point(247, 1062);
+            txtBalance1.Name = "txtBalance1";
+            txtBalance1.Size = new Size(324, 20);
+            txtBalance1.TabIndex = 266;
+            // 
+            // txtAccountNumber1
+            // 
+            txtAccountNumber1.AutoSize = false;
+            txtAccountNumber1.BackColor = Color.Transparent;
+            txtAccountNumber1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtAccountNumber1.Location = new Point(247, 1046);
+            txtAccountNumber1.Name = "txtAccountNumber1";
+            txtAccountNumber1.Size = new Size(324, 20);
+            txtAccountNumber1.TabIndex = 265;
+            // 
+            // txtNumberofDependents
+            // 
+            txtNumberofDependents.AutoSize = false;
+            txtNumberofDependents.BackColor = Color.Transparent;
+            txtNumberofDependents.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtNumberofDependents.Location = new Point(247, 918);
+            txtNumberofDependents.Name = "txtNumberofDependents";
+            txtNumberofDependents.Size = new Size(324, 20);
+            txtNumberofDependents.TabIndex = 264;
+            txtNumberofDependents.Text = "SSS";
+            // 
+            // txtYearsinBusiness
+            // 
+            txtYearsinBusiness.AutoSize = false;
+            txtYearsinBusiness.BackColor = Color.Transparent;
+            txtYearsinBusiness.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtYearsinBusiness.Location = new Point(247, 903);
+            txtYearsinBusiness.Name = "txtYearsinBusiness";
+            txtYearsinBusiness.Size = new Size(324, 20);
+            txtYearsinBusiness.TabIndex = 263;
+            txtYearsinBusiness.Text = "SSS";
+            // 
+            // txtPosition
+            // 
+            txtPosition.AutoSize = false;
+            txtPosition.BackColor = Color.Transparent;
+            txtPosition.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtPosition.Location = new Point(247, 887);
+            txtPosition.Name = "txtPosition";
+            txtPosition.Size = new Size(324, 20);
+            txtPosition.TabIndex = 262;
+            txtPosition.Text = "SSS";
+            // 
+            // txtTin
+            // 
+            txtTin.AutoSize = false;
+            txtTin.BackColor = Color.Transparent;
+            txtTin.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtTin.Location = new Point(247, 872);
+            txtTin.Name = "txtTin";
+            txtTin.Size = new Size(324, 20);
+            txtTin.TabIndex = 261;
+            txtTin.Text = "SSS";
+            // 
+            // txtOccupation
+            // 
+            txtOccupation.AutoSize = false;
+            txtOccupation.BackColor = Color.Transparent;
+            txtOccupation.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtOccupation.Location = new Point(247, 858);
+            txtOccupation.Name = "txtOccupation";
+            txtOccupation.Size = new Size(324, 20);
+            txtOccupation.TabIndex = 260;
+            txtOccupation.Text = "SSS";
+            // 
+            // txtEmployerEmailAddress
+            // 
+            txtEmployerEmailAddress.AutoSize = false;
+            txtEmployerEmailAddress.BackColor = Color.Transparent;
+            txtEmployerEmailAddress.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtEmployerEmailAddress.Location = new Point(247, 843);
+            txtEmployerEmailAddress.Name = "txtEmployerEmailAddress";
+            txtEmployerEmailAddress.Size = new Size(324, 20);
+            txtEmployerEmailAddress.TabIndex = 259;
+            txtEmployerEmailAddress.Text = "SSS";
+            // 
+            // txtTrunkLine
+            // 
+            txtTrunkLine.AutoSize = false;
+            txtTrunkLine.BackColor = Color.Transparent;
+            txtTrunkLine.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtTrunkLine.Location = new Point(247, 828);
+            txtTrunkLine.Name = "txtTrunkLine";
+            txtTrunkLine.Size = new Size(324, 20);
+            txtTrunkLine.TabIndex = 258;
+            txtTrunkLine.Text = "SSS";
+            // 
+            // txtDirectLine
+            // 
+            txtDirectLine.AutoSize = false;
+            txtDirectLine.BackColor = Color.Transparent;
+            txtDirectLine.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtDirectLine.Location = new Point(247, 812);
+            txtDirectLine.Name = "txtDirectLine";
+            txtDirectLine.Size = new Size(324, 20);
+            txtDirectLine.TabIndex = 257;
+            txtDirectLine.Text = "SSS";
+            // 
+            // txtBusinessAddress
+            // 
+            txtBusinessAddress.AutoSize = false;
+            txtBusinessAddress.BackColor = Color.Transparent;
+            txtBusinessAddress.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtBusinessAddress.Location = new Point(247, 797);
+            txtBusinessAddress.Name = "txtBusinessAddress";
+            txtBusinessAddress.Size = new Size(324, 20);
+            txtBusinessAddress.TabIndex = 256;
+            txtBusinessAddress.Text = "SSS";
+            // 
+            // txtBusinessname
+            // 
+            txtBusinessname.AutoSize = false;
+            txtBusinessname.BackColor = Color.Transparent;
+            txtBusinessname.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtBusinessname.Location = new Point(247, 781);
+            txtBusinessname.Name = "txtBusinessname";
+            txtBusinessname.Size = new Size(324, 20);
+            txtBusinessname.TabIndex = 255;
+            txtBusinessname.Text = "SSS";
+            // 
+            // txtSSS
+            // 
+            txtSSS.AutoSize = false;
+            txtSSS.BackColor = Color.Transparent;
+            txtSSS.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtSSS.Location = new Point(247, 766);
+            txtSSS.Name = "txtSSS";
+            txtSSS.Size = new Size(324, 19);
+            txtSSS.TabIndex = 254;
+            txtSSS.Text = "SSS";
+            // 
+            // txtAreaMeasurement
+            // 
+            txtAreaMeasurement.AutoSize = false;
+            txtAreaMeasurement.BackColor = Color.Transparent;
+            txtAreaMeasurement.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtAreaMeasurement.Location = new Point(228, 646);
+            txtAreaMeasurement.Name = "txtAreaMeasurement";
+            txtAreaMeasurement.Size = new Size(324, 19);
+            txtAreaMeasurement.TabIndex = 253;
+            txtAreaMeasurement.Text = "Area";
+            // 
+            // txtCCTProperty
+            // 
+            txtCCTProperty.AutoSize = false;
+            txtCCTProperty.BackColor = Color.Transparent;
+            txtCCTProperty.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtCCTProperty.Location = new Point(228, 631);
+            txtCCTProperty.Name = "txtCCTProperty";
+            txtCCTProperty.Size = new Size(324, 19);
+            txtCCTProperty.TabIndex = 252;
+            txtCCTProperty.Text = "CCT";
+            // 
+            // txtBldgNumber
+            // 
+            txtBldgNumber.AutoSize = false;
+            txtBldgNumber.BackColor = Color.Transparent;
+            txtBldgNumber.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtBldgNumber.Location = new Point(228, 616);
+            txtBldgNumber.Name = "txtBldgNumber";
+            txtBldgNumber.Size = new Size(324, 19);
+            txtBldgNumber.TabIndex = 251;
+            txtBldgNumber.Text = "Bldg";
+            // 
+            // txtUnitNumber
+            // 
+            txtUnitNumber.AutoSize = false;
+            txtUnitNumber.BackColor = Color.Transparent;
+            txtUnitNumber.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtUnitNumber.Location = new Point(228, 601);
+            txtUnitNumber.Name = "txtUnitNumber";
+            txtUnitNumber.Size = new Size(324, 19);
+            txtUnitNumber.TabIndex = 250;
+            txtUnitNumber.Text = "Unit";
+            // 
+            // txtTypeofProperty
+            // 
+            txtTypeofProperty.AutoSize = false;
+            txtTypeofProperty.BackColor = Color.Transparent;
+            txtTypeofProperty.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtTypeofProperty.Location = new Point(228, 586);
+            txtTypeofProperty.Name = "txtTypeofProperty";
+            txtTypeofProperty.Size = new Size(324, 19);
+            txtTypeofProperty.TabIndex = 249;
+            txtTypeofProperty.Text = "Type";
+            // 
+            // txtPropertyLocation
+            // 
+            txtPropertyLocation.AutoSize = false;
+            txtPropertyLocation.BackColor = Color.Transparent;
+            txtPropertyLocation.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtPropertyLocation.Location = new Point(228, 570);
+            txtPropertyLocation.Name = "txtPropertyLocation";
+            txtPropertyLocation.Size = new Size(324, 19);
+            txtPropertyLocation.TabIndex = 248;
+            txtPropertyLocation.Text = "Location";
+            // 
+            // txtDeclarationNumber
+            // 
+            txtDeclarationNumber.AutoSize = false;
+            txtDeclarationNumber.BackColor = Color.Transparent;
+            txtDeclarationNumber.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtDeclarationNumber.Location = new Point(228, 554);
+            txtDeclarationNumber.Name = "txtDeclarationNumber";
+            txtDeclarationNumber.Size = new Size(324, 19);
+            txtDeclarationNumber.TabIndex = 247;
+            txtDeclarationNumber.Text = "Tax";
+            // 
+            // txtNameofProperty
+            // 
+            txtNameofProperty.AutoSize = false;
+            txtNameofProperty.BackColor = Color.Transparent;
+            txtNameofProperty.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtNameofProperty.Location = new Point(228, 539);
+            txtNameofProperty.Name = "txtNameofProperty";
+            txtNameofProperty.Size = new Size(324, 19);
+            txtNameofProperty.TabIndex = 246;
+            txtNameofProperty.Text = "Name";
+            // 
+            // txtModePayment
+            // 
+            txtModePayment.AutoSize = false;
+            txtModePayment.BackColor = Color.Transparent;
+            txtModePayment.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtModePayment.Location = new Point(177, 421);
+            txtModePayment.Name = "txtModePayment";
+            txtModePayment.Size = new Size(324, 19);
+            txtModePayment.TabIndex = 245;
+            txtModePayment.Text = "Mode";
+            // 
+            // txtLoanTerm
+            // 
+            txtLoanTerm.AutoSize = false;
+            txtLoanTerm.BackColor = Color.Transparent;
+            txtLoanTerm.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtLoanTerm.Location = new Point(177, 405);
+            txtLoanTerm.Name = "txtLoanTerm";
+            txtLoanTerm.Size = new Size(324, 19);
+            txtLoanTerm.TabIndex = 244;
+            txtLoanTerm.Text = "Term";
+            // 
+            // txtLoanAmount
+            // 
+            txtLoanAmount.AutoSize = false;
+            txtLoanAmount.BackColor = Color.Transparent;
+            txtLoanAmount.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtLoanAmount.Location = new Point(177, 390);
+            txtLoanAmount.Name = "txtLoanAmount";
+            txtLoanAmount.Size = new Size(324, 19);
+            txtLoanAmount.TabIndex = 243;
+            txtLoanAmount.Text = "Amount";
+            // 
+            // txtYearsofStay
+            // 
+            txtYearsofStay.AutoSize = false;
+            txtYearsofStay.BackColor = Color.Transparent;
+            txtYearsofStay.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtYearsofStay.Location = new Point(177, 270);
+            txtYearsofStay.Name = "txtYearsofStay";
+            txtYearsofStay.Size = new Size(324, 19);
+            txtYearsofStay.TabIndex = 242;
+            txtYearsofStay.Text = "Years";
+            // 
+            // txtOwnership
+            // 
+            txtOwnership.AutoSize = false;
+            txtOwnership.BackColor = Color.Transparent;
+            txtOwnership.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtOwnership.Location = new Point(177, 255);
+            txtOwnership.Name = "txtOwnership";
+            txtOwnership.Size = new Size(324, 19);
+            txtOwnership.TabIndex = 241;
+            txtOwnership.Text = "Ownership";
+            // 
+            // txtEmailAddress
+            // 
+            txtEmailAddress.AutoSize = false;
+            txtEmailAddress.BackColor = Color.Transparent;
+            txtEmailAddress.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtEmailAddress.Location = new Point(177, 240);
+            txtEmailAddress.Name = "txtEmailAddress";
+            txtEmailAddress.Size = new Size(324, 19);
+            txtEmailAddress.TabIndex = 240;
+            txtEmailAddress.Text = "Email";
+            // 
+            // txtPhoneNumber
+            // 
+            txtPhoneNumber.AutoSize = false;
+            txtPhoneNumber.BackColor = Color.Transparent;
+            txtPhoneNumber.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtPhoneNumber.Location = new Point(177, 225);
+            txtPhoneNumber.Name = "txtPhoneNumber";
+            txtPhoneNumber.Size = new Size(324, 19);
+            txtPhoneNumber.TabIndex = 239;
+            txtPhoneNumber.Text = "Number";
+            // 
+            // txtLandline
+            // 
+            txtLandline.AutoSize = false;
+            txtLandline.BackColor = Color.Transparent;
+            txtLandline.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtLandline.Location = new Point(177, 210);
+            txtLandline.Name = "txtLandline";
+            txtLandline.Size = new Size(324, 19);
+            txtLandline.TabIndex = 238;
+            txtLandline.Text = "Landline";
+            // 
+            // txtMaritalStatus
+            // 
+            txtMaritalStatus.AutoSize = false;
+            txtMaritalStatus.BackColor = Color.Transparent;
+            txtMaritalStatus.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtMaritalStatus.Location = new Point(177, 195);
+            txtMaritalStatus.Name = "txtMaritalStatus";
+            txtMaritalStatus.Size = new Size(324, 19);
+            txtMaritalStatus.TabIndex = 237;
+            txtMaritalStatus.Text = "Status";
+            // 
+            // txtPermanentAddress
+            // 
+            txtPermanentAddress.AutoSize = false;
+            txtPermanentAddress.BackColor = Color.Transparent;
+            txtPermanentAddress.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtPermanentAddress.Location = new Point(177, 180);
+            txtPermanentAddress.Name = "txtPermanentAddress";
+            txtPermanentAddress.Size = new Size(324, 19);
+            txtPermanentAddress.TabIndex = 236;
+            txtPermanentAddress.Text = "Address";
+            // 
+            // txtSex
+            // 
+            txtSex.AutoSize = false;
+            txtSex.BackColor = Color.Transparent;
+            txtSex.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtSex.Location = new Point(177, 118);
+            txtSex.Name = "txtSex";
+            txtSex.Size = new Size(324, 19);
+            txtSex.TabIndex = 235;
+            txtSex.Text = "Name";
+            // 
+            // txtPresentAddress
+            // 
+            txtPresentAddress.AutoSize = false;
+            txtPresentAddress.BackColor = Color.Transparent;
+            txtPresentAddress.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtPresentAddress.Location = new Point(177, 165);
+            txtPresentAddress.Name = "txtPresentAddress";
+            txtPresentAddress.Size = new Size(324, 19);
+            txtPresentAddress.TabIndex = 234;
+            txtPresentAddress.Text = "Adress";
+            // 
+            // txtBirthdate
+            // 
+            txtBirthdate.AutoSize = false;
+            txtBirthdate.BackColor = Color.Transparent;
+            txtBirthdate.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtBirthdate.Location = new Point(177, 150);
+            txtBirthdate.Name = "txtBirthdate";
+            txtBirthdate.Size = new Size(324, 19);
+            txtBirthdate.TabIndex = 233;
+            txtBirthdate.Text = "Birthday";
+            // 
+            // txtNationality
+            // 
+            txtNationality.AutoSize = false;
+            txtNationality.BackColor = Color.Transparent;
+            txtNationality.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtNationality.Location = new Point(177, 134);
+            txtNationality.Name = "txtNationality";
+            txtNationality.Size = new Size(324, 19);
+            txtNationality.TabIndex = 232;
+            txtNationality.Text = "Nationality";
+            // 
+            // txtFullName
+            // 
+            txtFullName.AutoSize = false;
+            txtFullName.BackColor = Color.Transparent;
+            txtFullName.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtFullName.Location = new Point(177, 103);
+            txtFullName.Name = "txtFullName";
+            txtFullName.Size = new Size(324, 19);
+            txtFullName.TabIndex = 231;
+            txtFullName.Text = "Name";
+            // 
+            // txtPagibigMIDNumber
+            // 
+            txtPagibigMIDNumber.AutoSize = false;
+            txtPagibigMIDNumber.BackColor = Color.Transparent;
+            txtPagibigMIDNumber.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txtPagibigMIDNumber.Location = new Point(177, 78);
+            txtPagibigMIDNumber.Name = "txtPagibigMIDNumber";
+            txtPagibigMIDNumber.Size = new Size(324, 19);
+            txtPagibigMIDNumber.TabIndex = 230;
+            txtPagibigMIDNumber.Text = "MID Number";
             // 
             // btnReview
             // 
@@ -498,16 +1596,6 @@
             guna2HtmlLabel80.TabIndex = 207;
             guna2HtmlLabel80.Text = "REAL ESTATE 3";
             // 
-            // guna2HtmlLabel81
-            // 
-            guna2HtmlLabel81.BackColor = Color.Transparent;
-            guna2HtmlLabel81.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            guna2HtmlLabel81.Location = new Point(15, 1966);
-            guna2HtmlLabel81.Name = "guna2HtmlLabel81";
-            guna2HtmlLabel81.Size = new Size(91, 19);
-            guna2HtmlLabel81.TabIndex = 206;
-            guna2HtmlLabel81.Text = "ISSUER NAME:";
-            // 
             // guna2HtmlLabel82
             // 
             guna2HtmlLabel82.BackColor = Color.Transparent;
@@ -579,16 +1667,6 @@
             guna2HtmlLabel72.TabIndex = 199;
             guna2HtmlLabel72.Text = "REAL ESTATE 2";
             // 
-            // guna2HtmlLabel73
-            // 
-            guna2HtmlLabel73.BackColor = Color.Transparent;
-            guna2HtmlLabel73.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            guna2HtmlLabel73.Location = new Point(15, 1820);
-            guna2HtmlLabel73.Name = "guna2HtmlLabel73";
-            guna2HtmlLabel73.Size = new Size(91, 19);
-            guna2HtmlLabel73.TabIndex = 198;
-            guna2HtmlLabel73.Text = "ISSUER NAME:";
-            // 
             // guna2HtmlLabel74
             // 
             guna2HtmlLabel74.BackColor = Color.Transparent;
@@ -659,16 +1737,6 @@
             guna2HtmlLabel63.Size = new Size(95, 19);
             guna2HtmlLabel63.TabIndex = 191;
             guna2HtmlLabel63.Text = "REAL ESTATE 1";
-            // 
-            // guna2HtmlLabel64
-            // 
-            guna2HtmlLabel64.BackColor = Color.Transparent;
-            guna2HtmlLabel64.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            guna2HtmlLabel64.Location = new Point(15, 1671);
-            guna2HtmlLabel64.Name = "guna2HtmlLabel64";
-            guna2HtmlLabel64.Size = new Size(91, 19);
-            guna2HtmlLabel64.TabIndex = 190;
-            guna2HtmlLabel64.Text = "ISSUER NAME:";
             // 
             // guna2HtmlLabel65
             // 
@@ -1398,6 +2466,7 @@
             btnPersonalInfo.Size = new Size(87, 61);
             btnPersonalInfo.TabIndex = 130;
             btnPersonalInfo.UseVisualStyleBackColor = true;
+            btnPersonalInfo.Click += btnPersonalInfo_Click;
             // 
             // Overview
             // 
@@ -1466,7 +2535,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel37;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel45;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel80;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel81;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel82;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel83;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel84;
@@ -1474,7 +2542,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel86;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel87;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel72;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel73;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel74;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel75;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel76;
@@ -1482,7 +2549,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel78;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel79;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel63;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel64;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel65;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel66;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel67;
@@ -1529,5 +2595,94 @@
         private Button btnPersonalInfo;
         private Button btnConfirm;
         private Button btnReview;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtSex;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtPresentAddress;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtBirthdate;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtNationality;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtFullName;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtPagibigMIDNumber;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtPermanentAddress;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtModePayment;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtLoanTerm;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtLoanAmount;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtYearsofStay;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtOwnership;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtEmailAddress;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtPhoneNumber;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtLandline;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtMaritalStatus;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtAreaMeasurement;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtCCTProperty;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtBldgNumber;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtUnitNumber;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtTypeofProperty;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtPropertyLocation;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtDeclarationNumber;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtNameofProperty;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtTin;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtOccupation;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtEmployerEmailAddress;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtTrunkLine;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtDirectLine;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtBusinessAddress;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtBusinessname;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtSSS;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtNumberofDependents;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtYearsinBusiness;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtPosition;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtIssuerName3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtBranchAddress3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtBank3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel dtDateOpened3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtTypeofAccount3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtBalance3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtAccountNumber3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtIssuerName2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtBranchAddress2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtBank2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel dtDateOpened2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtTypeofAccount2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtBalance2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtAccountNumber2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtIssuerName1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtBranchAddress1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtBank1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel dtDateOpened1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtTypeofAccount1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtBalance1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtAccountNumber1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtEstateLocation1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtRentalIncome3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtMorgageBalance3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtMarketValue3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtAcquisitionCost3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtTypeofProperty3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtEstateLocation3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtRentalIncome2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtMorgageBalance2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtMarketValue2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtAcquisitionCost2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtTypeofProperty2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtEstateLocation2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtRentalIncome1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtMorgageBalance1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtMarketValue1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtAcquisitionCost1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtTypeofProperty1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtAmortization3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtLoanBalance3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtTypeofSecurity3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtMaturityDate3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtTypeofLoan3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtAmortization2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtLoanBalance2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtTypeofSecurity2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtMaturityDate2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtTypeofLoan2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtAmortization1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtLoanBalance1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtTypeofSecurity1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtMaturityDate1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtTypeofLoan1;
     }
 }
