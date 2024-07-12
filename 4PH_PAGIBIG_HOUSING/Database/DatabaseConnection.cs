@@ -130,5 +130,22 @@ namespace _4PH_PAGIBIG_HOUSING.Database
             return pagIBIGMIDNumbers;
         }
 
+        public void ExecuteNonQuery(string query, MySqlTransaction transaction)
+        {
+            using (MySqlConnection conn = GetConnection())
+            {
+                using (var command = new MySqlCommand(query, conn, transaction))
+                {
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public MySqlTransaction BeginTransaction()
+        {
+            MySqlConnection conn = GetConnection();
+            conn.Open();
+            return conn.BeginTransaction();
+        }
     }
 }

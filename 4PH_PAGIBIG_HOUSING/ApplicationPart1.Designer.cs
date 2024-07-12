@@ -368,7 +368,7 @@
             // cbSex
             // 
             cbSex.FormattingEnabled = true;
-            cbSex.Items.AddRange(new object[] { "Male", "Female", "Beks" });
+            cbSex.Items.AddRange(new object[] { "Male", "Female" });
             cbSex.Location = new Point(598, 366);
             cbSex.Name = "cbSex";
             cbSex.Size = new Size(90, 23);

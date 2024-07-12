@@ -326,26 +326,24 @@ namespace _4PH_PAGIBIG_HOUSING
             if (dgCollateral.SelectedRows.Count > 0)
             {
                 DataGridViewRow selectedRow = dgCollateral.SelectedRows[0];
+                string? collateralId = selectedRow.Cells["Collateral_ID"].Value?.ToString();
+                string? pagIbigMIDNumber = selectedRow.Cells["Pag_IBIG_MID_Number_RTN"]?.Value.ToString();
 
-                string? pagIbigMIDNumber = selectedRow.Cells["Pag_IBIG_MID_Number_RTN"].Value?.ToString();
-                int collateralId = Convert.ToInt32(selectedRow.Cells["Collateral_ID"].Value);
-
-                // Construct the delete query
-                string query = $@"
-            DELETE FROM COLLATERAL_INFORMATION
-            WHERE 
-                Collateral_ID = {collateralId} 
-                AND Pag_IBIG_MID_Number_RTN = '{pagIbigMIDNumber}'";
-
-                // Execute the delete
-                if (DatabaseConnection.Instance.ExecuteNonQuery(query))
+                try
                 {
-                    MessageBox.Show("Collateral record deleted successfully.");
-                    LoadCollateralInfo(); // Refresh the DataGridView
+                    // Delete related records from other tables
+                    string deleteQuery = $@"
+            DELETE FROM LOAN_INFORMATION WHERE PAG_IBIG_MID_Number_RTN = '{pagIbigMIDNumber}';
+            DELETE FROM COLLATERAL_INFORMATION WHERE Collateral_ID = {collateralId}";
+
+                    DatabaseConnection.Instance.ExecuteNonQuery(deleteQuery);
+
+                    MessageBox.Show("Collateral record and related records deleted successfully.");
+                    LoadCollateralInfo();
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Failed to delete the collateral record.");
+                    MessageBox.Show($"An error occurred: {ex.Message}");
                 }
             }
             else
@@ -480,26 +478,23 @@ namespace _4PH_PAGIBIG_HOUSING
             if (dgRealEstate.SelectedRows.Count > 0)
             {
                 DataGridViewRow selectedRow = dgRealEstate.SelectedRows[0];
+                string? realEstateKey = selectedRow.Cells["Real_Estate_Key"].Value.ToString();
+                string? pagIbigMIDNumber = selectedRow.Cells["PAG_IBIG_MID_Number_RTN"].Value.ToString();
 
-                int realEstateKey = Convert.ToInt32(selectedRow.Cells["Real_Estate_Key"].Value);
-                string? pagIbigMIDNumber = selectedRow.Cells["PAG_IBIG_MID_Number_RTN"].Value?.ToString();
-
-                // Construct the delete query
-                string query = $@"
-            DELETE FROM REAL_ESTATE_INFORMATION
-            WHERE 
-                Real_Estate_Key = {realEstateKey} 
-                AND PAG_IBIG_MID_Number_RTN = '{pagIbigMIDNumber}'";
-
-                // Execute the delete
-                if (DatabaseConnection.Instance.ExecuteNonQuery(query))
+                try
                 {
+                    // Delete related records from other tables
+                    string deleteQuery = $@"
+            DELETE FROM REAL_ESTATE_INFORMATION WHERE Real_Estate_Key = {realEstateKey}";
+
+                    DatabaseConnection.Instance.ExecuteNonQuery(deleteQuery);
+
                     MessageBox.Show("Real estate record deleted successfully.");
-                    LoadRealEstateInfo(); // Refresh the DataGridView
+                    LoadRealEstateInfo();
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Failed to delete the real estate record.");
+                    MessageBox.Show($"An error occurred: {ex.Message}");
                 }
             }
             else
@@ -561,26 +556,21 @@ namespace _4PH_PAGIBIG_HOUSING
             if (dgBankInformation.SelectedRows.Count > 0)
             {
                 DataGridViewRow selectedRow = dgBankInformation.SelectedRows[0];
-
                 int bankId = Convert.ToInt32(selectedRow.Cells["Bank_ID"].Value);
-                string? pagIbigMIDNumber = selectedRow.Cells["PAG_IBIG_MID_Number_RTN"].Value?.ToString();
 
-                // Construct the delete query
-                string query = $@"
-            DELETE FROM BANKING_INFORMATION
-            WHERE 
-                Bank_ID = {bankId} 
-                AND PAG_IBIG_MID_Number_RTN = '{pagIbigMIDNumber}'";
-
-                // Execute the delete
-                if (DatabaseConnection.Instance.ExecuteNonQuery(query))
+                try
                 {
+                    string deleteQuery = $@"
+            DELETE FROM BANKING_INFORMATION WHERE Bank_ID = {bankId}";
+
+                    DatabaseConnection.Instance.ExecuteNonQuery(deleteQuery);
+
                     MessageBox.Show("Bank information deleted successfully.");
-                    LoadBankInformation(); // Refresh the DataGridView
+                    LoadBankInformation();
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Failed to delete the bank information.");
+                    MessageBox.Show($"An error occurred: {ex.Message}");
                 }
             }
             else
@@ -638,26 +628,21 @@ namespace _4PH_PAGIBIG_HOUSING
             if (dgOtherLoanInformation.SelectedRows.Count > 0)
             {
                 DataGridViewRow selectedRow = dgOtherLoanInformation.SelectedRows[0];
-
                 int loanAvailmentKey = Convert.ToInt32(selectedRow.Cells["Loan_Availment_Key"].Value);
-                string? pagIbigMIDNumber = selectedRow.Cells["PAG_IBIG_MID_Number_RTN"].Value?.ToString();
 
-                // Construct the delete query
-                string query = $@"
-            DELETE FROM LOAN_INFORMATION
-            WHERE 
-                Loan_Availment_Key = {loanAvailmentKey} 
-                AND PAG_IBIG_MID_Number_RTN = '{pagIbigMIDNumber}'";
-
-                // Execute the delete
-                if (DatabaseConnection.Instance.ExecuteNonQuery(query))
+                try
                 {
+                    string deleteQuery = $@"
+            DELETE FROM LOAN_INFORMATION WHERE Loan_Availment_Key = {loanAvailmentKey}";
+
+                    DatabaseConnection.Instance.ExecuteNonQuery(deleteQuery);
+
                     MessageBox.Show("Other loan information deleted successfully.");
-                    LoadOtherLoanInformation(); // Refresh the DataGridView
+                    LoadOtherLoanInformation();
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Failed to delete the other loan information.");
+                    MessageBox.Show($"An error occurred: {ex.Message}");
                 }
             }
             else
