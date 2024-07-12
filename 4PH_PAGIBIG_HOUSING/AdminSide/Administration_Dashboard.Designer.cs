@@ -44,7 +44,6 @@
             btnRealEstateInfo = new Button();
             btnOtherLoanInfo = new Button();
             btnExit = new Button();
-            btnAddRecord = new Button();
             imgSectionTitle = new PictureBox();
             lblMRID = new Guna.UI2.WinForms.Guna2HtmlLabel();
             cbSelectMRID = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -207,22 +206,6 @@
             btnExit.UseVisualStyleBackColor = true;
             btnExit.Click += btnExit_Click;
             // 
-            // btnAddRecord
-            // 
-            btnAddRecord.BackColor = Color.Transparent;
-            btnAddRecord.Cursor = Cursors.Hand;
-            btnAddRecord.FlatAppearance.BorderSize = 0;
-            btnAddRecord.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnAddRecord.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnAddRecord.FlatStyle = FlatStyle.Flat;
-            btnAddRecord.Image = (Image)resources.GetObject("btnAddRecord.Image");
-            btnAddRecord.Location = new Point(419, 389);
-            btnAddRecord.Name = "btnAddRecord";
-            btnAddRecord.Size = new Size(359, 175);
-            btnAddRecord.TabIndex = 50;
-            btnAddRecord.UseVisualStyleBackColor = true;
-            btnAddRecord.Click += btnAddRecord_Click;
-            // 
             // imgSectionTitle
             // 
             imgSectionTitle.BackColor = Color.Transparent;
@@ -237,7 +220,7 @@
             // 
             lblMRID.BackColor = Color.Transparent;
             lblMRID.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMRID.Location = new Point(898, 17);
+            lblMRID.Location = new Point(552, 211);
             lblMRID.Name = "lblMRID";
             lblMRID.Size = new Size(152, 17);
             lblMRID.TabIndex = 54;
@@ -254,10 +237,10 @@
             cbSelectMRID.Font = new Font("Segoe UI", 10F);
             cbSelectMRID.ForeColor = Color.FromArgb(68, 88, 112);
             cbSelectMRID.ItemHeight = 30;
-            cbSelectMRID.Location = new Point(898, 35);
+            cbSelectMRID.Location = new Point(552, 229);
             cbSelectMRID.Name = "cbSelectMRID";
             cbSelectMRID.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            cbSelectMRID.Size = new Size(280, 36);
+            cbSelectMRID.Size = new Size(504, 36);
             cbSelectMRID.TabIndex = 55;
             // 
             // btnSQLProblems
@@ -301,9 +284,9 @@
             btnManageRecord.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnManageRecord.FlatStyle = FlatStyle.Flat;
             btnManageRecord.Image = (Image)resources.GetObject("btnManageRecord.Image");
-            btnManageRecord.Location = new Point(819, 389);
+            btnManageRecord.Location = new Point(419, 392);
             btnManageRecord.Name = "btnManageRecord";
-            btnManageRecord.Size = new Size(359, 175);
+            btnManageRecord.Size = new Size(759, 172);
             btnManageRecord.TabIndex = 61;
             btnManageRecord.UseVisualStyleBackColor = true;
             btnManageRecord.Click += btnManageRecord_Click;
@@ -314,10 +297,10 @@
             pnlAboutUs.Controls.Add(btnBack);
             pnlAboutUs.Controls.Add(imgAboutUs);
             pnlAboutUs.CustomizableEdges = customizableEdges5;
-            pnlAboutUs.Location = new Point(295, 0);
+            pnlAboutUs.Location = new Point(295, -2);
             pnlAboutUs.Name = "pnlAboutUs";
             pnlAboutUs.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            pnlAboutUs.Size = new Size(986, 800);
+            pnlAboutUs.Size = new Size(986, 802);
             pnlAboutUs.TabIndex = 62;
             // 
             // imgPapas
@@ -353,9 +336,9 @@
             // imgAboutUs
             // 
             imgAboutUs.Image = (Image)resources.GetObject("imgAboutUs.Image");
-            imgAboutUs.Location = new Point(0, 0);
+            imgAboutUs.Location = new Point(0, 3);
             imgAboutUs.Name = "imgAboutUs";
-            imgAboutUs.Size = new Size(986, 800);
+            imgAboutUs.Size = new Size(986, 797);
             imgAboutUs.TabIndex = 0;
             imgAboutUs.TabStop = false;
             // 
@@ -363,7 +346,7 @@
             // 
             imgSearchIcon.BackColor = Color.Transparent;
             imgSearchIcon.Image = (Image)resources.GetObject("imgSearchIcon.Image");
-            imgSearchIcon.Location = new Point(862, 37);
+            imgSearchIcon.Location = new Point(516, 231);
             imgSearchIcon.Name = "imgSearchIcon";
             imgSearchIcon.Size = new Size(30, 30);
             imgSearchIcon.TabIndex = 99;
@@ -382,7 +365,6 @@
             Controls.Add(cbSelectMRID);
             Controls.Add(lblMRID);
             Controls.Add(imgSectionTitle);
-            Controls.Add(btnAddRecord);
             Controls.Add(btnExit);
             Controls.Add(btnOtherLoanInfo);
             Controls.Add(btnRealEstateInfo);
@@ -418,7 +400,6 @@
         private Button btnRealEstateInfo;
         private Button btnOtherLoanInfo;
         private Button btnExit;
-        private Button btnAddRecord;
         private PictureBox imgSectionTitle;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblMRID;
         private Guna.UI2.WinForms.Guna2ComboBox cbSelectMRID;
