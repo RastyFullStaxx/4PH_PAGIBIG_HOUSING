@@ -57,32 +57,42 @@
             dtMaturityDate = new DateTimePicker();
             cbTypeOfLoan = new ComboBox();
             pnlMain = new Panel();
+            pnlEntry3 = new Panel();
+            cbTypeofLoan3 = new ComboBox();
+            label13 = new Label();
+            dtMaturityDate3 = new DateTimePicker();
+            label14 = new Label();
+            label15 = new Label();
+            label16 = new Label();
+            label17 = new Label();
+            txtBalance3 = new TextBox();
+            txtAmortization3 = new TextBox();
             btnCancelEntry3 = new Button();
             btnRevealEntry3 = new Button();
-            pnlEntry3 = new Panel();
-            comboBox2 = new ComboBox();
+            pnlEntry2 = new Panel();
+            cbTypeofLoan2 = new ComboBox();
             label6 = new Label();
-            dateTimePicker2 = new DateTimePicker();
+            dtMaturityDate2 = new DateTimePicker();
             label7 = new Label();
             label8 = new Label();
             label9 = new Label();
             label10 = new Label();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
+            txtBalance2 = new TextBox();
+            txtAmortization2 = new TextBox();
             btnCancelEntry2 = new Button();
-            pnlEntry2 = new Panel();
-            comboBox1 = new ComboBox();
+            pnlEntry1 = new Panel();
+            cbTypeofLoan1 = new ComboBox();
             label1 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            dtMaturityDate1 = new DateTimePicker();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            pnlEntry1 = new Panel();
+            txtBalance1 = new TextBox();
+            txtAmortization1 = new TextBox();
+            cbSecurityType3 = new ComboBox();
+            cbSecurityType2 = new ComboBox();
+            cbSecurityType1 = new ComboBox();
             pnlMain.SuspendLayout();
             pnlEntry3.SuspendLayout();
             pnlEntry2.SuspendLayout();
@@ -158,7 +168,7 @@
             btnRevealEntry2.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnRevealEntry2.FlatStyle = FlatStyle.Flat;
             btnRevealEntry2.Image = (Image)resources.GetObject("btnRevealEntry2.Image");
-            btnRevealEntry2.Location = new Point(405, 289);
+            btnRevealEntry2.Location = new Point(350, 199);
             btnRevealEntry2.Name = "btnRevealEntry2";
             btnRevealEntry2.Size = new Size(413, 45);
             btnRevealEntry2.TabIndex = 38;
@@ -433,17 +443,126 @@
             // 
             pnlMain.AutoScroll = true;
             pnlMain.BackColor = Color.Transparent;
+            pnlMain.Controls.Add(btnRevealEntry2);
+            pnlMain.Controls.Add(pnlEntry3);
             pnlMain.Controls.Add(btnCancelEntry3);
             pnlMain.Controls.Add(btnRevealEntry3);
-            pnlMain.Controls.Add(pnlEntry3);
-            pnlMain.Controls.Add(btnCancelEntry2);
-            pnlMain.Controls.Add(btnRevealEntry2);
             pnlMain.Controls.Add(pnlEntry2);
+            pnlMain.Controls.Add(btnCancelEntry2);
             pnlMain.Controls.Add(pnlEntry1);
             pnlMain.Location = new Point(28, 222);
             pnlMain.Name = "pnlMain";
             pnlMain.Size = new Size(1224, 428);
             pnlMain.TabIndex = 145;
+            // 
+            // pnlEntry3
+            // 
+            pnlEntry3.Controls.Add(cbSecurityType3);
+            pnlEntry3.Controls.Add(cbTypeofLoan3);
+            pnlEntry3.Controls.Add(label13);
+            pnlEntry3.Controls.Add(dtMaturityDate3);
+            pnlEntry3.Controls.Add(label14);
+            pnlEntry3.Controls.Add(label15);
+            pnlEntry3.Controls.Add(label16);
+            pnlEntry3.Controls.Add(label17);
+            pnlEntry3.Controls.Add(txtBalance3);
+            pnlEntry3.Controls.Add(txtAmortization3);
+            pnlEntry3.Location = new Point(28, 492);
+            pnlEntry3.Name = "pnlEntry3";
+            pnlEntry3.Size = new Size(1054, 188);
+            pnlEntry3.TabIndex = 149;
+            pnlEntry3.Visible = false;
+            // 
+            // cbTypeofLoan3
+            // 
+            cbTypeofLoan3.Location = new Point(12, 42);
+            cbTypeofLoan3.Name = "cbTypeofLoan3";
+            cbTypeofLoan3.Size = new Size(284, 23);
+            cbTypeofLoan3.Sorted = true;
+            cbTypeofLoan3.TabIndex = 144;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.BackColor = Color.Transparent;
+            label13.FlatStyle = FlatStyle.Flat;
+            label13.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label13.Location = new Point(14, 24);
+            label13.Name = "label13";
+            label13.Size = new Size(87, 15);
+            label13.TabIndex = 22;
+            label13.Text = "TYPE OF LOAN";
+            // 
+            // dtMaturityDate3
+            // 
+            dtMaturityDate3.Location = new Point(762, 42);
+            dtMaturityDate3.Name = "dtMaturityDate3";
+            dtMaturityDate3.Size = new Size(263, 23);
+            dtMaturityDate3.TabIndex = 143;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.BackColor = Color.Transparent;
+            label14.FlatStyle = FlatStyle.Flat;
+            label14.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label14.Location = new Point(14, 109);
+            label14.Name = "label14";
+            label14.Size = new Size(117, 15);
+            label14.TabIndex = 23;
+            label14.Text = "AMOUNT/BALANCE";
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.BackColor = Color.Transparent;
+            label15.FlatStyle = FlatStyle.Flat;
+            label15.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label15.Location = new Point(337, 24);
+            label15.Name = "label15";
+            label15.Size = new Size(196, 15);
+            label15.TabIndex = 24;
+            label15.Text = "TYPE OF SECURITY FOR THE LOAN";
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.BackColor = Color.Transparent;
+            label16.FlatStyle = FlatStyle.Flat;
+            label16.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label16.Location = new Point(552, 112);
+            label16.Name = "label16";
+            label16.Size = new Size(167, 15);
+            label16.TabIndex = 25;
+            label16.Text = "MORTGAGE AMORTIZATION";
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.BackColor = Color.Transparent;
+            label17.FlatStyle = FlatStyle.Flat;
+            label17.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label17.Location = new Point(762, 24);
+            label17.Name = "label17";
+            label17.Size = new Size(99, 15);
+            label17.TabIndex = 26;
+            label17.Text = "MATURITY DATE";
+            // 
+            // txtBalance3
+            // 
+            txtBalance3.BackColor = Color.WhiteSmoke;
+            txtBalance3.Location = new Point(14, 127);
+            txtBalance3.Name = "txtBalance3";
+            txtBalance3.Size = new Size(519, 23);
+            txtBalance3.TabIndex = 41;
+            // 
+            // txtAmortization3
+            // 
+            txtAmortization3.BackColor = Color.WhiteSmoke;
+            txtAmortization3.Location = new Point(552, 130);
+            txtAmortization3.Name = "txtAmortization3";
+            txtAmortization3.Size = new Size(473, 23);
+            txtAmortization3.TabIndex = 42;
             // 
             // btnCancelEntry3
             // 
@@ -454,7 +573,7 @@
             btnCancelEntry3.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnCancelEntry3.FlatStyle = FlatStyle.Flat;
             btnCancelEntry3.Image = (Image)resources.GetObject("btnCancelEntry3.Image");
-            btnCancelEntry3.Location = new Point(985, 675);
+            btnCancelEntry3.Location = new Point(1084, 636);
             btnCancelEntry3.Name = "btnCancelEntry3";
             btnCancelEntry3.Size = new Size(97, 41);
             btnCancelEntry3.TabIndex = 149;
@@ -470,37 +589,38 @@
             btnRevealEntry3.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnRevealEntry3.FlatStyle = FlatStyle.Flat;
             btnRevealEntry3.Image = (Image)resources.GetObject("btnRevealEntry3.Image");
-            btnRevealEntry3.Location = new Point(405, 545);
+            btnRevealEntry3.Location = new Point(350, 441);
             btnRevealEntry3.Name = "btnRevealEntry3";
             btnRevealEntry3.Size = new Size(413, 45);
             btnRevealEntry3.TabIndex = 147;
             btnRevealEntry3.UseVisualStyleBackColor = true;
-            btnRevealEntry3.Click += pnlRevealEntry3_Click;
+            btnRevealEntry3.Visible = false;
+            btnRevealEntry3.Click += btnRevealEntry3_Click;
             // 
-            // pnlEntry3
+            // pnlEntry2
             // 
-            pnlEntry3.Controls.Add(comboBox2);
-            pnlEntry3.Controls.Add(label6);
-            pnlEntry3.Controls.Add(dateTimePicker2);
-            pnlEntry3.Controls.Add(label7);
-            pnlEntry3.Controls.Add(label8);
-            pnlEntry3.Controls.Add(label9);
-            pnlEntry3.Controls.Add(label10);
-            pnlEntry3.Controls.Add(textBox4);
-            pnlEntry3.Controls.Add(textBox5);
-            pnlEntry3.Controls.Add(textBox6);
-            pnlEntry3.Location = new Point(28, 479);
-            pnlEntry3.Name = "pnlEntry3";
-            pnlEntry3.Size = new Size(1054, 188);
-            pnlEntry3.TabIndex = 148;
-            pnlEntry3.Visible = false;
+            pnlEntry2.Controls.Add(cbSecurityType2);
+            pnlEntry2.Controls.Add(cbTypeofLoan2);
+            pnlEntry2.Controls.Add(label6);
+            pnlEntry2.Controls.Add(dtMaturityDate2);
+            pnlEntry2.Controls.Add(label7);
+            pnlEntry2.Controls.Add(label8);
+            pnlEntry2.Controls.Add(label9);
+            pnlEntry2.Controls.Add(label10);
+            pnlEntry2.Controls.Add(txtBalance2);
+            pnlEntry2.Controls.Add(txtAmortization2);
+            pnlEntry2.Location = new Point(28, 247);
+            pnlEntry2.Name = "pnlEntry2";
+            pnlEntry2.Size = new Size(1054, 188);
+            pnlEntry2.TabIndex = 148;
+            pnlEntry2.Visible = false;
             // 
-            // comboBox2
+            // cbTypeofLoan2
             // 
-            comboBox2.Location = new Point(12, 42);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(284, 23);
-            comboBox2.TabIndex = 144;
+            cbTypeofLoan2.Location = new Point(12, 42);
+            cbTypeofLoan2.Name = "cbTypeofLoan2";
+            cbTypeofLoan2.Size = new Size(284, 23);
+            cbTypeofLoan2.TabIndex = 144;
             // 
             // label6
             // 
@@ -514,12 +634,12 @@
             label6.TabIndex = 22;
             label6.Text = "TYPE OF LOAN";
             // 
-            // dateTimePicker2
+            // dtMaturityDate2
             // 
-            dateTimePicker2.Location = new Point(762, 42);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(263, 23);
-            dateTimePicker2.TabIndex = 143;
+            dtMaturityDate2.Location = new Point(762, 42);
+            dtMaturityDate2.Name = "dtMaturityDate2";
+            dtMaturityDate2.Size = new Size(263, 23);
+            dtMaturityDate2.TabIndex = 143;
             // 
             // label7
             // 
@@ -569,29 +689,21 @@
             label10.TabIndex = 26;
             label10.Text = "MATURITY DATE";
             // 
-            // textBox4
+            // txtBalance2
             // 
-            textBox4.BackColor = Color.WhiteSmoke;
-            textBox4.Location = new Point(337, 42);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(382, 23);
-            textBox4.TabIndex = 40;
+            txtBalance2.BackColor = Color.WhiteSmoke;
+            txtBalance2.Location = new Point(14, 127);
+            txtBalance2.Name = "txtBalance2";
+            txtBalance2.Size = new Size(519, 23);
+            txtBalance2.TabIndex = 41;
             // 
-            // textBox5
+            // txtAmortization2
             // 
-            textBox5.BackColor = Color.WhiteSmoke;
-            textBox5.Location = new Point(14, 127);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(519, 23);
-            textBox5.TabIndex = 41;
-            // 
-            // textBox6
-            // 
-            textBox6.BackColor = Color.WhiteSmoke;
-            textBox6.Location = new Point(552, 130);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(473, 23);
-            textBox6.TabIndex = 42;
+            txtAmortization2.BackColor = Color.WhiteSmoke;
+            txtAmortization2.Location = new Point(552, 130);
+            txtAmortization2.Name = "txtAmortization2";
+            txtAmortization2.Size = new Size(473, 23);
+            txtAmortization2.TabIndex = 42;
             // 
             // btnCancelEntry2
             // 
@@ -602,37 +714,36 @@
             btnCancelEntry2.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnCancelEntry2.FlatStyle = FlatStyle.Flat;
             btnCancelEntry2.Image = (Image)resources.GetObject("btnCancelEntry2.Image");
-            btnCancelEntry2.Location = new Point(985, 419);
+            btnCancelEntry2.Location = new Point(1084, 391);
             btnCancelEntry2.Name = "btnCancelEntry2";
             btnCancelEntry2.Size = new Size(97, 41);
             btnCancelEntry2.TabIndex = 146;
             btnCancelEntry2.UseVisualStyleBackColor = true;
             btnCancelEntry2.Click += btnCancelEntry2_Click;
             // 
-            // pnlEntry2
+            // pnlEntry1
             // 
-            pnlEntry2.Controls.Add(comboBox1);
-            pnlEntry2.Controls.Add(label1);
-            pnlEntry2.Controls.Add(dateTimePicker1);
-            pnlEntry2.Controls.Add(label2);
-            pnlEntry2.Controls.Add(label3);
-            pnlEntry2.Controls.Add(label4);
-            pnlEntry2.Controls.Add(label5);
-            pnlEntry2.Controls.Add(textBox1);
-            pnlEntry2.Controls.Add(textBox2);
-            pnlEntry2.Controls.Add(textBox3);
-            pnlEntry2.Location = new Point(28, 223);
-            pnlEntry2.Name = "pnlEntry2";
-            pnlEntry2.Size = new Size(1054, 188);
-            pnlEntry2.TabIndex = 145;
-            pnlEntry2.Visible = false;
+            pnlEntry1.Controls.Add(cbSecurityType1);
+            pnlEntry1.Controls.Add(cbTypeofLoan1);
+            pnlEntry1.Controls.Add(label1);
+            pnlEntry1.Controls.Add(dtMaturityDate1);
+            pnlEntry1.Controls.Add(label2);
+            pnlEntry1.Controls.Add(label3);
+            pnlEntry1.Controls.Add(label4);
+            pnlEntry1.Controls.Add(label5);
+            pnlEntry1.Controls.Add(txtBalance1);
+            pnlEntry1.Controls.Add(txtAmortization1);
+            pnlEntry1.Location = new Point(28, 7);
+            pnlEntry1.Name = "pnlEntry1";
+            pnlEntry1.Size = new Size(1054, 188);
+            pnlEntry1.TabIndex = 145;
             // 
-            // comboBox1
+            // cbTypeofLoan1
             // 
-            comboBox1.Location = new Point(12, 42);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(284, 23);
-            comboBox1.TabIndex = 144;
+            cbTypeofLoan1.Location = new Point(12, 42);
+            cbTypeofLoan1.Name = "cbTypeofLoan1";
+            cbTypeofLoan1.Size = new Size(284, 23);
+            cbTypeofLoan1.TabIndex = 144;
             // 
             // label1
             // 
@@ -646,12 +757,12 @@
             label1.TabIndex = 22;
             label1.Text = "TYPE OF LOAN";
             // 
-            // dateTimePicker1
+            // dtMaturityDate1
             // 
-            dateTimePicker1.Location = new Point(762, 42);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(263, 23);
-            dateTimePicker1.TabIndex = 143;
+            dtMaturityDate1.Location = new Point(762, 42);
+            dtMaturityDate1.Name = "dtMaturityDate1";
+            dtMaturityDate1.Size = new Size(263, 23);
+            dtMaturityDate1.TabIndex = 143;
             // 
             // label2
             // 
@@ -701,46 +812,42 @@
             label5.TabIndex = 26;
             label5.Text = "MATURITY DATE";
             // 
-            // textBox1
+            // txtBalance1
             // 
-            textBox1.BackColor = Color.WhiteSmoke;
-            textBox1.Location = new Point(337, 42);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(382, 23);
-            textBox1.TabIndex = 40;
+            txtBalance1.BackColor = Color.WhiteSmoke;
+            txtBalance1.Location = new Point(14, 127);
+            txtBalance1.Name = "txtBalance1";
+            txtBalance1.Size = new Size(519, 23);
+            txtBalance1.TabIndex = 41;
             // 
-            // textBox2
+            // txtAmortization1
             // 
-            textBox2.BackColor = Color.WhiteSmoke;
-            textBox2.Location = new Point(14, 127);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(519, 23);
-            textBox2.TabIndex = 41;
+            txtAmortization1.BackColor = Color.WhiteSmoke;
+            txtAmortization1.Location = new Point(552, 130);
+            txtAmortization1.Name = "txtAmortization1";
+            txtAmortization1.Size = new Size(473, 23);
+            txtAmortization1.TabIndex = 42;
             // 
-            // textBox3
+            // cbSecurityType3
             // 
-            textBox3.BackColor = Color.WhiteSmoke;
-            textBox3.Location = new Point(552, 130);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(473, 23);
-            textBox3.TabIndex = 42;
+            cbSecurityType3.Location = new Point(337, 45);
+            cbSecurityType3.Name = "cbSecurityType3";
+            cbSecurityType3.Size = new Size(382, 23);
+            cbSecurityType3.TabIndex = 145;
             // 
-            // pnlEntry1
+            // cbSecurityType2
             // 
-            pnlEntry1.Controls.Add(cbTypeOfLoan);
-            pnlEntry1.Controls.Add(lblTypeOfLoan);
-            pnlEntry1.Controls.Add(dtMaturityDate);
-            pnlEntry1.Controls.Add(lblBalance);
-            pnlEntry1.Controls.Add(lblTypeOfSecurity);
-            pnlEntry1.Controls.Add(lblMortgage);
-            pnlEntry1.Controls.Add(lblMaturityDate);
-            pnlEntry1.Controls.Add(txtTypeOfSecurity);
-            pnlEntry1.Controls.Add(txtBalance);
-            pnlEntry1.Controls.Add(txtMortgage);
-            pnlEntry1.Location = new Point(28, 15);
-            pnlEntry1.Name = "pnlEntry1";
-            pnlEntry1.Size = new Size(1084, 176);
-            pnlEntry1.TabIndex = 0;
+            cbSecurityType2.Location = new Point(337, 42);
+            cbSecurityType2.Name = "cbSecurityType2";
+            cbSecurityType2.Size = new Size(382, 23);
+            cbSecurityType2.TabIndex = 145;
+            // 
+            // cbSecurityType1
+            // 
+            cbSecurityType1.Location = new Point(337, 45);
+            cbSecurityType1.Name = "cbSecurityType1";
+            cbSecurityType1.Size = new Size(382, 23);
+            cbSecurityType1.TabIndex = 145;
             // 
             // ApplicationPart7
             // 
@@ -812,30 +919,40 @@
         private ComboBox cbTypeOfLoan;
         private Panel pnlMain;
         private Panel pnlEntry1;
-        private Panel pnlEntry2;
-        private ComboBox comboBox1;
+        private ComboBox cbTypeofLoan1;
         private Label label1;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtMaturityDate1;
         private Label label2;
         private Label label3;
         private Label label4;
         private Label label5;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private TextBox txtBalance1;
+        private TextBox txtAmortization1;
         private Button btnCancelEntry3;
         private Button btnRevealEntry3;
-        private Panel pnlEntry3;
-        private ComboBox comboBox2;
+        private Panel pnlEntry2;
+        private ComboBox cbTypeofLoan2;
         private Label label6;
-        private DateTimePicker dateTimePicker2;
+        private DateTimePicker dtMaturityDate2;
         private Label label7;
         private Label label8;
         private Label label9;
         private Label label10;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
+        private TextBox txtBalance2;
+        private TextBox txtAmortization2;
         private Button btnCancelEntry2;
+        private Panel pnlEntry3;
+        private ComboBox cbTypeofLoan3;
+        private Label label13;
+        private DateTimePicker dtMaturityDate3;
+        private Label label14;
+        private Label label15;
+        private Label label16;
+        private Label label17;
+        private TextBox txtBalance3;
+        private TextBox txtAmortization3;
+        private ComboBox cbSecurityType3;
+        private ComboBox cbSecurityType2;
+        private ComboBox cbSecurityType1;
     }
 }

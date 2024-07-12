@@ -99,13 +99,13 @@ CREATE TABLE REAL_ESTATE_INFORMATION (
 
 -- Table for storing other loan information
 CREATE TABLE LOAN_INFORMATION (
+    Loan_Availment_Key INT AUTO_INCREMENT PRIMARY KEY,
     PAG_IBIG_MID_Number_RTN VARCHAR(14) NOT NULL,
-    Loan_Availment_Key VARCHAR(5) NOT NULL,
-    Security VARCHAR(50) NOT NULL CHECK (Security IN ('Property', 'Vehicle', 'Savings')),
     Type VARCHAR(50) NOT NULL CHECK (Type IN ('Mortgage Loan', 'Auto Loan', 'Personal Loan')),
+    Security VARCHAR(50) NOT NULL CHECK (Security IN ('Property', 'Vehicle', 'Savings')),
     Maturity_Date DATE NOT NULL,
-    Amount_Balance NUMERIC(15) NOT NULL,
+    Amount_Balance NUMERIC(15,2) NOT NULL,
     Mo_Amortization VARCHAR(15) NOT NULL,
-    PRIMARY KEY (PAG_IBIG_MID_Number_RTN, Loan_Availment_Key),
-    FOREIGN KEY (PAG_IBIG_MID_Number_RTN) REFERENCES BORROWER_INFORMATION(Pag_IBIG_MID_Number_RTN)
+    FOREIGN KEY (PAG_IBIG_MID_Number_RTN) REFERENCES BORROWER_INFORMATION(PAG_IBIG_MID_Number_RTN)
 );
+

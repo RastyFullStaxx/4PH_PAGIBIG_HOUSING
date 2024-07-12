@@ -149,7 +149,7 @@
             // cbModeOfPayment
             // 
             cbModeOfPayment.FormattingEnabled = true;
-            cbModeOfPayment.Items.AddRange(new object[] { "Salary deduction, Over-the-Counter (Post-Dated Checks)", "Over-the-Counter (Cash/Check)", "Collecting Agent (Bank)", "Collecting Agent (Developer)", "Collecting Agent (Remittance Center)", "" });
+            cbModeOfPayment.Items.AddRange(new object[] { "Salary deduction", "Over-the-Counter (Post-Dated Checks)", "Over-the-Counter (Cash/Check)", "Collecting Agent (Bank)", "Collecting Agent (Developer)", "Collecting Agent (Remittance Center)" });
             cbModeOfPayment.Location = new Point(73, 460);
             cbModeOfPayment.Name = "cbModeOfPayment";
             cbModeOfPayment.Size = new Size(328, 23);

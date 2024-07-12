@@ -56,12 +56,14 @@ namespace _4PH_PAGIBIG_HOUSING
 
         private void rdbtnYES_CheckedChanged(object sender, EventArgs e)
         {
+            pnlEntry1.Visible = true;
             // Show pnlMain if rdbtnYES is selected
             SetPanelVisibility();
         }
 
         private void rdbtnNO_CheckedChanged(object sender, EventArgs e)
         {
+            pnlEntry1.Visible = false;
             // Hide pnlMain if rdbtnNO is selected
             SetPanelVisibility();
         }
@@ -239,7 +241,7 @@ namespace _4PH_PAGIBIG_HOUSING
         private void btnNext_Click(object sender, EventArgs e)
         {
             // Validate and insert data for Panel 1 if it's visible
-            if (ValidatePanel1())
+            if (pnlEntry1.Visible && ValidatePanel1())
             {
                 Panel1Insert();
             }

@@ -9,7 +9,6 @@ namespace _4PH_PAGIBIG_HOUSING.DbContext
     internal class LoanInformation
     {
         public string? PAG_IBIG_MID_Number_RTN { get; set; }
-        public string? Loan_Availment_Key { get; set; }
         public string? Security { get; set; }
         public string? Type { get; set; }
         public DateTime Maturity_Date { get; set; }
