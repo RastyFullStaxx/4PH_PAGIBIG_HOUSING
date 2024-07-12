@@ -40,7 +40,7 @@ namespace _4PH_PAGIBIG_HOUSING
             //    UseShellExecute = true
             //});
 
-            Ac_Manage_Record ac_Manage_Record = new Ac_Manage_Record();
+            Ac_Manage_Record_NoSelectedUser ac_Manage_Record = new Ac_Manage_Record_NoSelectedUser();
             ac_Manage_Record.Show();
             this.Hide();
         }

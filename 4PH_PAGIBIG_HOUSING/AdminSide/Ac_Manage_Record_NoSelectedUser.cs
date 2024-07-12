@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace _4PH_PAGIBIG_HOUSING
 {
-    public partial class Ac_Manage_Record : Form
+    public partial class Ac_Manage_Record_NoSelectedUser : Form
     {
-        public Ac_Manage_Record()
+        public Ac_Manage_Record_NoSelectedUser()
         {
             InitializeComponent();
         }
