@@ -293,27 +293,28 @@
             // 
             // pnlAboutUs
             // 
-            pnlAboutUs.Controls.Add(imgPapas);
             pnlAboutUs.Controls.Add(btnBack);
+            pnlAboutUs.Controls.Add(imgPapas);
             pnlAboutUs.Controls.Add(imgAboutUs);
             pnlAboutUs.CustomizableEdges = customizableEdges5;
-            pnlAboutUs.Location = new Point(295, -2);
+            pnlAboutUs.Location = new Point(295, 0);
             pnlAboutUs.Name = "pnlAboutUs";
             pnlAboutUs.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            pnlAboutUs.Size = new Size(986, 802);
+            pnlAboutUs.Size = new Size(986, 800);
             pnlAboutUs.TabIndex = 62;
             // 
             // imgPapas
             // 
+            imgPapas.BackColor = Color.Transparent;
             imgPapas.BorderRadius = 30;
             imgPapas.CustomizableEdges = customizableEdges3;
             imgPapas.FillColor = Color.WhiteSmoke;
             imgPapas.Image = (Image)resources.GetObject("imgPapas.Image");
             imgPapas.ImageRotate = 0F;
-            imgPapas.Location = new Point(37, 282);
+            imgPapas.Location = new Point(32, 282);
             imgPapas.Name = "imgPapas";
             imgPapas.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            imgPapas.Size = new Size(932, 222);
+            imgPapas.Size = new Size(932, 217);
             imgPapas.TabIndex = 77;
             imgPapas.TabStop = false;
             // 
@@ -336,9 +337,9 @@
             // imgAboutUs
             // 
             imgAboutUs.Image = (Image)resources.GetObject("imgAboutUs.Image");
-            imgAboutUs.Location = new Point(0, 3);
+            imgAboutUs.Location = new Point(0, 0);
             imgAboutUs.Name = "imgAboutUs";
-            imgAboutUs.Size = new Size(986, 797);
+            imgAboutUs.Size = new Size(986, 800);
             imgAboutUs.TabIndex = 0;
             imgAboutUs.TabStop = false;
             // 

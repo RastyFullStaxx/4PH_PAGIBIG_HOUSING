@@ -33,12 +33,16 @@ namespace _4PH_PAGIBIG_HOUSING
         private void btnManageRecord_Click(object sender, EventArgs e)
         {
             // Open a website when the button is clicked
-            string url = "http://localhost/phpmyadmin/index.php?route=/database/structure&db=pagibighousing";
-            Process.Start(new ProcessStartInfo
-            {
-                FileName = url,
-                UseShellExecute = true
-            });
+            //string url = "http://localhost/phpmyadmin/index.php?route=/database/structure&db=pagibighousing";
+            //Process.Start(new ProcessStartInfo
+            //{
+            //    FileName = url,
+            //    UseShellExecute = true
+            //});
+
+            Ac_Manage_Record ac_Manage_Record = new Ac_Manage_Record();
+            ac_Manage_Record.Show();
+            this.Hide();
         }
 
         private void btnAddRecord_Click(object sender, EventArgs e)
