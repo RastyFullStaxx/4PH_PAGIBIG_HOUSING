@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ApplicationBriefing));
             btnApply = new Button();
-            panel2 = new Panel();
-            panel1 = new Panel();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // btnApply
@@ -50,19 +50,15 @@
             btnApply.UseVisualStyleBackColor = true;
             btnApply.Click += btnApply_Click;
             // 
-            // panel2
+            // pictureBox1
             // 
-            panel2.Location = new Point(600, 210);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(529, 409);
-            panel2.TabIndex = 32;
-            // 
-            // panel1
-            // 
-            panel1.Location = new Point(148, 210);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(433, 409);
-            panel1.TabIndex = 33;
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.Location = new Point(208, 253);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(889, 368);
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
             // 
             // ApplicationBriefing
             // 
@@ -70,21 +66,20 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1280, 800);
-            Controls.Add(panel1);
-            Controls.Add(panel2);
+            Controls.Add(pictureBox1);
             Controls.Add(btnApply);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ApplicationBriefing";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ApplicationBriefing";
             Load += ApplicationBriefing_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Button btnApply;
-        private Panel panel2;
-        private Panel panel1;
+        private PictureBox pictureBox1;
     }
 }

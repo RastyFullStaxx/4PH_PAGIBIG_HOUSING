@@ -35,8 +35,8 @@ namespace _4PH_PAGIBIG_HOUSING
 
                 try
                 {
-                    // Show ApplicationPart1
-                    ApplicationPart1 borrowerinfo = new ApplicationPart1();
+                    // Show ApplicationBriefing
+                    ApplicationBriefing borrowerinfo = new ApplicationBriefing();
                     borrowerinfo.Show();
 
                     // Close this loading form

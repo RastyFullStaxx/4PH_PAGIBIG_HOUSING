@@ -139,7 +139,7 @@
             lblIssuerName.BackColor = Color.Transparent;
             lblIssuerName.FlatStyle = FlatStyle.Flat;
             lblIssuerName.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblIssuerName.Location = new Point(17, 214);
+            lblIssuerName.Location = new Point(21, 215);
             lblIssuerName.Name = "lblIssuerName";
             lblIssuerName.Size = new Size(85, 15);
             lblIssuerName.TabIndex = 23;
@@ -175,7 +175,7 @@
             lblBranch.BackColor = Color.Transparent;
             lblBranch.FlatStyle = FlatStyle.Flat;
             lblBranch.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblBranch.Location = new Point(585, 214);
+            lblBranch.Location = new Point(585, 215);
             lblBranch.Name = "lblBranch";
             lblBranch.Size = new Size(194, 15);
             lblBranch.TabIndex = 26;
@@ -226,7 +226,7 @@
             // txtIssuerName1
             // 
             txtIssuerName1.BackColor = Color.WhiteSmoke;
-            txtIssuerName1.Location = new Point(9, 233);
+            txtIssuerName1.Location = new Point(17, 233);
             txtIssuerName1.Name = "txtIssuerName1";
             txtIssuerName1.Size = new Size(503, 23);
             txtIssuerName1.TabIndex = 38;
@@ -242,7 +242,7 @@
             // txtBranchAddress1
             // 
             txtBranchAddress1.BackColor = Color.WhiteSmoke;
-            txtBranchAddress1.Location = new Point(577, 233);
+            txtBranchAddress1.Location = new Point(585, 233);
             txtBranchAddress1.Name = "txtBranchAddress1";
             txtBranchAddress1.Size = new Size(469, 23);
             txtBranchAddress1.TabIndex = 41;

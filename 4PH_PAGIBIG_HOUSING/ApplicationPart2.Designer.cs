@@ -33,7 +33,6 @@
             lblLoanAmount = new Label();
             lblLoanTerm = new Label();
             lblModeOfPayment = new Label();
-            pnlBusinessRule = new Panel();
             btnBack = new Button();
             txtLoanAmount = new TextBox();
             cbLoanTerm = new ComboBox();
@@ -52,6 +51,8 @@
             lblOtherInfo = new Label();
             button1 = new Button();
             button2 = new Button();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // btnNext
@@ -105,13 +106,6 @@
             lblModeOfPayment.Size = new Size(116, 15);
             lblModeOfPayment.TabIndex = 20;
             lblModeOfPayment.Text = "MODE OF PAYMENT";
-            // 
-            // pnlBusinessRule
-            // 
-            pnlBusinessRule.Location = new Point(555, 230);
-            pnlBusinessRule.Name = "pnlBusinessRule";
-            pnlBusinessRule.Size = new Size(529, 323);
-            pnlBusinessRule.TabIndex = 31;
             // 
             // btnBack
             // 
@@ -351,12 +345,23 @@
             button2.TabIndex = 70;
             button2.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.Location = new Point(683, 298);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(495, 268);
+            pictureBox1.TabIndex = 71;
+            pictureBox1.TabStop = false;
+            // 
             // ApplicationPart2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1280, 800);
+            Controls.Add(pictureBox1);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(lblOtherInfo);
@@ -375,7 +380,6 @@
             Controls.Add(cbLoanTerm);
             Controls.Add(txtLoanAmount);
             Controls.Add(btnBack);
-            Controls.Add(pnlBusinessRule);
             Controls.Add(lblModeOfPayment);
             Controls.Add(lblLoanTerm);
             Controls.Add(lblLoanAmount);
@@ -385,6 +389,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ApplicationPart2";
             Load += ApplicationPart2_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -395,7 +400,6 @@
         private Label lblLoanAmount;
         private Label lblLoanTerm;
         private Label lblModeOfPayment;
-        private Panel pnlBusinessRule;
         private Button btnBack;
         private TextBox txtLoanAmount;
         private ComboBox cbLoanTerm;
@@ -414,5 +418,6 @@
         private Label lblOtherInfo;
         private Button button1;
         private Button button2;
+        private PictureBox pictureBox1;
     }
 }
