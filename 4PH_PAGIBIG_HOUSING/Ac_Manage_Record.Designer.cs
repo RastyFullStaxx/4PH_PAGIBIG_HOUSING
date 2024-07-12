@@ -86,7 +86,7 @@
             // pnlMain
             // 
             pnlMain.AutoScroll = true;
-            pnlMain.BackColor = Color.Transparent;
+            pnlMain.BackColor = Color.White;
             pnlMain.Controls.Add(button1);
             pnlMain.Controls.Add(btnDeleteOtherLoan);
             pnlMain.Controls.Add(btnDeleteBankInformation);
