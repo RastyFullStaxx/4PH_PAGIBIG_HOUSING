@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ac_Manage_Record_NoSelectedUser));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             imgPapas = new Guna.UI2.WinForms.Guna2PictureBox();
             pnlMain = new Panel();
             btnUpdateOtherLoan = new Button();
@@ -78,13 +78,13 @@
             // 
             imgPapas.BackColor = Color.Transparent;
             imgPapas.BorderRadius = 30;
-            imgPapas.CustomizableEdges = customizableEdges1;
+            imgPapas.CustomizableEdges = customizableEdges3;
             imgPapas.FillColor = Color.WhiteSmoke;
             imgPapas.Image = (Image)resources.GetObject("imgPapas.Image");
             imgPapas.ImageRotate = 0F;
             imgPapas.Location = new Point(873, 22);
             imgPapas.Name = "imgPapas";
-            imgPapas.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            imgPapas.ShadowDecoration.CustomizableEdges = customizableEdges4;
             imgPapas.Size = new Size(395, 59);
             imgPapas.TabIndex = 78;
             imgPapas.TabStop = false;
@@ -131,6 +131,7 @@
             // 
             // btnUpdateOtherLoan
             // 
+            btnUpdateOtherLoan.Font = new Font("Segoe UI Semibold", 7F, FontStyle.Bold);
             btnUpdateOtherLoan.Location = new Point(1072, 2871);
             btnUpdateOtherLoan.Name = "btnUpdateOtherLoan";
             btnUpdateOtherLoan.Size = new Size(75, 23);
@@ -141,6 +142,7 @@
             // 
             // btnUpdateBankInfo
             // 
+            btnUpdateBankInfo.Font = new Font("Segoe UI Semibold", 7F, FontStyle.Bold);
             btnUpdateBankInfo.Location = new Point(1072, 2370);
             btnUpdateBankInfo.Name = "btnUpdateBankInfo";
             btnUpdateBankInfo.Size = new Size(75, 23);
@@ -151,6 +153,7 @@
             // 
             // btnUpdateRealEstate
             // 
+            btnUpdateRealEstate.Font = new Font("Segoe UI Semibold", 7F, FontStyle.Bold);
             btnUpdateRealEstate.Location = new Point(1072, 1899);
             btnUpdateRealEstate.Name = "btnUpdateRealEstate";
             btnUpdateRealEstate.Size = new Size(75, 23);
@@ -161,6 +164,7 @@
             // 
             // btnUpdateEmployment
             // 
+            btnUpdateEmployment.Font = new Font("Segoe UI Semibold", 7F, FontStyle.Bold);
             btnUpdateEmployment.Location = new Point(1072, 1428);
             btnUpdateEmployment.Name = "btnUpdateEmployment";
             btnUpdateEmployment.Size = new Size(75, 23);
@@ -171,6 +175,7 @@
             // 
             // btnUpdateCollateral
             // 
+            btnUpdateCollateral.Font = new Font("Segoe UI Semibold", 7F, FontStyle.Bold);
             btnUpdateCollateral.Location = new Point(1072, 944);
             btnUpdateCollateral.Name = "btnUpdateCollateral";
             btnUpdateCollateral.Size = new Size(75, 23);
@@ -181,6 +186,7 @@
             // 
             // btnUpdateLoanInfo
             // 
+            btnUpdateLoanInfo.Font = new Font("Segoe UI Semibold", 7F, FontStyle.Bold);
             btnUpdateLoanInfo.Location = new Point(1072, 473);
             btnUpdateLoanInfo.Name = "btnUpdateLoanInfo";
             btnUpdateLoanInfo.Size = new Size(75, 23);
@@ -191,6 +197,8 @@
             // 
             // btnPersonalInfoUpdate
             // 
+            btnPersonalInfoUpdate.Font = new Font("Segoe UI Semibold", 7F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnPersonalInfoUpdate.ForeColor = Color.Black;
             btnPersonalInfoUpdate.Location = new Point(1072, 18);
             btnPersonalInfoUpdate.Name = "btnPersonalInfoUpdate";
             btnPersonalInfoUpdate.Size = new Size(75, 23);

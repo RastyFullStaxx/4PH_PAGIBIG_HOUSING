@@ -394,6 +394,7 @@
             // 
             // btnUpdateOtherLoan
             // 
+            btnUpdateOtherLoan.Font = new Font("Segoe UI Semibold", 7F, FontStyle.Bold);
             btnUpdateOtherLoan.Location = new Point(1072, 1583);
             btnUpdateOtherLoan.Name = "btnUpdateOtherLoan";
             btnUpdateOtherLoan.Size = new Size(75, 23);
@@ -404,6 +405,7 @@
             // 
             // btnUpdateBank
             // 
+            btnUpdateBank.Font = new Font("Segoe UI Semibold", 7F, FontStyle.Bold);
             btnUpdateBank.Location = new Point(1072, 1130);
             btnUpdateBank.Name = "btnUpdateBank";
             btnUpdateBank.Size = new Size(75, 23);
@@ -414,6 +416,7 @@
             // 
             // btnUpdateRealEstate
             // 
+            btnUpdateRealEstate.Font = new Font("Segoe UI Semibold", 7F, FontStyle.Bold);
             btnUpdateRealEstate.Location = new Point(1072, 679);
             btnUpdateRealEstate.Name = "btnUpdateRealEstate";
             btnUpdateRealEstate.Size = new Size(75, 23);
@@ -424,6 +427,7 @@
             // 
             // btnUpdateEmployment
             // 
+            btnUpdateEmployment.Font = new Font("Segoe UI Semibold", 7F, FontStyle.Bold);
             btnUpdateEmployment.Location = new Point(1072, 496);
             btnUpdateEmployment.Name = "btnUpdateEmployment";
             btnUpdateEmployment.Size = new Size(75, 23);
@@ -434,6 +438,7 @@
             // 
             // btnUpdateCollateral
             // 
+            btnUpdateCollateral.Font = new Font("Segoe UI Semibold", 7F, FontStyle.Bold);
             btnUpdateCollateral.Location = new Point(1072, 329);
             btnUpdateCollateral.Name = "btnUpdateCollateral";
             btnUpdateCollateral.Size = new Size(75, 23);
@@ -444,6 +449,7 @@
             // 
             // btnUpdateLoan
             // 
+            btnUpdateLoan.Font = new Font("Segoe UI Semibold", 7F, FontStyle.Bold);
             btnUpdateLoan.Location = new Point(1072, 172);
             btnUpdateLoan.Name = "btnUpdateLoan";
             btnUpdateLoan.Size = new Size(75, 23);
@@ -454,7 +460,8 @@
             // 
             // btnUpdatePersonal
             // 
-            btnUpdatePersonal.Location = new Point(1072, 19);
+            btnUpdatePersonal.Font = new Font("Segoe UI Semibold", 7F, FontStyle.Bold);
+            btnUpdatePersonal.Location = new Point(1173, 19);
             btnUpdatePersonal.Name = "btnUpdatePersonal";
             btnUpdatePersonal.Size = new Size(75, 23);
             btnUpdatePersonal.TabIndex = 255;
