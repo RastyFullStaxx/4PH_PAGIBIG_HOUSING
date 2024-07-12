@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _4PH_PAGIBIG_HOUSING.Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,7 +37,6 @@ namespace _4PH_PAGIBIG_HOUSING
             Administration_CollateralInfo administration_CollateralInfo = new Administration_CollateralInfo();
             administration_CollateralInfo.Show();
             this.Hide();
-
         }
 
         private void btnEmploymentInfo_Click(object sender, EventArgs e)
@@ -79,6 +79,79 @@ namespace _4PH_PAGIBIG_HOUSING
             Administration_Dashboard administration_Dashboard = new Administration_Dashboard();
             administration_Dashboard.Show();
             this.Hide();
+        }
+
+        private void Administration_CollateralInfo_Load(object sender, EventArgs e)
+        {
+            dgCollateral.RowTemplate.Height = 100; // Adjust the height as needed
+            dgCollateral.Size = new Size(975, 682);
+
+            CustomizeDataGridView(dgCollateral);
+
+            LoadCollateralInfo();
+            LoadPagIBIGMIDNumbers();
+        }
+
+        private void CustomizeDataGridView(DataGridView dgv)
+        {
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv.BorderStyle = BorderStyle.None;
+            dgv.BackgroundColor = Color.White;
+            dgv.RowHeadersVisible = false;
+            dgv.AllowUserToAddRows = false;
+            dgv.AllowUserToDeleteRows = false;
+            dgv.AllowUserToOrderColumns = false;
+            dgv.AllowUserToResizeRows = false;
+            dgv.DefaultCellStyle.Font = new Font("Segoe UI", 10);
+            dgv.ScrollBars = ScrollBars.Both;
+
+            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.LightBlue;
+            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+
+            dgv.RowsDefaultCellStyle.BackColor = Color.White;
+            dgv.RowsDefaultCellStyle.ForeColor = Color.Black;
+            dgv.EnableHeadersVisualStyles = false;
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.LightBlue;
+            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+
+            dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv.DefaultCellStyle.SelectionBackColor = Color.LightBlue;
+            dgv.DefaultCellStyle.SelectionForeColor = Color.Black;
+        }
+
+        private void LoadCollateralInfo()
+        {
+            string? selectedMID = cbSelectMRID.SelectedValue?.ToString();
+
+            string query;
+            if (string.IsNullOrEmpty(selectedMID))
+            {
+                query = "SELECT * FROM COLLATERAL_INFORMATION";
+            }
+            else
+            {
+                query = $"SELECT * FROM COLLATERAL_INFORMATION WHERE Pag_IBIG_MID_Number_RTN = '{selectedMID}'";
+            }
+
+            DataSet ds = DatabaseConnection.Instance.ExecuteQuery(query);
+            dgCollateral.DataSource = ds.Tables[0];
+
+            CustomizeDataGridView(dgCollateral);
+            dgCollateral.ClearSelection();
+        }
+
+        private void LoadPagIBIGMIDNumbers()
+        {
+            List<string> midNumbers = DatabaseConnection.Instance.GetPagIBIGMIDNumbers();
+            midNumbers.Insert(0, string.Empty);
+            cbSelectMRID.DataSource = midNumbers;
+        }
+
+        private void cbSelectMRID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadCollateralInfo();
         }
     }
 }

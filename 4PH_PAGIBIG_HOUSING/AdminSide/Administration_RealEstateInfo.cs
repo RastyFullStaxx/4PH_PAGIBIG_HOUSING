@@ -1,11 +1,8 @@
-﻿using System;
+﻿using _4PH_PAGIBIG_HOUSING.Database;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace _4PH_PAGIBIG_HOUSING
@@ -19,65 +16,112 @@ namespace _4PH_PAGIBIG_HOUSING
 
         private void btnPersonalInfo_Click(object sender, EventArgs e)
         {
-            Administration_PersonalInfo administration_PersonalInfo = new Administration_PersonalInfo();
-            administration_PersonalInfo.Show();
-            this.Hide();
+            ShowForm(new Administration_PersonalInfo());
         }
 
         private void btnLoanInfo_Click(object sender, EventArgs e)
         {
-            Administration_LoanInfo administration_LoanInfo = new Administration_LoanInfo();
-            administration_LoanInfo.Show();
-            this.Hide();
+            ShowForm(new Administration_LoanInfo());
         }
 
         private void btnCollateralInfo_Click(object sender, EventArgs e)
         {
-            Administration_CollateralInfo administration_CollateralInfo = new Administration_CollateralInfo();
-            administration_CollateralInfo.Show();
-            this.Hide();
-
+            ShowForm(new Administration_CollateralInfo());
         }
 
         private void btnEmploymentInfo_Click(object sender, EventArgs e)
         {
-            Administration_EmploymentInfo administration_EmploymentInfo = new Administration_EmploymentInfo();
-            administration_EmploymentInfo.Show();
-            this.Hide();
+            ShowForm(new Administration_EmploymentInfo());
         }
 
         private void btnBankInfo_Click(object sender, EventArgs e)
         {
-            Administration_BankInfo administration_BankInfo = new Administration_BankInfo();
-            administration_BankInfo.Show();
-            this.Hide();
+            ShowForm(new Administration_BankInfo());
         }
 
         private void btnRealEstateInfo_Click(object sender, EventArgs e)
         {
-            Administration_RealEstateInfo administration_RealEstateInfo = new Administration_RealEstateInfo();
-            administration_RealEstateInfo.Show();
-            this.Hide();
+            ShowForm(new Administration_RealEstateInfo());
         }
 
         private void btnOtherLoanInfo_Click(object sender, EventArgs e)
         {
-            Administration_OtherLoanInfo administration_OtherLoanInfo = new Administration_OtherLoanInfo();
-            administration_OtherLoanInfo.Show();
-            this.Hide();
+            ShowForm(new Administration_OtherLoanInfo());
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            A_Launch a_Launch = new A_Launch();
-            a_Launch.Show();
-            this.Hide();
+            ShowForm(new A_Launch());
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            Administration_Dashboard administration_Dashboard = new Administration_Dashboard();
-            administration_Dashboard.Show();
+            ShowForm(new Administration_Dashboard());
+        }
+
+        private void Administration_RealEstateInfo_Load(object sender, EventArgs e)
+        {
+            LoadPagIBIGMIDNumbers();
+            LoadRealEstateInformation();
+        }
+
+        private void LoadRealEstateInformation()
+        {
+
+            string? selectedMID = cbSelectMRID.SelectedValue?.ToString();
+
+            string query;
+            if (string.IsNullOrEmpty(selectedMID))
+            {
+                query = "SELECT * FROM REAL_ESTATE_INFORMATION";
+            }
+            else
+            {
+                query = $"SELECT * FROM REAL_ESTATE_INFORMATION WHERE PAG_IBIG_MID_Number_RTN = '{selectedMID}'";
+            }
+            DataSet ds = DatabaseConnection.Instance.ExecuteQuery(query);
+            dgRealEstate.DataSource = ds.Tables[0];
+            CustomizeDataGridView(dgRealEstate);
+            dgRealEstate.ClearSelection(); // Clear any selected rows
+        }
+
+        private void LoadPagIBIGMIDNumbers()
+        {
+            List<string> midNumbers = DatabaseConnection.Instance.GetPagIBIGMIDNumbers();
+            midNumbers.Insert(0, string.Empty);
+            cbSelectMRID.DataSource = midNumbers;
+        }
+
+        private void CustomizeDataGridView(DataGridView dgv)
+        {
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv.BorderStyle = BorderStyle.None;
+            dgv.BackgroundColor = Color.White;
+            dgv.RowHeadersVisible = false;
+            dgv.AllowUserToAddRows = false;
+            dgv.AllowUserToDeleteRows = false;
+            dgv.AllowUserToOrderColumns = false;
+            dgv.AllowUserToResizeRows = false;
+            dgv.DefaultCellStyle.Font = new Font("Segoe UI", 10);
+            dgv.ScrollBars = ScrollBars.Both;
+
+            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.LightBlue;
+            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+
+            dgv.RowsDefaultCellStyle.BackColor = Color.White;
+            dgv.RowsDefaultCellStyle.ForeColor = Color.Black;
+            dgv.EnableHeadersVisualStyles = false;
+
+            dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv.DefaultCellStyle.SelectionBackColor = Color.LightBlue;
+            dgv.DefaultCellStyle.SelectionForeColor = Color.Black;
+        }
+
+        private void ShowForm(Form form)
+        {
+            form.Show();
             this.Hide();
         }
     }

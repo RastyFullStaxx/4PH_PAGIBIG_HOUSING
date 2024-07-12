@@ -127,6 +127,7 @@
             pnlMain.Name = "pnlMain";
             pnlMain.Size = new Size(1280, 698);
             pnlMain.TabIndex = 79;
+            pnlMain.Paint += pnlMain_Paint;
             // 
             // btnUpdateOtherLoan
             // 
@@ -342,6 +343,7 @@
             dgBankInformation.Name = "dgBankInformation";
             dgBankInformation.Size = new Size(1245, 373);
             dgBankInformation.TabIndex = 244;
+            dgBankInformation.CellContentClick += dgBankInformation_CellContentClick;
             // 
             // dgRealEstate
             // 
@@ -360,6 +362,7 @@
             dgEmployment.Name = "dgEmployment";
             dgEmployment.Size = new Size(1245, 373);
             dgEmployment.TabIndex = 242;
+            dgEmployment.CellContentClick += dgEmployment_CellContentClick;
             // 
             // dgCollateral
             // 
@@ -378,6 +381,7 @@
             dgLoanInfo.Name = "dgLoanInfo";
             dgLoanInfo.Size = new Size(1245, 373);
             dgLoanInfo.TabIndex = 240;
+            dgLoanInfo.CellContentClick += dgLoanInfo_CellContentClick;
             // 
             // dgPersonalInfo
             // 

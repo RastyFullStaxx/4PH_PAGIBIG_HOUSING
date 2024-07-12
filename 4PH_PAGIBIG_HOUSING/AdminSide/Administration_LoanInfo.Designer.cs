@@ -41,13 +41,12 @@
             btnLoanInfo = new Button();
             btnPersonalInfo = new Button();
             btnDashboard = new Button();
-            dataGridView = new DataGridView();
-            button1 = new Button();
+            dgLoanInfo = new DataGridView();
             imgSearchIcon = new PictureBox();
             cbSelectMRID = new Guna.UI2.WinForms.Guna2ComboBox();
             lblMRID = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)imgSectionTitle).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgLoanInfo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)imgSearchIcon).BeginInit();
             SuspendLayout();
             // 
@@ -205,29 +204,14 @@
             btnDashboard.UseVisualStyleBackColor = true;
             btnDashboard.Click += btnDashboard_Click;
             // 
-            // dataGridView
+            // dgLoanInfo
             // 
-            dataGridView.BackgroundColor = SystemColors.Control;
-            dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView.Location = new Point(330, 120);
-            dataGridView.Name = "dataGridView";
-            dataGridView.Size = new Size(900, 682);
-            dataGridView.TabIndex = 67;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.Transparent;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(330, 90);
-            button1.Name = "button1";
-            button1.Size = new Size(95, 24);
-            button1.TabIndex = 68;
-            button1.UseVisualStyleBackColor = true;
+            dgLoanInfo.BackgroundColor = SystemColors.Control;
+            dgLoanInfo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgLoanInfo.Location = new Point(303, 127);
+            dgLoanInfo.Name = "dgLoanInfo";
+            dgLoanInfo.Size = new Size(975, 682);
+            dgLoanInfo.TabIndex = 67;
             // 
             // imgSearchIcon
             // 
@@ -275,8 +259,7 @@
             Controls.Add(imgSearchIcon);
             Controls.Add(cbSelectMRID);
             Controls.Add(lblMRID);
-            Controls.Add(button1);
-            Controls.Add(dataGridView);
+            Controls.Add(dgLoanInfo);
             Controls.Add(imgSectionTitle);
             Controls.Add(btnExit);
             Controls.Add(btnOtherLoanInfo);
@@ -291,8 +274,9 @@
             Name = "Administration_LoanInfo";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Administration_LoanInfo";
+            Load += Administration_LoanInfo_Load;
             ((System.ComponentModel.ISupportInitialize)imgSectionTitle).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgLoanInfo).EndInit();
             ((System.ComponentModel.ISupportInitialize)imgSearchIcon).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -310,8 +294,7 @@
         private Button btnLoanInfo;
         private Button btnPersonalInfo;
         private Button btnDashboard;
-        private DataGridView dataGridView;
-        private Button button1;
+        private DataGridView dgLoanInfo;
         private PictureBox imgSearchIcon;
         private Guna.UI2.WinForms.Guna2ComboBox cbSelectMRID;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblMRID;

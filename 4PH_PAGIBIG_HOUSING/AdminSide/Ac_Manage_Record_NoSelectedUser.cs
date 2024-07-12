@@ -676,5 +676,25 @@ namespace _4PH_PAGIBIG_HOUSING
                 MessageBox.Show("Please select a row to update.");
             }
         }
+
+        private void dgLoanInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void pnlMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dgEmployment_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgBankInformation_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

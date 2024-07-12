@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _4PH_PAGIBIG_HOUSING.Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -80,5 +81,89 @@ namespace _4PH_PAGIBIG_HOUSING
             administration_Dashboard.Show();
             this.Hide();
         }
+
+        private void Administration_PersonalInfo_Load(object sender, EventArgs e)
+        {
+            dgPersonalInfo.RowTemplate.Height = 100; // Adjust the height as needed
+            dgPersonalInfo.Size = new Size(975, 682);
+
+            CustomizeDataGridView(dgPersonalInfo);
+
+            LoadPersonalInfo();
+            LoadPagIBIGMIDNumbers();
+        }
+
+        private void CustomizeDataGridView(DataGridView dgv)
+        {
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; // or another option if needed
+            dgv.BorderStyle = BorderStyle.None;
+            dgv.BackgroundColor = Color.White;
+            dgv.RowHeadersVisible = false;
+            dgv.AllowUserToAddRows = false;
+            dgv.AllowUserToDeleteRows = false;
+            dgv.AllowUserToOrderColumns = false;
+            dgv.AllowUserToResizeRows = false;
+            dgv.DefaultCellStyle.Font = new Font("Segoe UI", 10);
+            dgv.ScrollBars = ScrollBars.Both;
+
+            // Set header style
+            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.LightBlue;
+            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+
+            // Set alternating row colors
+            dgv.RowsDefaultCellStyle.BackColor = Color.White;
+            dgv.RowsDefaultCellStyle.ForeColor = Color.Black;
+            dgv.EnableHeadersVisualStyles = false;
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.LightBlue;
+            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+
+            // Modern appearance
+            dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv.DefaultCellStyle.SelectionBackColor = Color.LightBlue;
+            dgv.DefaultCellStyle.SelectionForeColor = Color.Black;
+        }
+
+        private void LoadPersonalInfo()
+        {
+            // Get the selected MID from cbSelectMRID
+            string? selectedMID = cbSelectMRID.SelectedValue?.ToString();
+
+            string query;
+
+            // If no MID is selected, select all data; otherwise, filter by selected MID
+            if (string.IsNullOrEmpty(selectedMID))
+            {
+                query = "SELECT * FROM BORROWER_INFORMATION";
+            }
+            else
+            {
+                query = $"SELECT * FROM BORROWER_INFORMATION WHERE Pag_IBIG_MID_Number_RTN = '{selectedMID}'";
+            }
+
+            // Execute the query and load data into DataGridView
+            DataSet ds = DatabaseConnection.Instance.ExecuteQuery(query);
+            dgPersonalInfo.DataSource = ds.Tables[0];
+
+            // Optionally customize DataGridView appearance
+            CustomizeDataGridView(dgPersonalInfo);
+
+            // Clear any selected rows
+            dgPersonalInfo.ClearSelection();
+        }
+
+        private void LoadPagIBIGMIDNumbers()
+        {
+            // Fetch Pag-IBIG MID Numbers from the database
+            List<string> midNumbers = DatabaseConnection.Instance.GetPagIBIGMIDNumbers();
+
+            // Insert an empty item at the beginning of the list
+            midNumbers.Insert(0, string.Empty);
+
+            // Set the ComboBox data source to the modified list
+            cbSelectMRID.DataSource = midNumbers;
+        }
+
     }
 }

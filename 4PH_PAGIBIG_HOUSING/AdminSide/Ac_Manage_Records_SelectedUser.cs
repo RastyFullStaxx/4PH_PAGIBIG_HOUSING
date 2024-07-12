@@ -138,7 +138,9 @@ namespace _4PH_PAGIBIG_HOUSING
             // Set alternating row colors
             dgv.RowsDefaultCellStyle.BackColor = Color.White;
             dgv.RowsDefaultCellStyle.ForeColor = Color.Black;
-            dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.LightBlue;
+            dgv.EnableHeadersVisualStyles = false;
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.LightBlue;
+            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
 
             // Modern appearance
             dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;

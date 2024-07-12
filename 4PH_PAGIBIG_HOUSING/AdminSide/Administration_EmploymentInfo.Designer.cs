@@ -29,10 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administration_EmploymentInfo));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            btnDelete = new Button();
-            dataGridView1 = new DataGridView();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            dgEmployment = new DataGridView();
             imgSectionTitle = new PictureBox();
             btnExit = new Button();
             btnOtherLoanInfo = new Button();
@@ -46,34 +45,19 @@
             imgSearchIcon = new PictureBox();
             cbSelectMRID = new Guna.UI2.WinForms.Guna2ComboBox();
             lblMRID = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgEmployment).BeginInit();
             ((System.ComponentModel.ISupportInitialize)imgSectionTitle).BeginInit();
             ((System.ComponentModel.ISupportInitialize)imgSearchIcon).BeginInit();
             SuspendLayout();
             // 
-            // btnDelete
+            // dgEmployment
             // 
-            btnDelete.BackColor = Color.Transparent;
-            btnDelete.Cursor = Cursors.Hand;
-            btnDelete.FlatAppearance.BorderSize = 0;
-            btnDelete.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnDelete.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnDelete.FlatStyle = FlatStyle.Flat;
-            btnDelete.Image = (Image)resources.GetObject("btnDelete.Image");
-            btnDelete.Location = new Point(334, 88);
-            btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(95, 24);
-            btnDelete.TabIndex = 82;
-            btnDelete.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.BackgroundColor = SystemColors.Control;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(334, 118);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(900, 682);
-            dataGridView1.TabIndex = 81;
+            dgEmployment.BackgroundColor = SystemColors.Control;
+            dgEmployment.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgEmployment.Location = new Point(305, 125);
+            dgEmployment.Name = "dgEmployment";
+            dgEmployment.Size = new Size(975, 682);
+            dgEmployment.TabIndex = 81;
             // 
             // imgSectionTitle
             // 
@@ -241,7 +225,7 @@
             // cbSelectMRID
             // 
             cbSelectMRID.BackColor = Color.Transparent;
-            cbSelectMRID.CustomizableEdges = customizableEdges17;
+            cbSelectMRID.CustomizableEdges = customizableEdges3;
             cbSelectMRID.DrawMode = DrawMode.OwnerDrawFixed;
             cbSelectMRID.DropDownStyle = ComboBoxStyle.DropDownList;
             cbSelectMRID.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -251,7 +235,7 @@
             cbSelectMRID.ItemHeight = 30;
             cbSelectMRID.Location = new Point(898, 35);
             cbSelectMRID.Name = "cbSelectMRID";
-            cbSelectMRID.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            cbSelectMRID.ShadowDecoration.CustomizableEdges = customizableEdges4;
             cbSelectMRID.Size = new Size(280, 36);
             cbSelectMRID.TabIndex = 104;
             // 
@@ -274,8 +258,7 @@
             Controls.Add(imgSearchIcon);
             Controls.Add(cbSelectMRID);
             Controls.Add(lblMRID);
-            Controls.Add(btnDelete);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgEmployment);
             Controls.Add(imgSectionTitle);
             Controls.Add(btnExit);
             Controls.Add(btnOtherLoanInfo);
@@ -290,7 +273,8 @@
             Name = "Administration_EmploymentInfo";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Administration_EmploymentInfo";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += Administration_EmploymentInfo_Load;
+            ((System.ComponentModel.ISupportInitialize)dgEmployment).EndInit();
             ((System.ComponentModel.ISupportInitialize)imgSectionTitle).EndInit();
             ((System.ComponentModel.ISupportInitialize)imgSearchIcon).EndInit();
             ResumeLayout(false);
@@ -298,8 +282,7 @@
         }
 
         #endregion
-        private Button btnDelete;
-        private DataGridView dataGridView1;
+        private DataGridView dgEmployment;
         private PictureBox imgSectionTitle;
         private Button btnExit;
         private Button btnOtherLoanInfo;
