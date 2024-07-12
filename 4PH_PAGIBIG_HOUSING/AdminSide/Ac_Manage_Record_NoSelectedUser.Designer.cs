@@ -33,7 +33,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             imgPapas = new Guna.UI2.WinForms.Guna2PictureBox();
             pnlMain = new Panel();
-            button1 = new Button();
             btnDeleteOtherLoan = new Button();
             btnDeleteBankInformation = new Button();
             btnDeleteRealEstate = new Button();
@@ -87,7 +86,6 @@
             // 
             pnlMain.AutoScroll = true;
             pnlMain.BackColor = Color.White;
-            pnlMain.Controls.Add(button1);
             pnlMain.Controls.Add(btnDeleteOtherLoan);
             pnlMain.Controls.Add(btnDeleteBankInformation);
             pnlMain.Controls.Add(btnDeleteRealEstate);
@@ -115,21 +113,6 @@
             pnlMain.Name = "pnlMain";
             pnlMain.Size = new Size(1280, 698);
             pnlMain.TabIndex = 79;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.Transparent;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(161, 3299);
-            button1.Name = "button1";
-            button1.Size = new Size(197, 47);
-            button1.TabIndex = 254;
-            button1.UseVisualStyleBackColor = true;
             // 
             // btnDeleteOtherLoan
             // 
@@ -400,7 +383,7 @@
             lblSectionTitle1.TabIndex = 230;
             lblSectionTitle1.Text = "PERSONAL INFORMATION";
             // 
-            // Ac_Manage_Record
+            // Ac_Manage_Record_NoSelectedUser
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -409,7 +392,7 @@
             Controls.Add(pnlMain);
             Controls.Add(imgPapas);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Ac_Manage_Record";
+            Name = "Ac_Manage_Record_NoSelectedUser";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Ac_Manage_Record";
             ((System.ComponentModel.ISupportInitialize)imgPapas).EndInit();
@@ -452,6 +435,5 @@
         private Button btnDeleteEmployment;
         private Button btnDeleteCollateral;
         private Button btnDeleteLoan;
-        private Button button1;
     }
 }
