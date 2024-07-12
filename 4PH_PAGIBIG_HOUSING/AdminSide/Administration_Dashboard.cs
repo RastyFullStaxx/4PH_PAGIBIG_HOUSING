@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using _4PH_PAGIBIG_HOUSING.Database;
 
 namespace _4PH_PAGIBIG_HOUSING
 {
@@ -21,6 +22,7 @@ namespace _4PH_PAGIBIG_HOUSING
         private void Administration_Dashboard_Load(object sender, EventArgs e)
         {
             pnlAboutUs.Visible = false;
+            LoadPagIBIGMIDNumbers();
         }
 
         private void btnSQLProblems_Click(object sender, EventArgs e)
@@ -32,24 +34,34 @@ namespace _4PH_PAGIBIG_HOUSING
 
         private void btnManageRecord_Click(object sender, EventArgs e)
         {
-            // Open a website when the button is clicked
-            //string url = "http://localhost/phpmyadmin/index.php?route=/database/structure&db=pagibighousing";
-            //Process.Start(new ProcessStartInfo
-            //{
-            //    FileName = url,
-            //    UseShellExecute = true
-            //});
+            // Check if the ComboBox has a selected item
+            if (cbSelectMRID.SelectedItem != null)
+            {
+                // Safely convert the selected item to string
+                string? selectedMIDNumber = cbSelectMRID.SelectedItem?.ToString();
 
-            Ac_Manage_Record_NoSelectedUser ac_Manage_Record = new Ac_Manage_Record_NoSelectedUser();
-            ac_Manage_Record.Show();
-            this.Hide();
-        }
+                if (!string.IsNullOrEmpty(selectedMIDNumber))
+                {
+                    // If a valid item is selected, pass it to Ac_Manage_Records_SelectedUser
+                    Ac_Manage_Records_SelectedUser ac_Manage_Record = new Ac_Manage_Records_SelectedUser(selectedMIDNumber);
+                    ac_Manage_Record.Show();
+                }
+                else
+                {
+                    // If no valid item is selected, show Ac_Manage_Record_NoSelectedUser
+                    Ac_Manage_Record_NoSelectedUser ac_Manage_Record_NoSelectedUser = new Ac_Manage_Record_NoSelectedUser();
+                    ac_Manage_Record_NoSelectedUser.Show();
+                }
+            }
+            else
+            {
+                // If no item is selected, show Ac_Manage_Record_NoSelectedUser
+                Ac_Manage_Record_NoSelectedUser ac_Manage_Record_NoSelectedUser = new Ac_Manage_Record_NoSelectedUser();
+                ac_Manage_Record_NoSelectedUser.Show();
+            }
 
-        private void btnAddRecord_Click(object sender, EventArgs e)
-        {
-            ApplicationPart1 applicationPart1 = new ApplicationPart1();
-            applicationPart1.Show();
             this.Hide();
+
         }
 
         private void btnAbout_Click(object sender, EventArgs e)
@@ -124,6 +136,24 @@ namespace _4PH_PAGIBIG_HOUSING
             Administration_Dashboard administration_Dashboard = new Administration_Dashboard();
             administration_Dashboard.Show();
             this.Hide();
+        }
+
+
+        private void LoadPagIBIGMIDNumbers()
+        {
+            // Fetch Pag-IBIG MID Numbers from the database
+            List<string> midNumbers = DatabaseConnection.Instance.GetPagIBIGMIDNumbers();
+
+            // Insert an empty item at the beginning of the list
+            midNumbers.Insert(0, string.Empty);
+
+            // Set the ComboBox data source to the modified list
+            cbSelectMRID.DataSource = midNumbers;
+        }
+
+        private void imgAboutUs_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

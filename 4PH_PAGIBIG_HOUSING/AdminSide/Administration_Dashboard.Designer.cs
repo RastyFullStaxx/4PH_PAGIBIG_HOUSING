@@ -51,8 +51,8 @@
             btnAbout = new Button();
             btnManageRecord = new Button();
             pnlAboutUs = new Guna.UI2.WinForms.Guna2Panel();
-            imgPapas = new Guna.UI2.WinForms.Guna2PictureBox();
             btnBack = new Button();
+            imgPapas = new Guna.UI2.WinForms.Guna2PictureBox();
             imgAboutUs = new PictureBox();
             imgSearchIcon = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)imgSectionTitle).BeginInit();
@@ -297,26 +297,11 @@
             pnlAboutUs.Controls.Add(imgPapas);
             pnlAboutUs.Controls.Add(imgAboutUs);
             pnlAboutUs.CustomizableEdges = customizableEdges5;
-            pnlAboutUs.Location = new Point(295, 0);
+            pnlAboutUs.Location = new Point(297, 0);
             pnlAboutUs.Name = "pnlAboutUs";
             pnlAboutUs.ShadowDecoration.CustomizableEdges = customizableEdges6;
             pnlAboutUs.Size = new Size(986, 800);
             pnlAboutUs.TabIndex = 62;
-            // 
-            // imgPapas
-            // 
-            imgPapas.BackColor = Color.Transparent;
-            imgPapas.BorderRadius = 30;
-            imgPapas.CustomizableEdges = customizableEdges3;
-            imgPapas.FillColor = Color.WhiteSmoke;
-            imgPapas.Image = (Image)resources.GetObject("imgPapas.Image");
-            imgPapas.ImageRotate = 0F;
-            imgPapas.Location = new Point(32, 282);
-            imgPapas.Name = "imgPapas";
-            imgPapas.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            imgPapas.Size = new Size(932, 217);
-            imgPapas.TabIndex = 77;
-            imgPapas.TabStop = false;
             // 
             // btnBack
             // 
@@ -334,14 +319,30 @@
             btnBack.UseVisualStyleBackColor = true;
             btnBack.Click += btnBack_Click;
             // 
+            // imgPapas
+            // 
+            imgPapas.BackColor = Color.Transparent;
+            imgPapas.BorderRadius = 30;
+            imgPapas.CustomizableEdges = customizableEdges3;
+            imgPapas.FillColor = Color.WhiteSmoke;
+            imgPapas.Image = (Image)resources.GetObject("imgPapas.Image");
+            imgPapas.ImageRotate = 0F;
+            imgPapas.Location = new Point(32, 282);
+            imgPapas.Name = "imgPapas";
+            imgPapas.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            imgPapas.Size = new Size(932, 217);
+            imgPapas.TabIndex = 77;
+            imgPapas.TabStop = false;
+            // 
             // imgAboutUs
             // 
             imgAboutUs.Image = (Image)resources.GetObject("imgAboutUs.Image");
             imgAboutUs.Location = new Point(0, 0);
             imgAboutUs.Name = "imgAboutUs";
-            imgAboutUs.Size = new Size(986, 800);
+            imgAboutUs.Size = new Size(983, 800);
             imgAboutUs.TabIndex = 0;
             imgAboutUs.TabStop = false;
+            imgAboutUs.Click += imgAboutUs_Click;
             // 
             // imgSearchIcon
             // 

@@ -103,6 +103,32 @@ namespace _4PH_PAGIBIG_HOUSING.Database
             }
             return dataSet;
         }
+        public List<string> GetPagIBIGMIDNumbers()
+        {
+            List<string> pagIBIGMIDNumbers = new List<string>();
+
+            string query = "SELECT Pag_IBIG_MID_Number_RTN FROM BORROWER_INFORMATION";
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        pagIBIGMIDNumbers.Add(reader.GetString(0));
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Handle exception
+                    Console.WriteLine(ex.Message);
+                }
+            }
+            return pagIBIGMIDNumbers;
+        }
 
     }
 }

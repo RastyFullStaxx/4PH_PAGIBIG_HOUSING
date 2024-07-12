@@ -395,6 +395,7 @@
             Name = "Ac_Manage_Record_NoSelectedUser";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Ac_Manage_Record";
+            Load += Ac_Manage_Record_NoSelectedUser_Load;
             ((System.ComponentModel.ISupportInitialize)imgPapas).EndInit();
             pnlMain.ResumeLayout(false);
             pnlMain.PerformLayout();

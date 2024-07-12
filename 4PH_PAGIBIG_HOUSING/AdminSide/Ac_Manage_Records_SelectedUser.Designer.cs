@@ -31,20 +31,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ac_Manage_Records_SelectedUser));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            button1 = new Button();
+            btnDeleteEntirely = new Button();
             btnDeleteOtherLoan = new Button();
             btnDeleteBankInformation = new Button();
             btnDeleteRealEstate = new Button();
             btnDeleteEmployment = new Button();
             btnDeleteCollateral = new Button();
             btnDeleteLoan = new Button();
-            btnDeletePersonal = new Button();
             btnPersonalInfo = new Button();
-            dataGridView5 = new DataGridView();
-            dataGridView4 = new DataGridView();
-            dataGridView3 = new DataGridView();
-            dataGridView2 = new DataGridView();
-            dataGridView1 = new DataGridView();
+            dgOtherLoanInformation = new DataGridView();
+            dgBankInformation = new DataGridView();
+            dgRealEstate = new DataGridView();
+            dgEmployment = new DataGridView();
+            dgCollateral = new DataGridView();
             dgLoanInfo = new DataGridView();
             dgPersonalInfo = new DataGridView();
             btnBackToDashboard = new Button();
@@ -56,34 +55,43 @@
             guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblSectionTitle1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             pnlMain = new Panel();
+            btnUpdateOtherLoan = new Button();
+            btnUpdateBank = new Button();
+            btnUpdateRealEstate = new Button();
+            btnUpdateEmployment = new Button();
+            btnUpdateCollateral = new Button();
+            btnUpdateLoan = new Button();
+            btnUpdatePersonal = new Button();
             imgPapas = new Guna.UI2.WinForms.Guna2PictureBox();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            ((System.ComponentModel.ISupportInitialize)dataGridView5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            txtMRID = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            ((System.ComponentModel.ISupportInitialize)dgOtherLoanInformation).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgBankInformation).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgRealEstate).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgEmployment).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgCollateral).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgLoanInfo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgPersonalInfo).BeginInit();
             pnlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)imgPapas).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // btnDeleteEntirely
             // 
-            button1.BackColor = Color.Transparent;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(161, 2012);
-            button1.Name = "button1";
-            button1.Size = new Size(197, 47);
-            button1.TabIndex = 254;
-            button1.UseVisualStyleBackColor = true;
+            btnDeleteEntirely.BackColor = Color.Transparent;
+            btnDeleteEntirely.Cursor = Cursors.Hand;
+            btnDeleteEntirely.FlatAppearance.BorderSize = 0;
+            btnDeleteEntirely.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnDeleteEntirely.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnDeleteEntirely.FlatStyle = FlatStyle.Flat;
+            btnDeleteEntirely.Image = (Image)resources.GetObject("btnDeleteEntirely.Image");
+            btnDeleteEntirely.Location = new Point(161, 2012);
+            btnDeleteEntirely.Name = "btnDeleteEntirely";
+            btnDeleteEntirely.Size = new Size(197, 47);
+            btnDeleteEntirely.TabIndex = 254;
+            btnDeleteEntirely.Text = "s";
+            btnDeleteEntirely.UseVisualStyleBackColor = true;
+            btnDeleteEntirely.Click += btnDeleteEntirely_Click;
             // 
             // btnDeleteOtherLoan
             // 
@@ -99,6 +107,7 @@
             btnDeleteOtherLoan.Size = new Size(95, 24);
             btnDeleteOtherLoan.TabIndex = 253;
             btnDeleteOtherLoan.UseVisualStyleBackColor = true;
+            btnDeleteOtherLoan.Click += btnDeleteOtherLoan_Click;
             // 
             // btnDeleteBankInformation
             // 
@@ -114,6 +123,7 @@
             btnDeleteBankInformation.Size = new Size(95, 24);
             btnDeleteBankInformation.TabIndex = 252;
             btnDeleteBankInformation.UseVisualStyleBackColor = true;
+            btnDeleteBankInformation.Click += btnDeleteBankInformation_Click;
             // 
             // btnDeleteRealEstate
             // 
@@ -129,6 +139,7 @@
             btnDeleteRealEstate.Size = new Size(95, 24);
             btnDeleteRealEstate.TabIndex = 251;
             btnDeleteRealEstate.UseVisualStyleBackColor = true;
+            btnDeleteRealEstate.Click += btnDeleteRealEstate_Click;
             // 
             // btnDeleteEmployment
             // 
@@ -144,6 +155,7 @@
             btnDeleteEmployment.Size = new Size(95, 24);
             btnDeleteEmployment.TabIndex = 250;
             btnDeleteEmployment.UseVisualStyleBackColor = true;
+            btnDeleteEmployment.Click += btnDeleteEmployment_Click;
             // 
             // btnDeleteCollateral
             // 
@@ -159,6 +171,7 @@
             btnDeleteCollateral.Size = new Size(95, 24);
             btnDeleteCollateral.TabIndex = 249;
             btnDeleteCollateral.UseVisualStyleBackColor = true;
+            btnDeleteCollateral.Click += btnDeleteCollateral_Click;
             // 
             // btnDeleteLoan
             // 
@@ -174,21 +187,7 @@
             btnDeleteLoan.Size = new Size(95, 24);
             btnDeleteLoan.TabIndex = 248;
             btnDeleteLoan.UseVisualStyleBackColor = true;
-            // 
-            // btnDeletePersonal
-            // 
-            btnDeletePersonal.BackColor = Color.Transparent;
-            btnDeletePersonal.Cursor = Cursors.Hand;
-            btnDeletePersonal.FlatAppearance.BorderSize = 0;
-            btnDeletePersonal.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnDeletePersonal.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnDeletePersonal.FlatStyle = FlatStyle.Flat;
-            btnDeletePersonal.Image = (Image)resources.GetObject("btnDeletePersonal.Image");
-            btnDeletePersonal.Location = new Point(1153, 18);
-            btnDeletePersonal.Name = "btnDeletePersonal";
-            btnDeletePersonal.Size = new Size(95, 24);
-            btnDeletePersonal.TabIndex = 247;
-            btnDeletePersonal.UseVisualStyleBackColor = true;
+            btnDeleteLoan.Click += btnDeleteLoan_Click;
             // 
             // btnPersonalInfo
             // 
@@ -205,50 +204,50 @@
             btnPersonalInfo.TabIndex = 246;
             btnPersonalInfo.UseVisualStyleBackColor = true;
             // 
-            // dataGridView5
+            // dgOtherLoanInformation
             // 
-            dataGridView5.BackgroundColor = Color.Lime;
-            dataGridView5.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView5.Location = new Point(3, 1613);
-            dataGridView5.Name = "dataGridView5";
-            dataGridView5.Size = new Size(1245, 373);
-            dataGridView5.TabIndex = 245;
+            dgOtherLoanInformation.BackgroundColor = Color.Lime;
+            dgOtherLoanInformation.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgOtherLoanInformation.Location = new Point(3, 1613);
+            dgOtherLoanInformation.Name = "dgOtherLoanInformation";
+            dgOtherLoanInformation.Size = new Size(1245, 373);
+            dgOtherLoanInformation.TabIndex = 245;
             // 
-            // dataGridView4
+            // dgBankInformation
             // 
-            dataGridView4.BackgroundColor = Color.Lime;
-            dataGridView4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView4.Location = new Point(3, 1159);
-            dataGridView4.Name = "dataGridView4";
-            dataGridView4.Size = new Size(1245, 373);
-            dataGridView4.TabIndex = 244;
+            dgBankInformation.BackgroundColor = Color.Lime;
+            dgBankInformation.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgBankInformation.Location = new Point(3, 1159);
+            dgBankInformation.Name = "dgBankInformation";
+            dgBankInformation.Size = new Size(1245, 373);
+            dgBankInformation.TabIndex = 244;
             // 
-            // dataGridView3
+            // dgRealEstate
             // 
-            dataGridView3.BackgroundColor = Color.Lime;
-            dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView3.Location = new Point(3, 708);
-            dataGridView3.Name = "dataGridView3";
-            dataGridView3.Size = new Size(1245, 373);
-            dataGridView3.TabIndex = 243;
+            dgRealEstate.BackgroundColor = Color.Lime;
+            dgRealEstate.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgRealEstate.Location = new Point(3, 708);
+            dgRealEstate.Name = "dgRealEstate";
+            dgRealEstate.Size = new Size(1245, 373);
+            dgRealEstate.TabIndex = 243;
             // 
-            // dataGridView2
+            // dgEmployment
             // 
-            dataGridView2.BackgroundColor = Color.Lime;
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(3, 525);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(1245, 101);
-            dataGridView2.TabIndex = 242;
+            dgEmployment.BackgroundColor = Color.Lime;
+            dgEmployment.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgEmployment.Location = new Point(3, 525);
+            dgEmployment.Name = "dgEmployment";
+            dgEmployment.Size = new Size(1245, 101);
+            dgEmployment.TabIndex = 242;
             // 
-            // dataGridView1
+            // dgCollateral
             // 
-            dataGridView1.BackgroundColor = Color.Lime;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(3, 358);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(1245, 97);
-            dataGridView1.TabIndex = 241;
+            dgCollateral.BackgroundColor = Color.Lime;
+            dgCollateral.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgCollateral.Location = new Point(3, 358);
+            dgCollateral.Name = "dgCollateral";
+            dgCollateral.Size = new Size(1245, 97);
+            dgCollateral.TabIndex = 241;
             // 
             // dgLoanInfo
             // 
@@ -282,6 +281,7 @@
             btnBackToDashboard.Size = new Size(151, 47);
             btnBackToDashboard.TabIndex = 233;
             btnBackToDashboard.UseVisualStyleBackColor = true;
+            btnBackToDashboard.Click += btnBackToDashboard_Click;
             // 
             // guna2HtmlLabel96
             // 
@@ -357,20 +357,26 @@
             // 
             pnlMain.AutoScroll = true;
             pnlMain.BackColor = Color.White;
-            pnlMain.Controls.Add(button1);
+            pnlMain.Controls.Add(btnUpdateOtherLoan);
+            pnlMain.Controls.Add(btnUpdateBank);
+            pnlMain.Controls.Add(btnUpdateRealEstate);
+            pnlMain.Controls.Add(btnUpdateEmployment);
+            pnlMain.Controls.Add(btnUpdateCollateral);
+            pnlMain.Controls.Add(btnUpdateLoan);
+            pnlMain.Controls.Add(btnUpdatePersonal);
+            pnlMain.Controls.Add(btnDeleteEntirely);
             pnlMain.Controls.Add(btnDeleteOtherLoan);
             pnlMain.Controls.Add(btnDeleteBankInformation);
             pnlMain.Controls.Add(btnDeleteRealEstate);
             pnlMain.Controls.Add(btnDeleteEmployment);
             pnlMain.Controls.Add(btnDeleteCollateral);
             pnlMain.Controls.Add(btnDeleteLoan);
-            pnlMain.Controls.Add(btnDeletePersonal);
             pnlMain.Controls.Add(btnPersonalInfo);
-            pnlMain.Controls.Add(dataGridView5);
-            pnlMain.Controls.Add(dataGridView4);
-            pnlMain.Controls.Add(dataGridView3);
-            pnlMain.Controls.Add(dataGridView2);
-            pnlMain.Controls.Add(dataGridView1);
+            pnlMain.Controls.Add(dgOtherLoanInformation);
+            pnlMain.Controls.Add(dgBankInformation);
+            pnlMain.Controls.Add(dgRealEstate);
+            pnlMain.Controls.Add(dgEmployment);
+            pnlMain.Controls.Add(dgCollateral);
             pnlMain.Controls.Add(dgLoanInfo);
             pnlMain.Controls.Add(dgPersonalInfo);
             pnlMain.Controls.Add(btnBackToDashboard);
@@ -385,6 +391,76 @@
             pnlMain.Name = "pnlMain";
             pnlMain.Size = new Size(1280, 623);
             pnlMain.TabIndex = 81;
+            // 
+            // btnUpdateOtherLoan
+            // 
+            btnUpdateOtherLoan.Location = new Point(1072, 1583);
+            btnUpdateOtherLoan.Name = "btnUpdateOtherLoan";
+            btnUpdateOtherLoan.Size = new Size(75, 23);
+            btnUpdateOtherLoan.TabIndex = 261;
+            btnUpdateOtherLoan.Text = "Update";
+            btnUpdateOtherLoan.UseVisualStyleBackColor = true;
+            btnUpdateOtherLoan.Click += btnUpdateOtherLoan_Click;
+            // 
+            // btnUpdateBank
+            // 
+            btnUpdateBank.Location = new Point(1072, 1130);
+            btnUpdateBank.Name = "btnUpdateBank";
+            btnUpdateBank.Size = new Size(75, 23);
+            btnUpdateBank.TabIndex = 260;
+            btnUpdateBank.Text = "Update";
+            btnUpdateBank.UseVisualStyleBackColor = true;
+            btnUpdateBank.Click += btnUpdateBank_Click;
+            // 
+            // btnUpdateRealEstate
+            // 
+            btnUpdateRealEstate.Location = new Point(1072, 679);
+            btnUpdateRealEstate.Name = "btnUpdateRealEstate";
+            btnUpdateRealEstate.Size = new Size(75, 23);
+            btnUpdateRealEstate.TabIndex = 259;
+            btnUpdateRealEstate.Text = "Update";
+            btnUpdateRealEstate.UseVisualStyleBackColor = true;
+            btnUpdateRealEstate.Click += btnUpdateRealEstate_Click;
+            // 
+            // btnUpdateEmployment
+            // 
+            btnUpdateEmployment.Location = new Point(1072, 496);
+            btnUpdateEmployment.Name = "btnUpdateEmployment";
+            btnUpdateEmployment.Size = new Size(75, 23);
+            btnUpdateEmployment.TabIndex = 258;
+            btnUpdateEmployment.Text = "Update";
+            btnUpdateEmployment.UseVisualStyleBackColor = true;
+            btnUpdateEmployment.Click += btnUpdateEmployment_Click;
+            // 
+            // btnUpdateCollateral
+            // 
+            btnUpdateCollateral.Location = new Point(1072, 329);
+            btnUpdateCollateral.Name = "btnUpdateCollateral";
+            btnUpdateCollateral.Size = new Size(75, 23);
+            btnUpdateCollateral.TabIndex = 257;
+            btnUpdateCollateral.Text = "Update";
+            btnUpdateCollateral.UseVisualStyleBackColor = true;
+            btnUpdateCollateral.Click += btnUpdateCollateral_Click;
+            // 
+            // btnUpdateLoan
+            // 
+            btnUpdateLoan.Location = new Point(1072, 172);
+            btnUpdateLoan.Name = "btnUpdateLoan";
+            btnUpdateLoan.Size = new Size(75, 23);
+            btnUpdateLoan.TabIndex = 256;
+            btnUpdateLoan.Text = "Update";
+            btnUpdateLoan.UseVisualStyleBackColor = true;
+            btnUpdateLoan.Click += btnUpdateLoan_Click;
+            // 
+            // btnUpdatePersonal
+            // 
+            btnUpdatePersonal.Location = new Point(1072, 19);
+            btnUpdatePersonal.Name = "btnUpdatePersonal";
+            btnUpdatePersonal.Size = new Size(75, 23);
+            btnUpdatePersonal.TabIndex = 255;
+            btnUpdatePersonal.Text = "Update";
+            btnUpdatePersonal.UseVisualStyleBackColor = true;
+            btnUpdatePersonal.Click += btnUpdatePersonal_Click;
             // 
             // imgPapas
             // 
@@ -411,17 +487,17 @@
             guna2HtmlLabel1.TabIndex = 255;
             guna2HtmlLabel1.Text = "MRID:";
             // 
-            // guna2HtmlLabel2
+            // txtMRID
             // 
-            guna2HtmlLabel2.AutoSize = false;
-            guna2HtmlLabel2.BackColor = Color.Transparent;
-            guna2HtmlLabel2.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel2.ForeColor = Color.Blue;
-            guna2HtmlLabel2.Location = new Point(604, 110);
-            guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(209, 39);
-            guna2HtmlLabel2.TabIndex = 256;
-            guna2HtmlLabel2.Text = "SSS";
+            txtMRID.AutoSize = false;
+            txtMRID.BackColor = Color.Transparent;
+            txtMRID.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtMRID.ForeColor = Color.Blue;
+            txtMRID.Location = new Point(604, 110);
+            txtMRID.Name = "txtMRID";
+            txtMRID.Size = new Size(209, 39);
+            txtMRID.TabIndex = 256;
+            txtMRID.Text = "SSS";
             // 
             // Ac_Manage_Records_SelectedUser
             // 
@@ -429,7 +505,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1280, 800);
-            Controls.Add(guna2HtmlLabel2);
+            Controls.Add(txtMRID);
             Controls.Add(guna2HtmlLabel1);
             Controls.Add(pnlMain);
             Controls.Add(imgPapas);
@@ -437,11 +513,12 @@
             Name = "Ac_Manage_Records_SelectedUser";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Ac_Manage_Records_SelectedUser";
-            ((System.ComponentModel.ISupportInitialize)dataGridView5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += Ac_Manage_Records_SelectedUser_Load;
+            ((System.ComponentModel.ISupportInitialize)dgOtherLoanInformation).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgBankInformation).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgRealEstate).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgEmployment).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgCollateral).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgLoanInfo).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgPersonalInfo).EndInit();
             pnlMain.ResumeLayout(false);
@@ -453,20 +530,19 @@
 
         #endregion
 
-        private Button button1;
+        private Button btnDeleteEntirely;
         private Button btnDeleteOtherLoan;
         private Button btnDeleteBankInformation;
         private Button btnDeleteRealEstate;
         private Button btnDeleteEmployment;
         private Button btnDeleteCollateral;
         private Button btnDeleteLoan;
-        private Button btnDeletePersonal;
         private Button btnPersonalInfo;
-        private DataGridView dataGridView5;
-        private DataGridView dataGridView4;
-        private DataGridView dataGridView3;
-        private DataGridView dataGridView2;
-        private DataGridView dataGridView1;
+        private DataGridView dgOtherLoanInformation;
+        private DataGridView dgBankInformation;
+        private DataGridView dgRealEstate;
+        private DataGridView dgEmployment;
+        private DataGridView dgCollateral;
         private DataGridView dgLoanInfo;
         private DataGridView dgPersonalInfo;
         private Button btnBackToDashboard;
@@ -480,6 +556,13 @@
         private Panel pnlMain;
         private Guna.UI2.WinForms.Guna2PictureBox imgPapas;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txtMRID;
+        private Button btnUpdatePersonal;
+        private Button btnUpdateOtherLoan;
+        private Button btnUpdateBank;
+        private Button btnUpdateRealEstate;
+        private Button btnUpdateEmployment;
+        private Button btnUpdateCollateral;
+        private Button btnUpdateLoan;
     }
 }

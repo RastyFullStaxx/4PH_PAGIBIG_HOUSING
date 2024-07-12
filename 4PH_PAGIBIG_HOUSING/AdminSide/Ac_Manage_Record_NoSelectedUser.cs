@@ -23,5 +23,10 @@ namespace _4PH_PAGIBIG_HOUSING
             administration_Dashboard.Show();
             this.Close();
         }
+
+        private void Ac_Manage_Record_NoSelectedUser_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
