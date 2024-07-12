@@ -85,8 +85,8 @@ CREATE TABLE BANKING_INFORMATION (
 
 -- Table for storing real estate information
 CREATE TABLE REAL_ESTATE_INFORMATION (
-    PAG_IBIG_MID_Number_RTN VARCHAR(14) NOT NULL,
     Real_Estate_Key INT AUTO_INCREMENT PRIMARY KEY,
+    PAG_IBIG_MID_Number_RTN VARCHAR(14) NOT NULL,
     Real_Estate_Location VARCHAR(120) NOT NULL,
     Type_of_Property VARCHAR(50) NOT NULL CHECK (Type_of_Property IN ('Real Estate Property', 'Commercial Property', 'Residential Property')),
     Acquisition_Cost NUMERIC(15) NOT NULL,
@@ -95,6 +95,7 @@ CREATE TABLE REAL_ESTATE_INFORMATION (
     Rental_Income NUMERIC(15) NOT NULL,
     FOREIGN KEY (PAG_IBIG_MID_Number_RTN) REFERENCES BORROWER_INFORMATION(Pag_IBIG_MID_Number_RTN)
 );
+
 
 -- Table for storing other loan information
 CREATE TABLE LOAN_INFORMATION (

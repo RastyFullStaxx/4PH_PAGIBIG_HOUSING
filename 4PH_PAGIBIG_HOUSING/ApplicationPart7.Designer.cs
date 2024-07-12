@@ -493,6 +493,7 @@
             pnlEntry3.Name = "pnlEntry3";
             pnlEntry3.Size = new Size(1054, 188);
             pnlEntry3.TabIndex = 148;
+            pnlEntry3.Visible = false;
             // 
             // comboBox2
             // 
@@ -624,6 +625,7 @@
             pnlEntry2.Name = "pnlEntry2";
             pnlEntry2.Size = new Size(1054, 188);
             pnlEntry2.TabIndex = 145;
+            pnlEntry2.Visible = false;
             // 
             // comboBox1
             // 

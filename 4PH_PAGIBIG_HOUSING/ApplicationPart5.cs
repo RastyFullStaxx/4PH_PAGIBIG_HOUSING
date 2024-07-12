@@ -35,6 +35,13 @@ namespace _4PH_PAGIBIG_HOUSING
             ShowOnlyCancelEntry3();
             _pagIBIGMIDNumberRTN = pagibigMIDNumber;
             _tct = tct;
+
+            // Set initial visibility for entry panels and buttons
+            pnlEntry2.Visible = false;
+            btnCancelEntry2.Visible = false;
+            pnlEntry3.Visible = false;
+            btnCancelEntry3.Visible = false;
+
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -44,6 +51,7 @@ namespace _4PH_PAGIBIG_HOUSING
 
         private void btnCancelEntry2_Click(object sender, EventArgs e)
         {
+            pnlEntry2.Visible = false;
             if (pnlEntry2Expanded)
             {
                 ShowOnlyCancelEntry2();
@@ -85,6 +93,7 @@ namespace _4PH_PAGIBIG_HOUSING
 
         private void ExpandPnlEntry2()
         {
+            pnlEntry2.Visible = true;
             // Show all controls in pnlEntry2
             btnCancelEntry2.Visible = true;
             label15.Visible = true;
@@ -109,6 +118,8 @@ namespace _4PH_PAGIBIG_HOUSING
 
         private void btnCancelEntry3_Click(object sender, EventArgs e)
         {
+            pnlEntry3.Visible = false;
+
             if (pnlEntry3Expanded)
             {
                 ShowOnlyCancelEntry3();
@@ -150,6 +161,8 @@ namespace _4PH_PAGIBIG_HOUSING
 
         private void ExpandPnlEntry3()
         {
+            pnlEntry3.Visible = true;
+
             // Show all controls in pnlEntry3
             btnCancelEntry3.Visible = true;
             btnRevealEntry3.Visible = false; // Hide btnRevealEntry3 when all controls are visible
@@ -182,36 +195,29 @@ namespace _4PH_PAGIBIG_HOUSING
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            // Validate each panel first
-            bool panel1Valid = ValidatePanel1();
-            bool panel2Valid = ValidatePanel2();
-            bool panel3Valid = ValidatePanel3();
-
-            // Proceed only if all panels are valid
-            if (panel1Valid && panel2Valid && panel3Valid)
+            // Validate and insert data for Panel 1 if it's visible
+            if (ValidatePanel1())
             {
-                // Insert data for each panel
-                bool panel1Inserted = Panel1Insert();
-                bool panel2Inserted = Panel2Insert();
-                bool panel3Inserted = Panel3Insert();
+                Panel1Insert();
+            }
 
-                // Check if all insertions were successful
-                if (panel1Inserted && panel2Inserted && panel3Inserted)
-                {
-                    // Navigate to the next form
-                    ApplicationPart6 realestate = new ApplicationPart6(_pagIBIGMIDNumberRTN, _tct);
-                    realestate.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Failed to save some of the banking information. Please check your entries.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
+            // Validate and insert data for Panel 2 if it's visible
+            if (pnlEntry2.Visible && ValidatePanel2())
             {
-                MessageBox.Show("Please fill out all required fields correctly in all panels before proceeding.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Panel2Insert();
             }
+
+            // Validate and insert data for Panel 3 if it's visible
+            if (pnlEntry3.Visible && ValidatePanel3())
+            {
+                Panel3Insert();
+            }
+
+            // Notify the user of success
+            MessageBox.Show("Real estate information saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ApplicationPart6 realestate = new ApplicationPart6(_pagIBIGMIDNumberRTN, _tct);
+            realestate.Show();
+            this.Hide();
         }
 
 

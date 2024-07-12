@@ -63,5 +63,25 @@ namespace _4PH_PAGIBIG_HOUSING.Database
             }
         }
 
+        public bool ExecuteNonQuery(string query)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    // Handle exception
+                    Console.WriteLine(ex.Message);
+                    return false;
+                }
+            }
+        }
+
     }
 }

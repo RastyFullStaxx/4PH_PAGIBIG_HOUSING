@@ -37,44 +37,44 @@
             btnCancelEntry3 = new Button();
             btnCancelEntry2 = new Button();
             pnlEntry3 = new Panel();
-            comboBox2 = new ComboBox();
+            cbTypeOfProperty3 = new ComboBox();
             label14 = new Label();
             label15 = new Label();
-            textBox11 = new TextBox();
+            txtLocation3 = new TextBox();
             label16 = new Label();
-            textBox12 = new TextBox();
+            txtCost3 = new TextBox();
             label17 = new Label();
-            textBox13 = new TextBox();
+            txtMortgage3 = new TextBox();
             label18 = new Label();
-            textBox14 = new TextBox();
+            txtRental3 = new TextBox();
             label19 = new Label();
-            textBox15 = new TextBox();
+            txtMarket3 = new TextBox();
             pnlEntry2 = new Panel();
-            comboBox1 = new ComboBox();
+            cbTypeOfProperty2 = new ComboBox();
             label6 = new Label();
             label7 = new Label();
-            textBox3 = new TextBox();
+            txtLocation2 = new TextBox();
             label8 = new Label();
-            textBox7 = new TextBox();
+            txtCost2 = new TextBox();
             label9 = new Label();
-            textBox8 = new TextBox();
+            txtMortgage2 = new TextBox();
             label10 = new Label();
-            textBox9 = new TextBox();
+            txtRental2 = new TextBox();
             label13 = new Label();
-            textBox10 = new TextBox();
+            txtMarket2 = new TextBox();
             pnlEntry1 = new Panel();
-            cbTypeOfProperty = new ComboBox();
+            cbTypeOfProperty1 = new ComboBox();
             lblMRID = new Label();
             label5 = new Label();
-            textBox1 = new TextBox();
+            txtLocation1 = new TextBox();
             label4 = new Label();
-            textBox2 = new TextBox();
+            txtCost1 = new TextBox();
             label3 = new Label();
-            textBox4 = new TextBox();
+            txtMortgage1 = new TextBox();
             label2 = new Label();
-            textBox5 = new TextBox();
+            txtRental1 = new TextBox();
             label1 = new Label();
-            textBox6 = new TextBox();
+            txtMarket1 = new TextBox();
             btnNext = new Button();
             btnBack = new Button();
             lblPrompt = new Label();
@@ -210,29 +210,30 @@
             // 
             // pnlEntry3
             // 
-            pnlEntry3.Controls.Add(comboBox2);
+            pnlEntry3.Controls.Add(cbTypeOfProperty3);
             pnlEntry3.Controls.Add(label14);
             pnlEntry3.Controls.Add(label15);
-            pnlEntry3.Controls.Add(textBox11);
+            pnlEntry3.Controls.Add(txtLocation3);
             pnlEntry3.Controls.Add(label16);
-            pnlEntry3.Controls.Add(textBox12);
+            pnlEntry3.Controls.Add(txtCost3);
             pnlEntry3.Controls.Add(label17);
-            pnlEntry3.Controls.Add(textBox13);
+            pnlEntry3.Controls.Add(txtMortgage3);
             pnlEntry3.Controls.Add(label18);
-            pnlEntry3.Controls.Add(textBox14);
+            pnlEntry3.Controls.Add(txtRental3);
             pnlEntry3.Controls.Add(label19);
-            pnlEntry3.Controls.Add(textBox15);
+            pnlEntry3.Controls.Add(txtMarket3);
             pnlEntry3.Location = new Point(16, 437);
             pnlEntry3.Name = "pnlEntry3";
             pnlEntry3.Size = new Size(963, 156);
             pnlEntry3.TabIndex = 30;
+            pnlEntry3.Visible = false;
             // 
-            // comboBox2
+            // cbTypeOfProperty3
             // 
-            comboBox2.Location = new Point(531, 32);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(413, 23);
-            comboBox2.TabIndex = 0;
+            cbTypeOfProperty3.Location = new Point(531, 32);
+            cbTypeOfProperty3.Name = "cbTypeOfProperty3";
+            cbTypeOfProperty3.Size = new Size(413, 23);
+            cbTypeOfProperty3.TabIndex = 0;
             // 
             // label14
             // 
@@ -258,13 +259,13 @@
             label15.TabIndex = 27;
             label15.Text = "RENTAL INCOME";
             // 
-            // textBox11
+            // txtLocation3
             // 
-            textBox11.BackColor = Color.WhiteSmoke;
-            textBox11.Location = new Point(8, 32);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(499, 23);
-            textBox11.TabIndex = 0;
+            txtLocation3.BackColor = Color.WhiteSmoke;
+            txtLocation3.Location = new Point(8, 32);
+            txtLocation3.Name = "txtLocation3";
+            txtLocation3.Size = new Size(499, 23);
+            txtLocation3.TabIndex = 0;
             // 
             // label16
             // 
@@ -278,13 +279,13 @@
             label16.TabIndex = 26;
             label16.Text = "MORTRAGE BALANCE";
             // 
-            // textBox12
+            // txtCost3
             // 
-            textBox12.BackColor = Color.WhiteSmoke;
-            textBox12.Location = new Point(8, 121);
-            textBox12.Name = "textBox12";
-            textBox12.Size = new Size(271, 23);
-            textBox12.TabIndex = 1;
+            txtCost3.BackColor = Color.WhiteSmoke;
+            txtCost3.Location = new Point(8, 121);
+            txtCost3.Name = "txtCost3";
+            txtCost3.Size = new Size(271, 23);
+            txtCost3.TabIndex = 1;
             // 
             // label17
             // 
@@ -298,13 +299,13 @@
             label17.TabIndex = 25;
             label17.Text = "TYPE OF PROPERTY";
             // 
-            // textBox13
+            // txtMortgage3
             // 
-            textBox13.BackColor = Color.WhiteSmoke;
-            textBox13.Location = new Point(531, 121);
-            textBox13.Name = "textBox13";
-            textBox13.Size = new Size(200, 23);
-            textBox13.TabIndex = 3;
+            txtMortgage3.BackColor = Color.WhiteSmoke;
+            txtMortgage3.Location = new Point(531, 121);
+            txtMortgage3.Name = "txtMortgage3";
+            txtMortgage3.Size = new Size(200, 23);
+            txtMortgage3.TabIndex = 3;
             // 
             // label18
             // 
@@ -318,13 +319,13 @@
             label18.TabIndex = 24;
             label18.Text = "MARKET VALUE";
             // 
-            // textBox14
+            // txtRental3
             // 
-            textBox14.BackColor = Color.WhiteSmoke;
-            textBox14.Location = new Point(744, 121);
-            textBox14.Name = "textBox14";
-            textBox14.Size = new Size(200, 23);
-            textBox14.TabIndex = 4;
+            txtRental3.BackColor = Color.WhiteSmoke;
+            txtRental3.Location = new Point(744, 121);
+            txtRental3.Name = "txtRental3";
+            txtRental3.Size = new Size(200, 23);
+            txtRental3.TabIndex = 4;
             // 
             // label19
             // 
@@ -338,39 +339,41 @@
             label19.TabIndex = 23;
             label19.Text = "ACQUISITION COST";
             // 
-            // textBox15
+            // txtMarket3
             // 
-            textBox15.BackColor = Color.WhiteSmoke;
-            textBox15.Location = new Point(285, 121);
-            textBox15.Name = "textBox15";
-            textBox15.Size = new Size(222, 23);
-            textBox15.TabIndex = 5;
+            txtMarket3.BackColor = Color.WhiteSmoke;
+            txtMarket3.Location = new Point(285, 121);
+            txtMarket3.Name = "txtMarket3";
+            txtMarket3.Size = new Size(222, 23);
+            txtMarket3.TabIndex = 5;
             // 
             // pnlEntry2
             // 
-            pnlEntry2.Controls.Add(comboBox1);
+            pnlEntry2.Controls.Add(cbTypeOfProperty2);
             pnlEntry2.Controls.Add(label6);
             pnlEntry2.Controls.Add(label7);
-            pnlEntry2.Controls.Add(textBox3);
+            pnlEntry2.Controls.Add(txtLocation2);
             pnlEntry2.Controls.Add(label8);
-            pnlEntry2.Controls.Add(textBox7);
+            pnlEntry2.Controls.Add(txtCost2);
             pnlEntry2.Controls.Add(label9);
-            pnlEntry2.Controls.Add(textBox8);
+            pnlEntry2.Controls.Add(txtMortgage2);
             pnlEntry2.Controls.Add(label10);
-            pnlEntry2.Controls.Add(textBox9);
+            pnlEntry2.Controls.Add(txtRental2);
             pnlEntry2.Controls.Add(label13);
-            pnlEntry2.Controls.Add(textBox10);
+            pnlEntry2.Controls.Add(txtMarket2);
+            pnlEntry2.Enabled = false;
             pnlEntry2.Location = new Point(14, 228);
             pnlEntry2.Name = "pnlEntry2";
             pnlEntry2.Size = new Size(963, 156);
             pnlEntry2.TabIndex = 29;
+            pnlEntry2.Visible = false;
             // 
-            // comboBox1
+            // cbTypeOfProperty2
             // 
-            comboBox1.Location = new Point(531, 32);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(413, 23);
-            comboBox1.TabIndex = 0;
+            cbTypeOfProperty2.Location = new Point(531, 32);
+            cbTypeOfProperty2.Name = "cbTypeOfProperty2";
+            cbTypeOfProperty2.Size = new Size(413, 23);
+            cbTypeOfProperty2.TabIndex = 0;
             // 
             // label6
             // 
@@ -396,13 +399,13 @@
             label7.TabIndex = 27;
             label7.Text = "RENTAL INCOME";
             // 
-            // textBox3
+            // txtLocation2
             // 
-            textBox3.BackColor = Color.WhiteSmoke;
-            textBox3.Location = new Point(8, 32);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(499, 23);
-            textBox3.TabIndex = 0;
+            txtLocation2.BackColor = Color.WhiteSmoke;
+            txtLocation2.Location = new Point(8, 32);
+            txtLocation2.Name = "txtLocation2";
+            txtLocation2.Size = new Size(499, 23);
+            txtLocation2.TabIndex = 0;
             // 
             // label8
             // 
@@ -416,13 +419,13 @@
             label8.TabIndex = 26;
             label8.Text = "MORTRAGE BALANCE";
             // 
-            // textBox7
+            // txtCost2
             // 
-            textBox7.BackColor = Color.WhiteSmoke;
-            textBox7.Location = new Point(8, 121);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(271, 23);
-            textBox7.TabIndex = 1;
+            txtCost2.BackColor = Color.WhiteSmoke;
+            txtCost2.Location = new Point(8, 121);
+            txtCost2.Name = "txtCost2";
+            txtCost2.Size = new Size(271, 23);
+            txtCost2.TabIndex = 1;
             // 
             // label9
             // 
@@ -436,13 +439,13 @@
             label9.TabIndex = 25;
             label9.Text = "TYPE OF PROPERTY";
             // 
-            // textBox8
+            // txtMortgage2
             // 
-            textBox8.BackColor = Color.WhiteSmoke;
-            textBox8.Location = new Point(531, 121);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(200, 23);
-            textBox8.TabIndex = 3;
+            txtMortgage2.BackColor = Color.WhiteSmoke;
+            txtMortgage2.Location = new Point(531, 121);
+            txtMortgage2.Name = "txtMortgage2";
+            txtMortgage2.Size = new Size(200, 23);
+            txtMortgage2.TabIndex = 3;
             // 
             // label10
             // 
@@ -456,13 +459,13 @@
             label10.TabIndex = 24;
             label10.Text = "MARKET VALUE";
             // 
-            // textBox9
+            // txtRental2
             // 
-            textBox9.BackColor = Color.WhiteSmoke;
-            textBox9.Location = new Point(744, 121);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(200, 23);
-            textBox9.TabIndex = 4;
+            txtRental2.BackColor = Color.WhiteSmoke;
+            txtRental2.Location = new Point(744, 121);
+            txtRental2.Name = "txtRental2";
+            txtRental2.Size = new Size(200, 23);
+            txtRental2.TabIndex = 4;
             // 
             // label13
             // 
@@ -476,39 +479,39 @@
             label13.TabIndex = 23;
             label13.Text = "ACQUISITION COST";
             // 
-            // textBox10
+            // txtMarket2
             // 
-            textBox10.BackColor = Color.WhiteSmoke;
-            textBox10.Location = new Point(285, 121);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(222, 23);
-            textBox10.TabIndex = 5;
+            txtMarket2.BackColor = Color.WhiteSmoke;
+            txtMarket2.Location = new Point(285, 121);
+            txtMarket2.Name = "txtMarket2";
+            txtMarket2.Size = new Size(222, 23);
+            txtMarket2.TabIndex = 5;
             // 
             // pnlEntry1
             // 
-            pnlEntry1.Controls.Add(cbTypeOfProperty);
+            pnlEntry1.Controls.Add(cbTypeOfProperty1);
             pnlEntry1.Controls.Add(lblMRID);
             pnlEntry1.Controls.Add(label5);
-            pnlEntry1.Controls.Add(textBox1);
+            pnlEntry1.Controls.Add(txtLocation1);
             pnlEntry1.Controls.Add(label4);
-            pnlEntry1.Controls.Add(textBox2);
+            pnlEntry1.Controls.Add(txtCost1);
             pnlEntry1.Controls.Add(label3);
-            pnlEntry1.Controls.Add(textBox4);
+            pnlEntry1.Controls.Add(txtMortgage1);
             pnlEntry1.Controls.Add(label2);
-            pnlEntry1.Controls.Add(textBox5);
+            pnlEntry1.Controls.Add(txtRental1);
             pnlEntry1.Controls.Add(label1);
-            pnlEntry1.Controls.Add(textBox6);
+            pnlEntry1.Controls.Add(txtMarket1);
             pnlEntry1.Location = new Point(14, 16);
             pnlEntry1.Name = "pnlEntry1";
             pnlEntry1.Size = new Size(963, 156);
             pnlEntry1.TabIndex = 28;
             // 
-            // cbTypeOfProperty
+            // cbTypeOfProperty1
             // 
-            cbTypeOfProperty.Location = new Point(531, 32);
-            cbTypeOfProperty.Name = "cbTypeOfProperty";
-            cbTypeOfProperty.Size = new Size(413, 23);
-            cbTypeOfProperty.TabIndex = 0;
+            cbTypeOfProperty1.Location = new Point(531, 32);
+            cbTypeOfProperty1.Name = "cbTypeOfProperty1";
+            cbTypeOfProperty1.Size = new Size(413, 23);
+            cbTypeOfProperty1.TabIndex = 0;
             // 
             // lblMRID
             // 
@@ -534,13 +537,13 @@
             label5.TabIndex = 27;
             label5.Text = "RENTAL INCOME";
             // 
-            // textBox1
+            // txtLocation1
             // 
-            textBox1.BackColor = Color.WhiteSmoke;
-            textBox1.Location = new Point(8, 32);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(499, 23);
-            textBox1.TabIndex = 0;
+            txtLocation1.BackColor = Color.WhiteSmoke;
+            txtLocation1.Location = new Point(8, 32);
+            txtLocation1.Name = "txtLocation1";
+            txtLocation1.Size = new Size(499, 23);
+            txtLocation1.TabIndex = 0;
             // 
             // label4
             // 
@@ -554,13 +557,13 @@
             label4.TabIndex = 26;
             label4.Text = "MORTRAGE BALANCE";
             // 
-            // textBox2
+            // txtCost1
             // 
-            textBox2.BackColor = Color.WhiteSmoke;
-            textBox2.Location = new Point(8, 121);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(271, 23);
-            textBox2.TabIndex = 1;
+            txtCost1.BackColor = Color.WhiteSmoke;
+            txtCost1.Location = new Point(8, 121);
+            txtCost1.Name = "txtCost1";
+            txtCost1.Size = new Size(271, 23);
+            txtCost1.TabIndex = 1;
             // 
             // label3
             // 
@@ -574,13 +577,13 @@
             label3.TabIndex = 25;
             label3.Text = "TYPE OF PROPERTY";
             // 
-            // textBox4
+            // txtMortgage1
             // 
-            textBox4.BackColor = Color.WhiteSmoke;
-            textBox4.Location = new Point(531, 121);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(200, 23);
-            textBox4.TabIndex = 3;
+            txtMortgage1.BackColor = Color.WhiteSmoke;
+            txtMortgage1.Location = new Point(531, 121);
+            txtMortgage1.Name = "txtMortgage1";
+            txtMortgage1.Size = new Size(200, 23);
+            txtMortgage1.TabIndex = 3;
             // 
             // label2
             // 
@@ -594,13 +597,13 @@
             label2.TabIndex = 24;
             label2.Text = "MARKET VALUE";
             // 
-            // textBox5
+            // txtRental1
             // 
-            textBox5.BackColor = Color.WhiteSmoke;
-            textBox5.Location = new Point(744, 121);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(200, 23);
-            textBox5.TabIndex = 4;
+            txtRental1.BackColor = Color.WhiteSmoke;
+            txtRental1.Location = new Point(744, 121);
+            txtRental1.Name = "txtRental1";
+            txtRental1.Size = new Size(200, 23);
+            txtRental1.TabIndex = 4;
             // 
             // label1
             // 
@@ -614,13 +617,13 @@
             label1.TabIndex = 23;
             label1.Text = "ACQUISITION COST";
             // 
-            // textBox6
+            // txtMarket1
             // 
-            textBox6.BackColor = Color.WhiteSmoke;
-            textBox6.Location = new Point(285, 121);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(222, 23);
-            textBox6.TabIndex = 5;
+            txtMarket1.BackColor = Color.WhiteSmoke;
+            txtMarket1.Location = new Point(285, 121);
+            txtMarket1.Name = "txtMarket1";
+            txtMarket1.Size = new Size(222, 23);
+            txtMarket1.TabIndex = 5;
             // 
             // btnNext
             // 
@@ -636,6 +639,7 @@
             btnNext.Size = new Size(126, 45);
             btnNext.TabIndex = 37;
             btnNext.UseVisualStyleBackColor = true;
+            btnNext.Click += btnNext_Click;
             // 
             // btnBack
             // 
@@ -906,11 +910,11 @@
         private RadioButton rdbtnYES;
         private RadioButton rdbtnNO;
         private Panel pnlMain;
-        private TextBox textBox1;
-        private TextBox textBox6;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox2;
+        private TextBox txtLocation1;
+        private TextBox txtMarket1;
+        private TextBox txtRental1;
+        private TextBox txtMortgage1;
+        private TextBox txtCost1;
         private Label label5;
         private Label label4;
         private Label label3;
@@ -935,34 +939,34 @@
         private Button btnCollateralInfo;
         private Button btnLoanInfo;
         private Button btnPersonalInfo;
-        private ComboBox cbTypeOfProperty;
+        private ComboBox cbTypeOfProperty1;
         private Panel pnlEntry1;
         private Panel pnlEntry3;
-        private ComboBox comboBox2;
+        private ComboBox cbTypeOfProperty3;
         private Label label14;
         private Label label15;
-        private TextBox textBox11;
+        private TextBox txtLocation3;
         private Label label16;
-        private TextBox textBox12;
+        private TextBox txtCost3;
         private Label label17;
-        private TextBox textBox13;
+        private TextBox txtMortgage3;
         private Label label18;
-        private TextBox textBox14;
+        private TextBox txtRental3;
         private Label label19;
-        private TextBox textBox15;
+        private TextBox txtMarket3;
         private Panel pnlEntry2;
-        private ComboBox comboBox1;
+        private ComboBox cbTypeOfProperty2;
         private Label label6;
         private Label label7;
-        private TextBox textBox3;
+        private TextBox txtLocation2;
         private Label label8;
-        private TextBox textBox7;
+        private TextBox txtCost2;
         private Label label9;
-        private TextBox textBox8;
+        private TextBox txtMortgage2;
         private Label label10;
-        private TextBox textBox9;
+        private TextBox txtRental2;
         private Label label13;
-        private TextBox textBox10;
+        private TextBox txtMarket2;
         private Button btnRevealEntry3;
         private Button btnCancelEntry3;
         private Button btnCancelEntry2;

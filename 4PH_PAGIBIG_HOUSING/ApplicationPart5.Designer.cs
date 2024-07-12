@@ -540,6 +540,7 @@
             pnlEntry3.ShadowDecoration.CustomizableEdges = customizableEdges4;
             pnlEntry3.Size = new Size(1156, 280);
             pnlEntry3.TabIndex = 117;
+            pnlEntry3.Visible = false;
             // 
             // btnCancelEntry3
             // 
@@ -721,6 +722,7 @@
             pnlEntry2.ShadowDecoration.CustomizableEdges = customizableEdges6;
             pnlEntry2.Size = new Size(1156, 280);
             pnlEntry2.TabIndex = 116;
+            pnlEntry2.Visible = false;
             pnlEntry2.Paint += pnlEntry2_Paint;
             // 
             // btnCancelEntry2

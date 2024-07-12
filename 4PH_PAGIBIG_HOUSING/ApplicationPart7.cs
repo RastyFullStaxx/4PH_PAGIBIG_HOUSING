@@ -1,4 +1,6 @@
-﻿using System;
+﻿using _4PH_PAGIBIG_HOUSING.Database;
+using _4PH_PAGIBIG_HOUSING.DbContext;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,17 @@ namespace _4PH_PAGIBIG_HOUSING
 {
     public partial class ApplicationPart7 : Form
     {
-        public ApplicationPart7()
+        private readonly string _pagIBIGMIDNumberRTN, _tct;
+        private readonly DatabaseConnection _database = DatabaseConnection.Instance;
+        private readonly LoanInformation _loaninfo1 = new LoanInformation();
+        private readonly LoanInformation _loaninfo2 = new LoanInformation();
+        private readonly LoanInformation _loaninfo3 = new LoanInformation();
+
+        public ApplicationPart7(string pagibigNumber, string tct)
         {
             InitializeComponent();
+            _pagIBIGMIDNumberRTN = pagibigNumber;
+            _tct = tct;
         }
 
         private void ApplicationPart7_Load(object sender, EventArgs e)
