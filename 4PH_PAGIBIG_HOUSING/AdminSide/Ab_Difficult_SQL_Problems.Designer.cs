@@ -115,7 +115,7 @@
             btnDifficult.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnDifficult.FlatStyle = FlatStyle.Flat;
             btnDifficult.Image = (Image)resources.GetObject("btnDifficult.Image");
-            btnDifficult.Location = new Point(746, 14);
+            btnDifficult.Location = new Point(705, 14);
             btnDifficult.Name = "btnDifficult";
             btnDifficult.Size = new Size(157, 63);
             btnDifficult.TabIndex = 61;
@@ -204,6 +204,7 @@
             dgDifficultProblem3.ThemeStyle.RowsStyle.Height = 25;
             dgDifficultProblem3.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgDifficultProblem3.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgDifficultProblem3.CellContentClick += dgDifficultProblem3_CellContentClick;
             // 
             // imgDifficultProblem3
             // 

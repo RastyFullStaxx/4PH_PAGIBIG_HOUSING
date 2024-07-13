@@ -151,7 +151,7 @@
             lblAverageBalance.BackColor = Color.Transparent;
             lblAverageBalance.FlatStyle = FlatStyle.Flat;
             lblAverageBalance.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblAverageBalance.Location = new Point(585, 25);
+            lblAverageBalance.Location = new Point(577, 26);
             lblAverageBalance.Name = "lblAverageBalance";
             lblAverageBalance.Size = new Size(114, 15);
             lblAverageBalance.TabIndex = 24;
@@ -163,7 +163,7 @@
             lblDateOpened.BackColor = Color.Transparent;
             lblDateOpened.FlatStyle = FlatStyle.Flat;
             lblDateOpened.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblDateOpened.Location = new Point(585, 119);
+            lblDateOpened.Location = new Point(577, 119);
             lblDateOpened.Name = "lblDateOpened";
             lblDateOpened.Size = new Size(85, 15);
             lblDateOpened.TabIndex = 25;
@@ -175,7 +175,7 @@
             lblBranch.BackColor = Color.Transparent;
             lblBranch.FlatStyle = FlatStyle.Flat;
             lblBranch.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblBranch.Location = new Point(585, 215);
+            lblBranch.Location = new Point(577, 215);
             lblBranch.Name = "lblBranch";
             lblBranch.Size = new Size(194, 15);
             lblBranch.TabIndex = 26;
@@ -242,7 +242,7 @@
             // txtBranchAddress1
             // 
             txtBranchAddress1.BackColor = Color.WhiteSmoke;
-            txtBranchAddress1.Location = new Point(585, 233);
+            txtBranchAddress1.Location = new Point(577, 233);
             txtBranchAddress1.Name = "txtBranchAddress1";
             txtBranchAddress1.Size = new Size(469, 23);
             txtBranchAddress1.TabIndex = 41;
@@ -250,7 +250,7 @@
             // dtDateOpened1
             // 
             dtDateOpened1.Font = new Font("Segoe UI", 9F);
-            dtDateOpened1.Location = new Point(585, 137);
+            dtDateOpened1.Location = new Point(577, 137);
             dtDateOpened1.Name = "dtDateOpened1";
             dtDateOpened1.Size = new Size(469, 23);
             dtDateOpened1.TabIndex = 115;

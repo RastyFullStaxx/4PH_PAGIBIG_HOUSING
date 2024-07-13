@@ -29,7 +29,7 @@ namespace _4PH_PAGIBIG_HOUSING.Database
 
             //EJAY = connectionString = "server=localhost;database=unbroke;uid=root;pwd='';";
 
-            connectionString = "server=localhost;database=pagibighousing;uid=root;pwd='';";
+            connectionString = "server=localhost;port=3307;database=pagibighousing;uid=root;pwd='';";
 
         }
 

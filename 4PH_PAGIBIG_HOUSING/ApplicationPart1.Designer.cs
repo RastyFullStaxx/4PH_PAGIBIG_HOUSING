@@ -576,7 +576,7 @@
             // cbHomeOwnership
             // 
             cbHomeOwnership.FormattingEnabled = true;
-            cbHomeOwnership.Items.AddRange(new object[] { "Owned" });
+            cbHomeOwnership.Items.AddRange(new object[] { "Owned", "Rented" });
             cbHomeOwnership.Location = new Point(70, 631);
             cbHomeOwnership.Name = "cbHomeOwnership";
             cbHomeOwnership.Size = new Size(285, 23);

@@ -97,7 +97,7 @@ namespace _4PH_PAGIBIG_HOUSING
 
             if (dataSet != null && dataSet.Tables.Count > 0)
             {
-                dgModerateProblem1.DataSource = dataSet.Tables[0];
+                dgModerateProblem2.DataSource = dataSet.Tables[0];
             }
         }
         private void LoadAverageLoanData()

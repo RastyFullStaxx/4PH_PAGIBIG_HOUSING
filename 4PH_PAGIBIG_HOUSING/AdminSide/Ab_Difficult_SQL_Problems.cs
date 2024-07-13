@@ -69,13 +69,14 @@ namespace _4PH_PAGIBIG_HOUSING
         private void LoadBorrowerLoanData()
         {
             string query = @"
-    SELECT Borrower.*, House.* 
-    FROM `4ps_housing_loan_information` AS House
-    JOIN borrower_information AS Borrower 
-    ON House.PAG_IBIG_MID_Number_RTN = Borrower.Pag_IBIG_MID_Number_RTN 
-    WHERE Borrower.Sex = 'F' 
-    AND TIMESTAMPDIFF(YEAR, Borrower.Birthdate, CURDATE()) >= 40
-    ORDER BY Borrower.Birthdate";
+   SELECT Borrower.*, House.* 
+   FROM 4ps_housing_loan_information AS House, 
+        borrower_information AS Borrower
+   WHERE House.PAG_IBIG_MID_Number_RTN = Borrower.PAG_IBIG_MID_Number_RTN 
+     AND Sex = 'F' 
+     AND timestampdiff(year, Birthdate, curdate()) >= 40
+   ORDER BY Birthdate";
+
 
             DataSet dataSet = DatabaseConnection.Instance.ExecuteQuery(query);
 
@@ -92,16 +93,17 @@ namespace _4PH_PAGIBIG_HOUSING
         private void LoadComplexData()
         {
             string query = @"
-    SELECT House.*, Borrow.*, Estate.*, Loan.* 
-    FROM 4ps_housing_loan_information AS House, 
-         borrower_information AS Borrow, 
-         real_estate_information AS Estate, 
-         loan_information AS Loan
-    WHERE House.PAG_IBIG_MID_Number_RTN = Borrow.PAG_IBIG_MID_Number_RTN 
-      AND House.PAG_IBIG_MID_Number_RTN = Estate.PAG_IBIG_MID_Number_RTN 
-      AND House.PAG_IBIG_MID_Number_RTN = Loan.PAG_IBIG_MID_Number_RTN
-    GROUP BY House.PAG_IBIG_MID_Number_RTN, House.TCT_OCT_CCT_NO, House.Loan_Amount, Loan_Term, Mode_of_Payment
-    ORDER BY House.PAG_IBIG_MID_Number_RTN";
+   SELECT House.*, Borrow.*, Estate.*, Loan.* 
+   FROM 4ps_housing_loan_information AS House, 
+        borrower_information AS Borrow, 
+        real_estate_information AS Estate, 
+        loan_information AS Loan
+   WHERE House.PAG_IBIG_MID_Number_RTN = Borrow.PAG_IBIG_MID_Number_RTN 
+     AND House.PAG_IBIG_MID_Number_RTN = Estate.PAG_IBIG_MID_Number_RTN 
+     AND House.PAG_IBIG_MID_Number_RTN = Loan.PAG_IBIG_MID_Number_RTN
+   GROUP BY House.PAG_IBIG_MID_Number_RTN, House.TCT_OCT_CCT_NO, House.Loan_Amount, Loan_Term, Mode_of_Payment
+   ORDER BY House.PAG_IBIG_MID_Number_RTN";
+
 
             DataSet dataSet = DatabaseConnection.Instance.ExecuteQuery(query);
 
@@ -168,6 +170,11 @@ namespace _4PH_PAGIBIG_HOUSING
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv.DefaultCellStyle.SelectionBackColor = Color.LightBlue;
             dgv.DefaultCellStyle.SelectionForeColor = Color.Black;
+        }
+
+        private void dgDifficultProblem3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -317,7 +317,7 @@
             // cbDependents
             // 
             cbDependents.FormattingEnabled = true;
-            cbDependents.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" });
+            cbDependents.Items.AddRange(new object[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" });
             cbDependents.Location = new Point(871, 566);
             cbDependents.Name = "cbDependents";
             cbDependents.Size = new Size(235, 23);
