@@ -238,6 +238,7 @@
             cbSelectMRID.ShadowDecoration.CustomizableEdges = customizableEdges2;
             cbSelectMRID.Size = new Size(280, 36);
             cbSelectMRID.TabIndex = 101;
+            cbSelectMRID.SelectedIndexChanged += cbSelectMRID_SelectedIndexChanged;
             // 
             // lblMRID
             // 

@@ -124,5 +124,12 @@ namespace _4PH_PAGIBIG_HOUSING
             form.Show();
             this.Hide();
         }
+
+        private void cbSelectMRID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadRealEstateInformation();
+        }
+
+
     }
 }

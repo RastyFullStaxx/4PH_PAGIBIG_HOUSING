@@ -656,34 +656,40 @@ namespace _4PH_PAGIBIG_HOUSING
         private void btnDeleteEntirely_Click(object sender, EventArgs e)
         {
             // Confirm the deletion with the user
-            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete all information for this Pag-IBIG MID Number? This action cannot be undone.",
-                "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult dialogResult = MessageBox.Show(
+                "Are you sure you want to delete all information for this Pag-IBIG MID Number? This action cannot be undone.",
+                "Confirm Deletion",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
 
             if (dialogResult == DialogResult.Yes)
             {
                 string pagIbigMIDNumber = _pagibigMIDnumber;
 
-                // Construct the delete queries for each table
-                string deleteBorrowerInfo = $"DELETE FROM BORROWER_INFORMATION WHERE Pag_IBIG_MID_Number_RTN = '{pagIbigMIDNumber}'";
-                string deleteEmploymentInfo = $"DELETE FROM BORROWERS_EMPLOYMENT_INFORMATION WHERE EE_SSS_GSIS_ID_No IN (SELECT EE_SSS_GSIS_ID_No FROM BORROWER_INFORMATION WHERE Pag_IBIG_MID_Number_RTN = '{pagIbigMIDNumber}')";
-                string deleteCollateralInfo = $"DELETE FROM COLLATERAL_INFORMATION WHERE Pag_IBIG_MID_Number_RTN = '{pagIbigMIDNumber}'";
-                string deleteLoanInfo = $"DELETE FROM 4PS_HOUSING_LOAN_INFORMATION WHERE PAG_IBIG_MID_Number_RTN = '{pagIbigMIDNumber}'";
-                string deleteBankInfo = $"DELETE FROM BANKING_INFORMATION WHERE PAG_IBIG_MID_Number_RTN = '{pagIbigMIDNumber}'";
-                string deleteRealEstateInfo = $"DELETE FROM REAL_ESTATE_INFORMATION WHERE PAG_IBIG_MID_Number_RTN = '{pagIbigMIDNumber}'";
-                string deleteOtherLoanInfo = $"DELETE FROM LOAN_INFORMATION WHERE PAG_IBIG_MID_Number_RTN = '{pagIbigMIDNumber}'";
+                // Define delete queries
+                string[] deleteQueries = new string[]
+                {
+             $"DELETE FROM BORROWER_INFORMATION WHERE Pag_IBIG_MID_Number_RTN = '{pagIbigMIDNumber}'",
+             $"DELETE FROM BORROWERS_EMPLOYMENT_INFORMATION WHERE EE_SSS_GSIS_ID_No IN (SELECT EE_SSS_GSIS_ID_No FROM BORROWER_INFORMATION WHERE Pag_IBIG_MID_Number_RTN = '{pagIbigMIDNumber}')",
+            $"DELETE FROM COLLATERAL_INFORMATION WHERE Pag_IBIG_MID_Number_RTN = '{pagIbigMIDNumber}'",
+            $"DELETE FROM 4PS_HOUSING_LOAN_INFORMATION WHERE PAG_IBIG_MID_Number_RTN = '{pagIbigMIDNumber}'",
+            $"DELETE FROM BANKING_INFORMATION WHERE PAG_IBIG_MID_Number_RTN = '{pagIbigMIDNumber}'",
+            $"DELETE FROM REAL_ESTATE_INFORMATION WHERE PAG_IBIG_MID_Number_RTN = '{pagIbigMIDNumber}'",
+            $"DELETE FROM LOAN_INFORMATION WHERE PAG_IBIG_MID_Number_RTN = '{pagIbigMIDNumber}'",
+            $"DELETE FROM BORROWER_INFORMATION WHERE Pag_IBIG_MID_Number_RTN = '{pagIbigMIDNumber}'"
+                };
 
                 // Execute delete queries
                 try
                 {
-                    DatabaseConnection.Instance.ExecuteNonQuery(deleteEmploymentInfo);
-                    DatabaseConnection.Instance.ExecuteNonQuery(deleteCollateralInfo);
-                    DatabaseConnection.Instance.ExecuteNonQuery(deleteLoanInfo);
-                    DatabaseConnection.Instance.ExecuteNonQuery(deleteBankInfo);
-                    DatabaseConnection.Instance.ExecuteNonQuery(deleteRealEstateInfo);
-                    DatabaseConnection.Instance.ExecuteNonQuery(deleteOtherLoanInfo);
-                    DatabaseConnection.Instance.ExecuteNonQuery(deleteBorrowerInfo);
+                    foreach (string query in deleteQueries)
+                    {
+                        DatabaseConnection.Instance.ExecuteNonQuery(query);
+                    }
 
                     MessageBox.Show("All information related to the Pag-IBIG MID Number has been deleted successfully.");
+
                     // Optionally, refresh or close the form
                     Administration_Dashboard dashboard = new Administration_Dashboard();
                     dashboard.Show();
@@ -691,7 +697,7 @@ namespace _4PH_PAGIBIG_HOUSING
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("An error occurred while deleting information: " + ex.Message);
+                    MessageBox.Show($"An error occurred while deleting information: {ex.Message}\n{ex.StackTrace}");
                 }
             }
         }

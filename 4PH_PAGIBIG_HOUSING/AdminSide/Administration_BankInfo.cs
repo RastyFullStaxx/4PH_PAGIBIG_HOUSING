@@ -135,5 +135,10 @@ namespace _4PH_PAGIBIG_HOUSING
             form.Show();
             this.Hide();
         }
+
+        private void cbSelectMRID_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            LoadBankInformation();
+        }
     }
 }

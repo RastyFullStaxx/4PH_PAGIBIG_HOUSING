@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administration_OtherLoanInfo));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             dgOtherLoanInfo = new DataGridView();
             imgSectionTitle = new PictureBox();
             btnExit = new Button();
@@ -225,7 +225,7 @@
             // cbSelectMRID
             // 
             cbSelectMRID.BackColor = Color.Transparent;
-            cbSelectMRID.CustomizableEdges = customizableEdges3;
+            cbSelectMRID.CustomizableEdges = customizableEdges1;
             cbSelectMRID.DrawMode = DrawMode.OwnerDrawFixed;
             cbSelectMRID.DropDownStyle = ComboBoxStyle.DropDownList;
             cbSelectMRID.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -235,9 +235,10 @@
             cbSelectMRID.ItemHeight = 30;
             cbSelectMRID.Location = new Point(898, 35);
             cbSelectMRID.Name = "cbSelectMRID";
-            cbSelectMRID.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            cbSelectMRID.ShadowDecoration.CustomizableEdges = customizableEdges2;
             cbSelectMRID.Size = new Size(280, 36);
             cbSelectMRID.TabIndex = 104;
+            cbSelectMRID.SelectedIndexChanged += cbSelectMRID_SelectedIndexChanged_1;
             // 
             // lblMRID
             // 

@@ -53,19 +53,19 @@
             btnDifficult = new Button();
             btnModerate = new Button();
             btnSimple = new Button();
-            DataViewEasyProblem3Result = new Guna.UI2.WinForms.Guna2DataGridView();
+            dgEasyProblem3 = new Guna.UI2.WinForms.Guna2DataGridView();
             imgSimpleProblem3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            DataViewEasyProblem2Result = new Guna.UI2.WinForms.Guna2DataGridView();
+            dgEasyProblem2 = new Guna.UI2.WinForms.Guna2DataGridView();
             imgSimpleProblem2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            DataViewEasyProblem1Result = new Guna.UI2.WinForms.Guna2DataGridView();
+            dgEasyProblem1 = new Guna.UI2.WinForms.Guna2DataGridView();
             imgSimpleProblem1 = new Guna.UI2.WinForms.Guna2PictureBox();
             imgSimpleProblems = new Guna.UI2.WinForms.Guna2PictureBox();
             pnlSimpleProblems.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)DataViewEasyProblem3Result).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgEasyProblem3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)imgSimpleProblem3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)DataViewEasyProblem2Result).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgEasyProblem2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)imgSimpleProblem2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)DataViewEasyProblem1Result).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgEasyProblem1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)imgSimpleProblem1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)imgSimpleProblems).BeginInit();
             SuspendLayout();
@@ -77,11 +77,11 @@
             pnlSimpleProblems.Controls.Add(btnDifficult);
             pnlSimpleProblems.Controls.Add(btnModerate);
             pnlSimpleProblems.Controls.Add(btnSimple);
-            pnlSimpleProblems.Controls.Add(DataViewEasyProblem3Result);
+            pnlSimpleProblems.Controls.Add(dgEasyProblem3);
             pnlSimpleProblems.Controls.Add(imgSimpleProblem3);
-            pnlSimpleProblems.Controls.Add(DataViewEasyProblem2Result);
+            pnlSimpleProblems.Controls.Add(dgEasyProblem2);
             pnlSimpleProblems.Controls.Add(imgSimpleProblem2);
-            pnlSimpleProblems.Controls.Add(DataViewEasyProblem1Result);
+            pnlSimpleProblems.Controls.Add(dgEasyProblem1);
             pnlSimpleProblems.Controls.Add(imgSimpleProblem1);
             pnlSimpleProblems.CustomizableEdges = customizableEdges7;
             pnlSimpleProblems.Location = new Point(188, 116);
@@ -154,11 +154,11 @@
             btnSimple.UseVisualStyleBackColor = true;
             btnSimple.Click += btnSimple_Click;
             // 
-            // DataViewEasyProblem3Result
+            // dgEasyProblem3
             // 
             dataGridViewCellStyle1.BackColor = Color.White;
-            DataViewEasyProblem3Result.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            DataViewEasyProblem3Result.BackgroundColor = Color.FromArgb(0, 192, 0);
+            dgEasyProblem3.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgEasyProblem3.BackgroundColor = Color.FromArgb(0, 192, 0);
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
@@ -166,9 +166,9 @@
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            DataViewEasyProblem3Result.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            DataViewEasyProblem3Result.ColumnHeadersHeight = 4;
-            DataViewEasyProblem3Result.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgEasyProblem3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgEasyProblem3.ColumnHeadersHeight = 30;
+            dgEasyProblem3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
@@ -176,34 +176,34 @@
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            DataViewEasyProblem3Result.DefaultCellStyle = dataGridViewCellStyle3;
-            DataViewEasyProblem3Result.GridColor = Color.FromArgb(231, 229, 255);
-            DataViewEasyProblem3Result.Location = new Point(51, 1224);
-            DataViewEasyProblem3Result.Name = "DataViewEasyProblem3Result";
-            DataViewEasyProblem3Result.RowHeadersVisible = false;
-            DataViewEasyProblem3Result.Size = new Size(836, 243);
-            DataViewEasyProblem3Result.TabIndex = 6;
-            DataViewEasyProblem3Result.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            DataViewEasyProblem3Result.ThemeStyle.AlternatingRowsStyle.Font = null;
-            DataViewEasyProblem3Result.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            DataViewEasyProblem3Result.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            DataViewEasyProblem3Result.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            DataViewEasyProblem3Result.ThemeStyle.BackColor = Color.FromArgb(0, 192, 0);
-            DataViewEasyProblem3Result.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            DataViewEasyProblem3Result.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            DataViewEasyProblem3Result.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            DataViewEasyProblem3Result.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
-            DataViewEasyProblem3Result.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            DataViewEasyProblem3Result.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            DataViewEasyProblem3Result.ThemeStyle.HeaderStyle.Height = 4;
-            DataViewEasyProblem3Result.ThemeStyle.ReadOnly = false;
-            DataViewEasyProblem3Result.ThemeStyle.RowsStyle.BackColor = Color.White;
-            DataViewEasyProblem3Result.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            DataViewEasyProblem3Result.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
-            DataViewEasyProblem3Result.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            DataViewEasyProblem3Result.ThemeStyle.RowsStyle.Height = 25;
-            DataViewEasyProblem3Result.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            DataViewEasyProblem3Result.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgEasyProblem3.DefaultCellStyle = dataGridViewCellStyle3;
+            dgEasyProblem3.GridColor = Color.FromArgb(231, 229, 255);
+            dgEasyProblem3.Location = new Point(51, 1224);
+            dgEasyProblem3.Name = "dgEasyProblem3";
+            dgEasyProblem3.RowHeadersVisible = false;
+            dgEasyProblem3.Size = new Size(836, 243);
+            dgEasyProblem3.TabIndex = 6;
+            dgEasyProblem3.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            dgEasyProblem3.ThemeStyle.AlternatingRowsStyle.Font = null;
+            dgEasyProblem3.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            dgEasyProblem3.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            dgEasyProblem3.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            dgEasyProblem3.ThemeStyle.BackColor = Color.FromArgb(0, 192, 0);
+            dgEasyProblem3.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            dgEasyProblem3.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            dgEasyProblem3.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgEasyProblem3.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            dgEasyProblem3.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            dgEasyProblem3.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgEasyProblem3.ThemeStyle.HeaderStyle.Height = 30;
+            dgEasyProblem3.ThemeStyle.ReadOnly = false;
+            dgEasyProblem3.ThemeStyle.RowsStyle.BackColor = Color.White;
+            dgEasyProblem3.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgEasyProblem3.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            dgEasyProblem3.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            dgEasyProblem3.ThemeStyle.RowsStyle.Height = 25;
+            dgEasyProblem3.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dgEasyProblem3.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
             // imgSimpleProblem3
             // 
@@ -217,11 +217,11 @@
             imgSimpleProblem3.TabIndex = 5;
             imgSimpleProblem3.TabStop = false;
             // 
-            // DataViewEasyProblem2Result
+            // dgEasyProblem2
             // 
             dataGridViewCellStyle4.BackColor = Color.White;
-            DataViewEasyProblem2Result.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            DataViewEasyProblem2Result.BackgroundColor = Color.FromArgb(0, 192, 0);
+            dgEasyProblem2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dgEasyProblem2.BackgroundColor = Color.FromArgb(0, 192, 0);
             dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
@@ -229,9 +229,9 @@
             dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            DataViewEasyProblem2Result.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            DataViewEasyProblem2Result.ColumnHeadersHeight = 4;
-            DataViewEasyProblem2Result.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgEasyProblem2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dgEasyProblem2.ColumnHeadersHeight = 30;
+            dgEasyProblem2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = Color.White;
             dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
@@ -239,34 +239,34 @@
             dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            DataViewEasyProblem2Result.DefaultCellStyle = dataGridViewCellStyle6;
-            DataViewEasyProblem2Result.GridColor = Color.FromArgb(231, 229, 255);
-            DataViewEasyProblem2Result.Location = new Point(51, 744);
-            DataViewEasyProblem2Result.Name = "DataViewEasyProblem2Result";
-            DataViewEasyProblem2Result.RowHeadersVisible = false;
-            DataViewEasyProblem2Result.Size = new Size(836, 243);
-            DataViewEasyProblem2Result.TabIndex = 4;
-            DataViewEasyProblem2Result.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            DataViewEasyProblem2Result.ThemeStyle.AlternatingRowsStyle.Font = null;
-            DataViewEasyProblem2Result.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            DataViewEasyProblem2Result.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            DataViewEasyProblem2Result.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            DataViewEasyProblem2Result.ThemeStyle.BackColor = Color.FromArgb(0, 192, 0);
-            DataViewEasyProblem2Result.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            DataViewEasyProblem2Result.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            DataViewEasyProblem2Result.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            DataViewEasyProblem2Result.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
-            DataViewEasyProblem2Result.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            DataViewEasyProblem2Result.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            DataViewEasyProblem2Result.ThemeStyle.HeaderStyle.Height = 4;
-            DataViewEasyProblem2Result.ThemeStyle.ReadOnly = false;
-            DataViewEasyProblem2Result.ThemeStyle.RowsStyle.BackColor = Color.White;
-            DataViewEasyProblem2Result.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            DataViewEasyProblem2Result.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
-            DataViewEasyProblem2Result.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            DataViewEasyProblem2Result.ThemeStyle.RowsStyle.Height = 25;
-            DataViewEasyProblem2Result.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            DataViewEasyProblem2Result.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgEasyProblem2.DefaultCellStyle = dataGridViewCellStyle6;
+            dgEasyProblem2.GridColor = Color.FromArgb(231, 229, 255);
+            dgEasyProblem2.Location = new Point(51, 744);
+            dgEasyProblem2.Name = "dgEasyProblem2";
+            dgEasyProblem2.RowHeadersVisible = false;
+            dgEasyProblem2.Size = new Size(836, 243);
+            dgEasyProblem2.TabIndex = 4;
+            dgEasyProblem2.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            dgEasyProblem2.ThemeStyle.AlternatingRowsStyle.Font = null;
+            dgEasyProblem2.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            dgEasyProblem2.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            dgEasyProblem2.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            dgEasyProblem2.ThemeStyle.BackColor = Color.FromArgb(0, 192, 0);
+            dgEasyProblem2.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            dgEasyProblem2.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            dgEasyProblem2.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgEasyProblem2.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            dgEasyProblem2.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            dgEasyProblem2.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgEasyProblem2.ThemeStyle.HeaderStyle.Height = 30;
+            dgEasyProblem2.ThemeStyle.ReadOnly = false;
+            dgEasyProblem2.ThemeStyle.RowsStyle.BackColor = Color.White;
+            dgEasyProblem2.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgEasyProblem2.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            dgEasyProblem2.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            dgEasyProblem2.ThemeStyle.RowsStyle.Height = 25;
+            dgEasyProblem2.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dgEasyProblem2.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
             // imgSimpleProblem2
             // 
@@ -280,11 +280,11 @@
             imgSimpleProblem2.TabIndex = 3;
             imgSimpleProblem2.TabStop = false;
             // 
-            // DataViewEasyProblem1Result
+            // dgEasyProblem1
             // 
             dataGridViewCellStyle7.BackColor = Color.White;
-            DataViewEasyProblem1Result.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            DataViewEasyProblem1Result.BackgroundColor = Color.FromArgb(0, 192, 0);
+            dgEasyProblem1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dgEasyProblem1.BackgroundColor = Color.FromArgb(0, 192, 0);
             dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle8.Font = new Font("Segoe UI", 9F);
@@ -292,9 +292,9 @@
             dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
-            DataViewEasyProblem1Result.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            DataViewEasyProblem1Result.ColumnHeadersHeight = 4;
-            DataViewEasyProblem1Result.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgEasyProblem1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dgEasyProblem1.ColumnHeadersHeight = 30;
+            dgEasyProblem1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = Color.White;
             dataGridViewCellStyle9.Font = new Font("Segoe UI", 9F);
@@ -302,34 +302,34 @@
             dataGridViewCellStyle9.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle9.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle9.WrapMode = DataGridViewTriState.False;
-            DataViewEasyProblem1Result.DefaultCellStyle = dataGridViewCellStyle9;
-            DataViewEasyProblem1Result.GridColor = Color.FromArgb(231, 229, 255);
-            DataViewEasyProblem1Result.Location = new Point(51, 255);
-            DataViewEasyProblem1Result.Name = "DataViewEasyProblem1Result";
-            DataViewEasyProblem1Result.RowHeadersVisible = false;
-            DataViewEasyProblem1Result.Size = new Size(836, 243);
-            DataViewEasyProblem1Result.TabIndex = 2;
-            DataViewEasyProblem1Result.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            DataViewEasyProblem1Result.ThemeStyle.AlternatingRowsStyle.Font = null;
-            DataViewEasyProblem1Result.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            DataViewEasyProblem1Result.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            DataViewEasyProblem1Result.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            DataViewEasyProblem1Result.ThemeStyle.BackColor = Color.FromArgb(0, 192, 0);
-            DataViewEasyProblem1Result.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            DataViewEasyProblem1Result.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            DataViewEasyProblem1Result.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            DataViewEasyProblem1Result.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
-            DataViewEasyProblem1Result.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            DataViewEasyProblem1Result.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            DataViewEasyProblem1Result.ThemeStyle.HeaderStyle.Height = 4;
-            DataViewEasyProblem1Result.ThemeStyle.ReadOnly = false;
-            DataViewEasyProblem1Result.ThemeStyle.RowsStyle.BackColor = Color.White;
-            DataViewEasyProblem1Result.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            DataViewEasyProblem1Result.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
-            DataViewEasyProblem1Result.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            DataViewEasyProblem1Result.ThemeStyle.RowsStyle.Height = 25;
-            DataViewEasyProblem1Result.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            DataViewEasyProblem1Result.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgEasyProblem1.DefaultCellStyle = dataGridViewCellStyle9;
+            dgEasyProblem1.GridColor = Color.FromArgb(231, 229, 255);
+            dgEasyProblem1.Location = new Point(51, 255);
+            dgEasyProblem1.Name = "dgEasyProblem1";
+            dgEasyProblem1.RowHeadersVisible = false;
+            dgEasyProblem1.Size = new Size(836, 243);
+            dgEasyProblem1.TabIndex = 2;
+            dgEasyProblem1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            dgEasyProblem1.ThemeStyle.AlternatingRowsStyle.Font = null;
+            dgEasyProblem1.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            dgEasyProblem1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            dgEasyProblem1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            dgEasyProblem1.ThemeStyle.BackColor = Color.FromArgb(0, 192, 0);
+            dgEasyProblem1.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            dgEasyProblem1.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            dgEasyProblem1.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgEasyProblem1.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            dgEasyProblem1.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            dgEasyProblem1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgEasyProblem1.ThemeStyle.HeaderStyle.Height = 30;
+            dgEasyProblem1.ThemeStyle.ReadOnly = false;
+            dgEasyProblem1.ThemeStyle.RowsStyle.BackColor = Color.White;
+            dgEasyProblem1.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgEasyProblem1.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            dgEasyProblem1.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            dgEasyProblem1.ThemeStyle.RowsStyle.Height = 25;
+            dgEasyProblem1.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dgEasyProblem1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
             // imgSimpleProblem1
             // 
@@ -369,12 +369,13 @@
             Name = "Ab_Easy_SQL_Problems";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Ab_SQL_Problems";
+            Load += Ab_Easy_SQL_Problems_Load;
             pnlSimpleProblems.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)DataViewEasyProblem3Result).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgEasyProblem3).EndInit();
             ((System.ComponentModel.ISupportInitialize)imgSimpleProblem3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)DataViewEasyProblem2Result).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgEasyProblem2).EndInit();
             ((System.ComponentModel.ISupportInitialize)imgSimpleProblem2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)DataViewEasyProblem1Result).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgEasyProblem1).EndInit();
             ((System.ComponentModel.ISupportInitialize)imgSimpleProblem1).EndInit();
             ((System.ComponentModel.ISupportInitialize)imgSimpleProblems).EndInit();
             ResumeLayout(false);
@@ -385,10 +386,10 @@
         private Guna.UI2.WinForms.Guna2Panel pnlSimpleProblems;
         private Guna.UI2.WinForms.Guna2PictureBox imgSimpleProblems;
         private Guna.UI2.WinForms.Guna2PictureBox imgSimpleProblem2;
-        private Guna.UI2.WinForms.Guna2DataGridView DataViewEasyProblem1Result;
+        private Guna.UI2.WinForms.Guna2DataGridView dgEasyProblem1;
         private Guna.UI2.WinForms.Guna2PictureBox imgSimpleProblem1;
-        private Guna.UI2.WinForms.Guna2DataGridView DataViewEasyProblem2Result;
-        private Guna.UI2.WinForms.Guna2DataGridView DataViewEasyProblem3Result;
+        private Guna.UI2.WinForms.Guna2DataGridView dgEasyProblem2;
+        private Guna.UI2.WinForms.Guna2DataGridView dgEasyProblem3;
         private Guna.UI2.WinForms.Guna2PictureBox imgSimpleProblem3;
         private Button btnSimple;
         private Button btnDifficult;

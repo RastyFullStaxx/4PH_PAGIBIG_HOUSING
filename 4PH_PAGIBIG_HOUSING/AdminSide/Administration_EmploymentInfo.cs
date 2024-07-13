@@ -91,18 +91,24 @@ namespace _4PH_PAGIBIG_HOUSING
         {
             string? selectedMID = cbSelectMRID.SelectedValue?.ToString();
 
-            string query;
-            if (string.IsNullOrEmpty(selectedMID))
+            // Update the query based on whether a MID is selected
+            string query = string.IsNullOrEmpty(selectedMID)
+                ? "SELECT * FROM BORROWERS_EMPLOYMENT_INFORMATION"
+                : $"SELECT * FROM BORROWERS_EMPLOYMENT_INFORMATION WHERE EE_SSS_GSIS_ID_No IN " +
+                  $"(SELECT EE_SSS_GSIS_ID_No FROM BORROWER_INFORMATION WHERE Pag_IBIG_MID_Number_RTN = '{selectedMID}')";
+
+            DataSet ds = DatabaseConnection.Instance.ExecuteQuery(query);
+
+            if (ds.Tables.Count > 0)
             {
-                query = "SELECT * FROM BORROWERS_EMPLOYMENT_INFORMATION";
+                dgEmployment.DataSource = ds.Tables[0];
+                CustomizeDataGridView(dgEmployment);
             }
             else
             {
-                query = $"SELECT * FROM BORROWERS_EMPLOYMENT_INFORMATION WHERE PAG_IBIG_MID_Number_RTN = '{selectedMID}'";
+                MessageBox.Show("No employment information found.");
+                dgEmployment.DataSource = null; // Clear the DataGridView
             }
-            DataSet ds = DatabaseConnection.Instance.ExecuteQuery(query);
-            dgEmployment.DataSource = ds.Tables[0];
-            CustomizeDataGridView(dgEmployment);
         }
 
 
@@ -144,6 +150,11 @@ namespace _4PH_PAGIBIG_HOUSING
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv.DefaultCellStyle.SelectionBackColor = Color.LightBlue;
             dgv.DefaultCellStyle.SelectionForeColor = Color.Black;
+        }
+
+        private void cbSelectMRID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadEmploymentInfo();
         }
     }
 }

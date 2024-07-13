@@ -153,5 +153,11 @@ namespace _4PH_PAGIBIG_HOUSING
         {
             LoadCollateralInfo();
         }
+
+        private void cbSelectMRID_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            LoadCollateralInfo();
+
+        }
     }
 }

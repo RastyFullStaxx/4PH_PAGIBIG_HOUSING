@@ -149,9 +149,10 @@ namespace _4PH_PAGIBIG_HOUSING
             cbSelectMRID.DataSource = midNumbers;
         }
 
-        private void cbSelectMRID_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbSelectMRID_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             LoadLoanInfo();
+
         }
     }
 }
