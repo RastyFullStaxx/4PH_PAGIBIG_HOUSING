@@ -1,0 +1,273 @@
+-- Create the database
+CREATE DATABASE IF NOT EXISTS PagIBIGHousing;
+
+-- Use the new database
+USE PagIBIGHousing;
+
+-- Create the database
+CREATE DATABASE IF NOT EXISTS PagIBIGHousing;
+USE PagIBIGHousing;
+
+CREATE TABLE BORROWER_INFORMATION (
+    Pag_IBIG_MID_Number_RTN VARCHAR(14) PRIMARY KEY,
+    Borrower_Name VARCHAR(100) NOT NULL,
+    Borrower_Citizenship VARCHAR(50) NOT NULL,
+    Birthdate DATE NOT NULL,
+    Sex CHAR(1) NOT NULL CHECK (Sex IN ('M', 'F')),
+    Permanent_Address VARCHAR(120) NOT NULL,
+    Present_Address VARCHAR(120) NOT NULL,
+    Marital_Status VARCHAR(20),
+    Borrower_Home_Landline VARCHAR(20) NOT NULL,
+    Borrower_Cellphone VARCHAR(20) NOT NULL,
+    Borrower_Email_Address VARCHAR(100) NOT NULL,
+    Home_Ownership VARCHAR(50) NOT NULL,
+    Years_of_Stay NUMERIC(2) CHECK (Years_of_Stay BETWEEN 1 AND 99),
+    EE_SSS_GSIS_ID_No NUMERIC(20) NOT NULL,
+    UNIQUE (EE_SSS_GSIS_ID_No)
+);
+
+CREATE TABLE BORROWERS_EMPLOYMENT_INFORMATION (
+    EE_SSS_GSIS_ID_No NUMERIC(20) PRIMARY KEY,
+    Employer_Business_Name VARCHAR(100) NOT NULL,
+    Employer_Business_Address VARCHAR(120) NOT NULL,
+    Employer_Direct_Line VARCHAR(20) NOT NULL,
+    Employer_Trunk_Line VARCHAR(20),
+    Employer_Email_Address VARCHAR(100) NOT NULL,
+    Occupation VARCHAR(100) NOT NULL,
+    TIN VARCHAR(20) NOT NULL,
+    Position_Department VARCHAR(100) NOT NULL,
+    Years_in_Business_Employment NUMERIC(2) CHECK (Years_in_Business_Employment BETWEEN 0 AND 99),
+    No_of_Dependents NUMERIC(2) CHECK (No_of_Dependents BETWEEN 0 AND 99),
+    FOREIGN KEY (EE_SSS_GSIS_ID_No) REFERENCES BORROWER_INFORMATION(EE_SSS_GSIS_ID_No)
+);
+
+-- Insert data into BORROWER_INFORMATION
+INSERT INTO BORROWER_INFORMATION (Pag_IBIG_MID_Number_RTN, Borrower_Name, Borrower_Citizenship, Birthdate, Sex, Permanent_Address, Present_Address, Marital_Status, Borrower_Home_Landline, Borrower_Cellphone, Borrower_Email_Address, Home_Ownership, Years_of_Stay, EE_SSS_GSIS_ID_No)
+VALUES
+('0000001', 'Earl Gem', 'Filipino', '2003-05-21', 'M', '123 Main Street, Makati City', '456 Elm Street, Quezon City', 'Married', '2 123 4567', '0912 345 6789', 'earlpogi@gmail.com', 'Owned', 10, 100001),
+('0000002', 'John Doe', 'Filipino', '1990-12-15', 'M', '789 Maple Avenue, Taguig City', '789 Maple Avenue, Manila', 'Single', '2 987 6543', '0987 654 3210', 'johndoe@example.com', 'Owned', 5, 100002),
+('0000003', 'Jane Doe', 'Filipino', '1985-08-30', 'F', '456 Oak Street, Pasig City', '456 Oak Street, Cavite City', 'Divorced', '2 345 6789', '0918 765 4321', 'janedoe@example.com', 'Owned', 15, 100003),
+('0000004', 'Michael Smith', 'Filipino', '1995-04-02', 'M', '321 Pine Street, Mandaluyong City', '789 Cedar Avenue, Angeles City', 'Single', '2 234 5678', '0977 654 3210', 'michael.smith@example.com', 'Rented', 3, 100004),
+('0000005', 'Sarah Lee', 'Filipino', '1988-11-12', 'F', '987 Elm Street, Manila', '987 Elm Street, Puerto Princesa City', 'Married', '2 876 5432', '0917 876 5432', 'sarah.lee@example.com', 'Owned', 8, 100005),
+('0000006', 'Richard Roe', 'Filipino', '1978-06-18', 'M', '123 Palm Street, Cebu City', '123 Palm Street, Cebu City', 'Married', '2 123 6789', '0912 678 9012', 'richard.roe@example.com', 'Owned', 12, 100006),
+('0000007', 'Emily Davis', 'Filipino', '1989-07-29', 'F', '789 Pine Street, Davao City', '789 Pine Street, Davao City', 'Single', '2 456 7890', '0987 123 4567', 'emily.davis@example.com', 'Owned', 7, 100007),
+('0000008', 'William Brown', 'Filipino', '1980-08-30', 'M', '456 Oak Street, Bacolod City', '456 Oak Street, Bacolod City', 'Divorced', '2 789 1234', '0918 234 5678', 'william.brown@example.com', 'Owned', 18, 100008),
+('0000009', 'Olivia Green', 'Filipino', '1991-09-14', 'F', '321 Pine Street, Iloilo City', '321 Pine Street, Iloilo City', 'Single', '2 345 6789', '0977 123 4567', 'olivia.green@example.com', 'Rented', 4, 100009),
+('0000010', 'David White', 'Filipino', '1988-10-10', 'M', '987 Elm Street, Zamboanga City', '987 Elm Street, Zamboanga City', 'Married', '2 876 5432', '0917 234 5678', 'david.white@example.com', 'Owned', 10, 100010),
+('0000011', 'Sophia Black', 'Filipino', '1993-11-11', 'F', '654 Maple Street, Naga City', '654 Maple Street, Naga City', 'Single', '2 345 6789', '0912 345 6789', 'sophia.black@example.com', 'Owned', 6, 100011),
+('0000012', 'James Wilson', 'Filipino', '1982-12-12', 'M', '321 Pine Street, San Fernando City', '321 Pine Street, San Fernando City', 'Married', '2 123 4567', '0987 654 3210', 'james.wilson@example.com', 'Owned', 15, 100012),
+('0000013', 'Charlotte Martinez', 'Filipino', '1985-01-01', 'F', '123 Oak Street, General Santos City', '123 Oak Street, General Santos City', 'Divorced', '2 345 6789', '0918 765 4321', 'charlotte.martinez@example.com', 'Owned', 9, 100013),
+('0000014', 'Henry Moore', 'Filipino', '1995-02-02', 'M', '789 Elm Street, Baguio City', '789 Elm Street, Baguio City', 'Single', '2 234 5678', '0977 654 3210', 'henry.moore@example.com', 'Rented', 5, 100014),
+('0000015', 'Isabella Taylor', 'Filipino', '1988-03-03', 'F', '456 Maple Street, Laoag City', '456 Maple Street, Laoag City', 'Married', '2 876 5432', '0917 876 5432', 'isabella.taylor@example.com', 'Owned', 11, 100015),
+('0000016', 'Thomas Anderson', 'Filipino', '1990-04-04', 'M', '654 Oak Street, Caloocan City', '654 Oak Street, Caloocan City', 'Single', '2 345 6789', '0912 345 6789', 'thomas.anderson@example.com', 'Owned', 3, 100016),
+('0000017', 'Ava Thomas', 'Filipino', '1983-05-05', 'F', '321 Maple Street, Muntinlupa City', '321 Maple Street, Muntinlupa City', 'Married', '2 123 4567', '0987 654 3210', 'ava.thomas@example.com', 'Owned', 13, 100017),
+('0000018', 'Daniel Jackson', 'Filipino', '1986-06-06', 'M', '987 Elm Street, Las Pinas City', '987 Elm Street, Las Pinas City', 'Divorced', '2 345 6789', '0918 765 4321', 'daniel.jackson@example.com', 'Owned', 8, 100018),
+('0000019', 'Mia Harris', 'Filipino', '1992-07-07', 'F', '654 Pine Street, Marikina City', '654 Pine Street, Marikina City', 'Single', '2 234 5678', '0977 654 3210', 'mia.harris@example.com', 'Rented', 4, 100019),
+('0000020', 'Liam Robinson', 'Filipino', '1989-08-08', 'M', '456 Maple Street, Antipolo City', '456 Maple Street, Antipolo City', 'Married', '2 876 5432', '0917 876 5432', 'liam.robinson@example.com', 'Owned', 10, 100020);
+
+
+-- Insert statements for BORROWERS_EMPLOYMENT_INFORMATION
+INSERT INTO BORROWERS_EMPLOYMENT_INFORMATION (EE_SSS_GSIS_ID_No, Employer_Business_Name, Employer_Business_Address, Employer_Direct_Line, Employer_Trunk_Line, Employer_Email_Address, Occupation, TIN, Position_Department, Years_in_Business_Employment, No_of_Dependents)
+VALUES
+(100001, 'ABC Company', '789 Business Street, Cityville', '0 2 987 6543', '0 2 123 4567', 'hr@abccompany.com', 'Software Engineer', '123-456-789', 'Senior Developer', 7, 1),
+(100002, 'XYZ Corporation', '456 Corporate Avenue, Metro Manila', '0 2 345 6789', NULL, 'info@xyzcorp.com', 'Accountant', '987-654-321', 'Financial Analyst', 3, 0),
+(100003, 'DEF Enterprises', '321 Main Street, Quezon City', '0 2 234 5678', '0 2 987 6543', 'contact@defent.com', 'Marketing Manager', '654-321-098', 'Marketing Lead', 5, 2),
+(100004, 'GHI Solutions', '654 Tech Park, Quezon City', '0 2 876 5432', '0 2 123 9876', 'support@ghisolutions.com', 'Project Manager', '321-654-987', 'Project Lead', 4, 1),
+(100005, 'JKL Holdings', '123 Business District, Manila', '0 2 456 7890', '0 2 654 3210', 'info@jklholdings.com', 'Business Analyst', '987-123-456', 'Business Development', 6, 1),
+(100006, 'MNO Enterprises', '987 Corporate Plaza, Makati', '0 2 234 1234', '0 2 789 6543', 'contact@mnoenterprises.com', 'HR Manager', '543-210-987', 'Human Resources', 8, 3),
+(100007, 'PQR Systems', '456 Industrial Park, Quezon City', '0 2 678 1234', '0 2 456 7891', 'support@pqrsystems.com', 'IT Specialist', '876-543-210', 'Technical Support', 5, 0),
+(100008, 'STU Innovations', '789 Startup Hub, Manila', '0 2 321 7890', '0 2 987 6543', 'contact@stuinnovations.com', 'Sales Executive', '210-987-654', 'Sales', 3, 2),
+(100009, 'VWX Corp', '654 Technology Center, Pasig', '0 2 765 4321', '0 2 876 5432', 'info@vwxcorp.com', 'Data Analyst', '345-678-901', 'Data Science', 2, 0),
+(100010, 'YZA Holdings', '321 Corporate Center, Mandaluyong', '0 2 543 2109', '0 2 123 4568', 'support@yzaholdings.com', 'Financial Analyst', '123-321-123', 'Finance', 5, 1),
+(100011, 'BCD Associates', '987 Business Road, Caloocan', '0 2 654 7890', '0 2 234 5678', 'hr@bcdassociates.com', 'Account Executive', '987-456-123', 'Accounts', 4, 1),
+(100012, 'EFG Services', '789 Work Plaza, Makati', '0 2 678 1234', '0 2 321 6548', 'info@efgservices.com', 'Customer Service', '543-789-210', 'Customer Support', 7, 3),
+(100013, 'HIJ Solutions', '456 Main Avenue, Pasay', '0 2 321 9876', '0 2 456 1234', 'contact@hijsolutions.com', 'Software Developer', '210-123-456', 'IT', 2, 0),
+(100014, 'KLM Corp', '123 Business Street, Manila', '0 2 654 3219', '0 2 987 6541', 'support@klmcorp.com', 'Marketing Executive', '987-654-321', 'Marketing', 6, 1),
+(100015, 'NOP Systems', '789 Startup Hub, Taguig', '0 2 987 6543', '0 2 123 4568', 'info@nopsystems.com', 'Project Coordinator', '654-123-789', 'Project Management', 5, 0),
+(100016, 'QRS Group', '654 Tech Park, Quezon City', '0 2 876 5432', '0 2 234 5678', 'contact@qrsgroup.com', 'IT Consultant', '321-456-789', 'IT Services', 4, 1),
+(100017, 'TUV Solutions', '321 Business Avenue, Pasig', '0 2 765 4321', '0 2 654 3210', 'support@tuvsolutions.com', 'HR Specialist', '987-321-654', 'HR Services', 3, 2),
+(100018, 'WXY Corp', '789 Corporate Plaza, Manila', '0 2 543 2100', '0 2 321 6789', 'info@wxycorp.com', 'Financial Manager', '456-789-123', 'Finance', 8, 1),
+(100019, 'ZAB Enterprises', '654 Industrial Park, Caloocan', '0 2 123 4567', '0 2 987 6543', 'contact@zabenterprises.com', 'Sales Manager', '321-654-098', 'Sales', 5, 3),
+(100020, 'CDE Group', '123 Corporate Center, Manila', '0 2 456 7890', '0 2 876 5432', 'support@cdegroup.com', 'Data Analyst', '789-123-456', 'Data Science', 4, 1);
+
+
+-- Table for storing collateral information, related to BORROWER_INFORMATION
+CREATE TABLE COLLATERAL_INFORMATION (
+    Collateral_ID INT AUTO_INCREMENT PRIMARY KEY,
+    Pag_IBIG_MID_Number_RTN VARCHAR(14) NOT NULL,
+    TCT_OCT_CCT_No VARCHAR(13) NOT NULL,
+    Property_Location VARCHAR(120) NOT NULL,
+    Type_of_Property VARCHAR(50) NOT NULL CHECK (Type_of_Property IN ('Rowhouse', 'Single Attached', 'Single Detached', 'Condominium', 'Townhouse', 'Duplex')),
+    Name_of_Project VARCHAR(50) NOT NULL,
+    Tax_Declaration NUMERIC(6) NOT NULL,
+    Land_Area NUMERIC(5) NOT NULL,
+    Lot_Unit_No VARCHAR(12),
+    Block_Bldg_No VARCHAR(12),
+    INDEX (TCT_OCT_CCT_No), -- Index on TCT_OCT_CCT_No for foreign key reference
+    FOREIGN KEY (Pag_IBIG_MID_Number_RTN) REFERENCES BORROWER_INFORMATION(Pag_IBIG_MID_Number_RTN)
+);
+
+INSERT INTO COLLATERAL_INFORMATION (Pag_IBIG_MID_Number_RTN, TCT_OCT_CCT_No, Property_Location, Type_of_Property, Name_of_Project, Tax_Declaration, Land_Area, Lot_Unit_No, Block_Bldg_No)
+VALUES
+('0000001', 'TCT123456', 'Kalayaan Avenue, Makati, Metro Manila', 'Single Detached', 'Crestview Realty Inc.', 293104, 102, 'Unit 510', 'Bldg. 3'),
+('0000002', 'TCT789012', 'Commonwealth Avenue, Quezon City, Metro Manila', 'Condominium', 'Crestview Realty Inc.', 517208, 95, 'Lot 217', 'Bldg. 4'),
+('0000003', 'TCT345678', 'Roxas Boulevard, Pasay, Metro Manila', 'Rowhouse', 'Apex Land Development', 641305, 110, 'Unit 703', 'Bldg. 5'),
+('0000004', 'TCT901234', 'Taft Avenue, Manila, Metro Manila', 'Single Attached', 'Apex Land Development', 874402, 98, 'Lot 415', 'Bldg. 6'),
+('0000005', 'TCT567890', 'Ortigas Avenue, Pasig, Metro Manila', 'Townhouse', 'Horizon Estates Ltd.', 129507, 105, 'Unit 628', 'Bldg. 7'),
+('0000006', 'TCT234567', 'Bonifacio Avenue, Taguig, Metro Manila', 'Duplex', 'Horizon Estates Ltd.', 365611, 92, 'Lot 132', 'Bldg. 8'),
+('0000007', 'TCT345123', 'Ayala Avenue, Makati, Metro Manila', 'Rowhouse', 'Summit Properties Co.', 982710, 108, 'Unit 924', 'Bldg. 9'),
+('0000008', 'TCT456789', 'España Boulevard, Manila, Metro Manila', 'Single Detached', 'Summit Properties Co.', 443806, 96, 'Lot 319', 'Bldg. 10'),
+('0000009', 'TCT567890', 'Shaw Boulevard, Mandaluyong, Metro Manila', 'Townhouse', 'Pinnacle Construction Group', 778903, 103, 'Unit 811', 'Bldg. 11'),
+('0000010', 'TCT678901', 'Aurora Boulevard, Quezon City, Metro Manila', 'Condominium', 'Pinnacle Construction Group', 215009, 99, 'Lot 526', 'Bldg. 12'),
+('0000011', 'TCT789012', 'C5 Road, Taguig, Metro Manila', 'Single Attached', 'Skyline Ventures Inc.', 536104, 106, 'Unit 337', 'Bldg. 13'),
+('0000012', 'TCT890123', 'MacArthur Highway, Malolos, Bulacan', 'Duplex', 'Skyline Ventures Inc.', 997202, 94, 'Lot 619', 'Bldg. 14'),
+('0000013', 'TCT901234', 'Rizal Avenue, San Fernando, Pampanga', 'Rowhouse', 'Evergreen Land Holdings', 624308, 101, 'Unit 428', 'Bldg. 15'),
+('0000014', 'TCT012345', 'Gen. Luna Street, Iloilo City, Iloilo', 'Single Detached', 'Evergreen Land Holdings', 381407, 97, 'Lot 813', 'Bldg. 16'),
+('0000015', 'TCT123456', 'R. Magsaysay Boulevard, Naga City, Camarines Sur', 'Townhouse', 'Prestige Realty Development', 859506, 109, 'Unit 245', 'Bldg. 17'),
+('0000016', 'TCT234567', 'Lacson Street, Bacolod City, Negros Occidental', 'Condominium', 'Prestige Realty Development', 203611, 93, 'Lot 721', 'Bldg. 18'),
+('0000017', 'TCT345678', 'Gen. Maxilom Avenue, Cebu City, Cebu', 'Duplex', 'Landmark Properties Corp.', 754708, 104, 'Unit 539', 'Bldg. 19'),
+('0000018', 'TCT456789', 'Duterte Street, Davao City, Davao del Sur', 'Single Attached', 'Landmark Properties Corp.', 462801, 91, 'Lot 914', 'Bldg. 20'),
+('0000009', 'TCT567890', 'C.M. Recto Avenue, Cagayan de Oro, Misamis Oriental', 'Rowhouse', 'Paramount Builders Ltd.', 589903, 107, 'Unit 632', 'Bldg. 21'),
+('0000020', 'TCT678901', 'A. Bichara Street, Legazpi City, Albay', 'Townhouse', 'Paramount Builders Ltd.', 320010, 100, 'Lot 408', 'Bldg. 22');
+
+-- Table for storing loan information
+CREATE TABLE 4PS_HOUSING_LOAN_INFORMATION (
+    Loan_ID INT AUTO_INCREMENT PRIMARY KEY,
+    PAG_IBIG_MID_Number_RTN VARCHAR(14) NOT NULL,
+    TCT_OCT_CCT_No VARCHAR(13) NOT NULL,
+    Loan_Amount DECIMAL(18, 2) NOT NULL,
+    Loan_Term VARCHAR(20) NOT NULL,
+    Mode_of_Payment VARCHAR(50) NOT NULL,
+    INDEX (TCT_OCT_CCT_No), -- Index on TCT_OCT_CCT_No for foreign key reference
+    FOREIGN KEY (PAG_IBIG_MID_Number_RTN) REFERENCES BORROWER_INFORMATION(Pag_IBIG_MID_Number_RTN),
+    FOREIGN KEY (TCT_OCT_CCT_No) REFERENCES COLLATERAL_INFORMATION(TCT_OCT_CCT_No)
+);
+
+
+-- Insert records into the loan information table
+INSERT INTO 4PS_HOUSING_LOAN_INFORMATION (Loan_ID, PAG_IBIG_MID_Number_RTN, TCT_OCT_CCT_No, Loan_Amount, Loan_Term, Mode_of_Payment) VALUES
+(1, '0000001', 'TCT123456', 120000, 10, 'SD'),
+(2, '0000002', 'TCT789012', 123100, 11, 'SD'),
+(3, '0000002', 'TCT345678', 1210000, 12, 'SD'),
+(4, '0000002', 'TCT901234', 500000, 14, 'SD'),
+(5, '0000002', 'TCT567890', 700000, 15, 'SD'),
+(6, '0000002', 'TCT234567', 60000, 16, 'OCTP'),
+(7, '0000002', 'TCT345123', 210000, 18, 'OCTP'),
+(8, '0000002', 'TCT456789', 2310000, 19, 'OCTP'),
+(9, '0000002', 'TCT567890', 700000, 20, 'OCTC'),
+(10, '0000002', 'TCT678901', 650000, 20, 'OCTC'),
+(11, '0000002', 'TCT789012', 540000, 22, 'OCTC'),
+(12, '0000002', 'TCT890123', 540200, 24, 'CAD'),
+(13, '0000002', 'TCT901234', 453045, 25, 'CAD'),
+(14, '0000002', 'TCT012345', 435034, 27, 'CAD'),
+(15, '0000002', 'TCT123456', 345353, 29, 'CAB'),
+(16, '0000002', 'TCT234567', 53450, 30, 'CAB'),
+(17, '0000002', 'TCT345678', 123000, 32, 'CAB'),
+(18, '0000002', 'TCT456789', 250000, 33, 'CAB'),
+(19, '0000002', 'TCT567890', 450000, 34, 'CAB'),
+(20, '0000002', 'TCT678901', 120000, 35, 'CAB');
+
+-- Table for storing banking information
+CREATE TABLE BANKING_INFORMATION (
+    Bank_ID INT AUTO_INCREMENT PRIMARY KEY,
+    PAG_IBIG_MID_Number_RTN VARCHAR(14) NOT NULL,
+    Account_No VARCHAR(10) NOT NULL,
+    Bank VARCHAR(80) NOT NULL,
+    Branch_Address VARCHAR(120),
+    Type_of_Account VARCHAR(50) NOT NULL CHECK (Type_of_Account IN ('Savings', 'Checking', 'Current')),
+    Date_Opened DATE NOT NULL,
+    Ave_Balance DECIMAL(15,2) NOT NULL,
+    Issuer_Name VARCHAR(80) NOT NULL,
+    UNIQUE (PAG_IBIG_MID_Number_RTN, Bank_ID),
+    FOREIGN KEY (PAG_IBIG_MID_Number_RTN) REFERENCES BORROWER_INFORMATION(Pag_IBIG_MID_Number_RTN)
+);
+
+-- Insert records into the banking information table
+INSERT INTO BANKING_INFORMATION (PAG_IBIG_MID_Number_RTN, Account_No, Bank, Branch_Address, Type_of_Account, Date_Opened, Ave_Balance, Issuer_Name) VALUES
+('0000001', '5648901234', 'GHI Bank', '468 Tulip Lane, Taguig City', 'Savings', '2019-06-10', 18000, 'Earl Gem'),
+('0000001', '6789712345', 'NOP Bank', '579 Jasmine Avenue, Pasay City', 'Checking', '2020-03-15', 25000, 'Earl Gem'),
+('0000001', '9010345678', 'EFG Bank', '680 Orchid Street, Quezon City', 'Savings', '2018-10-20', 18000, 'Earl Gem'),
+('0000002', '3456719012', 'YZA Bank', '791 Magnolia Drive, Makati City', 'Savings', '2019-11-05', 35000, 'John Doe'),
+('0000002', '5278901234', 'VWX Bank', '802 Daisy Avenue, Taguig City', 'Savings', '2020-02-20', 4000, 'John Doe'),
+('0000003', '6789002345', 'NOP Bank', '579 Jasmine Avenue, Pasay City', 'Checking', '2020-03-15', 25000, 'Jane Doe'),
+('0000003', '9012340678', 'EFG Bank', '680 Orchid Street, Quezon City', 'Savings', '2018-10-20', 18000, 'Jane Doe'),
+('0000004', '3356789012', 'YZA Bank', '791 Magnolia Drive, Makati City', 'Savings', '2019-11-05', 35000, 'Michael Smith'),
+('0000004', '5678901014', 'VWX Bank', '802 Daisy Avenue, Taguig City', 'Savings', '2020-02-20', 4000, 'Michael Smith'),
+('0000005', '6712012345', 'NOP Bank', '579 Jasmine Avenue, Pasay City', 'Checking', '2020-03-15', 25000, 'Sarah Lee'),
+('0000005', '8022345678', 'EFG Bank', '680 Orchid Street, Quezon City', 'Savings', '2018-10-20', 18000, 'Sarah Lee'),
+('0000006', '3449789012', 'YZA Bank', '791 Magnolia Drive, Makati City', 'Savings', '2019-11-05', 35000, 'Richard Roe'),
+('0000006', '4978901234', 'VWX Bank', '802 Daisy Avenue, Taguig City', 'Savings', '2020-02-20', 4000, 'Richard Roe'),
+('0000007', '6289112345', 'NOP Bank', '579 Jasmine Avenue, Pasay City', 'Checking', '2020-03-15', 25000, 'Emily Davis'),
+('0000007', '7912345678', 'EFG Bank', '680 Orchid Street, Quezon City', 'Savings', '2018-10-20', 18000, 'Emily Davis'),
+('0000008', '6556789012', 'YZA Bank', '791 Magnolia Drive, Makati City', 'Savings', '2019-11-05', 35000, 'William Brown'),
+('0000008', '5601901234', 'VWX Bank', '802 Daisy Avenue, Taguig City', 'Savings', '2020-02-20', 4000, 'William Brown'),
+('0000009', '6729012945', 'NOP Bank', '579 Jasmine Avenue, Pasay City', 'Checking', '2020-03-15', 25000, 'Olivia Green'),
+('0000009', '1012345278', 'EFG Bank', '680 Orchid Street, Quezon City', 'Savings', '2018-10-20', 18000, 'Olivia Green');
+
+-- Table for storing real estate information
+CREATE TABLE REAL_ESTATE_INFORMATION (
+    Real_Estate_Key INT AUTO_INCREMENT PRIMARY KEY,
+    PAG_IBIG_MID_Number_RTN VARCHAR(14) NOT NULL,
+    Real_Estate_Location VARCHAR(120) NOT NULL,
+    Type_of_Property VARCHAR(50) NOT NULL CHECK (Type_of_Property IN ('Real Estate Property', 'Commercial Property', 'Residential Property')),
+    Acquisition_Cost NUMERIC(15) NOT NULL,
+    Market_Value NUMERIC(15) NOT NULL,
+    Mortgage_Balance NUMERIC(15) NOT NULL,
+    Rental_Income NUMERIC(15) NOT NULL,
+    FOREIGN KEY (PAG_IBIG_MID_Number_RTN) REFERENCES BORROWER_INFORMATION(Pag_IBIG_MID_Number_RTN)
+);
+
+-- Insert records into the real estate information table
+INSERT INTO REAL_ESTATE_INFORMATION (PAG_IBIG_MID_Number_RTN, Real_Estate_Key, Real_Estate_Location, Type_of_Property, Acquisition_Cost, Market_Value, Mortgage_Balance, Rental_Income) VALUES
+('0000001', '00001', 'Maui Oasis Underpass, Santa Mesa, Manila, Metro Manila', 'Real Estate Property', 520000, 850000, 500000, 20000),
+('0000002', '00002', 'Sunset Boulevard, Quezon City, Metro Manila', 'Residential Property', 650000, 980000, 400000, 25000),
+('0000003', '00003', 'Emerald Tower, Ortigas Center, Pasig City', 'Commercial Property', 1500000, 2200000, 1000000, 80000),
+('0000004', '00004', 'Pine Residences, Taguig City, Metro Manila', 'Residential Property', 800000, 1200000, 600000, 30000),
+('0000005', '00005', 'Diamond Plaza, Makati City, Metro Manila', 'Commercial Property', 3000000, 4500000, 2000000, 120000),
+('0000005', '00006', 'Azure Urban Resort Residences, Parañaque City', 'Residential Property', 1200000, 1800000, 900000, 40000),
+('0000005', '00007', 'Central Park Tower, Bonifacio Global City, Taguig City', 'Commercial Property', 2500000, 3500000, 1500000, 100000),
+('0000012', '00008', 'Golden Grove Subdivision, Davao City', 'Residential Property', 500000, 800000, 400000, 15000),
+('0000012', '00009', 'Sapphire Plaza, Cebu City', 'Commercial Property', 1800000, 2500000, 1200000, 70000),
+('0000016', '00010', 'Pearl Tower, Mandaluyong City, Metro Manila', 'Residential Property', 700000, 1100000, 500000, 28000),
+('0000016', '00011', 'Horizon Homes, Quezon City, Metro Manila', 'Real Estate Property', 900000, 1400000, 700000, 35000),
+('0000019', '00012', 'Oceanview Condominiums, Pasay City, Metro Manila', 'Residential Property', 1000000, 1500000, 800000, 40000),
+('0000019', '00013', 'Riverfront Gardens, Bacolod City', 'Real Estate Property', 600000, 900000, 400000, 18000),
+('0000020', '00014', 'Parkview Residences, Iloilo City', 'Residential Property', 400000, 650000, 300000, 12000),
+('0000020', '00015', 'Bayfront Towers, Zamboanga City', 'Commercial Property', 2200000, 3000000, 1500000, 80000);
+
+
+-- Table for storing other loan information
+CREATE TABLE LOAN_INFORMATION (
+    Loan_Availment_Key INT AUTO_INCREMENT PRIMARY KEY,
+    PAG_IBIG_MID_Number_RTN VARCHAR(14) NOT NULL,
+    Type VARCHAR(50) NOT NULL CHECK (Type IN ('Mortgage Loan', 'Auto Loan', 'Personal Loan')),
+    Security VARCHAR(50) NOT NULL CHECK (Security IN ('Property', 'Vehicle', 'Savings')),
+    Maturity_Date DATE NOT NULL,
+    Amount_Balance NUMERIC(15,2) NOT NULL,
+    Mo_Amortization VARCHAR(15) NOT NULL,
+    FOREIGN KEY (PAG_IBIG_MID_Number_RTN) REFERENCES BORROWER_INFORMATION(PAG_IBIG_MID_Number_RTN)
+);
+
+-- Insert records into the loan information table
+INSERT INTO LOAN_INFORMATION (PAG_IBIG_MID_Number_RTN, Security, Type, Maturity_Date, Amount_Balance, Mo_Amortization) VALUES
+('0000001', 'Property', 'Mortgage Loan', '2025-12-31', 300000, 15000),
+('0000001', 'Vehicle', 'Auto Loan', '2024-08-15', 250000, 12000),
+('0000001', 'Savings', 'Personal Loan', '2023-06-20', 100000, 8000),
+('0000008', 'Property', 'Mortgage Loan', '2026-02-28', 500000, 25000),
+('0000008', 'Savings', 'Personal Loan', '2024-11-10', 150000, 10000),
+('0000010', 'Vehicle', 'Auto Loan', '2023-09-15', 200000, 15000),
+('0000010', 'Property', 'Mortgage Loan', '2025-05-30', 400000, 20000),
+('0000010', 'Savings', 'Personal Loan', '2023-12-05', 120000, 9000),
+('0000014', 'Vehicle', 'Auto Loan', '2024-04-18', 180000, 13000),
+('0000016', 'Property', 'Mortgage Loan', '2026-07-22', 600000, 30000),
+('0000016', 'Savings', 'Personal Loan', '2023-10-15', 200000, 14000),
+('0000018', 'Vehicle', 'Auto Loan', '2024-03-28', 220000, 16000),
+('0000018', 'Property', 'Mortgage Loan', '2025-09-10', 350000, 18000),
+('0000019', 'Savings', 'Personal Loan', '2023-07-15', 80000, 7000),
+('0000019', 'Vehicle', 'Auto Loan', '2024-12-20', 280000, 17000);
+
+
+
+
+
+
